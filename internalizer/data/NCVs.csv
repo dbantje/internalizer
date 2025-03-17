@@ -1,0 +1,36 @@
+dataset reference product,dataset unit,NCV in MJ/product
+"electricity, high voltage",kilowatt hour,3.6
+"heat, district or industrial, natural gas",megajoule,1
+"natural gas, high pressure",cubic meter,36.6
+"hydrogen, gaseous, low pressure",kilogram,120
+"diesel, synthetic",kilogram,42.6
+"kerosene, synthetic",kilogram,43
+"heat, district or industrial, other than natural gas",megajoule,1
+coke,megajoule,1
+lignite briquettes,megajoule,1
+hard coal briquettes,megajoule,1
+"syngas, RWGS, Production",kilogram,23.9
+diesel,kilogram,42.78
+kerosene,kilogram,43
+"petrol, unleaded",kilogram,43.44
+"biodiesel, from palm oil",kilogram,37.8
+"biodiesel, from rapeseed oil",kilogram,37.8
+"ethanol, from corn",kilogram,26.7
+"ethanol, from sugarbeet",kilogram,26.7
+"ethanol, from sugarcane",kilogram,26.7
+"ethanol, from grain sorghum",kilogram,26.7
+"ethanol, from poplar",kilogram,26.7
+"ethanol, from switchgrass",kilogram,26.7
+"ethanol, from eucalyptus",kilogram,26.7
+"ethanol, from miscanthus",kilogram,26.7
+"hydrogen, gaseous, 25 bar",kilogram,120
+"wood chips, wet, measured as dry mass",kilogram,15.4
+"wood pellet, measured as dry mass",kilogram,17.6
+"biomethane, from biogas upgrading, using amine scrubbing",kilogram,47.5
+"heat, deep geothermal",megajoule,1
+"electricity, low voltage",kilowatt hour,3.6
+"heat, central or small-scale, other than natural gas",megajoule,1
+"hydrogen, gaseous, 30 bar",kilogram,120
+"hydrogen, gaseous, 20 bar",kilogram,120
+"hydrogen, gaseous, 1 bar",kilogram,120
+"methane, from electrochemical methanation",kilogram,50

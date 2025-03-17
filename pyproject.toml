@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=65.5"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "internalizer"
+authors = [
+  { name="David Bantje", email="david.bantje@pik-potsdam.de" }
+]
+maintainers = [
+  { name="David Bantje", email="david.bantje@pik-potsdam.de" }
+]
+description = ""
+readme = "README.md"
+dynamic = ["dependencies", "version"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+requires-python = ">=3.10,<3.12"
+
+[project.urls]
+source = "https://github.com/dbantje/internalizer"
+homepage = "https://github.com/dbantje/internalizer"
+tracker = "https://github.com/dbantje/internalizer/issues"
+
+[tool.setuptools]
+license-files = ["LICENSE"]
+include-package-data = true
+packages = ["internalizer"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+version = {attr = "internalizer.__version__"}
+
+

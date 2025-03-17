@@ -4,12 +4,11 @@ from pathlib import Path
 import os
 import numpy as np
 import xarray as xr
+import uuid
 
 from premise.geomap import Geomap
 
-from filesystem_constants import DATA_DIR
-
-import uuid
+from .filesystem_constants import DATA_DIR
 
 REMIND_REGIONS = [
     "CAZ",

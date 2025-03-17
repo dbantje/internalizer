@@ -6,10 +6,11 @@ import xarray as xr
 import pandas as pd
 import numpy as np
 import os
-from regionalization import regionalize_costs, combine_shares_and_costs
-from utils import *
-from filesystem_constants import DATA_DIR
 from pathlib import Path
+
+from .regionalization import regionalize_costs, combine_shares_and_costs
+from .utils import *
+from .filesystem_constants import DATA_DIR
 
 FILEPATH_MONETIZATION_FACTORS = DATA_DIR / "mfs_monte_carlo_sample_euro2022.nc"
 NCV_DICT = get_ncv_dict()

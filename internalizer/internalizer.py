@@ -10,9 +10,9 @@ import numpy as np
 import xarray as xr
 import shutil
 
-from plca import _run_premise_year, _calculate_costs_year
-from regionalization import get_regionalized_mapping
-from utils import convert_euros_to_dollar
+from .plca import _run_premise_year, _calculate_costs_year
+from .regionalization import get_regionalized_mapping
+from .utils import convert_euros_to_dollar
 
 EURO_REF_YEAR = 2022
 REMIND_USD_REF_YEAR = 2017
@@ -84,23 +84,6 @@ class Internalizer:
         else:
             for arg in args:
                 _run_premise_year(*arg)
-
-        # for year in years:
-        #     ei_label = "ecoinvent-{}-cutoff".format(self.ei_version)
-        #     scen = {"model": self.model, "pathway": self.scenario, "year": year, "filepath": self.rundir}
-        #     ndb = NewDatabase(
-        #         scenarios=[scen],
-        #         source_db=ei_label,
-        #         source_version=self.ei_version,
-        #         biosphere_name="ecoinvent-{}-biosphere".format(self.ei_version)
-        #     )
-
-        #     ndb.update()
-
-        #     ndb.write_db_to_matrices(self.outdir)
-
-        #     del ndb
-        #     gc.collect()
 
     def calculate_costs(
         self,

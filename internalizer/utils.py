@@ -3,7 +3,8 @@ from scipy import sparse
 from scipy.sparse import csr_matrix
 import numpy as np
 import pandas as pd
-from filesystem_constants import DATA_DIR
+
+from .filesystem_constants import DATA_DIR
 
 LCIA_METHODS =  DATA_DIR / "lcia_for-monetization_ei310.json"
 FILEPATH_NCVS = DATA_DIR / "NCVs.csv"
