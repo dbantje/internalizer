@@ -1,7 +1,6 @@
-from typing import List, Optional
+from typing import List, Optional, Tuple
 from pathlib import Path
 import os
-from premise import NewDatabase
 
 from multiprocessing import Pool, cpu_count
 import bw2data as bd
@@ -10,12 +9,18 @@ import numpy as np
 import xarray as xr
 import shutil
 
-from .plca import _run_premise_year, _calculate_costs_year
+from .plca import _run_premise_year, _calculate_costs_year, _calculate_costs_year_new
 from .regionalization import get_regionalized_mapping
 from .utils import convert_euros_to_dollar
 
 EURO_REF_YEAR = 2022
 REMIND_USD_REF_YEAR = 2017
+COST_PERSPECTIVES = [
+    "damage costs",
+    "prevention costs",
+    "budget constraint",
+    "taxation costs"
+]
 
 MODEL_YEARS = {
     "remind": [2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045,
@@ -84,6 +89,48 @@ class Internalizer:
         else:
             for arg in args:
                 _run_premise_year(*arg)
+
+    def calculate_costs_new(
+            self,
+            regionalized_mapping: pd.DataFrame,
+            cost_perspective: str | float,
+            remove_double_counting: bool,
+            extra_activities: List[Tuple] = [],
+            multiprocessing: bool = True
+    ) -> None:
+        # check cost perspectives
+        if isinstance(cost_perspective, float):
+            if cost_perspective >= 1 or cost_perspective <= 0:
+                raise ValueError("Given number for cost perspective is not a "
+                "valid quantile (not between 0 and 1)!")
+        else:
+            if cost_perspective not in COST_PERSPECTIVES:
+                raise ValueError(f"Cost perspective must be one of {COST_PERSPECTIVES}.")
+            
+        args = [
+            (
+                regionalized_mapping,
+                cost_perspective,
+                remove_double_counting,
+                extra_activities,
+                self.scenario,
+                year,
+                self.outdir,
+                self.model,
+            )
+            for year in self.years
+        ]
+
+        self.cost_results = {}
+        if multiprocessing:
+            with Pool(cpu_count(), maxtasksperchild=1000) as p:
+                results = p.starmap(_calculate_costs_year_new, args)
+
+                for y, r in zip(self.years, results):
+                    self.cost_results[y] = r
+        else:
+            for year, arg in zip(self.years, args):
+                self.cost_results[year] = _calculate_costs_year_new(*arg)
 
     def calculate_costs(
         self,

@@ -1,0 +1,965 @@
+REMIND tech,dataset name,dataset reference product,dataset unit,share,region
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,CAZ
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,CAZ
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,CAZ
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,CAZ
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,CAZ
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,CAZ
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,CAZ
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,CAZ
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,CAZ
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,CAZ
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,CAZ
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,CAZ
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,CAZ
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,CAZ
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,CAZ
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,CAZ
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,CAZ
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,CAZ
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,CAZ
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,CAZ
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,CAZ
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,CAZ
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,CAZ
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,CAZ
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,CAZ
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,CAZ
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,CAZ
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,CAZ
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,CAZ
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,CAZ
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,CAZ
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,CAZ
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,CAZ
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,CAZ
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,CAZ
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,CAZ
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,CAZ
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,CAZ
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,CAZ
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,CAZ
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,CAZ
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,CAZ
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,CAZ
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,CAZ
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,CAZ
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,CAZ
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,CAZ
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,CAZ
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,CAZ
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,CAZ
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,CAZ
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,CAZ
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,CAZ
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,CAZ
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,CAZ
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,CAZ
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,CAZ
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,CAZ
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,CAZ
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,CAZ
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,CAZ
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,CAZ
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,CAZ
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,CAZ
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,CAZ
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,CHA
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,CHA
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,CHA
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,CHA
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,CHA
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,CHA
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,CHA
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,CHA
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,CHA
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,CHA
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,CHA
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,CHA
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,CHA
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,CHA
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,CHA
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,CHA
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,CHA
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,CHA
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,CHA
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,CHA
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,CHA
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,CHA
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,CHA
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,CHA
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,CHA
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,CHA
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,CHA
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,CHA
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,CHA
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,CHA
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,CHA
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,CHA
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,CHA
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,CHA
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,CHA
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,CHA
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,CHA
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,CHA
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,CHA
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,CHA
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,CHA
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,CHA
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,CHA
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,CHA
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,CHA
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,CHA
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,CHA
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,CHA
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,CHA
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,CHA
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,CHA
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,CHA
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,CHA
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,CHA
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,CHA
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,CHA
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,CHA
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,CHA
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,CHA
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,CHA
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,CHA
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,CHA
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,CHA
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,CHA
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,CHA
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,EUR
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,EUR
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,EUR
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,EUR
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,EUR
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,EUR
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,EUR
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,EUR
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,EUR
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,EUR
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,EUR
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,EUR
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,EUR
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,EUR
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,EUR
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,EUR
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,EUR
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,EUR
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,EUR
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,EUR
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,EUR
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,EUR
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,EUR
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,EUR
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,EUR
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,EUR
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,EUR
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,EUR
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,EUR
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,EUR
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,EUR
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,EUR
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,EUR
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,EUR
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,EUR
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,EUR
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,EUR
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,EUR
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,EUR
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,EUR
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,EUR
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,EUR
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,EUR
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,EUR
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,EUR
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,EUR
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,EUR
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,EUR
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,EUR
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,EUR
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,EUR
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,EUR
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,EUR
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,EUR
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,EUR
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,EUR
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,EUR
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,EUR
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,EUR
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,EUR
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,EUR
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,EUR
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,EUR
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,EUR
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,EUR
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,IND
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,IND
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,IND
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,IND
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,IND
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,IND
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,IND
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,IND
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,IND
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,IND
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,IND
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,IND
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,IND
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,IND
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,IND
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,IND
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,IND
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,IND
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,IND
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,IND
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,IND
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,IND
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,IND
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,IND
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,IND
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,IND
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,IND
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,IND
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,IND
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,IND
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,IND
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,IND
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,IND
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,IND
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,IND
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,IND
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,IND
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,IND
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,IND
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,IND
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,IND
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,IND
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,IND
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,IND
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,IND
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,IND
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,IND
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,IND
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,IND
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,IND
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,IND
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,IND
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,IND
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,IND
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,IND
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,IND
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,IND
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,IND
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,IND
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,IND
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,IND
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,IND
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,IND
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,IND
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,IND
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,JPN
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,JPN
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,JPN
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,JPN
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,JPN
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,JPN
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,JPN
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,JPN
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,JPN
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,JPN
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,JPN
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,JPN
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,JPN
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,JPN
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,JPN
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,JPN
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,JPN
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,JPN
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,JPN
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,JPN
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,JPN
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,JPN
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,JPN
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,JPN
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,JPN
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,JPN
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,JPN
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,JPN
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,JPN
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,JPN
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,JPN
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,JPN
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,JPN
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,JPN
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,JPN
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,JPN
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,JPN
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,JPN
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,JPN
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,JPN
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,JPN
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,JPN
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,JPN
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,JPN
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,JPN
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,JPN
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,JPN
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,JPN
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,JPN
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,JPN
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,JPN
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,JPN
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,JPN
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,JPN
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,JPN
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,JPN
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,JPN
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,JPN
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,JPN
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,JPN
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,JPN
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,JPN
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,JPN
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,JPN
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,JPN
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,LAM
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,LAM
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,LAM
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,LAM
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,LAM
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,LAM
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,LAM
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,LAM
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,LAM
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,LAM
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,LAM
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,LAM
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,LAM
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,LAM
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,LAM
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,LAM
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,LAM
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,LAM
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,LAM
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,LAM
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,LAM
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,LAM
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,LAM
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,LAM
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,LAM
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,LAM
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,LAM
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,LAM
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,LAM
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,LAM
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,LAM
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,LAM
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,LAM
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,LAM
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,LAM
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,LAM
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,LAM
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,LAM
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,LAM
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,LAM
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,LAM
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,LAM
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,LAM
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,LAM
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,LAM
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,LAM
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,LAM
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,LAM
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,LAM
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,LAM
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,LAM
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,LAM
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,LAM
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,LAM
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,LAM
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,LAM
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,LAM
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,LAM
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,LAM
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,LAM
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,LAM
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,LAM
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,LAM
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,LAM
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,LAM
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,MEA
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,MEA
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,MEA
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,MEA
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,MEA
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,MEA
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,MEA
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,MEA
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,MEA
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,MEA
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,MEA
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,MEA
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,MEA
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,MEA
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,MEA
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,MEA
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,MEA
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,MEA
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,MEA
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,MEA
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,MEA
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,MEA
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,MEA
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,MEA
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,MEA
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,MEA
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,MEA
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,MEA
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,MEA
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,MEA
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,MEA
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,MEA
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,MEA
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,MEA
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,MEA
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,MEA
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,MEA
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,MEA
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,MEA
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,MEA
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,MEA
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,MEA
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,MEA
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,MEA
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,MEA
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,MEA
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,MEA
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,MEA
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,MEA
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,MEA
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,MEA
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,MEA
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,MEA
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,MEA
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,MEA
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,MEA
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,MEA
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,MEA
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,MEA
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,MEA
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,MEA
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,MEA
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,MEA
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,MEA
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,MEA
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,NEU
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,NEU
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,NEU
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,NEU
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,NEU
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,NEU
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,NEU
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,NEU
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,NEU
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,NEU
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,NEU
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,NEU
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,NEU
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,NEU
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,NEU
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,NEU
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,NEU
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,NEU
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,NEU
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,NEU
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,NEU
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,NEU
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,NEU
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,NEU
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,NEU
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,NEU
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,NEU
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,NEU
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,NEU
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,NEU
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,NEU
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,NEU
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,NEU
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,NEU
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,NEU
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,NEU
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,NEU
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,NEU
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,NEU
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,NEU
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,NEU
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,NEU
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,NEU
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,NEU
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,NEU
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,NEU
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,NEU
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,NEU
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,NEU
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,NEU
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,NEU
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,NEU
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,NEU
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,NEU
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,NEU
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,NEU
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,NEU
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,NEU
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,NEU
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,NEU
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,NEU
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,NEU
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,NEU
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,NEU
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,NEU
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,OAS
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,OAS
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,OAS
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,OAS
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,OAS
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,OAS
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,OAS
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,OAS
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,OAS
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,OAS
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,OAS
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,OAS
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,OAS
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,OAS
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,OAS
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,OAS
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,OAS
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,OAS
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,OAS
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,OAS
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,OAS
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,OAS
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,OAS
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,OAS
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,OAS
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,OAS
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,OAS
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,OAS
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,OAS
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,OAS
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,OAS
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,OAS
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,OAS
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,OAS
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,OAS
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,OAS
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,OAS
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,OAS
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,OAS
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,OAS
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,OAS
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,OAS
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,OAS
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,OAS
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,OAS
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,OAS
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,OAS
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,OAS
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,OAS
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,OAS
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,OAS
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,OAS
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,OAS
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,OAS
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,OAS
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,OAS
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,OAS
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,OAS
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,OAS
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,OAS
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,OAS
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,OAS
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,OAS
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,OAS
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,OAS
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,REF
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,REF
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,REF
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,REF
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,REF
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,REF
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,REF
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,REF
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,REF
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,REF
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,REF
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,REF
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,REF
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,REF
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,REF
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,REF
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,REF
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,REF
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,REF
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,REF
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,REF
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,REF
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,REF
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,REF
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,REF
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,REF
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,REF
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,REF
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,REF
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,REF
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,REF
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,REF
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,REF
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,REF
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,REF
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,REF
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,REF
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,REF
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,REF
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,REF
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,REF
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,REF
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,REF
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,REF
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,REF
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,REF
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,REF
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,REF
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,REF
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,REF
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,REF
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,REF
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,REF
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,REF
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,REF
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,REF
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,REF
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,REF
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,REF
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,REF
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,REF
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,REF
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,REF
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,REF
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,REF
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,SSA
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,SSA
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,SSA
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,SSA
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,SSA
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,SSA
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,SSA
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,SSA
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,SSA
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,SSA
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,SSA
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,SSA
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,SSA
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,SSA
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,SSA
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,SSA
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,SSA
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,SSA
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,SSA
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,SSA
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,SSA
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,SSA
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,SSA
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,SSA
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,SSA
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,SSA
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,SSA
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,SSA
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,SSA
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,SSA
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,SSA
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,SSA
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,SSA
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,SSA
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,SSA
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,SSA
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,SSA
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,SSA
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,SSA
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,SSA
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,SSA
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,SSA
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,SSA
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,SSA
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,SSA
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,SSA
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,SSA
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,SSA
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,SSA
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,SSA
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,SSA
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,SSA
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,SSA
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,SSA
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,SSA
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,SSA
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,SSA
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,SSA
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,SSA
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,SSA
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,SSA
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,SSA
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,SSA
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,SSA
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,SSA
+pegas.seel.ngcc,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,1.0,USA
+pegas.seel.ngccc,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,USA
+pegas.seel.ngt,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,1.0,USA
+pegas.seh2.gash2,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,1.0,USA
+pegas.seh2.gash2c,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,USA
+pegas.sehe.gashp,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,1.0,USA
+pegas.seliqfos.gasftrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,0.6,USA
+pegas.seliqfos.gasftrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,0.4,USA
+pegas.seliqfos.gasftcrec,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,0.6,USA
+pegas.seliqfos.gasftcrec,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,0.4,USA
+pecoal.seel.igcc,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,USA
+pecoal.seel.igcc,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,0.5,USA
+pecoal.seel.igccc,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,USA
+pecoal.seel.igccc,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,0.5,USA
+pecoal.seel.pc,"electricity production, lignite","electricity, high voltage",kilowatt hour,0.5,USA
+pecoal.seel.pc,"electricity production, hard coal","electricity, high voltage",kilowatt hour,0.5,USA
+pecoal.sesofos.coaltr,coke production,coke,megajoule,0.4,USA
+pecoal.sesofos.coaltr,lignite briquettes production,lignite briquettes,megajoule,0.3,USA
+pecoal.sesofos.coaltr,hard coal briquettes production,hard coal briquettes,megajoule,0.3,USA
+pecoal.segafos.coalgas,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,1.0,USA
+pecoal.seh2.coalh2,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,1.0,USA
+pecoal.seh2.coalh2c,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,1.0,USA
+pecoal.sehe.coalhp,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,1.0,USA
+peoil.seliqfos.refliq,"diesel production, petroleum refinery operation",diesel,kilogram,0.34,USA
+peoil.seliqfos.refliq,"kerosene production, petroleum refinery operation",kerosene,kilogram,0.1,USA
+peoil.seliqfos.refliq,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,0.56,USA
+pecoal.seliqfos.coalftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,0.5,USA
+pecoal.seliqfos.coalftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,0.5,USA
+pecoal.seliqfos.coalftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,USA
+pecoal.seliqfos.coalftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,USA
+pebiolc.seliqbio.bioftrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,0.5,USA
+pebiolc.seliqbio.bioftrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,0.5,USA
+pebiolc.seliqbio.bioftcrec,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,0.5,USA
+pebiolc.seliqbio.bioftcrec,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,0.5,USA
+peoil.seel.dot,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,1.0,USA
+pebiolc.seel.bioigcc,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,1.0,USA
+pebiolc.seel.bioigccc,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,1.0,USA
+pebiolc.seh2.bioh2,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,USA
+pebiolc.seh2.bioh2c,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,1.0,USA
+pebiolc.sehe.biohp,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.0,USA
+pebiolc.sesobio.biotr,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,1.0,USA
+pebiolc.sesobio.biotrmod,wood pellet production,"wood pellet, measured as dry mass",kilogram,1.0,USA
+pebiolc.segabio.biogas,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,USA
+pebiolc.segabio.biogasc,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram,1.0,USA
+pegeo.seel.geohdr,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,1.0,USA
+pegeo.sehe.geohe,"heat production, deep geothermal","heat, deep geothermal",megajoule,1.0,USA
+pehyd.seel.hydro,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,1.0,USA
+pewin.seel.wind,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,USA
+pewin.seel.wind,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.6,USA
+pewin.seel.wind,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,0.2,USA
+pewin.seel.windoff,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,1.0,USA
+pesol.seel.spv,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,1.0,USA
+pesol.seel.csp,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,0.5,USA
+pesol.seel.csp,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,0.5,USA
+pesol.sehe.solhe,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule,1.0,USA
+peur.seel.tnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,USA
+peur.seel.fnrs,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,1.0,USA
+seel.seh2.elh2,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,0.8,USA
+seel.seh2.elh2,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,0.1,USA
+seel.seh2.elh2,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,0.1,USA
+seh2.seel.h2turb,"electricity production, from hydrogen-fired one gigawatt gas turbine","electricity, high voltage",kilowatt hour,1.0,USA
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat","methane, from electrochemical methanation",kilogram,0.5,USA
+seh2.segasyn.h22ch4,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat","methane, from electrochemical methanation",kilogram,0.5,USA
+seh2.seliqsyn.MeOH,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","diesel, synthetic",kilogram,0.5,USA
+seh2.seliqsyn.MeOH,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,0.5,USA
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,CAZ
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,CHA
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,EUR
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,IND
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,JPN
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,LAM
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,MEA
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,NEU
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,OAS
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,REF
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,SSA
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,1.0,USA
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.5162037037037,CAZ
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,0.038201266099105,CHA
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.55173895952834,EUR
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,0.9,IND
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,0.9,JPN
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,0.9,LAM
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,0.9,MEA
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,2.07816230090728,NEU
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,3.56909430438842,OAS
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,3.53171594642406,REF
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,0.9,SSA
+pebiolc.seel.biochp,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,1.06276874538839,USA
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.5,CAZ
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.6,CHA
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.5,EUR
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.5,IND
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.5,JPN
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.5,LAM
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.5,MEA
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.5,NEU
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.5,OAS
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.5,REF
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.5,SSA
+pecoal.seel.coalchp,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,0.5,USA
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.45,CAZ
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.367494502593654,CHA
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.385898255757327,EUR
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.45,IND
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.45,JPN
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.45,LAM
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.45,MEA
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.3436128436128435,NEU
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.52230865912019,OAS
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.7153368224381,REF
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.45,SSA
+pecoal.seel.coalchp,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,0.17563485598612,USA
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.5,CAZ
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.4,CHA
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.5,EUR
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.5,IND
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.5,JPN
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.5,LAM
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.5,MEA
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.5,NEU
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.5,OAS
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.5,REF
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.5,SSA
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,0.5,USA
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.45,CAZ
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.244996335062436,CHA
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.385898255757327,EUR
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.45,IND
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.45,JPN
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.45,LAM
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.45,MEA
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.3436128436128435,NEU
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.52230865912019,OAS
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.7153368224381,REF
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.45,SSA
+pecoal.seel.coalchp,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,0.17563485598612,USA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,CAZ
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,CHA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,EUR
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,IND
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,JPN
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,LAM
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,MEA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,NEU
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,OAS
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,REF
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,SSA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,0.1,USA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.0625695775694797,CAZ
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.245842371655821,CHA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.0987087799953343,EUR
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.09000000000000001,IND
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.09000000000000001,JPN
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.09000000000000001,LAM
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.09000000000000001,MEA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.161985115281055,NEU
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.085937764387164,OAS
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.11892508561023502,REF
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.09000000000000001,SSA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,0.0323536547365618,USA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,CAZ
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,CHA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,EUR
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,IND
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,JPN
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,LAM
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,MEA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,NEU
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,OAS
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,REF
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,SSA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,0.9,USA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,0.5631261981253173,CAZ
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,2.212581344902389,CHA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,0.8883790199580087,EUR
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,0.81,IND
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,0.81,JPN
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,0.81,LAM
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,0.81,MEA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,1.457866037529495,NEU
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,0.773439879484476,OAS
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,1.070325770492115,REF
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,0.81,SSA
+pegas.seel.gaschp,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,0.2911828926290562,USA
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.4,CAZ
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.4,CHA
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.3,EUR
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.5,JPN
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.5,LAM
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.3,NEU
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.3,OAS
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.9,USA
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.3,CAZ
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.4,CHA
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.7,EUR
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.3,JPN
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.7,NEU
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,1.0,REF
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.1,USA
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.5,IND
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.5,LAM
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.5,MEA
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.7,OAS
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.3,SSA
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from grain sorghum, energy allocation","ethanol, from grain sorghum",kilogram,0.3,CAZ
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from grain sorghum, energy allocation","ethanol, from grain sorghum",kilogram,0.2,CHA
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from grain sorghum, energy allocation","ethanol, from grain sorghum",kilogram,0.5,IND
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from grain sorghum, energy allocation","ethanol, from grain sorghum",kilogram,0.2,JPN
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from grain sorghum, energy allocation","ethanol, from grain sorghum",kilogram,0.5,MEA
+pebios.seliqbio.bioeths,"ethanol production, via fermentation, from grain sorghum, energy allocation","ethanol, from grain sorghum",kilogram,0.7,SSA
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0,IND
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0,LAM
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0,MEA
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0,OAS
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0,SSA
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0,CAZ
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0,CHA
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0,EUR
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0,JPN
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0,NEU
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0,REF
+pebioil.seliqbio.biodiesel,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0,USA
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.5,CAZ
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.5,CHA
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.5,EUR
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.6,JPN
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.6,NEU
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.8,REF
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.2,USA
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.5,CAZ
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.5,CHA
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.4,EUR
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.4,JPN
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.4,NEU
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.2,REF
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.5,USA
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.1,EUR
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.3,IND
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.3,LAM
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.2,MEA
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.2,OAS
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.1,SSA
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.7,IND
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.7,LAM
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.8,MEA
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.8,OAS
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.9,SSA
+pebiolc.seliqbio.bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.3,USA
