@@ -1,0 +1,23 @@
+all_enty;emi_sectors;dataset name;dataset reference product;dataset unit;share
+fesos;indst;hard coal, burned in hard coal industrial furnace 1-10MW;heat;megajoule;1.0
+fesos;build;wood pellet, burned in residential stove 9kW;heat;megajoule;1.0
+fehos;indst;light fuel oil, burned in industrial furnace 1MW;heat;megajoule;1.0
+fehos;build;light fuel oil, burned in residential boiler 10kW;heat;megajoule;1.0
+fegas;indst;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;1.0
+fegas;CDR;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;1.0
+fegas;build;heat production, natural gas, at boiler modulating <100kW;heat, central or small-scale, natural gas;megajoule;1.0
+fegat;trans;compressed gas, burned in passenger car;heat;megajoule;1.0
+feh2s;indst;hydrogen, burned in gas turbine 1GW;heat;megajoule;1.0
+feh2s;CDR;hydrogen, burned in gas turbine 1GW;heat;megajoule;1.0
+feh2s;build;hydrogen, burned in residential boiler;heat;megajoule;1.0
+feh2t;trans;hydrogen, converted in 1kWe fuel cell;heat;megajoule;1.0
+fehes;indst;market for heat, district or industrial, natural gas;heat, district or industrial, natural gas;megajoule;1.0
+fehes;CDR;market for heat, district or industrial, natural gas;heat, district or industrial, natural gas;megajoule;1.0
+fehes;build;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;1.0
+feels;indst;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;1.0
+feels;CDR;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;1.0
+feels;build;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;1.0
+feelt;trans;electricity, used in passenger car;electricity, low voltage;kilowatt hour;1.0
+fepet;trans;petrol, burned in passenger car;heat;megajoule;1.0
+fedie;trans;diesel blend, burned in heavy-duty vehicle;heat;megajoule;1.0
+fedie;CDR;diesel, burned in diesel-electric generating set, 10MW;diesel, burned in diesel-electric generating set, 10MW;megajoule;1.0

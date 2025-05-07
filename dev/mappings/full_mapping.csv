@@ -1,0 +1,274 @@
+sector;REMIND name;dataset name;dataset reference product;dataset unit;share
+pe2se production;pegas.seel.ngcc;electricity production, natural gas, combined cycle power plant;electricity, high voltage;kilowatt hour;1.0
+pe2se production;pegas.seel.ngccc;electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;1.0
+pe2se production;pegas.seel.ngt;electricity production, natural gas, conventional power plant;electricity, high voltage;kilowatt hour;1.0
+pe2se production;pegas.seel.gaschp;heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical;electricity, high voltage;kilowatt hour;regional
+pe2se production;pegas.seel.gaschp;heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical;heat, district or industrial, natural gas;megajoule;regional
+pe2se production;pegas.seel.gaschp;heat and power co-generation, natural gas, conventional power plant, 100MW electrical;electricity, high voltage;kilowatt hour;regional
+pe2se production;pegas.seel.gaschp;heat and power co-generation, natural gas, conventional power plant, 100MW electrical;heat, district or industrial, natural gas;megajoule;regional
+pe2se production;pegas.segafos.gastr;petroleum and gas production, onshore;natural gas, high pressure;cubic meter;regional
+pe2se production;pegas.segafos.gastr;petroleum and gas production, offshore;natural gas, high pressure;cubic meter;regional
+pe2se production;pegas.seh2.gash2;hydrogen production, steam methane reforming;hydrogen, gaseous, low pressure;kilogram;1.0
+pe2se production;pegas.seh2.gash2c;hydrogen production, steam methane reforming, with CCS;hydrogen, gaseous, low pressure;kilogram;1.0
+pe2se production;pegas.sehe.gashp;heat and power co-generation, natural gas, 500kW electrical, lean burn;heat, district or industrial, natural gas;megajoule;1.0
+pe2se production;pegas.seliqfos.gasftrec;diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation;diesel, synthetic;kilogram;0.6
+pe2se production;pegas.seliqfos.gasftrec;kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation;kerosene, synthetic;kilogram;0.4
+pe2se production;pegas.seliqfos.gasftcrec;diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage;diesel, synthetic;kilogram;0.6
+pe2se production;pegas.seliqfos.gasftcrec;kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage;kerosene, synthetic;kilogram;0.4
+pe2se production;pecoal.seel.igcc;electricity production, at lignite-fired IGCC power plant;electricity, high voltage;kilowatt hour;0.5
+pe2se production;pecoal.seel.igcc;electricity production, at hard coal-fired IGCC power plant;electricity, high voltage;kilowatt hour;0.5
+pe2se production;pecoal.seel.igccc;electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;0.5
+pe2se production;pecoal.seel.igccc;electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;0.5
+pe2se production;pecoal.seel.pc;electricity production, lignite;electricity, high voltage;kilowatt hour;0.5
+pe2se production;pecoal.seel.pc;electricity production, hard coal;electricity, high voltage;kilowatt hour;0.5
+pe2se production;pecoal.seel.coalchp;heat and power co-generation, lignite;electricity, high voltage;kilowatt hour;regional
+pe2se production;pecoal.seel.coalchp;heat and power co-generation, lignite;heat, district or industrial, other than natural gas;megajoule;regional
+pe2se production;pecoal.seel.coalchp;heat and power co-generation, hard coal;electricity, high voltage;kilowatt hour;regional
+pe2se production;pecoal.seel.coalchp;heat and power co-generation, hard coal;heat, district or industrial, other than natural gas;megajoule;regional
+pe2se production;pecoal.sesofos.coaltr;coke production;coke;megajoule;0.4
+pe2se production;pecoal.sesofos.coaltr;lignite briquettes production;lignite briquettes;megajoule;0.3
+pe2se production;pecoal.sesofos.coaltr;hard coal briquettes production;hard coal briquettes;megajoule;0.3
+pe2se production;pecoal.segafos.coalgas;syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification;syngas, RWGS, Production;kilogram;1.0
+pe2se production;pecoal.seh2.coalh2;hydrogen production, coal gasification;hydrogen, gaseous, low pressure;kilogram;1.0
+pe2se production;pecoal.seh2.coalh2c;hydrogen production, coal gasification, with CCS;hydrogen, gaseous, low pressure;kilogram;1.0
+pe2se production;pecoal.sehe.coalhp;heat production, at hard coal industrial furnace 1-10MW;heat, district or industrial, other than natural gas;megajoule;1.0
+pe2se production;peoil.seliqfos.refliq;diesel production, petroleum refinery operation;diesel;kilogram;0.34
+pe2se production;peoil.seliqfos.refliq;kerosene production, petroleum refinery operation;kerosene;kilogram;0.1
+pe2se production;peoil.seliqfos.refliq;petrol production, unleaded, petroleum refinery operation;petrol, unleaded;kilogram;0.56
+pe2se production;pecoal.seliqfos.coalftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;diesel, synthetic;kilogram;0.5
+pe2se production;pecoal.seliqfos.coalftrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;kerosene, synthetic;kilogram;0.5
+pe2se production;pecoal.seliqfos.coalftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;diesel, synthetic;kilogram;0.5
+pe2se production;pecoal.seliqfos.coalftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;0.5
+pe2se production;pebiolc.seliqbio.bioftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation;diesel, synthetic;kilogram;0.5
+pe2se production;pebiolc.seliqbio.bioftrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation;kerosene, synthetic;kilogram;0.5
+pe2se production;pebiolc.seliqbio.bioftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation;diesel, synthetic;kilogram;0.5
+pe2se production;pebiolc.seliqbio.bioftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;0.5
+pe2se production;pebioil.seliqbio.biodiesel;biodiesel production, via transesterification, from palm oil, energy allocation;biodiesel, from palm oil;kilogram;regional
+pe2se production;pebioil.seliqbio.biodiesel;biodiesel production, via transesterification, from rapeseed oil, energy allocation;biodiesel, from rapeseed oil;kilogram;regional
+pe2se production;pebios.seliqbio.bioeths;ethanol production, via fermentation, from corn, energy allocation;ethanol, from corn;kilogram;regional
+pe2se production;pebios.seliqbio.bioeths;ethanol production, via fermentation, from sugarbeet, energy allocation;ethanol, from sugarbeet;kilogram;regional
+pe2se production;pebios.seliqbio.bioeths;ethanol production, via fermentation, from sugarcane, energy allocation;ethanol, from sugarcane;kilogram;regional
+pe2se production;pebios.seliqbio.bioeths;ethanol production, via fermentation, from grain sorghum, energy allocation;ethanol, from grain sorghum;kilogram;regional
+pe2se production;pebiolc.seliqbio.bioethl;ethanol production, via fermentation, from poplar, energy allocation;ethanol, from poplar;kilogram;regional
+pe2se production;pebiolc.seliqbio.bioethl;ethanol production, via fermentation, from switchgrass, energy allocation;ethanol, from switchgrass;kilogram;regional
+pe2se production;pebiolc.seliqbio.bioethl;ethanol production, via fermentation, from eucalyptus;ethanol, from eucalyptus;kilogram;regional
+pe2se production;pebiolc.seliqbio.bioethl;ethanol production, via fermentation, from miscanthus, energy allocation;ethanol, from miscanthus;kilogram;regional
+pe2se production;peoil.seel.dot;heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction;electricity, high voltage;kilowatt hour;1.0
+pe2se production;pebiolc.seel.biochp;heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014;electricity, high voltage;kilowatt hour;regional
+pe2se production;pebiolc.seel.biochp;heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014;heat, district or industrial, other than natural gas;megajoule;regional
+pe2se production;pebiolc.seel.bioigcc;electricity production, at biomass-fired IGCC power plant;electricity, high voltage;kilowatt hour;1.0
+pe2se production;pebiolc.seel.bioigccc;electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;1.0
+pe2se production;pebiolc.seh2.bioh2;hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant;hydrogen, gaseous, 25 bar;kilogram;1.0
+pe2se production;pebiolc.seh2.bioh2c;hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant;hydrogen, gaseous, 25 bar;kilogram;1.0
+pe2se production;pebiolc.sehe.biohp;heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014;heat, district or industrial, other than natural gas;megajoule;1.0
+pe2se production;pebiolc.sesobio.biotr;wood chips production, hardwood, at sawmill;wood chips, wet, measured as dry mass;kilogram;1.0
+pe2se production;pebiolc.sesobio.biotrmod;wood pellet production;wood pellet, measured as dry mass;kilogram;1.0
+pe2se production;pebiolc.segabio.biogas;biomethane production, from biogas upgrading, using amine scrubbing;biomethane, from biogas upgrading, using amine scrubbing;kilogram;1.0
+pe2se production;pebiolc.segabio.biogasc;biomethane production, from biogas upgrading, using amine scrubbing;biomethane, from biogas upgrading, using amine scrubbing;kilogram;1.0
+pe2se production;pegeo.seel.geohdr;electricity production, deep geothermal;electricity, high voltage;kilowatt hour;1.0
+pe2se production;pegeo.sehe.geohe;heat production, deep geothermal;heat, deep geothermal;megajoule;1.0
+pe2se production;pehyd.seel.hydro;electricity production, hydro, reservoir, non-alpine region;electricity, high voltage;kilowatt hour;1.0
+pe2se production;pewin.seel.wind;electricity production, wind, <1MW turbine, onshore;electricity, high voltage;kilowatt hour;0.2
+pe2se production;pewin.seel.wind;electricity production, wind, 1-3MW turbine, onshore;electricity, high voltage;kilowatt hour;0.6
+pe2se production;pewin.seel.wind;electricity production, wind, >3MW turbine, onshore;electricity, high voltage;kilowatt hour;0.2
+pe2se production;pewin.seel.windoff;electricity production, wind, 1-3MW turbine, offshore;electricity, high voltage;kilowatt hour;1.0
+pe2se production;pesol.seel.spv;electricity production, photovoltaic, commercial;electricity, low voltage;kilowatt hour;1.0
+pe2se production;pesol.seel.csp;electricity production, solar tower power plant, 20 MW;electricity, high voltage;kilowatt hour;0.5
+pe2se production;pesol.seel.csp;electricity production, solar thermal parabolic trough, 50 MW;electricity, high voltage;kilowatt hour;0.5
+pe2se production;pesol.sehe.solhe;operation, solar collector system, Cu flat plate collector, one-family house, for combined system;heat, central or small-scale, other than natural gas;megajoule;1.0
+pe2se production;peur.seel.tnrs;electricity production, nuclear, pressure water reactor;electricity, high voltage;kilowatt hour;1.0
+pe2se production;peur.seel.fnrs;electricity production, nuclear, pressure water reactor;electricity, high voltage;kilowatt hour;1.0
+se2se production;seel.seh2.elh2;hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity;hydrogen, gaseous, 30 bar;kilogram;0.8
+se2se production;seel.seh2.elh2;hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity;hydrogen, gaseous, 20 bar;kilogram;0.1
+se2se production;seel.seh2.elh2;hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity;hydrogen, gaseous, 1 bar;kilogram;0.1
+se2se production;seh2.seel.h2turb;electricity production, from hydrogen-fired one gigawatt gas turbine;electricity, high voltage;kilowatt hour;1.0
+se2se production;seh2.segasyn.h22ch4;methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat;methane, from electrochemical methanation;kilogram;0.5
+se2se production;seh2.segasyn.h22ch4;methane, from electrochemical methanation, with carbon from atmosphere, using waste heat;methane, from electrochemical methanation;kilogram;0.5
+se2se production;seh2.seliqsyn.MeOH;diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation;diesel, synthetic;kilogram;0.5
+se2se production;seh2.seliqsyn.MeOH;kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation;kerosene, synthetic;kilogram;0.5
+FE transport;International Aviation - Liquids;transport, freight, aircraft, dedicated freight, long haul;transport, freight, aircraft, long haul;ton kilometer;1.0
+FE transport;Domestic Aviation - Liquids;transport, passenger aircraft, short haul;transport, passenger aircraft, short haul;person kilometer;1.0
+FE transport;Domestic Aviation - Hydrogen;transport, passenger aircraft, short haul;transport, passenger aircraft, short haul;person kilometer;1.0
+FE transport;Motorcycle (50-250cc) - BEV;transport, passenger, motor scooter;transport, passenger, motor scooter;person kilometer;1.0
+FE transport;Motorcycle (50-250cc) - Liquids;transport, passenger, motor scooter;transport, passenger, motor scooter;person kilometer;1.0
+FE transport;Moped - BEV;transport, passenger, motor scooter;transport, passenger, motor scooter;person kilometer;1.0
+FE transport;Moped - Liquids;transport, passenger, motor scooter;transport, passenger, motor scooter;person kilometer;1.0
+FE transport;Motorcycle (>250cc) - BEV;transport, passenger, motor scooter;transport, passenger, motor scooter;person kilometer;1.0
+FE transport;Motorcycle (>250cc) - Liquids;transport, passenger, motor scooter;transport, passenger, motor scooter;person kilometer;1.0
+FE transport;Compact Car - BEV;transport, passenger car, battery electric, Small;transport, passenger car;kilometer;1.0
+FE transport;Compact Car - FCEV;transport, passenger car, fuel cell electric, Small;transport, passenger car;kilometer;1.0
+FE transport;Compact Car - Liquids;transport, passenger car, gasoline, Small, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Compact Car - Gases;transport, passenger car, compressed gas, Small, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Mini Car - BEV;transport, passenger car, battery electric, Mini;transport, passenger car;kilometer;1.0
+FE transport;Mini Car - FCEV;transport, passenger car, fuel cell electric, Mini;transport, passenger car;kilometer;1.0
+FE transport;Mini Car - Liquids;transport, passenger car, gasoline, Mini, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Mini Car - Gases;transport, passenger car, compressed gas, Mini, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Subcompact Car - BEV;transport, passenger car, battery electric, Small;transport, passenger car;kilometer;1.0
+FE transport;Subcompact Car - FCEV;transport, passenger car, fuel cell electric, Small;transport, passenger car;kilometer;1.0
+FE transport;Subcompact Car - Liquids;transport, passenger car, gasoline, Small, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Subcompact Car - Gases;transport, passenger car, compressed gas, Small, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Large Car and SUV - BEV;transport, passenger car, battery electric, Medium SUV;transport, passenger car;kilometer;1.0
+FE transport;Large Car and SUV - FCEV;transport, passenger car, fuel cell electric, Medium SUV;transport, passenger car;kilometer;1.0
+FE transport;Large Car and SUV - Liquids;transport, passenger car, gasoline, Medium SUV, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Large Car and SUV - Gases;transport, passenger car, compressed gas, Medium SUV, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Large Car - BEV;transport, passenger car, battery electric, Large;transport, passenger car;kilometer;1.0
+FE transport;Large Car - FCEV;transport, passenger car, fuel cell electric, Large;transport, passenger car;kilometer;1.0
+FE transport;Large Car - Liquids;transport, passenger car, gasoline, Large, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Large Car - Gases;transport, passenger car, compressed gas, Large, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Midsize Car - BEV;transport, passenger car, battery electric, Medium;transport, passenger car;kilometer;1.0
+FE transport;Midsize Car - FCEV;transport, passenger car, fuel cell electric, Medium;transport, passenger car;kilometer;1.0
+FE transport;Midsize Car - Liquids;transport, passenger car, gasoline, Medium, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Midsize Car - Gases;transport, passenger car, compressed gas, Medium, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Van - BEV;transport, passenger car, battery electric, Van;transport, passenger car;kilometer;1.0
+FE transport;Van - FCEV;transport, passenger car, fuel cell electric, Van;transport, passenger car;kilometer;1.0
+FE transport;Van - Liquids;transport, passenger car, gasoline, Van, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Van - Gases;transport, passenger car, compressed gas, Van, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Bus - Liquids;transport, passenger bus, diesel, 13m single deck urban bus, EURO-VI;transport, passenger bus;person kilometer;1.0
+FE transport;Bus - Gases;transport, passenger bus, compressed gas, 13m single deck urban bus, EURO-VI;transport, passenger bus;person kilometer;1.0
+FE transport;HSR - Electric;transport, passenger train, high-speed;transport, passenger train;person kilometer;1.0
+FE transport;Passenger Rail - Electric;transport, passenger train;transport, passenger train;person kilometer;1.0
+FE transport;Passenger Rail - Liquids;transport, passenger train;transport, passenger train;person kilometer;1.0
+FE transport;Walk - Walk_tmp_technology;;;;1.0
+FE transport;Cycle - Cycle_tmp_technology;;;;1.0
+FE transport;Compact Car - Hybrid electric;transport, passenger car, plugin gasoline hybrid, Small, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Mini Car - Hybrid electric;transport, passenger car, plugin gasoline hybrid, Mini, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Subcompact Car - Hybrid electric;transport, passenger car, plugin gasoline hybrid, Small, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Large Car and SUV - Hybrid electric;transport, passenger car, plugin gasoline hybrid, Medium SUV, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Large Car - Hybrid electric;transport, passenger car, plugin gasoline hybrid, Large, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Midsize Car - Hybrid electric;transport, passenger car, plugin gasoline hybrid, Medium, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Van - Hybrid electric;transport, passenger car, plugin gasoline hybrid, Van, EURO-6;transport, passenger car, EURO-6;kilometer;1.0
+FE transport;Bus - BEV;transport, passenger bus, battery electric - overnight charging, 13m single deck urban bus;transport, passenger bus;person kilometer;1.0
+FE transport;Bus - FCEV;transport, passenger bus, fuel cell electric, 13m single deck urban bus;transport, passenger bus;person kilometer;1.0
+FE transport;Truck (0-3_5t) - Liquids;;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (0-3_5t) - Gases;transport, freight, lorry, compressed gas, 3.5t gross weight, EURO-VI, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (18t) - Liquids;transport, freight, lorry, diesel, 18t gross weight, EURO-VI, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (18t) - Gases;transport, freight, lorry, compressed gas, 18t gross weight, EURO-VI, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (26t) - Liquids;transport, freight, lorry, diesel, 26t gross weight, EURO-VI, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (26t) - Gases;transport, freight, lorry, compressed gas, 26t gross weight, EURO-VI, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (7_5t) - Liquids;transport, freight, lorry, diesel, 7.5t gross weight, EURO-VI, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (7_5t) - Gases;transport, freight, lorry, compressed gas, 7.5t gross weight, EURO-VI, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (40t) - Liquids;transport, freight, lorry, diesel, 40t gross weight, EURO-VI, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (40t) - Gases;transport, freight, lorry, compressed gas, 40t gross weight, EURO-VI, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Domestic Ship - Liquids;transport, freight, sea, ferry;transport, freight, sea, ferry;ton kilometer;1.0
+FE transport;Freight Rail - Electric;transport, freight train, electric;transport, freight train;ton kilometer;1.0
+FE transport;Freight Rail - Liquids;transport, freight train, diesel;transport, freight train;ton kilometer;1.0
+FE transport;Truck (0-3_5t) - BEV;transport, freight, lorry, battery electric, 3.5t gross weight, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (0-3_5t) - FCEV;transport, freight, lorry, fuel cell electric, 3.5t gross weight, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (18t) - BEV;transport, freight, lorry, battery electric, 18t gross weight, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (18t) - FCEV;transport, freight, lorry, fuel cell electric, 18t gross weight, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (26t) - BEV;transport, freight, lorry, battery electric, 26t gross weight, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (26t) - FCEV;transport, freight, lorry, fuel cell electric, 26t gross weight, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (7_5t) - BEV;transport, freight, lorry, battery electric, 7.5t gross weight, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (7_5t) - FCEV;transport, freight, lorry, fuel cell electric, 7.5t gross weight, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (40t) - BEV;transport, freight, lorry, battery electric, 40t gross weight, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;Truck (40t) - FCEV;transport, freight, lorry, fuel cell electric, 40t gross weight, long haul;transport, freight, lorry;ton kilometer;1.0
+FE transport;International Ship - Liquids;transport, freight, sea, container ship;transport, freight, sea, container ship;ton kilometer;1.0
+PE extraction;pecoal;hard coal mine operation and hard coal preparation;hard coal;kilogram;regional
+PE extraction;pecoal;lignite mine operation;lignite;kilogram;regional
+PE extraction;pegas;petroleum and gas production, onshore;natural gas, high pressure;cubic meter;regional
+PE extraction;pegas;petroleum and gas production, offshore;natural gas, high pressure;cubic meter;regional
+PE extraction;peoil;petroleum and gas production, onshore;petroleum;kilogram;regional
+PE extraction;peoil;petroleum and gas production, offshore;petroleum;kilogram;regional
+PE extraction;pebiolc;hardwood forestry, beech, sustainable forest management;wood chips, wet, measured as dry mass;kilogram;regional
+PE extraction;pebiolc;hardwood forestry, birch, sustainable forest management;wood chips, wet, measured as dry mass;kilogram;regional
+PE extraction;pebiolc;hardwood forestry, oak, sustainable forest management;wood chips, wet, measured as dry mass;kilogram;regional
+PE extraction;pebiolc;softwood forestry, mixed species, sustainable forest management;wood chips, wet, measured as dry mass;kilogram;regional
+PE extraction;pebiolc;softwood forestry, pine, sustainable forest management;wood chips, wet, measured as dry mass;kilogram;regional
+PE extraction;pebiolc;softwood forestry, spruce, sustainable forest management;wood chips, wet, measured as dry mass;kilogram;regional
+PE extraction;pebiolc;farming and supply of miscanthus;miscanthus, harvested, at ethanol plant;kilogram;regional
+PE extraction;pebiolc;farming and supply of eucalyptus;eucalyptus, harvested, at ethanol plant;kilogram;regional
+PE extraction;pebiolc;farming and supply of poplar;poplar, harvested, at ethanol plant;kilogram;regional
+PE extraction;pebiolc;farming and supply of switchgrass;switchgrass, harvested, at ethanol plant;kilogram;regional
+PE extraction;pebioil;farming and supply of rapeseed;rapeseed cultivation;kilogram;regional
+PE extraction;pebioil;farming and supply of Fresh Fruit Bunches (FFBs) for palm oil;fresh Fruit Bunches (FFBs) production;kilogram;regional
+PE extraction;pebios;farming and supply of sugarbeet;sugar beet cultivation;kilogram;regional
+PE extraction;pebios;farming and supply of sugarcane;sugarcane, harvested, at ethanol plant;kilogram;regional
+PE extraction;pebios;farming and supply of corn;corn, harvested, at ethanol plant;kilogram;regional
+PE extraction;pebios;farming and supply of Grain Sorghum;grain sorghum, harvested, at ethanol plant;kilogram;regional
+PE extraction;peur;uranium mine operation, underground;uranium ore, as U;kilogram;regional
+PE extraction;peur;uranium mine operation, open cast;uranium ore, as U;kilogram;regional
+pe2se capacity addition;pegas.seel.ngcc;gas power plant construction, combined cycle, 400MW electrical;gas power plant, combined cycle, 400MW electrical;unit;1.0
+pe2se capacity addition;pegas.seel.ngccc;gas power plant construction, combined cycle, 400MW electrical;gas power plant, combined cycle, 400MW electrical;unit;1.0
+pe2se capacity addition;pegas.seel.ngt;gas power plant construction, 100MW electrical;gas power plant, 100MW electrical;unit;1.0
+pe2se capacity addition;pegas.seel.gaschp;gas power plant construction, combined cycle, 400MW electrical;gas power plant, combined cycle, 400MW electrical;unit;regional
+pe2se capacity addition;pegas.seel.gaschp;gas power plant construction, 100MW electrical;gas power plant, 100MW electrical;unit;regional
+pe2se capacity addition;pegas.segafos.gastr;petroleum and gas production, onshore;natural gas, high pressure;cubic meter;regional
+pe2se capacity addition;pegas.segafos.gastr;petroleum and gas production, offshore;natural gas, high pressure;cubic meter;regional
+pe2se capacity addition;pegas.seh2.gash2;hydrogen production, steam methane reforming;hydrogen, gaseous, low pressure;kilogram;1.0
+pe2se capacity addition;pegas.seh2.gash2c;hydrogen production, steam methane reforming, with CCS;hydrogen, gaseous, low pressure;kilogram;1.0
+pe2se capacity addition;pegas.sehe.gashp;heat and power co-generation, natural gas, 500kW electrical, lean burn;heat, district or industrial, natural gas;megajoule;1.0
+pe2se capacity addition;pegas.seliqfos.gasftrec;diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation;diesel, synthetic;kilogram;0.6
+pe2se capacity addition;pegas.seliqfos.gasftrec;kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation;kerosene, synthetic;kilogram;0.4
+pe2se capacity addition;pegas.seliqfos.gasftcrec;diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage;diesel, synthetic;kilogram;0.6
+pe2se capacity addition;pegas.seliqfos.gasftcrec;kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage;kerosene, synthetic;kilogram;0.4
+pe2se capacity addition;pecoal.seel.igcc;electricity production, at lignite-fired IGCC power plant;electricity, high voltage;kilowatt hour;0.5
+pe2se capacity addition;pecoal.seel.igcc;electricity production, at hard coal-fired IGCC power plant;electricity, high voltage;kilowatt hour;0.5
+pe2se capacity addition;pecoal.seel.igccc;electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;0.5
+pe2se capacity addition;pecoal.seel.igccc;electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;0.5
+pe2se capacity addition;pecoal.seel.pc;electricity production, lignite;electricity, high voltage;kilowatt hour;0.5
+pe2se capacity addition;pecoal.seel.pc;electricity production, hard coal;electricity, high voltage;kilowatt hour;0.5
+pe2se capacity addition;pecoal.seel.coalchp;heat and power co-generation, lignite;electricity, high voltage;kilowatt hour;regional
+pe2se capacity addition;pecoal.seel.coalchp;heat and power co-generation, lignite;heat, district or industrial, other than natural gas;megajoule;regional
+pe2se capacity addition;pecoal.seel.coalchp;heat and power co-generation, hard coal;electricity, high voltage;kilowatt hour;regional
+pe2se capacity addition;pecoal.seel.coalchp;heat and power co-generation, hard coal;heat, district or industrial, other than natural gas;megajoule;regional
+pe2se capacity addition;pecoal.sesofos.coaltr;coke production;coke;megajoule;0.4
+pe2se capacity addition;pecoal.sesofos.coaltr;lignite briquettes production;lignite briquettes;megajoule;0.3
+pe2se capacity addition;pecoal.sesofos.coaltr;hard coal briquettes production;hard coal briquettes;megajoule;0.3
+pe2se capacity addition;pecoal.segafos.coalgas;syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification;syngas, RWGS, Production;kilogram;1.0
+pe2se capacity addition;pecoal.seh2.coalh2;hydrogen production, coal gasification;hydrogen, gaseous, low pressure;kilogram;1.0
+pe2se capacity addition;pecoal.seh2.coalh2c;hydrogen production, coal gasification, with CCS;hydrogen, gaseous, low pressure;kilogram;1.0
+pe2se capacity addition;pecoal.sehe.coalhp;heat production, at hard coal industrial furnace 1-10MW;heat, district or industrial, other than natural gas;megajoule;1.0
+pe2se capacity addition;peoil.seliqfos.refliq;diesel production, petroleum refinery operation;diesel;kilogram;0.34
+pe2se capacity addition;peoil.seliqfos.refliq;kerosene production, petroleum refinery operation;kerosene;kilogram;0.1
+pe2se capacity addition;peoil.seliqfos.refliq;petrol production, unleaded, petroleum refinery operation;petrol, unleaded;kilogram;0.56
+pe2se capacity addition;pecoal.seliqfos.coalftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;diesel, synthetic;kilogram;0.5
+pe2se capacity addition;pecoal.seliqfos.coalftrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;kerosene, synthetic;kilogram;0.5
+pe2se capacity addition;pecoal.seliqfos.coalftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;diesel, synthetic;kilogram;0.5
+pe2se capacity addition;pecoal.seliqfos.coalftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;0.5
+pe2se capacity addition;pebiolc.seliqbio.bioftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation;diesel, synthetic;kilogram;0.5
+pe2se capacity addition;pebiolc.seliqbio.bioftrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation;kerosene, synthetic;kilogram;0.5
+pe2se capacity addition;pebiolc.seliqbio.bioftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation;diesel, synthetic;kilogram;0.5
+pe2se capacity addition;pebiolc.seliqbio.bioftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;0.5
+pe2se capacity addition;pebioil.seliqbio.biodiesel;biodiesel production, via transesterification, from palm oil, energy allocation;biodiesel, from palm oil;kilogram;regional
+pe2se capacity addition;pebioil.seliqbio.biodiesel;biodiesel production, via transesterification, from rapeseed oil, energy allocation;biodiesel, from rapeseed oil;kilogram;regional
+pe2se capacity addition;pebios.seliqbio.bioeths;ethanol production, via fermentation, from corn, energy allocation;ethanol, from corn;kilogram;regional
+pe2se capacity addition;pebios.seliqbio.bioeths;ethanol production, via fermentation, from sugarbeet, energy allocation;ethanol, from sugarbeet;kilogram;regional
+pe2se capacity addition;pebios.seliqbio.bioeths;ethanol production, via fermentation, from sugarcane, energy allocation;ethanol, from sugarcane;kilogram;regional
+pe2se capacity addition;pebios.seliqbio.bioeths;ethanol production, via fermentation, from grain sorghum, energy allocation;ethanol, from grain sorghum;kilogram;regional
+pe2se capacity addition;pebiolc.seliqbio.bioethl;ethanol production, via fermentation, from poplar, energy allocation;ethanol, from poplar;kilogram;regional
+pe2se capacity addition;pebiolc.seliqbio.bioethl;ethanol production, via fermentation, from switchgrass, energy allocation;ethanol, from switchgrass;kilogram;regional
+pe2se capacity addition;pebiolc.seliqbio.bioethl;ethanol production, via fermentation, from eucalyptus;ethanol, from eucalyptus;kilogram;regional
+pe2se capacity addition;pebiolc.seliqbio.bioethl;ethanol production, via fermentation, from miscanthus, energy allocation;ethanol, from miscanthus;kilogram;regional
+pe2se capacity addition;peoil.seel.dot;heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction;electricity, high voltage;kilowatt hour;1.0
+pe2se capacity addition;pebiolc.seel.biochp;heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014;electricity, high voltage;kilowatt hour;regional
+pe2se capacity addition;pebiolc.seel.biochp;heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014;heat, district or industrial, other than natural gas;megajoule;regional
+pe2se capacity addition;pebiolc.seel.bioigcc;electricity production, at biomass-fired IGCC power plant;electricity, high voltage;kilowatt hour;1.0
+pe2se capacity addition;pebiolc.seel.bioigccc;electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;1.0
+pe2se capacity addition;pebiolc.seh2.bioh2;hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant;hydrogen, gaseous, 25 bar;kilogram;1.0
+pe2se capacity addition;pebiolc.seh2.bioh2c;hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant;hydrogen, gaseous, 25 bar;kilogram;1.0
+pe2se capacity addition;pebiolc.sehe.biohp;heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014;heat, district or industrial, other than natural gas;megajoule;1.0
+pe2se capacity addition;pebiolc.sesobio.biotr;wood chips production, hardwood, at sawmill;wood chips, wet, measured as dry mass;kilogram;1.0
+pe2se capacity addition;pebiolc.sesobio.biotrmod;wood pellet factory production;wood pellet factory;unit;1.0
+pe2se capacity addition;pebiolc.segabio.biogas;biomethane production, from biogas upgrading, using amine scrubbing;biomethane, from biogas upgrading, using amine scrubbing;kilogram;1.0
+pe2se capacity addition;pebiolc.segabio.biogasc;biomethane production, from biogas upgrading, using amine scrubbing;biomethane, from biogas upgrading, using amine scrubbing;kilogram;1.0
+pe2se capacity addition;pegeo.seel.geohdr;electricity production, deep geothermal;electricity, high voltage;kilowatt hour;1.0
+pe2se capacity addition;pegeo.sehe.geohe;heat production, deep geothermal;heat, deep geothermal;megajoule;1.0
+pe2se capacity addition;pehyd.seel.hydro;electricity production, hydro, reservoir, non-alpine region;electricity, high voltage;kilowatt hour;1.0
+pe2se capacity addition;pewin.seel.wind;electricity production, wind, <1MW turbine, onshore;electricity, high voltage;kilowatt hour;0.2
+pe2se capacity addition;pewin.seel.wind;electricity production, wind, 1-3MW turbine, onshore;electricity, high voltage;kilowatt hour;0.6
+pe2se capacity addition;pewin.seel.wind;electricity production, wind, >3MW turbine, onshore;electricity, high voltage;kilowatt hour;0.2
+pe2se capacity addition;pewin.seel.windoff;electricity production, wind, 1-3MW turbine, offshore;electricity, high voltage;kilowatt hour;1.0
+pe2se capacity addition;pesol.seel.spv;electricity production, photovoltaic, commercial;electricity, low voltage;kilowatt hour;1.0
+pe2se capacity addition;pesol.seel.csp;electricity production, solar tower power plant, 20 MW;electricity, high voltage;kilowatt hour;0.5
+pe2se capacity addition;pesol.seel.csp;electricity production, solar thermal parabolic trough, 50 MW;electricity, high voltage;kilowatt hour;0.5
+pe2se capacity addition;pesol.sehe.solhe;operation, solar collector system, Cu flat plate collector, one-family house, for combined system;heat, central or small-scale, other than natural gas;megajoule;1.0
+pe2se capacity addition;peur.seel.tnrs;electricity production, nuclear, pressure water reactor;electricity, high voltage;kilowatt hour;1.0
+pe2se capacity addition;peur.seel.fnrs;electricity production, nuclear, pressure water reactor;electricity, high voltage;kilowatt hour;1.0
+se2se capacity addition;seel.seh2.elh2;hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity;hydrogen, gaseous, 30 bar;kilogram;0.8
+se2se capacity addition;seel.seh2.elh2;hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity;hydrogen, gaseous, 20 bar;kilogram;0.1
+se2se capacity addition;seel.seh2.elh2;hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity;hydrogen, gaseous, 1 bar;kilogram;0.1
+se2se capacity addition;seh2.seel.h2turb;electricity production, from hydrogen-fired one gigawatt gas turbine;electricity, high voltage;kilowatt hour;1.0
+se2se capacity addition;seh2.segasyn.h22ch4;methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat;methane, from electrochemical methanation;kilogram;0.5
+se2se capacity addition;seh2.segasyn.h22ch4;methane, from electrochemical methanation, with carbon from atmosphere, using waste heat;methane, from electrochemical methanation;kilogram;0.5
+se2se capacity addition;seh2.seliqsyn.MeOH;diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation;diesel, synthetic;kilogram;0.5
+se2se capacity addition;seh2.seliqsyn.MeOH;kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation;kerosene, synthetic;kilogram;0.5
