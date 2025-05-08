@@ -1,4 +1,4 @@
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Dict
 from pathlib import Path
 import os
 
@@ -93,26 +93,26 @@ class Internalizer:
     def calculate_costs_new(
             self,
             regionalized_mapping: pd.DataFrame,
-            cost_perspective: str | float,
+            quantiles: np.ndarray,
             remove_double_counting: bool,
-            extra_activities: List[Tuple] = [],
+            remove_activities: pd.DataFrame,
             multiprocessing: bool = True
     ) -> None:
-        # check cost perspectives
-        if isinstance(cost_perspective, float):
-            if cost_perspective >= 1 or cost_perspective <= 0:
-                raise ValueError("Given number for cost perspective is not a "
-                "valid quantile (not between 0 and 1)!")
-        else:
-            if cost_perspective not in COST_PERSPECTIVES:
-                raise ValueError(f"Cost perspective must be one of {COST_PERSPECTIVES}.")
+        # # check cost perspectives
+        # if isinstance(cost_perspective, float):
+        #     if cost_perspective >= 1 or cost_perspective <= 0:
+        #         raise ValueError("Given number for cost perspective is not a "
+        #         "valid quantile (not between 0 and 1)!")
+        # else:
+        #     if cost_perspective not in COST_PERSPECTIVES:
+        #         raise ValueError(f"Cost perspective must be one of {COST_PERSPECTIVES}.")
             
         args = [
             (
                 regionalized_mapping,
-                cost_perspective,
+                quantiles,
                 remove_double_counting,
-                extra_activities,
+                remove_activities,
                 self.scenario,
                 year,
                 self.outdir,
