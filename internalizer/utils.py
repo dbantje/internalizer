@@ -101,3 +101,11 @@ def fill_characterization_factors_matrices(
     )
 
     return matrix
+
+def check_monetization_factors(
+        monetization: dict
+) -> None:
+    available_methods = get_lcia_method_names()
+    for k in monetization.keys():
+        if k not in available_methods:
+            raise ValueError(f"Method {k} not available!")

@@ -9,9 +9,9 @@ import numpy as np
 import xarray as xr
 import shutil
 
-from .plca import _run_premise_year, _calculate_costs_year, _calculate_costs_year_new
+from .plca import _run_premise_year, _calculate_costs_year
 from .regionalization import get_regionalized_mapping
-from .utils import convert_euros_to_dollar
+from .utils import convert_euros_to_dollar, check_monetization_factors
 
 EURO_REF_YEAR = 2022
 REMIND_USD_REF_YEAR = 2017
@@ -90,79 +90,63 @@ class Internalizer:
             for arg in args:
                 _run_premise_year(*arg)
 
-    def calculate_costs_new(
+    def calculate_costs(
             self,
-            regionalized_mapping: pd.DataFrame,
-            quantiles: np.ndarray,
-            remove_double_counting: bool,
-            remove_activities: pd.DataFrame,
+            monetization: float | str | dict,
             multiprocessing: bool = True
     ) -> None:
-        # # check cost perspectives
-        # if isinstance(cost_perspective, float):
-        #     if cost_perspective >= 1 or cost_perspective <= 0:
-        #         raise ValueError("Given number for cost perspective is not a "
-        #         "valid quantile (not between 0 and 1)!")
-        # else:
-        #     if cost_perspective not in COST_PERSPECTIVES:
-        #         raise ValueError(f"Cost perspective must be one of {COST_PERSPECTIVES}.")
-            
-        args = [
-            (
-                regionalized_mapping,
-                quantiles,
-                remove_double_counting,
-                remove_activities,
-                self.scenario,
-                year,
-                self.outdir,
-                self.model,
-            )
-            for year in self.years
-        ]
-
-        self.cost_results = {}
-        if multiprocessing:
-            with Pool(cpu_count(), maxtasksperchild=1000) as p:
-                results = p.starmap(_calculate_costs_year_new, args)
-
-                for y, r in zip(self.years, results):
-                    self.cost_results[y] = r
+        """
+        Calculate all costs.
+        """           
+        # check monetization
+        if isinstance(monetization, float):
+            if monetization >= 1 or monetization <= 0:
+                raise ValueError("Given number for cost perspective is not a "
+                "valid quantile (not between 0 and 1)!")
+        elif isinstance(monetization, str):
+            if monetization not in COST_PERSPECTIVES:
+                raise ValueError(f"Cost perspective must be one of {COST_PERSPECTIVES}.")
+        elif isinstance(monetization, dict):
+            check_monetization_factors(monetization)
         else:
-            for year, arg in zip(self.years, args):
-                self.cost_results[year] = _calculate_costs_year_new(*arg)
+            raise ValueError(f"Argument 'monetization' must be a float, string, or dictionary!")
 
-    def calculate_costs(
-        self,
-        mapping: pd.DataFrame,
-        quantiles: np.ndarray,
-        multiprocessing: bool = True
-    ) -> None:
-        # regionalize mapping
-        all_shares = get_regionalized_mapping(mapping, self.rundir)
-
-        args = [
-            (
-                all_shares,
-                self.scenario,
-                year,
-                self.outdir,
-                self.model,
-                quantiles
-            )
-            for year in self.years
-        ]
+        # obtain mappings and removal lists
+        setup = prepare_setup()
+        self.levels = setup.keys()
+        args = []
+        yearlist = []
+        lvllist = []
+        for lvl in self.levels:
+            mapping = setup[lvl]["mapping"]
+            rlist = setup[lvl]["removal list"]
+            for year in self.years:
+                args.append(
+                    (
+                        mapping,
+                        monetization,
+                        rlist,
+                        self.scenario,
+                        year,
+                        self.outdir,
+                        self.model,
+                    )   
+                )
+                yearlist.append(year)
+                lvllist.append(lvl)
 
         self.cost_results = {}
+        for year in self.years:
+            self.cost_results[year] = {}
         if multiprocessing:
             with Pool(cpu_count(), maxtasksperchild=1000) as p:
                 results = p.starmap(_calculate_costs_year, args)
 
-                for y, r in zip(self.years, results):
-                    self.cost_results[y] = r
+                for y, lvl, r in zip(yearlist, lvllist, results):
+                    self.cost_results[y][lvl] = r
         else:
-            for year, arg in zip(self.years, args):
-                self.cost_results[year] = _calculate_costs_year(*arg)
+            for y, lvl, arg in zip(yearlist, lvllist, args):
+                self.cost_results[y][lvl] = _calculate_costs_year(*arg)
 
     def export_costs(
             self,
