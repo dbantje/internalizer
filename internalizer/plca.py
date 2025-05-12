@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 import os
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 from .regionalization import regionalize_costs, combine_shares_and_costs
 from .utils import *
@@ -16,6 +16,47 @@ from .filesystem_constants import DATA_DIR
 FILEPATH_MONETIZATION_FACTORS = DATA_DIR / "mfs_monte_carlo_sample_euro2022.nc"
 FILEPATH_MONETIZATION_FACTORS_PERSPECTIVES = DATA_DIR / "mfs_perspectives_euro2022.nc"
 NCV_DICT = get_ncv_dict()
+
+def get_cfs_and_mfs(
+        monetization: float | str | dict,
+        lca: MultiLCA,
+        biosphere_inds: dict
+) -> Tuple[csr_matrix, xr.DataArray]:
+    methods = get_lcia_method_names()
+    if isinstance(monetization, float):
+        cfs = fill_characterization_factors_matrices(
+            methods=methods,
+            biosphere_matrix_dict=lca.dicts.biosphere,
+            biosphere_dict=biosphere_inds
+        )
+        mfs = xr.load_dataarray(FILEPATH_MONETIZATION_FACTORS)
+        return cfs, mfs 
+    elif isinstance(monetization, str):
+        cfs = fill_characterization_factors_matrices(
+            methods=methods,
+            biosphere_matrix_dict=lca.dicts.biosphere,
+            biosphere_dict=biosphere_inds
+        )
+        mfs = xr.load_dataarray(FILEPATH_MONETIZATION_FACTORS_PERSPECTIVES).sel(
+            {"perspective": monetization}
+        )
+        return cfs, mfs
+    else:
+        methods = list(monetization.keys())
+        cfs = fill_characterization_factors_matrices(
+            methods=methods,
+            biosphere_matrix_dict=lca.dicts.biosphere,
+            biosphere_dict=biosphere_inds
+        )
+        mfs = xr.DataArray(
+            np.diag(monetization.values()),
+            {
+                "LCIA method": methods,
+                "impact category": methods
+            }
+        )
+        return cfs, mfs
+    
 
 def get_monetized_results(
     lca: MultiLCA,
@@ -130,39 +171,10 @@ def _calculate_costs_year(
         lca.lci()
 
     # impact and cost calculation
-    methods = get_lcia_method_names()
     quantile = None
+    cfs, mfs = get_cfs_and_mfs(monetization, lca, biosphere_inds)
     if isinstance(monetization, float):
-        cfs = fill_characterization_factors_matrices(
-            methods=methods,
-            biosphere_matrix_dict=lca.dicts.biosphere,
-            biosphere_dict=biosphere_inds
-        )
-        mfs = xr.load_dataarray(FILEPATH_MONETIZATION_FACTORS) 
         quantile = monetization
-    elif isinstance(monetization, str):
-        cfs = fill_characterization_factors_matrices(
-            methods=methods,
-            biosphere_matrix_dict=lca.dicts.biosphere,
-            biosphere_dict=biosphere_inds
-        )
-        mfs = xr.load_dataarray(FILEPATH_MONETIZATION_FACTORS_PERSPECTIVES).sel(
-            {"perspective": monetization}
-        )
-    else:
-        methods = list(monetization.keys())
-        cfs = fill_characterization_factors_matrices(
-            methods=methods,
-            biosphere_matrix_dict=lca.dicts.biosphere,
-            biosphere_dict=biosphere_inds
-        )
-        mfs = xr.DataArray(
-            np.diag(monetization.values()),
-            {
-                "LCIA method": methods,
-                "impact category": methods
-            }
-        )
     costs = get_monetized_results(lca, selected_inds, cfs, mfs, quantile)
     costs.to_csv(Path(matrix_folder) / "costs.csv", index=False)
 
