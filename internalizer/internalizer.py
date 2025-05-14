@@ -11,7 +11,7 @@ import shutil
 
 from .plca import _run_premise_year, _calculate_costs_year
 from .regionalization import get_regionalized_mapping
-from .utils import convert_euros_to_dollar, check_monetization_factors
+from .utils import convert_euros_to_dollar, check_monetization_factors, get_linear_ramp_up, interpolate_and_weight_costs
 
 EURO_REF_YEAR = 2022
 REMIND_USD_REF_YEAR = 2017
@@ -91,9 +91,9 @@ class Internalizer:
                 _run_premise_year(*arg)
 
     def calculate_costs(
-            self,
-            monetization: float | str | dict,
-            multiprocessing: bool = True
+        self,
+        monetization: float | str | dict,
+        multiprocessing: bool = True
     ) -> None:
         """
         Calculate all costs.
@@ -136,72 +136,41 @@ class Internalizer:
                 lvllist.append(lvl)
 
         self.cost_results = {}
-        for year in self.years:
-            self.cost_results[year] = {}
+        for lvl in self.levels:
+            self.cost_results[lvl] = {}
         if multiprocessing:
             with Pool(cpu_count(), maxtasksperchild=1000) as p:
                 results = p.starmap(_calculate_costs_year, args)
 
-                for y, lvl, r in zip(yearlist, lvllist, results):
-                    self.cost_results[y][lvl] = r
+                for lvl, y, r in zip(lvllist, yearlist, results):
+                    self.cost_results[lvl][y] = r
         else:
-            for y, lvl, arg in zip(yearlist, lvllist, args):
-                self.cost_results[y][lvl] = _calculate_costs_year(*arg)
-
-    def export_costs(
-            self,
-            ramp_up_startyear: Optional[int] = None,
-    ) -> xr.DataArray:
-        years_extended = MODEL_YEARS[self.model]
-
-        data = self.cost_results.copy()
-
-        years_in_data = np.array(list(data.keys()))
-        first_year = years_extended[0]
-        years_before = [y for y in years_extended if y < years_in_data[0]]
-        years_after = [y for y in years_extended if y > years_in_data[-1]]
-        last_year = years_extended[-1]
-
-        last_array = data[max(years_in_data)]
-        zero_array = xr.zeros_like(last_array)
-        
-        if len(years_before) > 0:
-            # add some years before
-            data[first_year] = zero_array
-            closest_year_before = max(years_before)
-            if ramp_up_startyear is None:
-                if first_year < closest_year_before:
-                    data[closest_year_before] = zero_array
-            else:
-                ramp_start = min(closest_year_before, ramp_up_startyear)
-                if first_year < ramp_start: 
-                    data[ramp_start] = zero_array
-
-        if len(years_after) > 0:
-            # add last year
-            data[last_year] = last_array
-
-        data = dict(sorted(data.items()))
-
-        return xr.concat(
-            list(data.values()),
-            pd.Index(list(data.keys()), name="year")
-        ).interp(year=years_extended)
+            for lvl, y, arg in zip(lvllist, yearlist, args):
+                self.cost_results[lvl][y] = _calculate_costs_year(*arg)
     
-    def write_remind_input_file(
-            self,
-            ramp_up_startyear,
-            excluded_impacts: List[str] = ["fossil resources", "climate change"],
-            q: float | List[float] = 0.5,
+    def write_remind_input_files(
+        self,
+        ramp_up_startyear: int,
+        ramp_up_endyear: int,
+        impact_categories: List[str]
     ) -> None:
-        x = self.export_costs(ramp_up_startyear=ramp_up_startyear)
-        x = x.sel({"quantile": q})
+        ramp_up = get_linear_ramp_up(MODEL_YEARS["remind"], ramp_up_startyear, ramp_up_endyear)
 
-        # convert to USD / GJ
-        x =  x * convert_euros_to_dollar(EURO_REF_YEAR, REMIND_USD_REF_YEAR) * 1000
+        for lvl in self.levels:
+            x = interpolate_and_weight_costs(
+                    self.cost_results[lvl],
+                    MODEL_YEARS["remind"],
+                    ramp_up
+                )
+            
+            # convert to USD / GJ
+            x =  x * convert_euros_to_dollar(EURO_REF_YEAR, REMIND_USD_REF_YEAR) * 1000
+                
+            total = x.sel({"impact category": impact_categories}).sum(dim="impact category")
+            df = total.to_dataframe().reset_index()
+            df[["year", "region", "REMIND index", "cost"]].to_csv(
+                self.outdir + f"/lca_costs_{lvl}.csv", index=False, header=False)
 
-        total = x.drop_sel({"impact category": excluded_impacts}).sum(dim="impact category")
-        df = total.to_dataframe().reset_index()
-        df["all_te"] = df["REMIND tech"].apply(lambda x: x.split(".")[-1])
-        df["quantile"] = df["quantile"].apply(lambda x: str(int(100 * x)))
-        df[["year", "region", "all_te", "quantile", "cost"]].to_csv(self.outdir + "/inputfile.cs4r", index=False, header=False)
+        
+
+        

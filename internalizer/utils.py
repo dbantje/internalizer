@@ -3,6 +3,7 @@ from scipy import sparse
 from scipy.sparse import csr_matrix
 import numpy as np
 import pandas as pd
+import xarray as xr
 
 from .filesystem_constants import DATA_DIR
 
@@ -109,3 +110,49 @@ def check_monetization_factors(
     for k in monetization.keys():
         if k not in available_methods:
             raise ValueError(f"Method {k} not available!")
+        
+def interpolate_and_weight_costs(
+    costs: dict,
+    interpolation_years: list,
+    weighting_factors: xr.DataArray
+) -> xr.DataArray:
+    # add padding    
+    last_array = costs[max(costs.keys())]
+    first_array = costs[min(costs.keys())]
+    costs[interpolation_years[0]] = first_array
+    costs[interpolation_years[-1]] = last_array
+
+    # transform to DataArray
+    costs = xr.concat(
+                list(costs.values()),
+                pd.Index(list(costs.keys()), name="year")
+            )
+    
+    # interpolate
+    costs = costs.interp(year=interpolation_years)
+
+    # weight
+    return costs * weighting_factors
+
+def ramp(
+    x: list | np.ndarray,
+    a: float,
+    b: float
+) -> np.ndarray:
+    if isinstance(x, list):
+        x = np.array(x)
+
+    return np.where(x <  a, 0, np.where(x > b, 1, (x-a)/(b-a)))
+
+def get_linear_ramp_up(
+    interpolation_years: list,
+    start: int,
+    end: int
+) -> xr.DataArray:
+    
+    return xr.DataArray(
+        ramp(interpolation_years, start, end),
+        coords={
+            "year": interpolation_years
+        }
+    )
