@@ -3,15 +3,11 @@ from pathlib import Path
 import os
 
 from multiprocessing import Pool, cpu_count
-import bw2data as bd
-import pandas as pd
-import numpy as np
-import xarray as xr
 import shutil
 
 from .plca import _run_premise_year, _calculate_costs_year
-from .regionalization import get_regionalized_mapping
 from .utils import convert_euros_to_dollar, check_monetization_factors, get_linear_ramp_up, interpolate_and_weight_costs
+from .calculation_setup import prepare_setup
 
 EURO_REF_YEAR = 2022
 REMIND_USD_REF_YEAR = 2017
@@ -48,13 +44,15 @@ class Internalizer:
         model: str,
         pathway: str,
         ei_version: str,
-        bw_project: str
+        bw_project: str,
+        gdxpath = str,
+        outputfolder: str = "output"
     ):
         # get directory of data file and scenario name
         self.model = model
         rundir, filename = extract_folder_and_filename(filepath)
         self.rundir = rundir
-        self.outdir = "./output/" + extract_output_folder(filepath)
+        self.outdir = f"./{outputfolder}/" + extract_output_folder(filepath)
         namecheck = "_".join((model.lower(), pathway))
         if filename != namecheck:
             shutil.copy(filepath, rundir+f"/{namecheck}.mif")
@@ -65,6 +63,7 @@ class Internalizer:
 
         self.ei_version = ei_version 
         self.bw_project = bw_project
+        self.gdxpath = gdxpath
 
     def run_premise(
         self,
@@ -93,6 +92,8 @@ class Internalizer:
     def calculate_costs(
         self,
         monetization: float | str | dict,
+        activities_mapping: List[str | Path],
+        level_names: Optional[List[str]] = None,
         multiprocessing: bool = True
     ) -> None:
         """
@@ -112,7 +113,7 @@ class Internalizer:
             raise ValueError(f"Argument 'monetization' must be a float, string, or dictionary!")
 
         # obtain mappings and removal lists
-        setup = prepare_setup()
+        setup = prepare_setup(activities_mapping, self.gdxpath, level_names)
         self.levels = setup.keys()
         args = []
         yearlist = []
