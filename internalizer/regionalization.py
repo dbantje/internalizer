@@ -3,7 +3,6 @@ import subprocess
 from pathlib import Path
 import os
 import numpy as np
-import xarray as xr
 import uuid
 
 from premise.geomap import Geomap
