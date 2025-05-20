@@ -27,26 +27,23 @@ REMIND_REGIONS = [
 
 FILEPATH_COALTYPE_SHARES = DATA_DIR / "shares_coal.csv"
 
-def get_coupled_production_parameters(rundir: str | Path, techs: list) -> pd.DataFrame:
+def get_coupled_production_parameters(gdxpath: str, techs: list) -> pd.DataFrame:
     """
     Get the coupled production parameters from a REMIND `.gdx` file.
-    :param rundir: Directory of the REMIND run
+    :param rundir: Filepath to a REMIND .gdx
     :params tech: List of technologies to filter out
     :return: dataframe containing coupled production parameters.
     """
-    if isinstance(rundir, str):
-        rundir = Path(rundir)
-    gdxpath = Path(rundir) / "fulldata.gdx"
     csvname = f"pm_prodCouple_{uuid.uuid4()}.csv"
     subprocess.run(["gdxdump", gdxpath, "symb=pm_prodCouple", "format=csv", f"output={csvname}"])
 
     df = pd.read_csv(csvname)
     os.remove(csvname)
 
-    df.rename(columns={"all_regi": "region", "all_te": "REMIND tech"},
+    df.rename(columns={"all_regi": "region", "all_te": "REMIND index"},
               inplace=True)
 
-    return df[df["REMIND tech"].isin(techs)][["region", "REMIND tech", "Val"]]
+    return df[df["REMIND index"].isin(techs)][["region", "REMIND index", "Val"]]
 
 def apply_regional_shares_to_dataframe(df: pd.DataFrame, shares: pd.Series | float, factors: pd.Series | float = 1.0) -> pd.DataFrame:
     """
@@ -80,7 +77,7 @@ def get_chp_regional_shares(mapping: pd.DataFrame, rundir: str | Path) -> pd.Dat
 
     # bio CHP
     shares = get_coupled_production_parameters(rundir, ["biochp"]).set_index("region")["Val"]
-    sel = mapping[mapping["REMIND tech"].str.endswith("biochp")]
+    sel = mapping[mapping["REMIND index"].str.endswith("biochp")]
     dflist.append(apply_regional_shares_to_dataframe(
         sel[sel["dataset reference product"].str.contains("electricity")], 1.0
     ))
@@ -90,7 +87,7 @@ def get_chp_regional_shares(mapping: pd.DataFrame, rundir: str | Path) -> pd.Dat
 
     # coal CHP
     shares = get_coupled_production_parameters(rundir, ["coalchp"]).set_index("region")["Val"]
-    sel = mapping[mapping["REMIND tech"].str.endswith("coalchp")]
+    sel = mapping[mapping["REMIND index"].str.endswith("coalchp")]
     coal_type_shares = pd.read_csv(FILEPATH_COALTYPE_SHARES).set_index("region")
     sel2 = sel[sel["dataset name"].str.contains("lignite")]
     dflist.append(apply_regional_shares_to_dataframe(
@@ -110,7 +107,7 @@ def get_chp_regional_shares(mapping: pd.DataFrame, rundir: str | Path) -> pd.Dat
 
     # gas CHP
     shares = get_coupled_production_parameters(rundir, ["gaschp"]).set_index("region")["Val"]
-    sel = mapping[mapping["REMIND tech"].str.endswith("gaschp")]
+    sel = mapping[mapping["REMIND index"].str.endswith("gaschp")]
     sel2 = sel[sel["dataset name"].str.contains("combined cycle")]
     dflist.append(apply_regional_shares_to_dataframe(
         sel2[sel2["dataset reference product"].str.contains("electricity")], 1.0, factors=0.1
@@ -137,7 +134,7 @@ def get_biofuels_regional_shares(mapping: pd.DataFrame) -> pd.DataFrame:
     dflist = []
 
     for fueltype in ["bioeths", "biodiesel", "bioethl"]:
-        sel = mapping[mapping["REMIND tech"].str.endswith(fueltype)]
+        sel = mapping[mapping["REMIND index"].str.endswith(fueltype)]
         shares = pd.read_csv(DATA_DIR / f"shares_{fueltype}.csv").set_index("region")
         for feedstock in shares.columns:
             sel2 = sel[sel["dataset name"].str.contains(feedstock)]
@@ -148,11 +145,11 @@ def get_biofuels_regional_shares(mapping: pd.DataFrame) -> pd.DataFrame:
     return pd.concat(dflist, axis=0, ignore_index=True).dropna(subset="share")
 
 
-def get_regionalized_mapping(mapping: pd.DataFrame, rundir: Path | str) -> pd.DataFrame:
+def get_regionalized_mapping(mapping: pd.DataFrame, gdxpath: str) -> pd.DataFrame:
     """
     Regionalize mapping.
     :param mapping: the unregionalized mapping
-    :param rundir: Directory of the REMIND run
+    :param rundir: Filepath of the REMIND .gdx file
     :return: the regionalized mapping
     """
     # for globally defined shares, simply copy from mapping
@@ -162,11 +159,24 @@ def get_regionalized_mapping(mapping: pd.DataFrame, rundir: Path | str) -> pd.Da
         df["region"] = region
         dflist.append(df)
 
+    # get all regional shares that are available
+    all_regional_shares = pd.concat(
+        [
+            get_chp_regional_shares(mapping, gdxpath),
+            get_biofuels_regional_shares(mapping)
+        ],
+        axis=0,
+        ignore_index=True
+    )
+
+    # select only those that are in the mapping
+    needed_techs = list(mapping[mapping["share"] == "regional"]["REMIND index"].unique())
+    needed_regional_shares = all_regional_shares[all_regional_shares["REMIND index"].isin(needed_techs)]
+
     all_shares = pd.concat(
         [
             pd.concat(dflist, axis=0, ignore_index=True),
-            get_chp_regional_shares(mapping, rundir),
-            get_biofuels_regional_shares(mapping)
+            needed_regional_shares
         ],
         axis=0,
         ignore_index=True
@@ -176,7 +186,7 @@ def get_regionalized_mapping(mapping: pd.DataFrame, rundir: Path | str) -> pd.Da
     return all_shares
 
 def test_share_summation(mapping):
-    sums = mapping.groupby(["REMIND tech", "region"]).agg({"share": sum})["share"]
+    sums = mapping.groupby(["REMIND index", "region"]).agg({"share": sum})["share"]
     if not all(sums == 1):
         print("Some shares don't sum to 1!")
         return sums[sums != 1]
@@ -252,7 +262,7 @@ def regionalize_costs(df: pd.DataFrame) -> pd.DataFrame:
     return pd.concat(
         dflist, axis=0, ignore_index=True).groupby(
             ["dataset name", "dataset reference product", 
-            "dataset unit", "region", "quantile", "impact category"]
+            "dataset unit", "region", "impact category"]
             ).agg({"cost": np.mean}).reset_index()
 
 def combine_shares_and_costs(shares: pd.DataFrame, costs: pd.DataFrame) -> pd.DataFrame:
@@ -268,7 +278,7 @@ def combine_shares_and_costs(shares: pd.DataFrame, costs: pd.DataFrame) -> pd.Da
     dflist = []
     costs_index = costs.index
     for idx, row in shares.iterrows():
-        tech = row["REMIND tech"]
+        tech = row["REMIND index"]
         factor = row["share"]
         j = idx
         if idx not in costs_index:
@@ -278,9 +288,9 @@ def combine_shares_and_costs(shares: pd.DataFrame, costs: pd.DataFrame) -> pd.Da
         except KeyError:
             break
         sel["cost"] = factor * sel["cost"]
-        sel = sel.pivot(index="quantile", columns="impact category", values="cost").reset_index()
-        sel["REMIND tech"] = tech
+        sel = sel.pivot(columns="impact category", values="cost").reset_index()
+        sel["REMIND index"] = tech
         sel["region"] = idx[-1]
         dflist.append(sel)
         
-    return pd.concat(dflist, axis=0, ignore_index=True).groupby(["REMIND tech", "region", "quantile"]).sum()
+    return pd.concat(dflist, axis=0, ignore_index=True).groupby(["REMIND index", "region"]).sum()
