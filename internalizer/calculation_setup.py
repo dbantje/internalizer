@@ -5,7 +5,7 @@ from .regionalization import get_regionalized_mapping
 
 def prepare_setup(
     activities_mappings: List[str | Path],
-    gdxpath: str,
+    gdxpath: Optional[str] = None,
     level_names: Optional[List[str]] = None,
     remove_layers: str = "all"
 ) -> dict:
@@ -13,7 +13,7 @@ def prepare_setup(
     # read in mapping files
     for i, fp in enumerate(activities_mappings):
         mapping = pd.read_csv(fp, sep=";")
-        k = fp.split(".")[0] if level_names is None else level_names[i]
+        k = fp.split("/")[-1].split(".")[0] if level_names is None else level_names[i]
         setup[k] = {}
         setup[k]["mapping"] = get_regionalized_mapping(mapping, gdxpath)
 

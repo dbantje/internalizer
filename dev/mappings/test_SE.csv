@@ -1,0 +1,33 @@
+REMIND index;dataset name;dataset reference product;dataset unit;share
+ngcc;electricity production, natural gas, combined cycle power plant;electricity, high voltage;kilowatt hour;1.0
+ngccc;electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;1.0
+ngt;electricity production, natural gas, conventional power plant;electricity, high voltage;kilowatt hour;1.0
+gash2;hydrogen production, steam methane reforming;hydrogen, gaseous, low pressure;kilogram;1.0
+gash2c;hydrogen production, steam methane reforming, with CCS;hydrogen, gaseous, low pressure;kilogram;1.0
+gashp;heat and power co-generation, natural gas, 500kW electrical, lean burn;heat, district or industrial, natural gas;megajoule;1.0
+gasftrec;diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation;diesel, synthetic;kilogram;0.6
+gasftrec;kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation;kerosene, synthetic;kilogram;0.4
+gasftcrec;diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage;diesel, synthetic;kilogram;0.6
+gasftcrec;kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage;kerosene, synthetic;kilogram;0.4
+igcc;electricity production, at lignite-fired IGCC power plant;electricity, high voltage;kilowatt hour;0.5
+igcc;electricity production, at hard coal-fired IGCC power plant;electricity, high voltage;kilowatt hour;0.5
+igccc;electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;0.5
+igccc;electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;0.5
+pc;electricity production, lignite;electricity, high voltage;kilowatt hour;0.5
+pc;electricity production, hard coal;electricity, high voltage;kilowatt hour;0.5
+coaltr;coke production;coke;megajoule;0.4
+coaltr;lignite briquettes production;lignite briquettes;megajoule;0.3
+coaltr;hard coal briquettes production;hard coal briquettes;megajoule;0.3
+coalgas;syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification;syngas, RWGS, Production;kilogram;1.0
+coalh2;hydrogen production, coal gasification;hydrogen, gaseous, low pressure;kilogram;1.0
+coalh2c;hydrogen production, coal gasification, with CCS;hydrogen, gaseous, low pressure;kilogram;1.0
+coalhp;heat production, at hard coal industrial furnace 1-10MW;heat, district or industrial, other than natural gas;megajoule;1.0
+refliq;diesel production, petroleum refinery operation;diesel;kilogram;0.34
+refliq;kerosene production, petroleum refinery operation;kerosene;kilogram;0.1
+refliq;petrol production, unleaded, petroleum refinery operation;petrol, unleaded;kilogram;0.56
+coalftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;diesel, synthetic;kilogram;0.5
+coalftrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;kerosene, synthetic;kilogram;0.5
+coalftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;diesel, synthetic;kilogram;0.5
+coalftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;0.5
+tnrs;electricity production, nuclear, pressure water reactor;electricity, high voltage;kilowatt hour;1.0
+fnrs;electricity production, nuclear, pressure water reactor;electricity, high voltage;kilowatt hour;1.0
