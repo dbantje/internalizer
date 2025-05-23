@@ -4,6 +4,7 @@ from pathlib import Path
 import os
 import numpy as np
 import uuid
+from typing import Optional
 
 from premise.geomap import Geomap
 
@@ -144,7 +145,7 @@ def get_biofuels_regional_shares(mapping: pd.DataFrame) -> pd.DataFrame:
     return pd.concat(dflist, axis=0, ignore_index=True).dropna(subset="share")
 
 
-def get_regionalized_mapping(mapping: pd.DataFrame, gdxpath: str) -> pd.DataFrame:
+def get_regionalized_mapping(mapping: pd.DataFrame, gdxpath: Optional[str]) -> pd.DataFrame:
     """
     Regionalize mapping.
     :param mapping: the unregionalized mapping
@@ -158,28 +159,32 @@ def get_regionalized_mapping(mapping: pd.DataFrame, gdxpath: str) -> pd.DataFram
         df["region"] = region
         dflist.append(df)
 
-    # get all regional shares that are available
-    all_regional_shares = pd.concat(
-        [
-            get_chp_regional_shares(mapping, gdxpath),
-            get_biofuels_regional_shares(mapping)
-        ],
-        axis=0,
-        ignore_index=True
-    )
+    if len(mapping[mapping["share"] == "regional"] == 0) or gdxpath is None:
+        all_shares = pd.concat(dflist, axis=0, ignore_index=True)
+    else:
+        # get all regional shares that are available
+        all_regional_shares = pd.concat(
+            [
+                get_chp_regional_shares(mapping, gdxpath),
+                get_biofuels_regional_shares(mapping)
+            ],
+            axis=0,
+            ignore_index=True
+        )
 
-    # select only those that are in the mapping
-    needed_techs = list(mapping[mapping["share"] == "regional"]["REMIND index"].unique())
-    needed_regional_shares = all_regional_shares[all_regional_shares["REMIND index"].isin(needed_techs)]
+        # select only those that are in the mapping
+        needed_techs = list(mapping[mapping["share"] == "regional"]["REMIND index"].unique())
+        needed_regional_shares = all_regional_shares[all_regional_shares["REMIND index"].isin(needed_techs)]
 
-    all_shares = pd.concat(
-        [
-            pd.concat(dflist, axis=0, ignore_index=True),
-            needed_regional_shares
-        ],
-        axis=0,
-        ignore_index=True
-    )
+        all_shares = pd.concat(
+            [
+                pd.concat(dflist, axis=0, ignore_index=True),
+                needed_regional_shares
+            ],
+            axis=0,
+            ignore_index=True
+        )
+        
     all_shares["share"] = all_shares["share"].astype(float)
 
     return all_shares
