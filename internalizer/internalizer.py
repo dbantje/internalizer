@@ -168,7 +168,7 @@ class Internalizer:
             x =  x * convert_euros_to_dollar(EURO_REF_YEAR, REMIND_USD_REF_YEAR) * 1000
                 
             total = x.sel({"impact category": impact_categories}).sum(dim="impact category")
-            df = total.to_dataframe().reset_index()
+            df = total.to_dataframe(name="cost").reset_index()
             df[["year", "region", "REMIND index", "cost"]].to_csv(
                 self.outdir + f"/lca_costs_{lvl}.csv", index=False, header=False)
 
