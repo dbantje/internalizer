@@ -175,3 +175,7 @@ cython_debug/
 
 # development
 # dev/
+
+# output data
+output/
+dev/export/
