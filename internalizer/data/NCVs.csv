@@ -37,3 +37,7 @@ kerosene,kilogram,43
 "hydrogen, gaseous, 1 bar",kilogram,120
 "methane, from electrochemical methanation",kilogram,50
 "diesel, burned in diesel-electric generating set, 10MW",megajoule,1.0
+"petroleum",kilogram,44
+lignite,kilogram,15
+"hard coal",kilogram,32.50
+"uranium ore, as U",kilogram,3.171e+08
