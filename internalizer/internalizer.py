@@ -45,7 +45,7 @@ class Internalizer:
         pathway: str,
         ei_version: str,
         bw_project: str,
-        gdxpath = str,
+        gdxpath: str,
         outputfolder: str = "output"
     ):
         # get directory of data file and scenario name
