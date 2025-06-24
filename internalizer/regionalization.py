@@ -292,7 +292,7 @@ def combine_shares_and_costs(shares: pd.DataFrame, costs: pd.DataFrame) -> pd.Da
         except KeyError:
             break
         sel["cost"] = factor * sel["cost"]
-        sel = sel.pivot(columns="impact category", values="cost").reset_index()
+        sel = sel.pivot(columns="impact category", values="cost").reset_index(drop=True)
         sel["REMIND index"] = tech
         sel["region"] = idx[-1]
         dflist.append(sel)
