@@ -4,6 +4,7 @@ import os
 
 from multiprocessing import Pool, cpu_count
 import shutil
+import pandas as pd
 
 from .plca import _run_premise_year, _calculate_costs_year
 from .utils import (
