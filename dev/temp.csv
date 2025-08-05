@@ -1,0 +1,170 @@
+,region,impact category,cost
+6,CAZ,ionizing radiation,-0.5161141069661797
+61,JPN,ozone depletion,-0.4570330619007744
+19,CHA,ionizing radiation,-0.43551968751985787
+58,JPN,ionizing radiation,-0.3658024072870418
+45,IND,ionizing radiation,-0.34204841258230034
+162,World,ionizing radiation,-0.3241595466335302
+35,EUR,ozone depletion,-0.3188850294450952
+110,OAS,ionizing radiation,-0.3113018716718207
+136,SSA,ionizing radiation,-0.2731261213543836
+84,MEA,ionizing radiation,-0.2697422109843943
+71,LAM,ionizing radiation,-0.26644256726876564
+32,EUR,ionizing radiation,-0.23889797739960827
+97,NEU,ionizing radiation,-0.2260615657535447
+149,USA,ionizing radiation,-0.22227924711759334
+123,REF,ionizing radiation,-0.21217784556906735
+56,JPN,fossil resources,-0.20406537963897614
+165,World,ozone depletion,-0.15304977169158676
+126,REF,ozone depletion,-0.151990027226041
+100,NEU,ozone depletion,-0.13670760894426384
+139,SSA,ozone depletion,-0.12669797113302855
+113,OAS,ozone depletion,-0.11657509665624888
+152,USA,ozone depletion,-0.11006112798304113
+87,MEA,ozone depletion,-0.09811622072657719
+74,LAM,ozone depletion,-0.09486131841487165
+62,JPN,particulate matter formation,-0.092346763389604
+121,REF,fossil resources,-0.08379048339939554
+53,JPN,climate change,-0.08065347691372036
+59,JPN,land use,-0.07466471231566929
+57,JPN,human toxicity,-0.07444833105361645
+82,MEA,fossil resources,-0.0658796903693731
+63,JPN,photochemical oxidant formation,-0.064535375696982
+43,IND,fossil resources,-0.063151513651599
+95,NEU,fossil resources,-0.06278647460144327
+44,IND,human toxicity,-0.06056594944528398
+147,USA,fossil resources,-0.05904562787680317
+160,World,fossil resources,-0.045119637051364625
+22,CHA,ozone depletion,-0.03845954417796733
+18,CHA,human toxicity,-0.03829361201429972
+70,LAM,human toxicity,-0.03751404543490875
+17,CHA,fossil resources,-0.03714673499075704
+108,OAS,fossil resources,-0.03714673499075704
+122,REF,human toxicity,-0.03338210165635197
+109,OAS,human toxicity,-0.03327194095099514
+135,SSA,human toxicity,-0.03263576098859267
+9,CAZ,ozone depletion,-0.03225037908697332
+96,NEU,human toxicity,-0.03160763200882137
+14,CHA,climate change,-0.029718038647372103
+40,IND,climate change,-0.028880720370743535
+161,World,human toxicity,-0.02865813953109187
+134,SSA,fossil resources,-0.026121311681688703
+50,IND,photochemical oxidant formation,-0.025755013670341723
+167,World,photochemical oxidant formation,-0.025459484320749678
+30,EUR,fossil resources,-0.023024861062232515
+83,MEA,human toxicity,-0.022191263824283707
+157,World,climate change,-0.022146698020317206
+148,USA,human toxicity,-0.021978366397334755
+69,LAM,fossil resources,-0.021577854948039286
+27,EUR,climate change,-0.020242438496966927
+89,MEA,photochemical oxidant formation,-0.017613372144176437
+79,MEA,climate change,-0.01646076946153177
+118,REF,climate change,-0.01602245737082276
+31,EUR,human toxicity,-0.015926283035925907
+48,IND,ozone depletion,-0.014708112211585444
+20,CHA,land use,-0.014598011292574311
+92,NEU,climate change,-0.012578980229593537
+131,SSA,climate change,-0.012422077602218798
+98,NEU,land use,-0.011414926548100755
+128,REF,photochemical oxidant formation,-0.011351467576240965
+105,OAS,climate change,-0.011037565322660661
+144,USA,climate change,-0.01087483239765781
+24,CHA,photochemical oxidant formation,-0.009094409922069143
+115,OAS,photochemical oxidant formation,-0.00884972580584848
+66,LAM,climate change,-0.007964953117956336
+64,JPN,water use,-0.0043986832673724285
+150,USA,land use,-0.002874171706572425
+154,USA,photochemical oxidant formation,-0.0017614455171118682
+137,SSA,land use,0.0004188571595501903
+141,SSA,photochemical oxidant formation,0.0008882297653100246
+51,IND,water use,0.0014552003579674114
+37,EUR,photochemical oxidant formation,0.002352361911482419
+116,OAS,water use,0.002429936946196661
+1,CAZ,climate change,0.0032222466412694406
+102,NEU,photochemical oxidant formation,0.00413867181759493
+76,LAM,photochemical oxidant formation,0.005098505172108254
+111,OAS,land use,0.005267634417236327
+142,SSA,water use,0.00693794869045721
+49,IND,particulate matter formation,0.007944702562205024
+163,World,land use,0.008377351821815716
+7,CAZ,land use,0.009189642253413746
+4,CAZ,fossil resources,0.011078277371466994
+55,JPN,eutrophication,0.011141637362955654
+29,EUR,eutrophication,0.013140128532823748
+33,EUR,land use,0.013980499163122273
+85,MEA,land use,0.01575557248465839
+168,World,water use,0.01591906279685952
+23,CHA,particulate matter formation,0.018609323627529546
+25,CHA,water use,0.024666945434718604
+129,REF,water use,0.025466143993611044
+77,LAM,water use,0.02743909555775513
+103,NEU,water use,0.030000848813865028
+39,IND,acidification,0.032182664127855566
+166,World,particulate matter formation,0.03467001104809052
+36,EUR,particulate matter formation,0.03521945579259514
+38,EUR,water use,0.03633314355304407
+127,REF,particulate matter formation,0.03772148247399961
+72,LAM,land use,0.04405749662471713
+42,IND,eutrophication,0.048429819757779706
+90,MEA,water use,0.06165830148981604
+52,JPN,acidification,0.06254123770224004
+88,MEA,particulate matter formation,0.06884331196005622
+28,EUR,ecotoxicity,0.07866676878914136
+41,IND,ecotoxicity,0.08570738705781128
+153,USA,particulate matter formation,0.08970868808983606
+75,LAM,particulate matter formation,0.09039699652470125
+54,JPN,ecotoxicity,0.09139253276786055
+68,LAM,eutrophication,0.09338018068414224
+67,LAM,ecotoxicity,0.09753049859194358
+133,SSA,eutrophication,0.09824723460782749
+80,MEA,ecotoxicity,0.09959057301795562
+46,IND,land use,0.09965298688566725
+107,OAS,eutrophication,0.10057019669055166
+156,World,acidification,0.10305271085757672
+155,USA,water use,0.10505460271196812
+106,OAS,ecotoxicity,0.10527063270654416
+114,OAS,particulate matter formation,0.10567367219716167
+145,USA,ecotoxicity,0.1085787083018016
+117,REF,acidification,0.10990321803006112
+158,World,ecotoxicity,0.11190467618136912
+132,SSA,ecotoxicity,0.11197019070955115
+26,EUR,acidification,0.11349891379038107
+146,USA,eutrophication,0.11419975648003772
+119,REF,ecotoxicity,0.11712048451639494
+13,CHA,acidification,0.11760991067975736
+5,CAZ,human toxicity,0.12090353541229773
+101,NEU,particulate matter formation,0.12191384412297966
+15,CHA,ecotoxicity,0.12202300297915132
+140,SSA,particulate matter formation,0.12243881259072827
+11,CAZ,photochemical oxidant formation,0.12521108501768213
+143,USA,acidification,0.12618841574026987
+78,MEA,acidification,0.12728620883567482
+94,NEU,eutrophication,0.12993781457306247
+81,MEA,eutrophication,0.1320294764930987
+12,CAZ,water use,0.13480878259606063
+120,REF,eutrophication,0.13773501590505985
+65,LAM,acidification,0.1570648379763644
+124,REF,land use,0.15989560594750774
+159,World,eutrophication,0.16201194065130045
+93,NEU,ecotoxicity,0.16430929170720057
+130,SSA,acidification,0.17677663433537405
+10,CAZ,particulate matter formation,0.1833881580910634
+16,CHA,eutrophication,0.18387512953773502
+104,OAS,acidification,0.19483616309546067
+2,CAZ,ecotoxicity,0.20563271458757437
+91,NEU,acidification,0.29517825842705847
+0,CAZ,acidification,0.43505623492742446
+99,NEU,metal/mineral resources,0.48866849887037006
+3,CAZ,eutrophication,0.49210493093330365
+86,MEA,metal/mineral resources,0.4922768179959483
+73,LAM,metal/mineral resources,0.49954570297465123
+138,SSA,metal/mineral resources,0.49954570297465123
+60,JPN,metal/mineral resources,0.5124093448755852
+151,USA,metal/mineral resources,0.5249394695217776
+125,REF,metal/mineral resources,0.5319014556822078
+164,World,metal/mineral resources,0.5490026736474243
+21,CHA,metal/mineral resources,0.5516037851314199
+47,IND,metal/mineral resources,0.5516037851314203
+112,OAS,metal/mineral resources,0.5568656791245008
+34,EUR,metal/mineral resources,0.5644421858873866
+8,CAZ,metal/mineral resources,0.582442763909254
