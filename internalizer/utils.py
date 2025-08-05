@@ -156,3 +156,10 @@ def get_linear_ramp_up(
             "year": interpolation_years
         }
     )
+
+def split_remind_index(df, domains):
+
+    for i, domain in enumerate(domains):
+        df[domain] = df["REMIND index"].apply(lambda x: x.split(" - ")[i])
+
+    return df
