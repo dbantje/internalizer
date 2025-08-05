@@ -2,6 +2,9 @@ import pandas as pd
 from typing import List, Optional
 from pathlib import Path
 from .regionalization import get_regionalized_mapping
+from .filesystem_constants import DATA_DIR
+
+prodSE_MAPPING = DATA_DIR / "mappings" / "prodSE.csv"
 
 def prepare_setup(
     activities_mappings: List[str | Path],
@@ -26,7 +29,23 @@ def prepare_setup(
             elif remove_layers == "all":
                 dflist.append(setup[j]["mapping"])
 
-        setup[k]["removal list"] = pd.concat(dflist).drop(
-            columns=["region", "share"]).drop_duplicates()
+        if len(dflist) > 0:
+            setup[k]["removal list"] = pd.concat(dflist).drop(
+                columns=["region", "share"]).drop_duplicates()
+        else:
+            setup[k]["removal list"] = None
         
     return setup
+
+def default_setup(gdxpath, remove_layers=None):
+    mappings = [
+        prodSE_MAPPING,
+    ]
+    levels = [
+        "SE",
+    ]
+
+    return prepare_setup(
+        mappings, gdxpath, level_names=levels, remove_layers=remove_layers
+    )
+
