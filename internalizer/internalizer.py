@@ -6,8 +6,15 @@ from multiprocessing import Pool, cpu_count
 import shutil
 
 from .plca import _run_premise_year, _calculate_costs_year
-from .utils import convert_euros_to_dollar, check_monetization_factors, get_linear_ramp_up, interpolate_and_weight_costs
-from .calculation_setup import prepare_setup
+from .utils import (
+    convert_euros_to_dollar,
+    check_monetization_factors,
+    get_linear_ramp_up,
+    interpolate_and_weight_costs,
+    split_remind_index,
+)
+from .calculation_setup import prepare_setup, default_setup
+from .regionalization import combine_shares_and_costs
 
 EURO_REF_YEAR = 2022
 REMIND_USD_REF_YEAR = 2017
@@ -46,13 +53,17 @@ class Internalizer:
         ei_version: str,
         bw_project: str,
         gdxpath: str,
-        outputfolder: str = "output"
+        outputfolder: str = "output",
+        single_run: bool = True
     ):
         # get directory of data file and scenario name
         self.model = model
         rundir, filename = extract_folder_and_filename(filepath)
         self.rundir = rundir
-        self.outdir = f"./{outputfolder}/" + extract_output_folder(filepath)
+        outputdir = f"./{outputfolder}"
+        if not single_run:
+            outputdir += "/" + extract_output_folder(filepath)
+        self.outdir = outputdir
         namecheck = "_".join((model.lower(), pathway))
         if filename != namecheck:
             shutil.copy(filepath, rundir+f"/{namecheck}.mif")
@@ -92,7 +103,7 @@ class Internalizer:
     def calculate_costs(
         self,
         monetization: float | str | dict,
-        activities_mapping: List[str | Path],
+        activities_mapping: List[str | Path] | str = "default",
         level_names: Optional[List[str]] = None,
         multiprocessing: bool = True
     ) -> None:
@@ -113,11 +124,12 @@ class Internalizer:
             raise ValueError(f"Argument 'monetization' must be a float, string, or dictionary!")
 
         # obtain mappings and removal lists
-        setup = prepare_setup(activities_mapping, self.gdxpath, level_names)
+        if activities_mapping == "default":
+            setup = default_setup(self.gdxpath)
+        else:
+            setup = prepare_setup(activities_mapping, self.gdxpath, level_names)
         self.levels = setup.keys()
         args = []
-        yearlist = []
-        lvllist = []
         for lvl in self.levels:
             mapping = setup[lvl]["mapping"]
             rlist = setup[lvl]["removal list"]
@@ -129,25 +141,48 @@ class Internalizer:
                         rlist,
                         self.scenario,
                         year,
+                        lvl,
                         self.outdir,
                         self.model,
                     )   
                 )
-                yearlist.append(year)
-                lvllist.append(lvl)
 
+        if multiprocessing:
+            with Pool(cpu_count(), maxtasksperchild=1000) as p:
+                p.starmap(_calculate_costs_year, args)
+
+                # for lvl, y, r in zip(lvllist, yearlist, results):
+                #     self.cost_results[lvl][y] = r
+        else:
+            for arg in args:
+                _calculate_costs_year(*arg)
+
+    def load_costs(
+        self,
+        activities_mapping: List[str | Path] | str = "default",
+        level_names: Optional[List[str]] = None
+    ) -> None:
+        # recalculate mappings
+        if activities_mapping == "default":
+            setup = default_setup(self.gdxpath)
+        else:
+            setup = prepare_setup(activities_mapping, self.gdxpath, level_names)
+
+        # load raw costs and aggregate with mappings
         self.cost_results = {}
         for lvl in self.levels:
             self.cost_results[lvl] = {}
-        if multiprocessing:
-            with Pool(cpu_count(), maxtasksperchild=1000) as p:
-                results = p.starmap(_calculate_costs_year, args)
-
-                for lvl, y, r in zip(lvllist, yearlist, results):
-                    self.cost_results[lvl][y] = r
-        else:
-            for lvl, y, arg in zip(lvllist, yearlist, args):
-                self.cost_results[lvl][y] = _calculate_costs_year(*arg)
+            mapping = setup[lvl]["mapping"]
+            for year in self.years:
+                fp = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/regionalized_costs_{lvl}.csv"
+                regionalized_costs = pd.read_csv(fp)
+                costs_agg = combine_shares_and_costs(mapping, regionalized_costs).melt(
+                    var_name="impact category", value_name="cost", ignore_index=False
+                ).reset_index()
+                self.cost_results[lvl][year] = costs_agg.set_index(
+                    ["REMIND index", "region", "impact category"]
+                )["cost"].to_xarray()
+        
     
     def write_remind_input_files(
         self,
@@ -169,8 +204,11 @@ class Internalizer:
                 
             total = x.sel({"impact category": impact_categories}).sum(dim="impact category")
             df = total.to_dataframe(name="cost").reset_index()
-            df[["year", "region", "REMIND index", "cost"]].to_csv(
-                self.outdir + f"/lca_costs_{lvl}.csv", index=False, header=False)
+            df = split_remind_index(df, ["all_te"])
+            df[["year", "region", "all_te", "cost"]].to_csv(
+                self.outdir + f"/lca_costs_{lvl}.csv", index=False, header=True)
+            
+
 
         
 

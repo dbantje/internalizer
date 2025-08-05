@@ -21,7 +21,7 @@ def get_cfs_and_mfs(
         monetization: float | str | dict,
         lca: MultiLCA,
         biosphere_inds: dict
-) -> Tuple[csr_matrix, xr.DataArray]:
+) -> Tuple[csr_matrix, xr.DataArray, list]:
     methods = get_lcia_method_names()
     if isinstance(monetization, float):
         cfs = fill_characterization_factors_matrices(
@@ -30,7 +30,7 @@ def get_cfs_and_mfs(
             biosphere_dict=biosphere_inds
         )
         mfs = xr.load_dataarray(FILEPATH_MONETIZATION_FACTORS)
-        return cfs, mfs 
+        return cfs, mfs, methods 
     elif isinstance(monetization, str):
         cfs = fill_characterization_factors_matrices(
             methods=methods,
@@ -40,7 +40,7 @@ def get_cfs_and_mfs(
         mfs = xr.load_dataarray(FILEPATH_MONETIZATION_FACTORS_PERSPECTIVES).sel(
             {"perspective": monetization}
         )
-        return cfs, mfs
+        return cfs, mfs, methods
     else:
         methods = list(monetization.keys())
         cfs = fill_characterization_factors_matrices(
@@ -55,20 +55,23 @@ def get_cfs_and_mfs(
                 "impact category": methods
             }
         )
-        return cfs, mfs
+        return cfs, mfs, methods
     
 
 def get_monetized_results(
     lca: MultiLCA,
     selected_inds: dict,
-    cfs: csr_matrix,
-    mfs: xr.DataArray,
-    quantile: Optional[float] = None
+    biosphere_inds: dict,
+    monetization: float | str | dict
 ) -> pd.DataFrame:
-    # get list of methods
-    methods = list(mfs.coords["LCIA method"].values)
+    # get characterization and monetization factors
+    cfs, mfs, methods = get_cfs_and_mfs(monetization, lca, biosphere_inds)
+    quantile = None
+    if isinstance(monetization, float):
+        quantile = monetization
     
     dflist = []
+    dflist_impacts = []
     for k, value in lca.inventories.items():
         impacts = xr.DataArray(
             np.squeeze(
@@ -78,6 +81,7 @@ def get_monetized_results(
                 "LCIA method": [m.replace(" - ", ", ") for m in methods]
             }
         )
+        
         costs = (mfs * impacts).sum(dim="LCIA method")
         if quantile is not None:
             a = costs.to_numpy()
@@ -97,10 +101,23 @@ def get_monetized_results(
         df["dataset location"] = location
         dflist.append(df)
 
-    return pd.concat(dflist, ignore_index=True)[
+        df_impacts = impacts.to_dataframe(name="impact").reset_index()
+        df_impacts["dataset name"] = name
+        df_impacts["dataset reference product"] = refprod
+        df_impacts["dataset unit"] = unit
+        df_impacts["dataset location"] = location
+        dflist_impacts.append(df_impacts)
+
+    all_costs = pd.concat(dflist, ignore_index=True)[
         ["dataset name", "dataset reference product", "dataset unit", 
         "dataset location", "impact category", "cost"]
     ]
+    all_impacts = pd.concat(dflist_impacts, ignore_index=True)[
+        ["dataset name", "dataset reference product", "dataset unit", 
+        "dataset location", "LCIA method", "impact"]
+    ]
+
+    return all_costs, all_impacts
    
 
 def _run_premise_year(
@@ -126,9 +143,10 @@ def _run_premise_year(
 def _calculate_costs_year(
     mapping: pd.DataFrame,
     monetization: float | str | dict,
-    remove_activities: pd.DataFrame,
+    remove_activities: Optional[pd.DataFrame],
     scenario: str,
     year: int,
+    level: str,
     outdir: str,
     model: str
 ) -> xr.DataArray:
@@ -150,10 +168,12 @@ def _calculate_costs_year(
     fus = {str(i): {selected_inds[k]: 1/NCV_DICT[(k[1], k[2])]} for i, k in enumerate(selected_inds.keys())}
 
     # select activities to remove
-    remove_idx_list = list(remove_activities.set_index(
-        ["dataset name", "dataset reference product", "dataset unit"]
-    ).index.unique())
-    to_remove = [v for k, v in technosphere_inds.items() if (k[0], k[1], k[2]) in remove_idx_list]
+    to_remove = []
+    if remove_activities is not None:
+        remove_idx_list = list(remove_activities.set_index(
+            ["dataset name", "dataset reference product", "dataset unit"]
+        ).index.unique())
+        to_remove = [v for k, v in technosphere_inds.items() if (k[0], k[1], k[2]) in remove_idx_list]
     
     # set up LCA, LCI calculation
     lca = MultiLCA(
@@ -171,19 +191,17 @@ def _calculate_costs_year(
         lca.lci()
 
     # impact and cost calculation
-    quantile = None
-    cfs, mfs = get_cfs_and_mfs(monetization, lca, biosphere_inds)
-    if isinstance(monetization, float):
-        quantile = monetization
-    costs = get_monetized_results(lca, selected_inds, cfs, mfs, quantile)
-    costs.to_csv(Path(matrix_folder) / "costs.csv", index=False)
+    costs, impacts = get_monetized_results(lca, selected_inds, biosphere_inds, monetization)
+    costs.to_csv(Path(matrix_folder) / f"costs_{level}.csv", index=False)
+    impacts.to_csv(Path(matrix_folder) / f"impacts_{level}.csv", index=False)
 
     # regionalize costs and combine with shares
     regionalized_costs = regionalize_costs(costs)
-    regionalized_costs.to_csv(Path(matrix_folder) / "regionalized_costs.csv", index=False)
-    return combine_shares_and_costs(mapping, regionalized_costs).melt(
-        var_name="impact category", value_name="cost", ignore_index=False).reset_index().set_index(
-    ["REMIND index", "region", "impact category"])["cost"].to_xarray()
+    regionalized_costs.to_csv(Path(matrix_folder) / f"regionalized_costs_{level}.csv", index=False)
+
+    # return combine_shares_and_costs(mapping, regionalized_costs).melt(
+    #     var_name="impact category", value_name="cost", ignore_index=False).reset_index().set_index(
+    # ["REMIND index", "region", "impact category"])["cost"].to_xarray()
 
 
 def remove_from_technosphere(
