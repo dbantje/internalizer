@@ -94,7 +94,7 @@ class Internalizer:
         args = [
             (
                 self.bw_project,
-                {"model": self.model, "pathway": self.scenario, "year": year, "mifpath": self.rundir},
+                {"model": self.model, "pathway": self.scenario, "year": year, "filepath": self.rundir},
                 self.ei_version,
                 self.outdir
             )
