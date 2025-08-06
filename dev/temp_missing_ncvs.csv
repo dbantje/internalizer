@@ -1,0 +1,10 @@
+dataset reference product,dataset unit,NCV in MJ/product
+"heat, air-water heat pump 10kW",megajoule,1.0
+"heat, from residential heating system",megajoule,1.0
+heat,megajoule,1.0
+"heat, central or small-scale, biomethane",megajoule,1.0
+"methanol, from biomass",kilogram,1.0
+light fuel oil,kilogram,1.0
+plywood,cubic meter,1.0
+"electricity, high voltage",megajoule,1.0
+"electricity, low voltage",megajoule,1.0

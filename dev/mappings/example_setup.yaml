@@ -1,0 +1,23 @@
+name: example
+levels:
+  - PE
+  - SE
+mappings:
+  PE:
+    path: /p/tmp/davidba/internalizer/dev/mappings/test_PE.csv
+    depends_on_year: False
+  SE:
+    path: /p/tmp/davidba/internalizer/dev/mappings/test_SE.csv
+    depends_on_year: False
+removal_lists:
+  PE:
+    remove_layers: SE
+    fltr: {}
+    mask: {}
+  SE:
+    remove_layers: PE
+    fltr: {}
+    mask: {}
+      
+        
+

@@ -163,3 +163,19 @@ def split_remind_index(df, domains):
         df[domain] = df["REMIND index"].apply(lambda x: x.split(" - ")[i])
 
     return df
+
+def apply_filter_to_dataframe(df, fltr, msk):
+    if len(fltr) == 0 and len(msk) == 0:
+        return None
+    
+    mask1 = False
+    for col, slist in fltr.items():
+        for s in slist:
+            mask1 = mask1 | df[col].str.contains(s)
+
+    mask2 = True
+    for col, slist in msk.items():
+        for s in slist:
+            mask2 = mask2 & ~df[col].str.contains(s) 
+
+    return df[mask1 & mask2]

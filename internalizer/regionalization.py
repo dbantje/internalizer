@@ -66,17 +66,17 @@ def apply_regional_shares_to_dataframe(df: pd.DataFrame, shares: pd.Series | flo
 
     return df.reset_index()
 
-def get_chp_regional_shares(mapping: pd.DataFrame, rundir: str | Path) -> pd.DataFrame:
+def get_chp_regional_shares(mapping: pd.DataFrame, gdxpath: str | Path) -> pd.DataFrame:
     """
     Get regional shares for CHP technologies.
     :param mapping: dataframe containing the mapping from REMIND to LCA datasets
-    :param rundir: Directory of the REMIND run
+    :param gdxpath: path to the REMIND gdx
     :return: dataframe with regional shares applied
     """
     dflist = []
 
     # bio CHP
-    shares = get_coupled_production_parameters(rundir, ["biochp"]).set_index("region")["Val"]
+    shares = get_coupled_production_parameters(gdxpath, ["biochp"]).set_index("region")["Val"]
     sel = mapping[mapping["REMIND index"].str.endswith("biochp")]
     dflist.append(apply_regional_shares_to_dataframe(
         sel[sel["dataset reference product"].str.contains("electricity")], 1.0
@@ -86,7 +86,7 @@ def get_chp_regional_shares(mapping: pd.DataFrame, rundir: str | Path) -> pd.Dat
     ))
 
     # coal CHP
-    shares = get_coupled_production_parameters(rundir, ["coalchp"]).set_index("region")["Val"]
+    shares = get_coupled_production_parameters(gdxpath, ["coalchp"]).set_index("region")["Val"]
     sel = mapping[mapping["REMIND index"].str.endswith("coalchp")]
     coal_type_shares = pd.read_csv(FILEPATH_COALTYPE_SHARES).set_index("region")
     sel2 = sel[sel["dataset name"].str.contains("lignite")]
@@ -106,7 +106,7 @@ def get_chp_regional_shares(mapping: pd.DataFrame, rundir: str | Path) -> pd.Dat
 
 
     # gas CHP
-    shares = get_coupled_production_parameters(rundir, ["gaschp"]).set_index("region")["Val"]
+    shares = get_coupled_production_parameters(gdxpath, ["gaschp"]).set_index("region")["Val"]
     sel = mapping[mapping["REMIND index"].str.endswith("gaschp")]
     sel2 = sel[sel["dataset name"].str.contains("combined cycle")]
     dflist.append(apply_regional_shares_to_dataframe(
@@ -144,8 +144,80 @@ def get_biofuels_regional_shares(mapping: pd.DataFrame) -> pd.DataFrame:
 
     return pd.concat(dflist, axis=0, ignore_index=True).dropna(subset="share")
 
+def fill_mapping_from_mif(
+    mapping: pd.DataFrame,
+    mifpath: str | Path,
+    year: int
+) -> pd.DataFrame:
+    # extend mapping
+    dflist = []
+    for region in REMIND_REGIONS:
+        df = mapping.copy()
+        df["region"] = region
+        dflist.append(df)
 
-def get_regionalized_mapping(mapping: pd.DataFrame, gdxpath: Optional[str]) -> pd.DataFrame:
+    regionalized_mapping = pd.concat(dflist).set_index(["scenario variable", "region"])
+
+    # load .mif
+    mif = pd.read_csv(mifpath, sep=";").rename(columns={"Region": "region", "Variable": "scenario variable"})
+    mifdata = mif.set_index(["scenario variable", "region"])[str(year)]
+
+    # select shared index (some regions don't have certain FE variables)
+    combined_idx = regionalized_mapping.index.intersection(mifdata.index)
+    sel = regionalized_mapping.loc[combined_idx]
+
+    # calculate shares
+    sel["weight"] = mifdata.loc[combined_idx]
+    sel = sel.reset_index()
+    sel["total"] = sel.reset_index().groupby(["REMIND index", "region"])["weight"].transform("sum")
+    sel["share"] = sel["weight"] / sel["total"]
+
+    return sel[["REMIND index", "dataset name", 
+                "dataset reference product", "dataset unit", "share", "region"]]
+
+def regionalize_SE_mapping(
+    mapping: pd.DataFrame,
+    gdxpath: Path | str
+) -> pd.DataFrame:
+    # for globally defined shares, simply copy from mapping
+    dflist = []
+    for region in REMIND_REGIONS:
+        df = mapping[mapping["share"] != "regional"].copy()
+        df["region"] = region
+        dflist.append(df)
+
+    # get all regional shares that are available
+    all_regional_shares = pd.concat(
+        [
+            get_chp_regional_shares(mapping, gdxpath),
+            get_biofuels_regional_shares(mapping)
+        ],
+        axis=0,
+        ignore_index=True
+    )
+
+    # select only those that are in the mapping
+    needed_techs = list(mapping[mapping["share"] == "regional"]["REMIND index"].unique())
+    needed_regional_shares = all_regional_shares[all_regional_shares["REMIND index"].isin(needed_techs)]
+
+    all_shares = pd.concat(
+        [
+            pd.concat(dflist, axis=0, ignore_index=True),
+            needed_regional_shares
+        ],
+        axis=0,
+        ignore_index=True
+    )
+
+    all_shares["share"] = all_shares["share"].astype(float)
+
+    return all_shares
+
+
+def get_regionalized_mapping(
+    mapping: pd.DataFrame,
+    gdxpath: Optional[str],
+) -> pd.DataFrame:
     """
     Regionalize mapping.
     :param mapping: the unregionalized mapping
@@ -158,7 +230,7 @@ def get_regionalized_mapping(mapping: pd.DataFrame, gdxpath: Optional[str]) -> p
         df = mapping[mapping["share"] != "regional"].copy()
         df["region"] = region
         dflist.append(df)
-
+    
     if len(mapping[mapping["share"] == "regional"] == 0) or gdxpath is None:
         all_shares = pd.concat(dflist, axis=0, ignore_index=True)
     else:

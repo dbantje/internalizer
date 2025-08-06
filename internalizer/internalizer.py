@@ -14,7 +14,13 @@ from .utils import (
     interpolate_and_weight_costs,
     split_remind_index,
 )
-from .calculation_setup import prepare_setup, default_setup
+from .calculation_setup import (
+    prepare_setup,
+    default_setup, 
+    CalculationSetup,
+    RemindInternalizationSetup,
+    EI_INDEX
+)
 from .regionalization import combine_shares_and_costs
 
 EURO_REF_YEAR = 2022
@@ -48,26 +54,26 @@ class Internalizer:
 
     def __init__(
         self,
-        filepath: str,
+        mifpath: str,
         model: str,
         pathway: str,
         ei_version: str,
         bw_project: str,
         gdxpath: str,
         outputfolder: str = "output",
-        single_run: bool = True
+        single_run: bool = True,
     ):
         # get directory of data file and scenario name
         self.model = model
-        rundir, filename = extract_folder_and_filename(filepath)
+        rundir, filename = extract_folder_and_filename(mifpath)
         self.rundir = rundir
         outputdir = f"./{outputfolder}"
         if not single_run:
-            outputdir += "/" + extract_output_folder(filepath)
+            outputdir += "/" + extract_output_folder(mifpath)
         self.outdir = outputdir
         namecheck = "_".join((model.lower(), pathway))
         if filename != namecheck:
-            shutil.copy(filepath, rundir+f"/{namecheck}.mif")
+            shutil.copy(mifpath, rundir+f"/{namecheck}.mif")
         self.scenario = pathway
 
         if not os.path.exists(self.outdir):
@@ -76,6 +82,7 @@ class Internalizer:
         self.ei_version = ei_version 
         self.bw_project = bw_project
         self.gdxpath = gdxpath
+        self.mifpath = mifpath
 
     def run_premise(
         self,
@@ -87,7 +94,7 @@ class Internalizer:
         args = [
             (
                 self.bw_project,
-                {"model": self.model, "pathway": self.scenario, "year": year, "filepath": self.rundir},
+                {"model": self.model, "pathway": self.scenario, "year": year, "mifpath": self.rundir},
                 self.ei_version,
                 self.outdir
             )
@@ -101,11 +108,34 @@ class Internalizer:
             for arg in args:
                 _run_premise_year(*arg)
 
+    def get_technosphere_df(self):
+        dflist = []
+        for year in self.years:
+            matrix_folder = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/"
+            df = pd.read_csv(
+                matrix_folder + "/A_matrix_index.csv", sep=";",
+                usecols=[0, 1, 2],
+                names=EI_INDEX
+            )
+            dflist.append(df)
+        
+        return pd.concat(dflist, ignore_index=True).drop_duplicates()
+
+    def set_calculation_setup(
+        self,
+        setup: Path | str = "default",
+    ) -> None:
+        if setup == "default":
+            self.cs = RemindInternalizationSetup(self.mifpath, self.gdxpath, self.get_technosphere_df())
+        else:
+            cs = CalculationSetup(setup)
+            cs.build_removal_lists(self.get_technosphere_df())
+            cs.regionalize_constant_mappings()
+            self.cs = cs   
+
     def calculate_costs(
         self,
         monetization: float | str | dict,
-        activities_mapping: List[str | Path] | str = "default",
-        level_names: Optional[List[str]] = None,
         multiprocessing: bool = True
     ) -> None:
         """
@@ -124,65 +154,67 @@ class Internalizer:
         else:
             raise ValueError(f"Argument 'monetization' must be a float, string, or dictionary!")
 
-        # obtain mappings and removal lists
-        if activities_mapping == "default":
-            setup = default_setup(self.gdxpath)
-        else:
-            setup = prepare_setup(activities_mapping, self.gdxpath, level_names)
-        self.levels = setup.keys()
-        args = []
-        for lvl in self.levels:
-            mapping = setup[lvl]["mapping"]
-            rlist = setup[lvl]["removal list"]
-            for year in self.years:
-                args.append(
-                    (
-                        mapping,
-                        monetization,
-                        rlist,
-                        self.scenario,
-                        year,
-                        lvl,
-                        self.outdir,
-                        self.model,
-                    )   
-                )
+        try:
+            args = []
+            for lvl in self.cs.levels:
+                rlist = self.cs.data[lvl]["removal list"]
+                for year in self.years:
+                    mapping = self.cs.data[lvl].get(
+                        "regionalized mapping", self.cs.regionalize_dynamic_mapping(lvl, year)
+                    )
+                        
+                    args.append(
+                        (
+                            mapping,
+                            monetization,
+                            rlist,
+                            self.scenario,
+                            year,
+                            lvl,
+                            self.outdir,
+                            self.model,
+                        )   
+                    )
 
-        if multiprocessing:
-            with Pool(cpu_count(), maxtasksperchild=1000) as p:
-                p.starmap(_calculate_costs_year, args)
+            if multiprocessing:
+                with Pool(cpu_count(), maxtasksperchild=1000) as p:
+                    p.starmap(_calculate_costs_year, args)
 
-                # for lvl, y, r in zip(lvllist, yearlist, results):
-                #     self.cost_results[lvl][y] = r
-        else:
-            for arg in args:
-                _calculate_costs_year(*arg)
+                    # for lvl, y, r in zip(lvllist, yearlist, results):
+                    #     self.cost_results[lvl][y] = r
+            else:
+                for arg in args:
+                    _calculate_costs_year(*arg)
+        except AttributeError:
+            print("No calculation setup is set. Run Internalizer.set_calculation_setup(...) first. Exiting.")
 
     def load_costs(
         self,
         activities_mapping: List[str | Path] | str = "default",
         level_names: Optional[List[str]] = None
     ) -> None:
-        # recalculate mappings
-        if activities_mapping == "default":
-            setup = default_setup(self.gdxpath)
-        else:
-            setup = prepare_setup(activities_mapping, self.gdxpath, level_names)
-
-        # load raw costs and aggregate with mappings
-        self.cost_results = {}
-        for lvl in self.levels:
-            self.cost_results[lvl] = {}
-            mapping = setup[lvl]["mapping"]
-            for year in self.years:
-                fp = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/regionalized_costs_{lvl}.csv"
-                regionalized_costs = pd.read_csv(fp)
-                costs_agg = combine_shares_and_costs(mapping, regionalized_costs).melt(
-                    var_name="impact category", value_name="cost", ignore_index=False
-                ).reset_index()
-                self.cost_results[lvl][year] = costs_agg.set_index(
-                    ["REMIND index", "region", "impact category"]
-                )["cost"].to_xarray()
+        
+        try:
+            # load raw costs and aggregate with mappings
+            self.cost_results = {}
+            for lvl in self.cs.levels:
+                self.cost_results[lvl] = {}
+                for year in self.years:
+                    # recalculate mapping
+                    mapping = self.cs.data[lvl].get(
+                        "regionalized mapping", self.cs.regionalize_dynamic_mapping(lvl, year)
+                    )
+                    fp = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/regionalized_costs_{lvl}.csv"
+                    regionalized_costs = pd.read_csv(fp)
+                    costs_agg = combine_shares_and_costs(mapping, regionalized_costs).melt(
+                        var_name="impact category", value_name="cost", ignore_index=False
+                    ).reset_index()
+                    self.cost_results[lvl][year] = costs_agg.set_index(
+                        ["REMIND index", "region", "impact category"]
+                    )["cost"].to_xarray()
+        except AttributeError:
+            print("No calculation setup is set. Run 'Internalizer.set_calculation_setup(...)`\n",
+                   "and `Internalizer.calculate_costs(...)`` first. Exiting.")
         
     
     def write_remind_input_files(
@@ -193,7 +225,8 @@ class Internalizer:
     ) -> None:
         ramp_up = get_linear_ramp_up(MODEL_YEARS["remind"], ramp_up_startyear, ramp_up_endyear)
 
-        for lvl in self.levels:
+        for lvl in self.cs.levels:
+            domains = self.cs.data[lvl]["domains"]
             x = interpolate_and_weight_costs(
                     self.cost_results[lvl],
                     MODEL_YEARS["remind"],
@@ -205,8 +238,8 @@ class Internalizer:
                 
             total = x.sel({"impact category": impact_categories}).sum(dim="impact category")
             df = total.to_dataframe(name="cost").reset_index()
-            df = split_remind_index(df, ["all_te"])
-            df[["year", "region", "all_te", "cost"]].to_csv(
+            df = split_remind_index(df, domains)
+            df[["year", "region", "cost"] + domains].to_csv(
                 self.outdir + f"/lca_costs_{lvl}.csv", index=False, header=True)
             
 
