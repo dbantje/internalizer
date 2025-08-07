@@ -102,7 +102,8 @@ class Internalizer:
         ]
 
         if multiprocessing:
-            with Pool(cpu_count(), maxtasksperchild=1000) as p:
+            with Pool(min(cpu_count(), 4), maxtasksperchild=1) as p:
+            #with Pool(cpu_count(), maxtasksperchild=1000) as p:
                 p.starmap(_run_premise_year, args)
         else:
             for arg in args:
@@ -177,7 +178,8 @@ class Internalizer:
                     )
 
             if multiprocessing:
-                with Pool(cpu_count(), maxtasksperchild=1000) as p:
+                with Pool(min(cpu_count(), 4), maxtasksperchild=1) as p:
+                # with Pool(cpu_count(), maxtasksperchild=1000) as p:
                     p.starmap(_calculate_costs_year, args)
 
                     # for lvl, y, r in zip(lvllist, yearlist, results):
@@ -189,9 +191,7 @@ class Internalizer:
             print("No calculation setup is set. Run Internalizer.set_calculation_setup(...) first. Exiting.")
 
     def load_costs(
-        self,
-        activities_mapping: List[str | Path] | str = "default",
-        level_names: Optional[List[str]] = None
+        self
     ) -> None:
         
         try:
@@ -238,8 +238,8 @@ class Internalizer:
                 
             total = x.sel({"impact category": impact_categories}).sum(dim="impact category")
             df = total.to_dataframe(name="cost").reset_index()
-            df = split_remind_index(df, domains)
-            df[["year", "region", "cost"] + domains].to_csv(
+            df = split_remind_index(df, domains).rename(columns={"year": "ttot", "region": "all_regi"})
+            df[["ttot", "all_regi"] + domains + ["cost"]].to_csv(
                 self.outdir + f"/lca_costs_{lvl}.csv", index=False, header=True)
             
 
