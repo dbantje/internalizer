@@ -77,7 +77,7 @@ indst - feh2s;FE|Non-energy Use|Industry|Gases|+|Hydrogen;market for hydrogen, g
 indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Biomass;methanol production, biomass gasification;methanol, from biomass;kilogram;regional
 indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Fossil;market for light fuel oil;light fuel oil;kilogram;regional
 indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Hydrogen;diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation;diesel, synthetic;kilogram;regional
-indst - Biomass;FE|Non-energy Use|Industry|Solids|+|Biomass;market for plywood;plywood;cubic meter;regional
+indst - fesos;FE|Non-energy Use|Industry|Solids|+|Biomass;market for plywood;plywood;cubic meter;regional
 indst - fesos;FE|Non-energy Use|Industry|Solids|+|Fossil;market for hard coal;hard coal;kilogram;regional
 trans - fedie;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass;methanol from biomass, burned in container ship;heat;megajoule;regional
 trans - fedie;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Fossil;heavy fuel oil, burned in container ship;heat;megajoule;regional
