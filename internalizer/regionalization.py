@@ -297,13 +297,13 @@ def select_regional_mixes(df: pd.DataFrame, geo: Geomap) -> pd.DataFrame:
     dflist = []
     for region in REMIND_REGIONS:
         if region in locations:
-            rdf = df[df["dataset location"] == region]
+            rdf = df.loc[df["dataset location"] == region].copy()
             rdf["region"] = region
             dflist.append(rdf)
         else:
             locations_in_region = [loc for loc in locations if geo.ecoinvent_to_iam_location(loc) == region]
             if len(locations_in_region) > 0:
-                rdf = df[df["dataset location"].isin(locations_in_region)]
+                rdf = df.loc[df["dataset location"].isin(locations_in_region)].copy()
                 rdf["region"] = region
                 dflist.append(rdf)  
         
@@ -315,7 +315,7 @@ def select_regional_mixes(df: pd.DataFrame, geo: Geomap) -> pd.DataFrame:
         rdf["region"] = "World"
         dflist.append(rdf)
     else:
-        rdf = df[df["dataset location"] == global_location]
+        rdf = df.loc[df["dataset location"] == global_location].copy()
         rdf["region"] = "World"
         dflist.append(rdf)
 
@@ -327,19 +327,19 @@ def regionalize_costs(df: pd.DataFrame) -> pd.DataFrame:
     :param df: dataframe with costs
     :return: regionalized dataframe
     """
-    df = df.set_index(["dataset name", "dataset reference product"])
+    df = df.set_index(["dataset name", "dataset reference product"]).sort_index()
     geo = Geomap(model="remind")
 
     dflist = []
     for i in df.index.unique():
-        sel = df.loc[i]
+        sel = df.loc[i].copy()
         dflist.append(select_regional_mixes(sel, geo).reset_index())
 
     return pd.concat(
         dflist, axis=0, ignore_index=True).groupby(
             ["dataset name", "dataset reference product", 
             "dataset unit", "region", "impact category"]
-            ).agg({"cost": np.mean}).reset_index()
+            ).agg({"cost": "mean"}).reset_index()
 
 def combine_shares_and_costs(shares: pd.DataFrame, costs: pd.DataFrame) -> pd.DataFrame:
     """
@@ -360,7 +360,7 @@ def combine_shares_and_costs(shares: pd.DataFrame, costs: pd.DataFrame) -> pd.Da
         if idx not in costs_index:
             j = (idx[0], idx[1], idx[2], "World")
         try:
-            sel = costs.loc[j]
+            sel = costs.loc[j].copy()
         except KeyError:
             break
         sel["cost"] = factor * sel["cost"]
