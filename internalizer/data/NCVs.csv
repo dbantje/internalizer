@@ -47,6 +47,6 @@ heat,megajoule,1.0
 "heat, central or small-scale, biomethane",megajoule,1.0
 "methanol, from biomass",kilogram,20.0
 light fuel oil,kilogram,40.6
-plywood,cubic meter,16.8
+plywood,cubic meter,10800
 "electricity, high voltage",megajoule,1.0
 "electricity, low voltage",megajoule,1.0
