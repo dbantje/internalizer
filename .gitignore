@@ -179,4 +179,7 @@ cython_debug/
 # output data
 output/
 dev/export/
-lca/
+/dev/lca/
+/dev/lca_noRemoval
+/dev/lca_premiseUpdate
+

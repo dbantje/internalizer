@@ -192,8 +192,8 @@ def _calculate_costs_year(
 
     # impact and cost calculation
     costs, impacts = get_monetized_results(lca, selected_inds, biosphere_inds, monetization)
-    costs.to_csv(Path(matrix_folder) / f"costs_{level}.csv", index=False)
-    impacts.to_csv(Path(matrix_folder) / f"impacts_{level}.csv", index=False)
+    # costs.to_csv(Path(matrix_folder) / f"costs_{level}.csv", index=False)
+    # impacts.to_csv(Path(matrix_folder) / f"impacts_{level}.csv", index=False)
 
     # regionalize costs and combine with shares
     regionalized_costs = regionalize_costs(costs)
