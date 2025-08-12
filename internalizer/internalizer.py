@@ -11,7 +11,7 @@ from .utils import (
     convert_euros_to_dollar,
     check_monetization_factors,
     get_linear_ramp_up,
-    interpolate_and_weight_costs,
+    interpolate_and_weight_xr,
     split_remind_index,
 )
 from .calculation_setup import (
@@ -238,7 +238,7 @@ class Internalizer:
 
         for lvl in self.cs.levels:
             domains = self.cs.data[lvl]["domains"]
-            x = interpolate_and_weight_costs(
+            x = interpolate_and_weight_xr(
                     self.cost_results[lvl],
                     MODEL_YEARS["remind"],
                     ramp_up

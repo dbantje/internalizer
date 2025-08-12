@@ -114,28 +114,28 @@ def check_monetization_factors(
         if k not in available_methods:
             raise ValueError(f"Method {k} not available!")
         
-def interpolate_and_weight_costs(
-    costs: dict,
+def interpolate_and_weight_xr(
+    data: dict,
     interpolation_years: list,
     weighting_factors: xr.DataArray
 ) -> xr.DataArray:
     # add padding    
-    last_array = costs[max(costs.keys())]
-    first_array = costs[min(costs.keys())]
-    costs[interpolation_years[0]] = first_array
-    costs[interpolation_years[-1]] = last_array
+    last_array = data[max(data.keys())]
+    first_array = data[min(data.keys())]
+    data[interpolation_years[0]] = first_array
+    data[interpolation_years[-1]] = last_array
 
     # transform to DataArray
-    costs = xr.concat(
-                list(costs.values()),
-                pd.Index(list(costs.keys()), name="year")
+    x = xr.concat(
+                list(x.values()),
+                pd.Index(list(x.keys()), name="year")
             )
     
     # interpolate
-    costs = costs.interp(year=interpolation_years)
+    x = x.interp(year=interpolation_years)
 
     # weight
-    return costs * weighting_factors
+    return x * weighting_factors
 
 def ramp(
     x: list | np.ndarray,
