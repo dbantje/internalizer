@@ -9,7 +9,6 @@ import yaml
 prodSE_MAPPING = DATA_DIR / "mappings" / "prodSE.csv"
 demFE_mapping = DATA_DIR / "mappings" / "demFE.csv"
 
-DEFAULT_CONFIG = DATA_DIR / "mappings" / "remind_internalization_setup.yaml"
 EI_INDEX = ["dataset name", "dataset reference product", "dataset unit"]
 
 class CalculationSetup:
@@ -70,12 +69,13 @@ class CalculationSetup:
 class RemindInternalizationSetup(CalculationSetup):
     def __init__(
         self,
+        yaml_file: Path | str,
         mifpath: Path | str,
         gdxpath: Path | str,
         technosphere_inds: pd.DataFrame
     ):
         super(RemindInternalizationSetup, self).__init__(
-            DEFAULT_CONFIG
+            yaml_file
         )
         self.mifpath = mifpath
         self.gdxpath = gdxpath

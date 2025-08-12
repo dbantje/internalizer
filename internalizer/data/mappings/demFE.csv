@@ -20,10 +20,10 @@ cdr - feh2s;FE|CDR|DAC|+|Hydrogen;heat production, from hydrogen-fired one gigaw
 cdr - fedie;FE|CDR|EW|+|Diesel;diesel, burned in diesel-electric generating set, 10MW;diesel, burned in diesel-electric generating set, 10MW;megajoule;regional
 cdr - feels;FE|CDR|EW|+|Electricity;electricity, medium-voltage, used as final energy;heat;megajoule;regional
 cdr - fedie;FE|CDR|OAE, electric calciner|+|Diesel;diesel, burned in diesel-electric generating set, 10MW;diesel, burned in diesel-electric generating set, 10MW;megajoule;regional
-cdr - fels;FE|CDR|OAE, electric calciner|+|Electricity;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
+cdr - feels;FE|CDR|OAE, electric calciner|+|Electricity;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
 cdr - feh2s;FE|CDR|OAE, electric calciner|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 cdr - fedie;FE|CDR|OAE, traditional calciner|+|Diesel;diesel, burned in diesel-electric generating set, 10MW;diesel, burned in diesel-electric generating set, 10MW;megajoule;regional
-cdr - fels;FE|CDR|OAE, traditional calciner|+|Electricity;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
+cdr - feels;FE|CDR|OAE, traditional calciner|+|Electricity;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
 cdr - fegas;FE|CDR|OAE, traditional calciner|+|Gases;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
 cdr - feh2s;FE|CDR|OAE, traditional calciner|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 indst - feels;FE|Industry|Cement|+|Electricity;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional

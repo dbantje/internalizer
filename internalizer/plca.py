@@ -10,7 +10,13 @@ from pathlib import Path
 from typing import List, Optional, Tuple
 
 from .regionalization import regionalize_costs, combine_shares_and_costs
-from .utils import *
+from .utils import (
+    fill_characterization_factors_matrices,
+    get_ncv_dict,
+    get_lcia_method_names,
+    csr_matrix,
+    correct_coke_production_flows
+)
 from .filesystem_constants import DATA_DIR
 
 FILEPATH_MONETIZATION_FACTORS = DATA_DIR / "mfs_monte_carlo_sample_euro2022.nc"
@@ -49,9 +55,9 @@ def get_cfs_and_mfs(
             biosphere_dict=biosphere_inds
         )
         mfs = xr.DataArray(
-            np.diag(monetization.values()),
+            np.diag(list(monetization.values())),
             {
-                "LCIA method": methods,
+                "LCIA method": [m.replace(" - ", ", ") for m in methods],
                 "impact category": methods
             }
         )
@@ -73,14 +79,21 @@ def get_monetized_results(
     dflist = []
     dflist_impacts = []
     for k, value in lca.inventories.items():
-        impacts = xr.DataArray(
-            np.squeeze(
-                np.array((cfs @ value).sum(axis=-1))
-            ),
-            {
-                "LCIA method": [m.replace(" - ", ", ") for m in methods]
-            }
-        )
+        data = np.squeeze(np.array((cfs @ value).sum(axis=-1)))
+        if len(methods) == 1:
+            impacts = xr.DataArray(
+                [data],
+                {
+                    "LCIA method": [m.replace(" - ", ", ") for m in methods]
+                }
+            )
+        else:
+            impacts = xr.DataArray(
+                data,
+                {
+                    "LCIA method": [m.replace(" - ", ", ") for m in methods]
+                }
+            )
         
         costs = (mfs * impacts).sum(dim="LCIA method")
         if quantile is not None:
@@ -140,6 +153,13 @@ def _run_premise_year(
 
     ndb.write_db_to_matrices(outdir)
 
+    if ei_version == "3.10":
+        model = scen["model"]
+        scenario = scen["pathway"]
+        year = scen["year"]
+        mfolder = outdir + f"/{model}/{scenario}/{str(year)}/"
+        correct_coke_production_flows(mfolder)
+
 def _calculate_costs_year(
     mapping: pd.DataFrame,
     monetization: float | str | dict,
@@ -148,7 +168,8 @@ def _calculate_costs_year(
     year: int,
     level: str,
     outdir: str,
-    model: str
+    model: str,
+    save_intermediate_results: bool
 ) -> xr.DataArray:
 
     # load matrices
@@ -174,6 +195,8 @@ def _calculate_costs_year(
             ["dataset name", "dataset reference product", "dataset unit"]
         ).index.unique())
         to_remove = [v for k, v in technosphere_inds.items() if (k[0], k[1], k[2]) in remove_idx_list]
+
+    print(f"{level}, {year}: {len(to_remove)} activities in the removal list")
     
     # set up LCA, LCI calculation
     lca = MultiLCA(
@@ -192,8 +215,9 @@ def _calculate_costs_year(
 
     # impact and cost calculation
     costs, impacts = get_monetized_results(lca, selected_inds, biosphere_inds, monetization)
-    # costs.to_csv(Path(matrix_folder) / f"costs_{level}.csv", index=False)
-    # impacts.to_csv(Path(matrix_folder) / f"impacts_{level}.csv", index=False)
+    if save_intermediate_results:
+        costs.to_csv(Path(matrix_folder) / f"costs_{level}.csv", index=False)
+        impacts.to_csv(Path(matrix_folder) / f"impacts_{level}.csv", index=False)
 
     # regionalize costs and combine with shares
     regionalized_costs = regionalize_costs(costs)

@@ -6,8 +6,8 @@ gaschp;heat and power co-generation, natural gas, combined cycle power plant, 40
 gaschp;heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical;heat, district or industrial, natural gas;megajoule;regional
 gaschp;heat and power co-generation, natural gas, conventional power plant, 100MW electrical;electricity, high voltage;kilowatt hour;regional
 gaschp;heat and power co-generation, natural gas, conventional power plant, 100MW electrical;heat, district or industrial, natural gas;megajoule;regional
-gastr;petroleum and gas production, onshore;natural gas, high pressure;cubic meter;regional
-gastr;petroleum and gas production, offshore;natural gas, high pressure;cubic meter;regional
+gastr;petroleum and gas production, onshore;natural gas, high pressure;cubic meter;0.7
+gastr;petroleum and gas production, offshore;natural gas, high pressure;cubic meter;0.3
 gash2;hydrogen production, steam methane reforming;hydrogen, gaseous, low pressure;kilogram;1.0
 gash2c;hydrogen production, steam methane reforming, with CCS;hydrogen, gaseous, low pressure;kilogram;1.0
 gashp;heat and power co-generation, natural gas, 500kW electrical, lean burn;heat, district or industrial, natural gas;megajoule;1.0

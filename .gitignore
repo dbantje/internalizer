@@ -174,12 +174,13 @@ cython_debug/
 .pypirc
 
 # development
-# dev/
+dev/
 
 # output data
 output/
-dev/export/
-/dev/lca/
-/dev/lca_noRemoval
-/dev/lca_premiseUpdate
+# dev/export/
+# /dev/lca*
+# /dev/lcia*
+# /dev/lca_noRemoval
+# /dev/lca_premiseUpdate
 

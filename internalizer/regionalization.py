@@ -341,6 +341,25 @@ def regionalize_costs(df: pd.DataFrame) -> pd.DataFrame:
             "dataset unit", "region", "impact category"]
             ).agg({"cost": "mean"}).reset_index()
 
+def regionalize_impacts(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    :param df: dataframe with impacts
+    :return: regionalized dataframe
+    """
+    df = df.set_index(["dataset name", "dataset reference product"]).sort_index()
+    geo = Geomap(model="remind")
+
+    dflist = []
+    for i in df.index.unique():
+        sel = df.loc[i].copy()
+        dflist.append(select_regional_mixes(sel, geo).reset_index())
+
+    return pd.concat(
+        dflist, axis=0, ignore_index=True).groupby(
+            ["dataset name", "dataset reference product", 
+            "dataset unit", "region", "LCIA method"]
+            ).agg({"impact": "mean"}).reset_index()
+
 def combine_shares_and_costs(shares: pd.DataFrame, costs: pd.DataFrame) -> pd.DataFrame:
     """
     Weight costs per shares.
@@ -349,24 +368,30 @@ def combine_shares_and_costs(shares: pd.DataFrame, costs: pd.DataFrame) -> pd.Da
     :return: regionalized aggregated costs per REMIND technology
     """
     shares = shares.set_index(["dataset name", "dataset reference product", "dataset unit", "region"])
-    costs = costs.set_index(["dataset name", "dataset reference product", "dataset unit", "region"])
+    costs = costs.pivot(
+        index=["dataset name", "dataset reference product", "dataset unit", "region"],
+        columns="impact category",
+        values="cost"
+        )
+    ics = costs.columns
 
-    dflist = []
-    costs_index = costs.index
-    for idx, row in shares.iterrows():
-        tech = row["REMIND index"]
-        factor = row["share"]
-        j = idx
-        if idx not in costs_index:
-            j = (idx[0], idx[1], idx[2], "World")
-        try:
-            sel = costs.loc[j].copy()
-        except KeyError:
-            break
-        sel["cost"] = factor * sel["cost"]
-        sel = sel.pivot(columns="impact category", values="cost").reset_index(drop=True)
-        sel["REMIND index"] = tech
-        sel["region"] = idx[-1]
-        dflist.append(sel)
-        
-    return pd.concat(dflist, axis=0, ignore_index=True).groupby(["REMIND index", "region"]).sum()
+    # build index with fallback to 'World' region
+    old_idx = shares.index
+    new_idx = []
+    for idx in old_idx:
+        if idx in costs.index:
+            new_idx.append(idx)
+        else:
+            new_idx.append((idx[0], idx[1], idx[2], "World"))
+
+    # combine and multiply by shares
+    combined = pd.DataFrame(
+        costs.loc[new_idx].to_numpy(),
+        index=old_idx,
+        columns=ics
+        ).mul(shares["share"], axis=0)
+    combined["REMIND index"] = shares["REMIND index"]
+
+    return combined.groupby(
+        ["REMIND index", "region"]
+    )[ics].sum()
