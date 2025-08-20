@@ -4,7 +4,8 @@ from pathlib import Path
 import os
 import numpy as np
 import uuid
-from typing import Optional
+from typing import Optional, List
+import xarray as xr
 
 from premise.geomap import Geomap
 
@@ -44,6 +45,33 @@ def get_coupled_production_parameters(gdxpath: str, techs: list) -> pd.DataFrame
               inplace=True)
 
     return df[df["REMIND index"].isin(techs)][["region", "REMIND index", "Val"]]
+
+def get_prodSE(gdxpath: str, years: List[int]) -> xr.DataArray:
+    csvname = f"vm_prodSE_{uuid.uuid4()}.csv"
+    subprocess.run(["gdxdump", gdxpath, "symb=vm_prodSE", "format=csv", f"output={csvname}"])
+
+    df = pd.read_csv(csvname)
+    os.remove(csvname)
+    mapper = {"all_te": "REMIND index", "Val": "prodSE", "tall": "year", "all_regi": "region"}
+    df = df.rename(columns=mapper)
+    df = df.loc[df["year"].isin(years)]
+
+    return df.set_index(["REMIND index", "year", "region"])["prodSE"].to_xarray()
+
+def get_demFE(gdxpath: str, years: List[int]) -> xr.DataArray:
+    csvname = f"vm_demFeSector_{uuid.uuid4()}.csv"
+    subprocess.run(["gdxdump", gdxpath, "symb=vm_demFeSector", "format=csv", f"output={csvname}"])
+
+    df = pd.read_csv(csvname)
+    os.remove(csvname)
+
+    df["emi_sectors"] = df["emi_sectors"].str.lower()
+    df["REMIND index"] = [" - ".join([sec, fuel]) for fuel, sec in zip(df["all_enty.1"], df["emi_sectors"])]
+    mapper = {"Val": "demFE", "ttot": "year", "all_regi": "region"}
+    df = df.rename(columns=mapper)
+    df = df.loc[df["year"].isin(years)]
+
+    return df.groupby(["REMIND index", "year", "region"])["demFE"].sum().to_xarray()
 
 def apply_regional_shares_to_dataframe(df: pd.DataFrame, shares: pd.Series | float, factors: pd.Series | float = 1.0) -> pd.DataFrame:
     """
@@ -174,6 +202,26 @@ def fill_mapping_from_mif(
 
     return sel[["REMIND index", "dataset name", 
                 "dataset reference product", "dataset unit", "share", "region"]]
+
+def get_mif_variables(
+    mapping: pd.DataFrame,
+    mifpath: str | Path,
+    years: List[int]
+) -> pd.DataFrame:
+    # load .mif and select years
+    mif = pd.read_csv(mifpath, sep=";").rename(columns={"Region": "region", "Variable": "scenario variable"})
+    years = [str(y) for y in years]
+    cols = [c for c in mif.columns if c in years]
+    mifdata = mif.set_index(["scenario variable", "region"])[cols]
+
+    # select needed variables
+    all_vars = list(mapping["scenario variable"].unique())
+    sel = mifdata.loc[pd.IndexSlice[all_vars, REMIND_REGIONS]].copy().reset_index()
+
+    return sel.melt(
+        id_vars=["scenario variable", "region"],
+        var_name="year",
+    )
 
 def regionalize_SE_mapping(
     mapping: pd.DataFrame,
@@ -360,38 +408,44 @@ def regionalize_impacts(df: pd.DataFrame) -> pd.DataFrame:
             "dataset unit", "region", "LCIA method"]
             ).agg({"impact": "mean"}).reset_index()
 
-def combine_shares_and_costs(shares: pd.DataFrame, costs: pd.DataFrame) -> pd.DataFrame:
+def aggregate_with_mapping(
+    mapping: pd.DataFrame,
+    df: pd.DataFrame,
+    var_col: str = "impact category",
+    value_col: str = "cost"
+) -> pd.DataFrame:
     """
-    Weight costs per shares.
-    :param shares: dataframe of regionalized shares
-    :param costs: dataframe of regionalized costs
-    :return: regionalized aggregated costs per REMIND technology
+    Aggregate dataframe with mapping.
+    :param mapping: dataframe of regionalized mapping containing shares
+    :param costs: regionalized dataframe
+    :return: regionalized aggregated data
     """
-    shares = shares.set_index(["dataset name", "dataset reference product", "dataset unit", "region"])
-    costs = costs.pivot(
+    mapping = mapping.set_index(["dataset name", "dataset reference product", "dataset unit", "region"])
+    df = df.pivot(
         index=["dataset name", "dataset reference product", "dataset unit", "region"],
-        columns="impact category",
-        values="cost"
+        columns=var_col,
+        values=value_col
         )
-    ics = costs.columns
+    ics = df.columns
 
     # build index with fallback to 'World' region
-    old_idx = shares.index
+    old_idx = mapping.index
     new_idx = []
     for idx in old_idx:
-        if idx in costs.index:
+        if idx in df.index:
             new_idx.append(idx)
         else:
             new_idx.append((idx[0], idx[1], idx[2], "World"))
 
     # combine and multiply by shares
     combined = pd.DataFrame(
-        costs.loc[new_idx].to_numpy(),
+        df.loc[new_idx].to_numpy(),
         index=old_idx,
         columns=ics
-        ).mul(shares["share"], axis=0)
-    combined["REMIND index"] = shares["REMIND index"]
+        ).mul(mapping["share"], axis=0)
+    combined["REMIND index"] = mapping["REMIND index"]
+    combined = combined.groupby(["REMIND index", "region"])[ics].sum()
 
-    return combined.groupby(
-        ["REMIND index", "region"]
-    )[ics].sum()
+    return combined.melt(
+        var_name=var_col, value_name=value_col, ignore_index=False
+    ).reset_index()
