@@ -117,7 +117,7 @@ def check_monetization_factors(
 def interpolate_and_weight_xr(
     data: dict,
     interpolation_years: list,
-    weighting_factors: xr.DataArray
+    weighting_factors: xr.DataArray | float
 ) -> xr.DataArray:
     # add padding    
     last_array = data[max(data.keys())]
@@ -127,8 +127,8 @@ def interpolate_and_weight_xr(
 
     # transform to DataArray
     x = xr.concat(
-                list(x.values()),
-                pd.Index(list(x.keys()), name="year")
+                list(data.values()),
+                pd.Index(list(data.keys()), name="year")
             )
     
     # interpolate
@@ -216,4 +216,8 @@ def correct_coke_production_flows(matrixfolder: Path | str):
     
     Bmatrix.loc[idx, "value"] = data["exchange amount - 3.10.1"].values
     Bmatrix.reset_index().to_csv(matrixfolder + "/B_matrix.csv", sep=";", index=False)
+
+def get_dict_mapping_from_df(df, col1, col2):
+    temp = df[[col1, col2]].copy().drop_duplicates()
+    return dict(zip(temp[col1], temp[col2]))
 
