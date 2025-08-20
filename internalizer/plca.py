@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 from typing import List, Optional, Tuple
 
-from .regionalization import regionalize_costs, combine_shares_and_costs
+from .regionalization import regionalize_costs, regionalize_impacts
 from .utils import (
     fill_characterization_factors_matrices,
     get_ncv_dict,
@@ -137,7 +137,8 @@ def _run_premise_year(
     project: str,
     scen: dict,
     ei_version: str,
-    outdir: str
+    outdir: str,
+    quiet: bool
 ) -> None:
     bd.projects.set_current(project)
 
@@ -146,7 +147,8 @@ def _run_premise_year(
         scenarios=[scen],
         source_db=ei_label,
         source_version=ei_version,
-        biosphere_name="ecoinvent-{}-biosphere".format(ei_version)
+        biosphere_name="ecoinvent-{}-biosphere".format(ei_version),
+        quiet=quiet
     )
 
     ndb.update()
@@ -180,6 +182,7 @@ def _calculate_costs_year(
         scenario,
         year
     )
+    print(f"{level}, {year}: Matrices loaded")
 
     # select functional units
     idx_list = list(mapping.set_index(
@@ -187,6 +190,7 @@ def _calculate_costs_year(
     ).index.unique())
     selected_inds = {k: v for k, v in technosphere_inds.items() if (k[0], k[1], k[2]) in idx_list}
     fus = {str(i): {selected_inds[k]: 1/NCV_DICT[(k[1], k[2])]} for i, k in enumerate(selected_inds.keys())}
+    print(f"{level}, {year}: Functional units selected")
 
     # select activities to remove
     to_remove = []
@@ -212,6 +216,7 @@ def _calculate_costs_year(
         lca.lci_calculation()
     else:
         lca.lci()
+    print(f"{level}, {year}: LCI done.")
 
     # impact and cost calculation
     costs, impacts = get_monetized_results(lca, selected_inds, biosphere_inds, monetization)
@@ -219,13 +224,15 @@ def _calculate_costs_year(
         costs.to_csv(Path(matrix_folder) / f"costs_{level}.csv", index=False)
         impacts.to_csv(Path(matrix_folder) / f"impacts_{level}.csv", index=False)
 
+    print(f"{level}, {year}: Cost calculation done.")
+
     # regionalize costs and combine with shares
     regionalized_costs = regionalize_costs(costs)
     regionalized_costs.to_csv(Path(matrix_folder) / f"regionalized_costs_{level}.csv", index=False)
+    regionalized_impacts = regionalize_impacts(impacts)
+    regionalized_impacts.to_csv(Path(matrix_folder) / f"regionalized_impacts_{level}.csv", index=False)
 
-    # return combine_shares_and_costs(mapping, regionalized_costs).melt(
-    #     var_name="impact category", value_name="cost", ignore_index=False).reset_index().set_index(
-    # ["REMIND index", "region", "impact category"])["cost"].to_xarray()
+    print(f"{level}, {year}: Regionalization done.")
 
 
 def remove_from_technosphere(

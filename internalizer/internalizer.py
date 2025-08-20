@@ -21,7 +21,7 @@ from .calculation_setup import (
     RemindInternalizationSetup,
     EI_INDEX
 )
-from .regionalization import combine_shares_and_costs
+from .regionalization import aggregate_with_mapping, regionalize_impacts
 from .filesystem_constants import DATA_DIR
 
 EURO_REF_YEAR = 2022
@@ -65,6 +65,7 @@ class Internalizer:
         gdxpath: str,
         outputfolder: str = "output",
         single_run: bool = True,
+        max_mp_tasks: int | None = 4
     ):
         # get directory of data file and scenario name
         self.model = model
@@ -86,11 +87,16 @@ class Internalizer:
         self.bw_project = bw_project
         self.gdxpath = gdxpath
         self.mifpath = mifpath
+        if max_mp_tasks is not None:
+            self.max_mp_tasks = max_mp_tasks
+        else:
+            self.max_mp_tasks = cpu_count()
 
     def run_premise(
         self,
         years: List[int],
-        multiprocessing: bool = True
+        multiprocessing: bool = True,
+        quiet: bool = True
     ) -> None:
         self.years = years
         
@@ -99,13 +105,14 @@ class Internalizer:
                 self.bw_project,
                 {"model": self.model, "pathway": self.scenario, "year": year, "filepath": self.rundir},
                 self.ei_version,
-                self.outdir
+                self.outdir,
+                quiet
             )
             for year in self.years
         ]
 
         if multiprocessing:
-            with Pool(min(cpu_count(), 4), maxtasksperchild=1) as p:
+            with Pool(self.max_mp_tasks) as p:
             #with Pool(cpu_count(), maxtasksperchild=1000) as p:
                 p.starmap(_run_premise_year, args)
         else:
@@ -187,7 +194,7 @@ class Internalizer:
                 )
 
         if multiprocessing:
-            with Pool(min(cpu_count(), 4), maxtasksperchild=1) as p:
+            with Pool(self.max_mp_tasks) as p:
             # with Pool(cpu_count(), maxtasksperchild=1000) as p:
                 p.starmap(_calculate_costs_year, args)
 
@@ -216,13 +223,50 @@ class Internalizer:
                 )
                 fp = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/regionalized_costs_{lvl}.csv"
                 regionalized_costs = pd.read_csv(fp)
-                costs_agg = combine_shares_and_costs(mapping, regionalized_costs).melt(
-                    var_name="impact category", value_name="cost", ignore_index=False
-                ).reset_index()
+                costs_agg = aggregate_with_mapping(mapping, regionalized_costs)
                 self.cost_results[lvl][year] = costs_agg.set_index(
                     ["REMIND index", "region", "impact category"]
                 )["cost"].to_xarray()
         
+    def calculate_aggregated_impacts(self) -> None:
+        if not hasattr(self, "cs"):
+            raise AttributeError("No calculation setup is set. Run 'Internalizer.set_calculation_setup(...)`\n",
+                   "and `Internalizer.calculate_costs(...)`` first. Exiting.")
+        
+        dflist = []
+        for lvl in self.cs.levels:
+            results = {}
+            for year in self.years:
+                # recalculate mapping
+                mapping = self.cs.data[lvl].get(
+                    "regionalized mapping", self.cs.regionalize_dynamic_mapping(lvl, year)
+                )
+                fp = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/regionalized_impacts_{lvl}.csv"
+                regionalized_impacts = pd.read_csv(fp)
+
+                impacts_agg = aggregate_with_mapping(
+                    mapping, regionalized_impacts,
+                    var_col="LCIA method",
+                    value_col="impact"
+                )
+
+                results[year] = impacts_agg.set_index(
+                    ["REMIND index", "region", "LCIA method"]
+                )["impact"].to_xarray()
+
+            # interpolate
+            x = interpolate_and_weight_xr(results, MODEL_YEARS[self.model], 1.0)
+
+            # multiply with production volumes
+            prodVol = self.cs.get_production_volumes(lvl, MODEL_YEARS[self.model])
+            df = (prodVol * x).to_dataframe(name="impact").reset_index()
+            df["level"] = lvl
+            dflist.append(df)
+
+        pd.concat(dflist, ignore_index=True)[
+            ["level", "REMIND index", "region", "year", "LCIA method", "impact"]].to_csv(
+                self.outdir + f"/aggregated_impacts.csv", index=False
+            )
     
     def write_remind_input_files(
         self,
@@ -234,13 +278,13 @@ class Internalizer:
             raise AttributeError("No cost results available. " \
             "Run `.calculate_costs()` and `.load_costs()` first. Exiting.")
         
-        ramp_up = get_linear_ramp_up(MODEL_YEARS["remind"], ramp_up_startyear, ramp_up_endyear)
+        ramp_up = get_linear_ramp_up(MODEL_YEARS[self.model], ramp_up_startyear, ramp_up_endyear)
 
         for lvl in self.cs.levels:
             domains = self.cs.data[lvl]["domains"]
             x = interpolate_and_weight_xr(
                     self.cost_results[lvl],
-                    MODEL_YEARS["remind"],
+                    MODEL_YEARS[self.model],
                     ramp_up
                 )
             
