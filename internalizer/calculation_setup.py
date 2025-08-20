@@ -1,15 +1,23 @@
 import pandas as pd
 from typing import List, Optional
 from pathlib import Path
-from .regionalization import get_regionalized_mapping, regionalize_SE_mapping, fill_mapping_from_mif
+from .regionalization import (
+    get_regionalized_mapping,
+    regionalize_SE_mapping,
+    fill_mapping_from_mif,
+    get_prodSE,
+    get_demFE
+)
 from .filesystem_constants import DATA_DIR
-from .utils import apply_filter_to_dataframe
+from .utils import apply_filter_to_dataframe, get_dict_mapping_from_df
 import yaml
+import xarray as xr
 
 prodSE_MAPPING = DATA_DIR / "mappings" / "prodSE.csv"
 demFE_mapping = DATA_DIR / "mappings" / "demFE.csv"
 
 EI_INDEX = ["dataset name", "dataset reference product", "dataset unit"]
+TWa2EJ = 31.536
 
 class CalculationSetup:
     def __init__(
@@ -65,6 +73,12 @@ class CalculationSetup:
             if not self.setup["mappings"][lvl]["depends_on_year"]:
                 self.data[lvl]["regionalized mapping"] = get_regionalized_mapping(self.data[lvl]["base mapping"], None)
 
+    def get_production_volume(
+        self,
+        lvl: str
+    ) -> float:
+        return 1.0
+
 
 class RemindInternalizationSetup(CalculationSetup):
     def __init__(
@@ -94,6 +108,18 @@ class RemindInternalizationSetup(CalculationSetup):
             return fill_mapping_from_mif(self.data[lvl]["base mapping"], self.mifpath, year)
         else:
             return get_regionalized_mapping(self.data[lvl]["base mapping"], None)
+        
+    def get_production_volumes(
+        self,
+        lvl: str,
+        years: List[int]
+    ) -> xr.DataArray | float:
+        if lvl == "FE":
+            return get_demFE(self.gdxpath, years) * TWa2EJ * 1e12
+        elif lvl == "SE":
+            return get_prodSE(self.gdxpath, years) * TWa2EJ * 1e12
+        else:
+            return 1.0
         
 
 def prepare_setup(
