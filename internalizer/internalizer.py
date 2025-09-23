@@ -5,7 +5,9 @@ import os
 from multiprocessing import Pool, cpu_count
 import shutil
 import pandas as pd
+import bw2data as bd
 
+from premise import NewDatabase, clear_cache
 from .plca import _run_premise_year, _calculate_costs_year
 from .utils import (
     convert_euros_to_dollar,
@@ -34,6 +36,7 @@ COST_PERSPECTIVES = [
 ]
 
 DEFAULT_CONFIG = DATA_DIR / "mappings" / "remind_internalization_setup.yaml"
+CONFIG_NO_REMOVAL = DATA_DIR / "mappings" / "remind_internalization_setup_noRemoval.yaml"
 
 MODEL_YEARS = {
     "remind": [2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045,
@@ -91,6 +94,25 @@ class Internalizer:
             self.max_mp_tasks = max_mp_tasks
         else:
             self.max_mp_tasks = cpu_count()
+
+    def recreate_premise_cache(
+        self,
+    ) -> None:
+        # set brightway project
+        bd.projects.set_current(self.bw_project)
+        
+        # clear premise cache
+        clear_cache()
+
+        # newdatabase initialization creates cache
+        ei_label = "ecoinvent-{}-cutoff".format(self.ei_version)
+        scen = {"model": self.model, "pathway": self.scenario, "year": 2020, "filepath": self.rundir}
+        ndb = NewDatabase(
+            scenarios=[scen],
+            source_db=ei_label,
+            source_version=self.ei_version,
+            biosphere_name="ecoinvent-{}-biosphere".format(self.ei_version),
+        )
 
     def run_premise(
         self,
