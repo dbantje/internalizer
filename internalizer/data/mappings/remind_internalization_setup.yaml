@@ -43,8 +43,8 @@ domains:
   SE:
     - all_te
   FE:
-    - all_enty
     - emi_sectors
+    - all_enty
       
         
 
