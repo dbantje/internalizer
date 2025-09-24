@@ -13,9 +13,6 @@ from .utils import apply_filter_to_dataframe, get_dict_mapping_from_df
 import yaml
 import xarray as xr
 
-prodSE_MAPPING = DATA_DIR / "mappings" / "prodSE.csv"
-demFE_mapping = DATA_DIR / "mappings" / "demFE.csv"
-
 EI_INDEX = ["dataset name", "dataset reference product", "dataset unit"]
 TWa2EJ = 31.536
 
@@ -97,14 +94,15 @@ class RemindInternalizationSetup(CalculationSetup):
         self.regionalize_constant_mappings()
 
     def regionalize_constant_mappings(self) -> None:
-        self.data["SE"]["regionalized mapping"] = regionalize_SE_mapping(self.data["SE"]["base mapping"], self.gdxpath)
+        self.data["pe2se"]["regionalized mapping"] = regionalize_SE_mapping(self.data["pe2se"]["base mapping"], self.gdxpath)
+        self.data["se2se"]["regionalized mapping"] = regionalize_SE_mapping(self.data["se2se"]["base mapping"], self.gdxpath)
 
     def regionalize_dynamic_mapping(
         self,
         lvl: str,
         year: int,
     ) -> pd.DataFrame:
-        if lvl == "FE":
+        if lvl == "fe":
             return fill_mapping_from_mif(self.data[lvl]["base mapping"], self.mifpath, year)
         else:
             return get_regionalized_mapping(self.data[lvl]["base mapping"], None)
@@ -114,67 +112,10 @@ class RemindInternalizationSetup(CalculationSetup):
         lvl: str,
         years: List[int]
     ) -> xr.DataArray | float:
-        if lvl == "FE":
+        if lvl == "fe":
             return get_demFE(self.gdxpath, years) * TWa2EJ * 1e12
-        elif lvl == "SE":
+        elif lvl in ["pe2se", "se2se"]: # xarray automatically uses smallest index
             return get_prodSE(self.gdxpath, years) * TWa2EJ * 1e12
         else:
             return 1.0
         
-
-def prepare_setup(
-    activities_mappings: List[str | Path],
-    gdxpath: Optional[str] = None,
-    level_names: Optional[List[str]] = None,
-    remove_layers: str = "all"
-) -> dict:
-    setup = {}
-    # read in mapping files
-    for i, fp in enumerate(activities_mappings):
-        mapping = pd.read_csv(fp, sep=";")
-        k = fp.split("/")[-1].split(".")[0] if level_names is None else level_names[i]
-        setup[k] = {}
-        setup[k]["mapping"] = get_regionalized_mapping(mapping, gdxpath)
-
-    # build removal lists
-    for k in setup.keys():
-        dflist = []
-        for j in setup.keys():
-            if k != j:
-                dflist.append(setup[j]["mapping"])
-            elif remove_layers == "all":
-                dflist.append(setup[j]["mapping"])
-
-        if len(dflist) > 0:
-            setup[k]["removal list"] = pd.concat(dflist).drop(
-                columns=["region", "share"]).drop_duplicates()
-        else:
-            setup[k]["removal list"] = None
-        
-    return setup
-
-def default_setup(gdxpath, remove_layers=None):
-    mappings = [
-        prodSE_MAPPING,
-    ]
-    levels = [
-        "SE",
-    ]
-
-    return prepare_setup(
-        mappings, gdxpath, level_names=levels, remove_layers=remove_layers
-    )
-
-def default_setup_new(gdxpath, remove_layers=None):
-    mappings = [
-        prodSE_MAPPING,
-        demFE_mapping,
-    ]
-    levels = [
-        "SE",
-        "FE"
-    ]
-
-    return prepare_setup(
-        mappings, gdxpath, level_names=levels, remove_layers=remove_layers
-    )
