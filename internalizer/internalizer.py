@@ -35,7 +35,7 @@ COST_PERSPECTIVES = [
     "taxation costs"
 ]
 
-DEFAULT_CONFIG = DATA_DIR / "mappings" / "remind_internalization_setup.yaml"
+DEFAULT_CONFIG = DATA_DIR / "mappings" / "remind_internalization_setup_v2.yaml"
 CONFIG_NO_REMOVAL = DATA_DIR / "mappings" / "remind_internalization_setup_noRemoval.yaml"
 
 MODEL_YEARS = {
