@@ -1,0 +1,82 @@
+name: default
+levels:
+  - pe2se
+  - se2se
+  - fe
+mappings:
+  pe2se:
+    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/pe2se.csv
+    depends_on_year: False
+  se2se:
+    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/se2se.csv
+    depends_on_year: False
+  fe:
+    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/demFE.csv
+    depends_on_year: True
+removal_lists:
+  fe:
+    remove_layers:
+      - pe2se
+      - se2se
+    fltr:
+      dataset name:
+        - electricity production
+        - heat production
+        - heat and power co-generation
+        - hydrogen production
+        - kerosene production
+        - ethanol production
+        - biodiesel production
+        - biomethane production
+        - petroleum and gas production
+        - diesel production
+        - briquettes production
+        - coke production
+        - petrol production
+        - syngas, RWGS, Production
+        - wood chips production
+    mask:
+      dataset name:
+        - unit construction
+        - treatment of
+        - carbon dioxide storage at hydrogen production plant
+        - carbon dioxide, captured at hydrogen production plant
+        - carbon dioxide, captured and stored
+      dataset unit:
+        - unit
+  se2se:
+    remove_layers:
+      - pe2se
+    fltr:
+      dataset name:
+        - electricity production
+        - heat production
+        - heat and power co-generation
+        - kerosene production
+        - ethanol production
+        - biodiesel production
+        - biomethane production
+        - petroleum and gas production
+        - diesel production
+        - briquettes production
+        - coke production
+        - petrol production
+        - syngas, RWGS, Production
+        - wood chips production
+    mask:
+      dataset name:
+        - unit construction
+        - treatment of
+        - carbon dioxide storage at hydrogen production plant
+        - carbon dioxide, captured at hydrogen production plant
+        - carbon dioxide, captured and stored
+      dataset unit:
+        - unit
+domains:
+  pe2se:
+    - all_te
+  se2se:
+    - all_te
+  fe:
+    - emi_sectors
+    - all_enty
