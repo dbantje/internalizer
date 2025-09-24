@@ -1,0 +1,9 @@
+REMIND index;dataset name;dataset reference product;dataset unit;share
+elh2;hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity;hydrogen, gaseous, 30 bar;kilogram;0.8
+elh2;hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity;hydrogen, gaseous, 20 bar;kilogram;0.1
+elh2;hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity;hydrogen, gaseous, 1 bar;kilogram;0.1
+h2turb;electricity production, from hydrogen-fired one gigawatt gas turbine, for grid balancing;electricity, high voltage;kilowatt hour;1.0
+h22ch4;methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat;methane, from electrochemical methanation;kilogram;0.5
+h22ch4;methane, from electrochemical methanation, with carbon from atmosphere, using waste heat;methane, from electrochemical methanation;kilogram;0.5
+MeOH;diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation;diesel, synthetic;kilogram;0.5
+MeOH;kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation;kerosene, synthetic;kilogram;0.5
