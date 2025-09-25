@@ -35,6 +35,7 @@ class CalculationSetup:
                 data[lvl]["domains"] = ["index"]
                 
         self.levels = setup["levels"]
+        self.aggregate_levels = setup["aggregate_levels"]
         self.setup = setup
         self.data = data
 
@@ -95,7 +96,8 @@ class RemindInternalizationSetup(CalculationSetup):
 
     def regionalize_constant_mappings(self) -> None:
         self.data["pe2se"]["regionalized mapping"] = regionalize_SE_mapping(self.data["pe2se"]["base mapping"], self.gdxpath)
-        self.data["se2se"]["regionalized mapping"] = regionalize_SE_mapping(self.data["se2se"]["base mapping"], self.gdxpath)
+        self.data["se2h2"]["regionalized mapping"] = regionalize_SE_mapping(self.data["se2h2"]["base mapping"], self.gdxpath)
+        self.data["h22se"]["regionalized mapping"] = regionalize_SE_mapping(self.data["h22se"]["base mapping"], self.gdxpath)
 
     def regionalize_dynamic_mapping(
         self,
@@ -114,7 +116,7 @@ class RemindInternalizationSetup(CalculationSetup):
     ) -> xr.DataArray | float:
         if lvl == "fe":
             return get_demFE(self.gdxpath, years) * TWa2EJ * 1e12
-        elif lvl in ["pe2se", "se2se"]: # xarray automatically uses smallest index
+        elif lvl in ["pe2se", "se2h2", "h22se"]: # xarray automatically uses smallest index
             return get_prodSE(self.gdxpath, years) * TWa2EJ * 1e12
         else:
             return 1.0

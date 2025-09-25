@@ -1,14 +1,25 @@
 name: default
 levels:
   - pe2se
-  - se2se
+  - se2h2
+  - h22se
   - fe
+aggregate_levels:
+  FE:
+    - fe
+  SE:
+    - pe2se
+    - se2h2
+    - h22se
 mappings:
   pe2se:
     path: /p/tmp/davidba/internalizer/internalizer/data/mappings/pe2se.csv
     depends_on_year: False
-  se2se:
-    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/se2se.csv
+  se2h2:
+    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/se2h2.csv
+    depends_on_year: False
+  h22se:
+    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/h22se.csv
     depends_on_year: False
   fe:
     path: /p/tmp/davidba/internalizer/internalizer/data/mappings/demFE.csv
@@ -17,7 +28,8 @@ removal_lists:
   fe:
     remove_layers:
       - pe2se
-      - se2se
+      - se2h2
+      - h22se
     fltr:
       dataset name:
         - electricity production
@@ -44,9 +56,39 @@ removal_lists:
         - carbon dioxide, captured and stored
       dataset unit:
         - unit
-  se2se:
+  se2h2:
     remove_layers:
       - pe2se
+      - h22se
+    fltr:
+      dataset name:
+        - electricity production
+        - heat production
+        - heat and power co-generation
+        - kerosene production
+        - ethanol production
+        - biodiesel production
+        - biomethane production
+        - petroleum and gas production
+        - diesel production
+        - briquettes production
+        - coke production
+        - petrol production
+        - syngas, RWGS, Production
+        - wood chips production
+    mask:
+      dataset name:
+        - unit construction
+        - treatment of
+        - carbon dioxide storage at hydrogen production plant
+        - carbon dioxide, captured at hydrogen production plant
+        - carbon dioxide, captured and stored
+      dataset unit:
+        - unit
+  h22se:
+    remove_layers:
+      - pe2se
+      - se2h2
     fltr:
       dataset name:
         - electricity production
@@ -75,7 +117,9 @@ removal_lists:
 domains:
   pe2se:
     - all_te
-  se2se:
+  se2h2:
+    - all_te
+  h22se:
     - all_te
   fe:
     - emi_sectors

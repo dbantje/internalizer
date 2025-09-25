@@ -1,517 +1,504 @@
-,dataset name,dataset reference product,dataset unit,_merge
-0,"biodiesel production, via Fischer-Tropsch, from forest product (non-residual), energy allocation","biodiesel, from forest residues",kilogram,left_only
-1,"biodiesel production, via Fischer-Tropsch, from forest residues, energy allocation","biodiesel, from forest residues",kilogram,left_only
-2,"biodiesel production, via transesterification, from algae, energy allocation","biodiesel, from algae",kilogram,left_only
-3,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,left_only
-4,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,left_only
-5,"biodiesel production, via transesterification, from used cooking oil, energy allocation","biodiesel, from cooking oil",kilogram,left_only
-6,"biodiesel production, via transesterification, from used cooking oil, with carbon capture and storage, energy allocation","biodiesel, from cooking oil",kilogram,left_only
-26,"biomethane production, high pressure from synthetic gas, wood, fixed bed technology","biomethane, high pressure",cubic meter,left_only
-27,"biomethane production, high pressure from synthetic gas, wood, fluidised technology","biomethane, high pressure",cubic meter,left_only
-28,"biomethane production, high pressure, vehicle grade","biomethane, high pressure, vehicle grade",kilogram,left_only
-29,"biomethane production, low pressure, vehicle grade","biomethane, low pressure, vehicle grade",kilogram,left_only
-30,"biomethane production, medium pressure, vehicle grade","biomethane, medium pressure, vehicle grade",kilogram,left_only
-46,coke production,benzene,kilogram,left_only
-47,coke production,coal gas,megajoule,left_only
-48,coke production,coal tar,kilogram,left_only
-49,coke production,coke,megajoule,left_only
-50,coke production,"steam, in chemical industry",kilogram,left_only
-51,coke production,sulfur,kilogram,left_only
-52,"coke production, dry quenching",benzene,kilogram,left_only
-53,"coke production, dry quenching",coal gas,megajoule,left_only
-54,"coke production, dry quenching",coal tar,kilogram,left_only
-55,"coke production, dry quenching",coke,megajoule,left_only
-56,"coke production, dry quenching","steam, in chemical industry",kilogram,left_only
-57,"coke production, dry quenching",sulfur,kilogram,left_only
-58,"coke production, wet quenching",benzene,kilogram,left_only
-59,"coke production, wet quenching",coal gas,megajoule,left_only
-60,"coke production, wet quenching",coal tar,kilogram,left_only
-61,"coke production, wet quenching",coke,megajoule,left_only
-62,"coke production, wet quenching",sulfur,kilogram,left_only
-89,"diesel production, from methanol, from wood, with CCS, economic allocation","diesel, synthetic",kilogram,left_only
-90,"diesel production, from methanol, from wood, with CCS, energy allocation","diesel, synthetic",kilogram,left_only
-91,"diesel production, from methanol, hydrogen from coal gasification, economic allocation","diesel, synthetic",kilogram,left_only
-92,"diesel production, from methanol, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,left_only
-93,"diesel production, from methanol, hydrogen from coal gasification, with CCS, economic allocation","diesel, synthetic",kilogram,left_only
-94,"diesel production, from methanol, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,left_only
-95,"diesel production, from methanol, hydrogen from electrolysis, CO2 from DAC, economic allocation","diesel, synthetic",kilogram,left_only
-96,"diesel production, from methanol, hydrogen from electrolysis, CO2 from DAC, energy allocation","diesel, synthetic",kilogram,left_only
-97,"diesel production, from methanol, hydrogen from electrolysis, CO2 from cement plant, economic allocation","diesel, synthetic",kilogram,left_only
-98,"diesel production, from methanol, hydrogen from electrolysis, CO2 from cement plant, energy allocation","diesel, synthetic",kilogram,left_only
-99,"diesel production, low-sulfur","diesel, low-sulfur",kilogram,left_only
-100,"diesel production, low-sulfur, petroleum refinery operation","diesel, low-sulfur",kilogram,left_only
-101,"diesel production, petroleum refinery operation",diesel,kilogram,left_only
-102,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram,left_only
-103,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram,left_only
-104,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, economic allocation","diesel, synthetic",kilogram,left_only
-105,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram,left_only
-106,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, economic allocation","diesel, synthetic",kilogram,left_only
-107,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram,left_only
-108,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, economic allocation","diesel, synthetic",kilogram,left_only
-110,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, economic allocation","diesel, synthetic",kilogram,left_only
-111,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram,left_only
-112,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, economic allocation","diesel, synthetic",kilogram,left_only
-113,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram,left_only
-114,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-115,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-116,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, with CCS, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-117,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-118,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from electrolysis, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-119,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from electrolysis, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-120,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-121,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-122,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, with CCS, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-123,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-124,"diesel production, synthetic, from methanol, from wood, with CCS, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-125,"diesel production, synthetic, from methanol, from wood, with CCS, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-126,"diesel production, synthetic, from methanol, hydrogen from coal gasification, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-127,"diesel production, synthetic, from methanol, hydrogen from coal gasification, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-128,"diesel production, synthetic, from methanol, hydrogen from coal gasification, with CCS, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-129,"diesel production, synthetic, from methanol, hydrogen from coal gasification, with CCS, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-130,"diesel production, synthetic, from methanol, hydrogen from electrolysis, CO2 from DAC, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-131,"diesel production, synthetic, from methanol, hydrogen from electrolysis, CO2 from DAC, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-132,"diesel production, synthetic, from methanol, hydrogen from electrolysis, CO2 from cement plant, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-133,"diesel production, synthetic, from methanol, hydrogen from electrolysis, CO2 from cement plant, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram,left_only
-165,"electricity production, Evolutionary Power Reactor (EPR)","electricity, high voltage",kilowatt hour,left_only
-166,"electricity production, Small Modular Reactor (SMR)","electricity, high voltage",kilowatt hour,left_only
-167,"electricity production, at 110 MW concentrating solar power plant, with thermal energy storage","electricity, high voltage",kilowatt hour,left_only
-168,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour,left_only
-169,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-170,"electricity production, at biomethane-fired combined cycle power plant","electricity, high voltage",kilowatt hour,left_only
-171,"electricity production, at biomethane-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-172,"electricity production, at co-firing wood and coal power plant, 50-50","electricity, high voltage",kilowatt hour,left_only
-173,"electricity production, at co-firing wood and coal power plant, 80-20","electricity, high voltage",kilowatt hour,left_only
-174,"electricity production, at co-generation hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-175,"electricity production, at co-generation natural gas-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-176,"electricity production, at co-generation oil-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-177,"electricity production, at co-generation wood-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-178,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour,left_only
-179,"electricity production, at hard coal-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-180,"electricity production, at hard coal-fired power plant, oxy, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-181,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-182,"electricity production, at hard coal-fired power plant, ultra-super critical, oxy, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-183,"electricity production, at hydrogen-fired combined cycle power plant, by auto-thermal reforming of natural gas","electricity, high voltage",kilowatt hour,left_only
-184,"electricity production, at hydrogen-fired combined cycle power plant, by auto-thermal reforming of natural gas, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-185,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour,left_only
-186,"electricity production, at lignite-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-187,"electricity production, at lignite-fired power plant, oxy, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-188,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-189,"electricity production, at lignite-fired power plant, pulverised","electricity, high voltage",kilowatt hour,left_only
-190,"electricity production, at natural gas-fired combined cycle power plant","electricity, high voltage",kilowatt hour,left_only
-191,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-192,"electricity production, at oil-fired power plant, combined cycle, oxy, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-193,"electricity production, at wood burning power plant","electricity, high voltage",kilowatt hour,left_only
-194,"electricity production, at wood burning power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-195,"electricity production, coal, aluminium industry","electricity, high voltage, aluminium industry",kilowatt hour,left_only
-196,"electricity production, cobalt industry","electricity, high voltage, cobalt industry",kilowatt hour,left_only
-197,"electricity production, compressed air energy storage","electricity, high voltage",kilowatt hour,left_only
-198,"electricity production, compressed air energy storage, adiabatic","electricity, high voltage",kilowatt hour,left_only
-199,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour,left_only
-200,"electricity production, from combined cycle plant, synthetic natural gas","electricity, high voltage",kilowatt hour,left_only
-201,"electricity production, from combined cycle plant, synthetic natural gas, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour,left_only
-202,"electricity production, from hydrogen-fired one gigawatt gas turbine, for grid balancing","electricity, high voltage",kilowatt hour,left_only
-203,"electricity production, hard coal","electricity, high voltage",kilowatt hour,left_only
-204,"electricity production, hard coal, at coal mine power plant","electricity, high voltage, for internal use in coal mining",kilowatt hour,left_only
-205,"electricity production, hard coal, conventional","electricity, high voltage",kilowatt hour,left_only
-206,"electricity production, hard coal, subcritical","electricity, high voltage",kilowatt hour,left_only
-207,"electricity production, hard coal, supercritical","electricity, high voltage",kilowatt hour,left_only
-208,"electricity production, hard coal, ultra-supercritical","electricity, high voltage",kilowatt hour,left_only
-209,"electricity production, high voltage, for Swiss Federal Railways","electricity, high voltage, for Swiss Federal Railways",kilowatt hour,left_only
-210,"electricity production, hydro, aluminium industry","electricity, high voltage, aluminium industry",kilowatt hour,left_only
-211,"electricity production, hydro, pumped storage","electricity, high voltage",kilowatt hour,left_only
-212,"electricity production, hydro, reservoir, alpine region","electricity, high voltage",kilowatt hour,left_only
-213,"electricity production, hydro, reservoir, alpine region, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour,left_only
-214,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour,left_only
-215,"electricity production, hydro, reservoir, tropical region","electricity, high voltage",kilowatt hour,left_only
-216,"electricity production, hydro, run-of-river","electricity, high voltage",kilowatt hour,left_only
-217,"electricity production, hydro, run-of-river, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour,left_only
-218,"electricity production, lignite","electricity, high voltage",kilowatt hour,left_only
-219,"electricity production, medium voltage, petroleum refinery operation","electricity, medium voltage",kilowatt hour,left_only
-220,"electricity production, natural gas, 10MW","electricity, high voltage",kilowatt hour,left_only
-221,"electricity production, natural gas, aluminium industry","electricity, high voltage, aluminium industry",kilowatt hour,left_only
-222,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour,left_only
-223,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour,left_only
-224,"electricity production, natural gas, gas turbine, conventional power plant","electricity, high voltage",kilowatt hour,left_only
-225,"electricity production, natural gas, subcritical, steam cycle","electricity, high voltage",kilowatt hour,left_only
-226,"electricity production, nuclear, aluminium industry","electricity, high voltage, aluminium industry",kilowatt hour,left_only
-227,"electricity production, nuclear, boiling water reactor","electricity, high voltage",kilowatt hour,left_only
-228,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour,left_only
-229,"electricity production, nuclear, pressure water reactor, heavy water moderated","electricity, high voltage",kilowatt hour,left_only
-230,"electricity production, oil","electricity, high voltage",kilowatt hour,left_only
-231,"electricity production, oil, aluminium industry","electricity, high voltage, aluminium industry",kilowatt hour,left_only
-232,"electricity production, peat","electricity, high voltage",kilowatt hour,left_only
-233,"electricity production, photovoltaic","electricity, low voltage",kilowatt hour,left_only
-234,"electricity production, photovoltaic, 0.28kWp, GaAs","electricity production, photovoltaic, 0.28kWp, GaAs",kilowatt hour,left_only
-235,"electricity production, photovoltaic, 0.5kWp, perovskite-on-silicon tandem","electricity production, photovoltaic, 0.5kWp, perovskite-on-silicon tandem",kilowatt hour,left_only
-236,"electricity production, photovoltaic, 3kWp facade installation, multi-Si, laminated, integrated","electricity, low voltage",kilowatt hour,left_only
-237,"electricity production, photovoltaic, 3kWp facade installation, multi-Si, panel, mounted","electricity, low voltage",kilowatt hour,left_only
-238,"electricity production, photovoltaic, 3kWp facade installation, single-Si, laminated, integrated","electricity, low voltage",kilowatt hour,left_only
-239,"electricity production, photovoltaic, 3kWp facade installation, single-Si, panel, mounted","electricity, low voltage",kilowatt hour,left_only
-240,"electricity production, photovoltaic, 3kWp flat-roof installation, multi-Si","electricity, low voltage",kilowatt hour,left_only
-241,"electricity production, photovoltaic, 3kWp flat-roof installation, single-Si","electricity, low voltage",kilowatt hour,left_only
-242,"electricity production, photovoltaic, 3kWp slanted-roof installation, CIS, panel, mounted","electricity, low voltage",kilowatt hour,left_only
-243,"electricity production, photovoltaic, 3kWp slanted-roof installation, CdTe, laminated, integrated","electricity, low voltage",kilowatt hour,left_only
-244,"electricity production, photovoltaic, 3kWp slanted-roof installation, a-Si, laminated, integrated","electricity, low voltage",kilowatt hour,left_only
-245,"electricity production, photovoltaic, 3kWp slanted-roof installation, a-Si, panel, mounted","electricity, low voltage",kilowatt hour,left_only
-246,"electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, laminated, integrated","electricity, low voltage",kilowatt hour,left_only
-247,"electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, panel, mounted","electricity, low voltage",kilowatt hour,left_only
-248,"electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, panel, mounted, renewable energy product","electricity, low voltage, renewable energy products",kilowatt hour,left_only
-249,"electricity production, photovoltaic, 3kWp slanted-roof installation, ribbon-Si, laminated, integrated","electricity, low voltage",kilowatt hour,left_only
-250,"electricity production, photovoltaic, 3kWp slanted-roof installation, ribbon-Si, panel, mounted","electricity, low voltage",kilowatt hour,left_only
-251,"electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, laminated, integrated","electricity, low voltage",kilowatt hour,left_only
-252,"electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, panel, mounted","electricity, low voltage",kilowatt hour,left_only
-253,"electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, panel, mounted, renewable energy produc","electricity, low voltage, renewable energy products",kilowatt hour,left_only
-254,"electricity production, photovoltaic, 570kWp open ground installation, multi-Si","electricity, low voltage",kilowatt hour,left_only
-255,"electricity production, photovoltaic, at 1.3 MWp slanted-roof, multi-Si, panel, mounted","electricity production, photovoltaic, at 1.3 MWp slanted-roof, multi-Si, panel, mounted",kilowatt hour,left_only
-256,"electricity production, photovoltaic, at 156 kWp flat-roof, multi-Si","electricity production, photovoltaic, at 156 kWp flat-roof, multi-Si",kilowatt hour,left_only
-257,"electricity production, photovoltaic, at 156 kWp flat-roof, single-Si","electricity production, photovoltaic, at 156 kWp flat-roof, single-Si",kilowatt hour,left_only
-258,"electricity production, photovoltaic, at 280 kWp flat-roof, multi-Si","electricity production, photovoltaic, at 280 kWp flat-roof, multi-Si",kilowatt hour,left_only
-259,"electricity production, photovoltaic, at 280 kWp flat-roof, single-Si","electricity production, photovoltaic, at 280 kWp flat-roof, single-Si",kilowatt hour,left_only
-260,"electricity production, photovoltaic, at 324 kWp flat-roof, multi-Si","electricity production, photovoltaic, at 324 kWp flat-roof, multi-Si",kilowatt hour,left_only
-261,"electricity production, photovoltaic, at 3kWp slanted-roof, CIS, laminated, integrated","electricity production, photovoltaic, at 3kWp slanted-roof, CIS, laminated, integrated",kilowatt hour,left_only
-262,"electricity production, photovoltaic, at 3kWp slanted-roof, CdTe, panel, mounted","electricity production, photovoltaic, at 3kWp slanted-roof, CdTe, panel, mounted",kilowatt hour,left_only
-263,"electricity production, photovoltaic, at 450 kWp flat-roof, single-Si","electricity production, photovoltaic, at 450 kWp flat-roof, single-Si",kilowatt hour,left_only
-264,"electricity production, photovoltaic, at 560 kWp open ground, single-Si","electricity production, photovoltaic, at 560 kWp open ground, single-Si",kilowatt hour,left_only
-265,"electricity production, photovoltaic, at 569 kWp open ground, multi-Si","electricity production, photovoltaic, at 569 kWp open ground, multi-Si",kilowatt hour,left_only
-266,"electricity production, photovoltaic, at 570 kWp open ground, multi-Si","electricity production, photovoltaic, at 570 kWp open ground, multi-Si",kilowatt hour,left_only
-267,"electricity production, photovoltaic, at 93 kWp slanted-roof, multi-Si, laminated, integrated","electricity production, photovoltaic, at 93 kWp slanted-roof, multi-Si, laminated, integrated",kilowatt hour,left_only
-268,"electricity production, photovoltaic, at 93 kWp slanted-roof, multi-Si, panel, mounted","electricity production, photovoltaic, at 93 kWp slanted-roof, multi-Si, panel, mounted",kilowatt hour,left_only
-269,"electricity production, photovoltaic, at 93 kWp slanted-roof, single-Si, laminated, integrated","electricity production, photovoltaic, at 93 kWp slanted-roof, single-Si, laminated, integrated",kilowatt hour,left_only
-270,"electricity production, photovoltaic, at 93 kWp slanted-roof, single-Si, panel, mounted","electricity production, photovoltaic, at 93 kWp slanted-roof, single-Si, panel, mounted",kilowatt hour,left_only
-271,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour,left_only
-272,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, CIS, panel, mounted","electricity, low voltage",kilowatt hour,left_only
-273,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, CdTe, laminated, integrated","electricity, low voltage",kilowatt hour,left_only
-274,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, multi-Si, laminated, integrated","electricity, low voltage",kilowatt hour,left_only
-275,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, multi-Si, panel, mounted","electricity, low voltage",kilowatt hour,left_only
-276,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, single-Si, laminated, integrated","electricity, low voltage",kilowatt hour,left_only
-277,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, single-Si, panel, mounted","electricity, low voltage",kilowatt hour,left_only
-278,"electricity production, photovoltaic, residential","electricity, low voltage",kilowatt hour,left_only
-279,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour,left_only
-280,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour,left_only
-281,"electricity production, wave energy converter","electricity, high voltage",kilowatt hour,left_only
-282,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour,left_only
-283,"electricity production, wind, 1-3MW turbine, offshore, direct drive","electricity, high voltage",kilowatt hour,left_only
-284,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour,left_only
-285,"electricity production, wind, 1-3MW turbine, onshore, direct drive","electricity, high voltage",kilowatt hour,left_only
-286,"electricity production, wind, 1-3MW turbine, onshore, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour,left_only
-287,"electricity production, wind, 1-3MW turbine, onshore, renewable energy products, direct drive","electricity, high voltage, renewable energy products",kilowatt hour,left_only
-288,"electricity production, wind, 2.3MW turbine, precast concrete tower, onshore","electricity, high voltage",kilowatt hour,left_only
-289,"electricity production, wind, 6kW small-scale turbine, onshore","electricity, low voltage",kilowatt hour,left_only
-290,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour,left_only
-291,"electricity production, wind, <1MW turbine, onshore, direct drive","electricity, high voltage",kilowatt hour,left_only
-292,"electricity production, wind, <1MW turbine, onshore, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour,left_only
-293,"electricity production, wind, <1MW turbine, onshore, renewable energy products, direct drive","electricity, high voltage, renewable energy products",kilowatt hour,left_only
-294,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour,left_only
-295,"electricity production, wind, >3MW turbine, onshore, direct drive","electricity, high voltage",kilowatt hour,left_only
-296,"electricity production, wind, >3MW turbine, onshore, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour,left_only
-297,"electricity production, wind, >3MW turbine, onshore, renewable energy products, direct drive","electricity, high voltage, renewable energy products",kilowatt hour,left_only
-298,"electricity production, wood, future","electricity, high voltage",kilowatt hour,left_only
-319,ethanol production from grass,"ethanol, without water, in 95% solution state, from fermentation",kilogram,left_only
-320,ethanol production from grass,grass fibre,kilogram,left_only
-321,ethanol production from grass,"protein feed, 100% crude",kilogram,left_only
-322,ethanol production from maize,Distiller's Dried Grains with Solubles,kilogram,left_only
-323,ethanol production from maize,"ethanol, without water, in 95% solution state, from fermentation",kilogram,left_only
-324,ethanol production from potatoes,Distiller's Dried Grains with Solubles,kilogram,left_only
-325,ethanol production from potatoes,"ethanol, without water, in 95% solution state, from fermentation",kilogram,left_only
-326,ethanol production from rye,Distiller's Dried Grains with Solubles,kilogram,left_only
-327,ethanol production from rye,"ethanol, without water, in 95% solution state, from fermentation",kilogram,left_only
-328,ethanol production from sugar beet,"ethanol, without water, in 95% solution state, from fermentation",kilogram,left_only
-329,ethanol production from sugar beet,sugar beet pulp,kilogram,left_only
-330,ethanol production from sugar beet molasses,"ethanol, without water, in 95% solution state, from fermentation",kilogram,left_only
-331,ethanol production from sweet sorghum,"bagasse, from sweet sorghum",kilogram,left_only
-332,ethanol production from sweet sorghum,"electricity, high voltage",kilowatt hour,left_only
-333,ethanol production from sweet sorghum,"ethanol, without water, in 95% solution state, from fermentation",kilogram,left_only
-334,ethanol production from whey,"ethanol, without water, in 95% solution state, from fermentation",kilogram,left_only
-335,ethanol production from whey,fodder yeast,kilogram,left_only
-336,ethanol production from whey,"protein feed, 100% crude",kilogram,left_only
-337,ethanol production from wood,"electricity, high voltage",kilowatt hour,left_only
-338,ethanol production from wood,"ethanol, without water, in 95% solution state, from fermentation",kilogram,left_only
-339,"ethanol production, ethylene hydration","diethyl ether, without water, in 99.95% solution state",kilogram,left_only
-340,"ethanol production, ethylene hydration","ethanol, without water, in 99.7% solution state, from ethylene",kilogram,left_only
-341,"ethanol production, via fermentation, from corn starch, energy allocation","ethanol, from corn starch",kilogram,left_only
-342,"ethanol production, via fermentation, from corn stover, economic allocation","ethanol, from corn stover",kilogram,left_only
-343,"ethanol production, via fermentation, from corn stover, energy allocation","ethanol, from corn stover",kilogram,left_only
-344,"ethanol production, via fermentation, from corn stover, system expansion","ethanol, from corn stover",kilogram,left_only
-345,"ethanol production, via fermentation, from corn, economic allocation","ethanol, from corn",kilogram,left_only
-346,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,left_only
-347,"ethanol production, via fermentation, from corn, system expansion","ethanol, from corn",kilogram,left_only
-348,"ethanol production, via fermentation, from corn, with carbon capture and reuse, economic allocation","ethanol, from corn",kilogram,left_only
-349,"ethanol production, via fermentation, from corn, with carbon capture and reuse, energy allocation","ethanol, from corn",kilogram,left_only
-350,"ethanol production, via fermentation, from corn, with carbon capture and reuse, system expansion","ethanol, from corn",kilogram,left_only
-351,"ethanol production, via fermentation, from corn, with carbon capture and storage, economic allocation","ethanol, from corn",kilogram,left_only
-352,"ethanol production, via fermentation, from corn, with carbon capture and storage, energy allocation","ethanol, from corn",kilogram,left_only
-353,"ethanol production, via fermentation, from corn, with carbon capture and storage, system expansion","ethanol, from corn",kilogram,left_only
-354,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,left_only
-355,"ethanol production, via fermentation, from eucalyptus, with carbon capture and storage","ethanol, from eucalyptus",kilogram,left_only
-356,"ethanol production, via fermentation, from forage sorghum, economic allocation","ethanol, from forage sorghum",kilogram,left_only
-357,"ethanol production, via fermentation, from forage sorghum, energy allocation","ethanol, from forage sorghum",kilogram,left_only
-358,"ethanol production, via fermentation, from forage sorghum, system expansion","ethanol, from forage sorghum",kilogram,left_only
-359,"ethanol production, via fermentation, from forest product (non-residual), energy allocation","ethanol, from forest residues",kilogram,left_only
-360,"ethanol production, via fermentation, from forest residue, economic allocation","ethanol, from forest residue",kilogram,left_only
-361,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,left_only
-362,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residues",kilogram,left_only
-363,"ethanol production, via fermentation, from forest residue, system expansion","ethanol, from forest residue",kilogram,left_only
-364,"ethanol production, via fermentation, from forest residue, with carbon capture and storage, energy allocation","ethanol, from forest residue",kilogram,left_only
-365,"ethanol production, via fermentation, from forest residues, energy allocation","ethanol, from forest residues",kilogram,left_only
-366,"ethanol production, via fermentation, from grain sorghum, economic allocation","ethanol, from grain sorghum",kilogram,left_only
-367,"ethanol production, via fermentation, from grain sorghum, energy allocation","ethanol, from grain sorghum",kilogram,left_only
-368,"ethanol production, via fermentation, from grain sorghum, system expansion","ethanol, from grain sorghum",kilogram,left_only
-369,"ethanol production, via fermentation, from miscanthus, economic allocation","ethanol, from miscanthus",kilogram,left_only
-370,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,left_only
-371,"ethanol production, via fermentation, from miscanthus, system expansion","ethanol, from miscanthus",kilogram,left_only
-372,"ethanol production, via fermentation, from miscanthus, with carbon capture and storage, economic allocation","ethanol, from miscanthus",kilogram,left_only
-373,"ethanol production, via fermentation, from miscanthus, with carbon capture and storage, energy allocation","ethanol, from miscanthus",kilogram,left_only
-374,"ethanol production, via fermentation, from miscanthus, with carbon capture and storage, system expansion","ethanol, from miscanthus",kilogram,left_only
-375,"ethanol production, via fermentation, from poplar, economic allocation","ethanol, from poplar",kilogram,left_only
-376,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,left_only
-377,"ethanol production, via fermentation, from poplar, system expansion","ethanol, from poplar",kilogram,left_only
-378,"ethanol production, via fermentation, from poplar, with carbon capture and storage, energy allocation","ethanol, from poplar",kilogram,left_only
-379,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,left_only
-380,"ethanol production, via fermentation, from sugarbeet, with carbon capture and storage, energy allocation","ethanol, from sugarbeet",kilogram,left_only
-381,"ethanol production, via fermentation, from sugarcane straw, economic allocation","ethanol, from sugarcane straw",kilogram,left_only
-382,"ethanol production, via fermentation, from sugarcane straw, energy allocation","ethanol, from sugarcane straw",kilogram,left_only
-383,"ethanol production, via fermentation, from sugarcane straw, system expansion","ethanol, from sugarcane straw",kilogram,left_only
-384,"ethanol production, via fermentation, from sugarcane, economic allocation","ethanol, from sugarcane",kilogram,left_only
-385,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,left_only
-386,"ethanol production, via fermentation, from sugarcane, system expansion","ethanol, from sugarcane",kilogram,left_only
-387,"ethanol production, via fermentation, from sugarcane, with carbon capture and storage, economic allocation","ethanol, from sugarcane",kilogram,left_only
-388,"ethanol production, via fermentation, from sugarcane, with carbon capture and storage, energy allocation","ethanol, from sugarcane",kilogram,left_only
-389,"ethanol production, via fermentation, from sugarcane, with carbon capture and storage, system expansion","ethanol, from sugarcane",kilogram,left_only
-390,"ethanol production, via fermentation, from sweet sorghum, economic allocation","ethanol, from sweet sorghum",kilogram,left_only
-391,"ethanol production, via fermentation, from sweet sorghum, energy allocation","ethanol, from sweet sorghum",kilogram,left_only
-392,"ethanol production, via fermentation, from sweet sorghum, system expansion","ethanol, from sweet sorghum",kilogram,left_only
-393,"ethanol production, via fermentation, from switchgrass, economic allocation","ethanol, from switchgrass",kilogram,left_only
-394,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,left_only
-395,"ethanol production, via fermentation, from switchgrass, system expansion","ethanol, from switchgrass",kilogram,left_only
-396,"ethanol production, via fermentation, from switchgrass, with carbon capture and storage, economic allocation","ethanol, from switchgrass",kilogram,left_only
-397,"ethanol production, via fermentation, from switchgrass, with carbon capture and storage, energy allocation","ethanol, from switchgrass",kilogram,left_only
-398,"ethanol production, via fermentation, from switchgrass, with carbon capture and storage, system expansion","ethanol, from switchgrass",kilogram,left_only
-399,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,left_only
-400,"ethanol production, via fermentation, from wheat straw, energy allocation","ethanol, from wheat straw pellets",kilogram,left_only
-401,"ethanol production, via fermentation, from willow, economic allocation","ethanol, from willow",kilogram,left_only
-402,"ethanol production, via fermentation, from willow, energy allocation","ethanol, from willow",kilogram,left_only
-403,"ethanol production, via fermentation, from willow, system expansion","ethanol, from willow",kilogram,left_only
-404,hard coal briquettes production,hard coal briquettes,megajoule,left_only
-409,"heat and power co-generation, biogas, gas engine","electricity, high voltage",kilowatt hour,left_only
-410,"heat and power co-generation, biogas, gas engine","heat, central or small-scale, other than natural gas",megajoule,left_only
-411,"heat and power co-generation, biogas, gas engine, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour,left_only
-412,"heat and power co-generation, biogas, gas engine, renewable energy products","heat, central or small-scale, other than natural gas",megajoule,left_only
-413,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour,left_only
-414,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","heat, district or industrial, other than natural gas",megajoule,left_only
-415,"heat and power co-generation, existing, wood chips","electricity, high voltage",kilowatt hour,left_only
-416,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour,left_only
-417,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule,left_only
-418,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour,left_only
-419,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule,left_only
-420,"heat and power co-generation, natural gas, 160kW electrical, Jakobsberg","electricity, low voltage",kilowatt hour,left_only
-421,"heat and power co-generation, natural gas, 160kW electrical, Jakobsberg","heat, central or small-scale, natural gas, Jakobsberg",megajoule,left_only
-422,"heat and power co-generation, natural gas, 160kW electrical, lambda=1","electricity, low voltage",kilowatt hour,left_only
-423,"heat and power co-generation, natural gas, 160kW electrical, lambda=1","heat, central or small-scale, natural gas",megajoule,left_only
-424,"heat and power co-generation, natural gas, 1MW electrical, lean burn","electricity, high voltage",kilowatt hour,left_only
-425,"heat and power co-generation, natural gas, 1MW electrical, lean burn","heat, district or industrial, natural gas",megajoule,left_only
-426,"heat and power co-generation, natural gas, 200kW electrical, lean burn","electricity, high voltage",kilowatt hour,left_only
-427,"heat and power co-generation, natural gas, 200kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,left_only
-428,"heat and power co-generation, natural gas, 500kW electrical, lean burn","electricity, high voltage",kilowatt hour,left_only
-429,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule,left_only
-430,"heat and power co-generation, natural gas, 50kW electrical, lean burn","electricity, low voltage",kilowatt hour,left_only
-431,"heat and power co-generation, natural gas, 50kW electrical, lean burn","heat, central or small-scale, natural gas",megajoule,left_only
-432,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour,left_only
-433,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule,left_only
-434,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour,left_only
-435,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule,left_only
-436,"heat and power co-generation, natural gas, mini-plant 2KW electrical","electricity, low voltage",kilowatt hour,left_only
-437,"heat and power co-generation, natural gas, mini-plant 2KW electrical","heat, central or small-scale, natural gas",megajoule,left_only
-438,"heat and power co-generation, oil","electricity, high voltage",kilowatt hour,left_only
-439,"heat and power co-generation, oil","heat, district or industrial, other than natural gas",megajoule,left_only
-440,"heat and power co-generation, wood chips, 2000 kW","electricity, high voltage",kilowatt hour,left_only
-441,"heat and power co-generation, wood chips, 2000 kW","heat, district or industrial, other than natural gas",megajoule,left_only
-442,"heat and power co-generation, wood chips, 2000 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,left_only
-443,"heat and power co-generation, wood chips, 2000 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-444,"heat and power co-generation, wood chips, 6667 kW","electricity, high voltage",kilowatt hour,left_only
-445,"heat and power co-generation, wood chips, 6667 kW","heat, district or industrial, other than natural gas",megajoule,left_only
-446,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour,left_only
-447,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-448,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour,left_only
-449,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014, renewable energy products","heat, district or industrial, other than natural gas",megajoule,left_only
-451,"heat production, anthracite, at stove 5-15kW","heat, central or small-scale, other than natural gas",megajoule,left_only
-452,"heat production, at 110 MW concentrating solar power plant, with thermal energy storage",heat,megajoule,left_only
-453,"heat production, at co-generation hard coal-fired power plant, post, pipeline 200km, storage 1000m","heat, district or industrial, other than natural gas",megajoule,left_only
-454,"heat production, at co-generation natural gas-fired power plant, post, pipeline 200km, storage 1000m","heat, district or industrial, natural gas",megajoule,left_only
-455,"heat production, at co-generation oil-fired power plant, post, pipeline 200km, storage 1000m","heat, district or industrial, other than natural gas",megajoule,left_only
-456,"heat production, at co-generation wood-fired power plant, post, pipeline 200km, storage 1000m","heat, district or industrial, other than natural gas",megajoule,left_only
-457,"heat production, at coal coke industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,left_only
-458,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule,left_only
-459,"heat production, at heat pump 30kW, allocation exergy","heat, central or small-scale, other than natural gas",megajoule,left_only
-460,"heat production, at hot water tank, solar+electric, flat plate, multiple dwelling","heat, solar+electric, multiple-dwelling, for hot water",megajoule,left_only
-461,"heat production, at hot water tank, solar+gas, flat plate, multiple dwelling","heat, solar+gas, multiple-dwelling, for hot water",megajoule,left_only
-462,"heat production, at hot water tank, solar+gas, flat plate, one-family house","heat, solar+gas, one-family house, for hot water",megajoule,left_only
-463,"heat production, at solar+gas heating, flat plate, one-family house, combined system","heat, solar+gas, one-family house, for combined system",megajoule,left_only
-464,"heat production, at solar+gas heating, tube collector, one-family house, combined system","heat, solar+gas, one-family house, for combined system",megajoule,left_only
-465,"heat production, at solar+wood heating, flat plate, one-family house, combined system","heat, solar+wood, one-family house, for combined system",megajoule,left_only
-468,"heat production, biomethane, low pressure, at diffusion absorption heat pump 4kW, future","heat, diffusion absorption heat pump",megajoule,left_only
-469,"heat production, borehole heat exchanger, brine-water heat pump 10kW","heat, brine-water heat pump 10kW",megajoule,left_only
-470,"heat production, coal tar, at industrial furnace 1MW","heat, district or industrial, other than natural gas",megajoule,left_only
-471,"heat production, deep geothermal","heat, deep geothermal",megajoule,left_only
-473,"heat production, from hydrogen-fired one gigawatt gas turbine, for grid balancing",heat,megajoule,left_only
-475,"heat production, hard coal coke, stove 5-15kW","heat, central or small-scale, other than natural gas",megajoule,left_only
-476,"heat production, hardwood chips from forest, at furnace 1000kW","heat, district or industrial, other than natural gas",megajoule,left_only
-477,"heat production, hardwood chips from forest, at furnace 1000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-478,"heat production, hardwood chips from forest, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule,left_only
-479,"heat production, hardwood chips from forest, at furnace 300kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-480,"heat production, hardwood chips from forest, at furnace 5000kW","heat, district or industrial, other than natural gas",megajoule,left_only
-481,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-482,"heat production, hardwood chips from forest, at furnace 50kW","heat, central or small-scale, other than natural gas",megajoule,left_only
-483,"heat production, hardwood chips from forest, at furnace 50kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule,left_only
-484,"heat production, heavy fuel oil, at industrial furnace 1MW","heat, district or industrial, other than natural gas",megajoule,left_only
-486,"heat production, light fuel oil, at boiler 100kW, non-modulating","heat, central or small-scale, other than natural gas",megajoule,left_only
-487,"heat production, light fuel oil, at boiler 10kW condensing, non-modulating","heat, central or small-scale, other than natural gas",megajoule,left_only
-488,"heat production, light fuel oil, at boiler 10kW, non-modulating","heat, central or small-scale, other than natural gas",megajoule,left_only
-489,"heat production, light fuel oil, at industrial furnace 1MW","heat, district or industrial, other than natural gas",megajoule,left_only
-490,"heat production, lignite briquette, at stove 5-15kW","heat, central or small-scale, other than natural gas",megajoule,left_only
-491,"heat production, mixed logs, at furnace 100kW","heat, central or small-scale, other than natural gas",megajoule,left_only
-492,"heat production, mixed logs, at furnace 100kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule,left_only
-493,"heat production, mixed logs, at furnace 30kW","heat, central or small-scale, other than natural gas",megajoule,left_only
-494,"heat production, mixed logs, at furnace 30kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule,left_only
-496,"heat production, mixed logs, at wood heater 6kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule,left_only
-497,"heat production, natural gas, at boiler atm. low-NOx condensing non-modulating <100kW","heat, central or small-scale, natural gas",megajoule,left_only
-498,"heat production, natural gas, at boiler atmospheric low-NOx non-modulating <100kW","heat, central or small-scale, natural gas",megajoule,left_only
-499,"heat production, natural gas, at boiler atmospheric non-modulating <100kW","heat, central or small-scale, natural gas",megajoule,left_only
-503,"heat production, natural gas, at boiler fan burner low-NOx non-modulating <100kW","heat, central or small-scale, natural gas",megajoule,left_only
-504,"heat production, natural gas, at boiler fan burner non-modulating <100kW","heat, central or small-scale, natural gas",megajoule,left_only
-505,"heat production, natural gas, at boiler modulating <100kW","heat, central or small-scale, natural gas",megajoule,left_only
-506,"heat production, natural gas, at boiler modulating >100kW","heat, district or industrial, natural gas",megajoule,left_only
-507,"heat production, natural gas, at diffusion absorption heat pump 4kW, future","heat, future",megajoule,left_only
-508,"heat production, natural gas, at industrial furnace >100kW","heat, district or industrial, natural gas",megajoule,left_only
-509,"heat production, natural gas, at industrial furnace low-NOx >100kW","heat, district or industrial, natural gas",megajoule,left_only
-510,"heat production, propane, at industrial furnace >100kW","heat, district or industrial, other than natural gas",megajoule,left_only
-511,"heat production, softwood chips from forest, at furnace 1000kW","heat, district or industrial, other than natural gas",megajoule,left_only
-512,"heat production, softwood chips from forest, at furnace 1000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-513,"heat production, softwood chips from forest, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule,left_only
-514,"heat production, softwood chips from forest, at furnace 300kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-515,"heat production, softwood chips from forest, at furnace 5000kW","heat, district or industrial, other than natural gas",megajoule,left_only
-516,"heat production, softwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-517,"heat production, softwood chips from forest, at furnace 50kW","heat, central or small-scale, other than natural gas",megajoule,left_only
-518,"heat production, softwood chips from forest, at furnace 50kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule,left_only
-519,"heat production, straw, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule,left_only
-520,"heat production, straw, organic, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule,left_only
-521,"heat production, untreated waste wood, at furnace 1000-5000 kW","heat, district or industrial, other than natural gas",megajoule,left_only
-522,"heat production, untreated waste wood, at furnace 1000-5000 kW","waste wood, untreated",kilogram,left_only
-523,"heat production, untreated waste wood, at furnace 1000-5000 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-524,"heat production, untreated waste wood, at furnace 1000-5000 kW, state-of-the-art 2014","waste wood, untreated",kilogram,left_only
-525,"heat production, water-water heat pump, industrial, 100kW","heat, water-water heat pump, industrial, 100kW",megajoule,left_only
-526,"heat production, wood chips from industry, at furnace 1000kW","heat, district or industrial, other than natural gas",megajoule,left_only
-527,"heat production, wood chips from industry, at furnace 1000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-528,"heat production, wood chips from industry, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule,left_only
-529,"heat production, wood chips from industry, at furnace 300kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-530,"heat production, wood chips from industry, at furnace 5000kW","heat, district or industrial, other than natural gas",megajoule,left_only
-531,"heat production, wood chips from industry, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule,left_only
-532,"heat production, wood chips from industry, at furnace 50kW","heat, central or small-scale, other than natural gas",megajoule,left_only
-533,"heat production, wood chips from industry, at furnace 50kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule,left_only
-534,"heat production, wood chips from post-consumer wood, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule,left_only
-535,"heat production, wood pellet, at furnace 25kW","heat, central or small-scale, other than natural gas",megajoule,left_only
-536,"heat production, wood pellet, at furnace 25kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule,left_only
-537,"heat production, wood pellet, at furnace 300kW","heat, central or small-scale, other than natural gas",megajoule,left_only
-538,"heat production, wood pellet, at furnace 300kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule,left_only
-540,"heat production, wood pellet, at furnace 9kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule,left_only
-548,"hydrogen production, auto-thermal reforming","hydrogen, gaseous, low pressure",kilogram,left_only
-549,"hydrogen production, auto-thermal reforming, from biomethane","hydrogen, gaseous, low pressure",kilogram,left_only
-550,"hydrogen production, auto-thermal reforming, from biomethane, with CCS","hydrogen, gaseous, low pressure",kilogram,left_only
-551,"hydrogen production, auto-thermal reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,left_only
-552,"hydrogen production, coal gasification","heat, from steam, in chemical industry",megajoule,left_only
-553,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram,left_only
-554,"hydrogen production, coal gasification",sulfur,kilogram,left_only
-555,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram,left_only
-556,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,left_only
-557,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, with steam input, from grid electricity","hydrogen, gaseous, 1 bar",kilogram,left_only
-558,"hydrogen production, gaseous, 100 bar, from methane pyrolysis","hydrogen, gaseous, 100 bar",kilogram,left_only
-559,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity","hydrogen, gaseous, 20 bar",kilogram,left_only
-560,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,left_only
-561,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,left_only
-562,"hydrogen production, gaseous, 25 bar, from heatpipe reformer gasification of woody biomass with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,left_only
-563,"hydrogen production, gaseous, 25 bar, from heatpipe reformer gasification of woody biomass, at gasification plant","hydrogen, gaseous, 25 bar",kilogram,left_only
-564,"hydrogen production, gaseous, 25 bar, from thermochemical water splitting, at solar tower","hydrogen, gaseous, 25 bar",kilogram,left_only
-565,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from concentrated solar electricity","hydrogen, gaseous, 30 bar",kilogram,left_only
-566,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from geothermal electricity","hydrogen, gaseous, 30 bar",kilogram,left_only
-567,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity","hydrogen, gaseous, 30 bar",kilogram,left_only
-568,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from offshore wind electricity","hydrogen, gaseous, 30 bar",kilogram,left_only
-569,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from onshore wind electricity","hydrogen, gaseous, 30 bar",kilogram,left_only
-570,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from solar photovoltaic electricity","hydrogen, gaseous, 30 bar",kilogram,left_only
-571,"hydrogen production, gaseous, petroleum refinery operation","hydrogen, gaseous, low pressure",kilogram,left_only
-572,"hydrogen production, gaseous, petroleum refinery operation, with CCS","hydrogen, gaseous, 30 bar",kilogram,left_only
-573,"hydrogen production, steam methane reforming","electricity, medium voltage",kilowatt hour,left_only
-574,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram,left_only
-575,"hydrogen production, steam methane reforming, from biomethane","hydrogen, gaseous, low pressure",kilogram,left_only
-576,"hydrogen production, steam methane reforming, from biomethane, with CCS","hydrogen, gaseous, low pressure",kilogram,left_only
-577,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram,left_only
-598,"kerosene production, from methanol, from wood, with CCS, economic allocation","kerosene, synthetic",kilogram,left_only
-599,"kerosene production, from methanol, from wood, with CCS, energy allocation","kerosene, synthetic",kilogram,left_only
-600,"kerosene production, from methanol, hydrogen from coal gasification, economic allocation","kerosene, synthetic",kilogram,left_only
-601,"kerosene production, from methanol, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,left_only
-602,"kerosene production, from methanol, hydrogen from coal gasification, with CCS, economic allocation","kerosene, synthetic",kilogram,left_only
-603,"kerosene production, from methanol, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,left_only
-604,"kerosene production, from methanol, hydrogen from electrolysis, CO2 from DAC, economic allocation","kerosene, synthetic",kilogram,left_only
-605,"kerosene production, from methanol, hydrogen from electrolysis, CO2 from DAC, energy allocation","kerosene, synthetic",kilogram,left_only
-606,"kerosene production, from methanol, hydrogen from electrolysis, CO2 from cement plant, economic allocation","kerosene, synthetic",kilogram,left_only
-607,"kerosene production, from methanol, hydrogen from electrolysis, CO2 from cement plant, energy allocation","kerosene, synthetic",kilogram,left_only
-608,"kerosene production, petroleum refinery operation",kerosene,kilogram,left_only
-609,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram,left_only
-610,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram,left_only
-611,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, economic allocation","kerosene, synthetic",kilogram,left_only
-612,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram,left_only
-613,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, economic allocation","kerosene, synthetic",kilogram,left_only
-614,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,left_only
-615,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, economic allocation","kerosene, synthetic",kilogram,left_only
-616,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation","kerosene, synthetic",kilogram,left_only
-617,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, economic allocation","kerosene, synthetic",kilogram,left_only
-618,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram,left_only
-619,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, economic allocation","kerosene, synthetic",kilogram,left_only
-620,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram,left_only
-621,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, economic allocation, at fuelling station","kerosene, synthetic",kilogram,left_only
-622,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, energy allocation, at fuelling station","kerosene, synthetic",kilogram,left_only
-623,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, with CCS, economic allocation, at fuelling station","kerosene, synthetic",kilogram,left_only
-624,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation, at fuelling station","kerosene, synthetic",kilogram,left_only
-625,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from electrolysis, economic allocation, at fuelling station","kerosene, synthetic",kilogram,left_only
-626,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from electrolysis, energy allocation, at fuelling station","kerosene, synthetic",kilogram,left_only
-627,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, economic allocation, at fuelling station","kerosene, synthetic",kilogram,left_only
-628,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, energy allocation, at fuelling station","kerosene, synthetic",kilogram,left_only
-629,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, with CCS, economic allocation, at fuelling station","kerosene, synthetic",kilogram,left_only
-630,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation, at fuelling station","kerosene, synthetic",kilogram,left_only
-631,"kerosene production, synthetic, from methanol, from wood, with CCS, economic allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram,left_only
-632,"kerosene production, synthetic, from methanol, from wood, with CCS, energy allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram,left_only
-633,"kerosene production, synthetic, from methanol, hydrogen from coal gasification, economic allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram,left_only
-634,"kerosene production, synthetic, from methanol, hydrogen from coal gasification, energy allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram,left_only
-635,"kerosene production, synthetic, from methanol, hydrogen from coal gasification, with CCS, economic allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram,left_only
-636,"kerosene production, synthetic, from methanol, hydrogen from coal gasification, with CCS, energy allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram,left_only
-637,"kerosene production, synthetic, from methanol, hydrogen from electrolysis, CO2 from DAC, economic allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram,left_only
-638,"kerosene production, synthetic, from methanol, hydrogen from electrolysis, CO2 from DAC, energy allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram,left_only
-639,"kerosene production, synthetic, from methanol, hydrogen from electrolysis, CO2 from cement plant, economic allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram,left_only
-640,"kerosene production, synthetic, from methanol, hydrogen from electrolysis, CO2 from cement plant, energy allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram,left_only
-641,"kerosene production, via Fischer-Tropsch, from forest product (non-residual), energy allocation","kerosene, from forest residues",kilogram,left_only
-642,"kerosene production, via Fischer-Tropsch, from forest product (non-residual), with carbon capture and storage, energy allocation","kerosene, from forest residues",kilogram,left_only
-643,"kerosene production, via Fischer-Tropsch, from forest residues, energy allocation","kerosene, from forest residues",kilogram,left_only
-654,lignite briquettes production,lignite briquettes,megajoule,left_only
-680,"methanol production, coal gasification",methanol,kilogram,left_only
-681,"methanol production, natural gas reforming",methanol,kilogram,left_only
-683,"mixed natural gas and biomethane production, high pressure","mixed natural gas and biomethane, high pressure",cubic meter,left_only
-693,needle coke production,needle coke,kilogram,left_only
-694,"petrol production, 15% ETBE additive by volume, with ethanol from biomass","petrol, 15% ETBE additive by volume, with ethanol from biomass",kilogram,left_only
-695,"petrol production, 4% ETBE additive by volume, with ethanol from biomass","petrol, 4% ETBE additive by volume, with ethanol from biomass",kilogram,left_only
-696,"petrol production, 5% ethanol by volume from biomass","petrol, 5% ethanol by volume from biomass",kilogram,left_only
-697,"petrol production, 85% ethanol by volume from biomass","petrol, 85% ethanol by volume from biomass",kilogram,left_only
-698,"petrol production, low-sulfur","petrol, low-sulfur",kilogram,left_only
-699,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram,left_only
-714,"petroleum and gas production, offshore","natural gas, high pressure",cubic meter,left_only
-715,"petroleum and gas production, offshore",petroleum,kilogram,left_only
-716,"petroleum and gas production, onshore","natural gas, high pressure",cubic meter,left_only
-717,"petroleum and gas production, onshore",petroleum,kilogram,left_only
-718,"petroleum coke production, petroleum refinery operation",petroleum coke,kilogram,left_only
-723,"steam heat production, water-water heat pump, industrial, 100kW","steam heat, water-water heat pump, industrial, 100kW",megajoule,left_only
-724,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram,left_only
-725,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification, with CCS","syngas, RWGS, Production",kilogram,left_only
-726,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from electrolysis","syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from electrolysis",kilogram,left_only
-727,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from wood gasification","syngas, RWGS, Production",kilogram,left_only
-728,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from wood gasification, with CCS","syngas, RWGS, Production",kilogram,left_only
-729,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,left_only
-730,"wood chips production, softwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,left_only
-731,"wood pellets, burned in stirling heat and power co-generation unit, 3kW electrical, future","electricity, low voltage",kilowatt hour,left_only
-732,"wood pellets, burned in stirling heat and power co-generation unit, 3kW electrical, future","heat, future",megajoule,left_only
+,dataset name,dataset reference product,dataset unit
+0,"biodiesel production, via Fischer-Tropsch, from forest product (non-residual), energy allocation","biodiesel, from forest residues",kilogram
+1,"biodiesel production, via Fischer-Tropsch, from forest residues, energy allocation","biodiesel, from forest residues",kilogram
+2,"biodiesel production, via transesterification, from algae, energy allocation","biodiesel, from algae",kilogram
+3,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram
+4,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram
+5,"biodiesel production, via transesterification, from used cooking oil, energy allocation","biodiesel, from cooking oil",kilogram
+6,"biodiesel production, via transesterification, from used cooking oil, with carbon capture and storage, energy allocation","biodiesel, from cooking oil",kilogram
+7,"biomethane production, from biogas upgrading, using amine scrubbing","biomethane, from biogas upgrading, using amine scrubbing",kilogram
+8,"biomethane production, high pressure from synthetic gas, wood, fixed bed technology","biomethane, high pressure",cubic meter
+9,"biomethane production, high pressure from synthetic gas, wood, fluidised technology","biomethane, high pressure",cubic meter
+10,"biomethane production, high pressure, vehicle grade","biomethane, high pressure, vehicle grade",kilogram
+11,"biomethane production, low pressure, vehicle grade","biomethane, low pressure, vehicle grade",kilogram
+12,"biomethane production, medium pressure, vehicle grade","biomethane, medium pressure, vehicle grade",kilogram
+13,coke production,benzene,kilogram
+14,coke production,coal gas,megajoule
+15,coke production,coal tar,kilogram
+16,coke production,coke,megajoule
+17,coke production,"steam, in chemical industry",kilogram
+18,coke production,sulfur,kilogram
+19,"coke production, dry quenching",benzene,kilogram
+20,"coke production, dry quenching",coal gas,megajoule
+21,"coke production, dry quenching",coal tar,kilogram
+22,"coke production, dry quenching",coke,megajoule
+23,"coke production, dry quenching","steam, in chemical industry",kilogram
+24,"coke production, dry quenching",sulfur,kilogram
+25,"coke production, wet quenching",benzene,kilogram
+26,"coke production, wet quenching",coal gas,megajoule
+27,"coke production, wet quenching",coal tar,kilogram
+28,"coke production, wet quenching",coke,megajoule
+29,"coke production, wet quenching",sulfur,kilogram
+30,"diesel production, from methanol, from wood, with CCS, economic allocation","diesel, synthetic",kilogram
+31,"diesel production, from methanol, from wood, with CCS, energy allocation","diesel, synthetic",kilogram
+32,"diesel production, from methanol, hydrogen from coal gasification, economic allocation","diesel, synthetic",kilogram
+33,"diesel production, from methanol, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram
+34,"diesel production, from methanol, hydrogen from coal gasification, with CCS, economic allocation","diesel, synthetic",kilogram
+35,"diesel production, from methanol, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram
+36,"diesel production, from methanol, hydrogen from electrolysis, CO2 from DAC, economic allocation","diesel, synthetic",kilogram
+37,"diesel production, from methanol, hydrogen from electrolysis, CO2 from DAC, energy allocation","diesel, synthetic",kilogram
+38,"diesel production, from methanol, hydrogen from electrolysis, CO2 from cement plant, economic allocation","diesel, synthetic",kilogram
+39,"diesel production, from methanol, hydrogen from electrolysis, CO2 from cement plant, energy allocation","diesel, synthetic",kilogram
+40,"diesel production, low-sulfur","diesel, low-sulfur",kilogram
+41,"diesel production, low-sulfur, petroleum refinery operation","diesel, low-sulfur",kilogram
+42,"diesel production, petroleum refinery operation",diesel,kilogram
+43,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","diesel, synthetic",kilogram
+44,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","diesel, synthetic",kilogram
+45,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, economic allocation","diesel, synthetic",kilogram
+46,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","diesel, synthetic",kilogram
+47,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, economic allocation","diesel, synthetic",kilogram
+48,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","diesel, synthetic",kilogram
+49,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, economic allocation","diesel, synthetic",kilogram
+51,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, economic allocation","diesel, synthetic",kilogram
+52,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","diesel, synthetic",kilogram
+53,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, economic allocation","diesel, synthetic",kilogram
+54,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","diesel, synthetic",kilogram
+55,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+56,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+57,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, with CCS, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+58,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+59,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from electrolysis, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+60,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from electrolysis, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+61,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+62,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+63,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, with CCS, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+64,"diesel production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+65,"diesel production, synthetic, from methanol, from wood, with CCS, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+66,"diesel production, synthetic, from methanol, from wood, with CCS, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+67,"diesel production, synthetic, from methanol, hydrogen from coal gasification, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+68,"diesel production, synthetic, from methanol, hydrogen from coal gasification, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+69,"diesel production, synthetic, from methanol, hydrogen from coal gasification, with CCS, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+70,"diesel production, synthetic, from methanol, hydrogen from coal gasification, with CCS, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+71,"diesel production, synthetic, from methanol, hydrogen from electrolysis, CO2 from DAC, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+72,"diesel production, synthetic, from methanol, hydrogen from electrolysis, CO2 from DAC, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+73,"diesel production, synthetic, from methanol, hydrogen from electrolysis, CO2 from cement plant, economic allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+74,"diesel production, synthetic, from methanol, hydrogen from electrolysis, CO2 from cement plant, energy allocation, at fuelling station","diesel, synthetic, vehicle grade",kilogram
+75,"electricity production, Evolutionary Power Reactor (EPR)","electricity, high voltage",kilowatt hour
+76,"electricity production, Small Modular Reactor (SMR)","electricity, high voltage",kilowatt hour
+77,"electricity production, at 110 MW concentrating solar power plant, with thermal energy storage","electricity, high voltage",kilowatt hour
+78,"electricity production, at biomass-fired IGCC power plant","electricity, high voltage",kilowatt hour
+79,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+80,"electricity production, at biomethane-fired combined cycle power plant","electricity, high voltage",kilowatt hour
+81,"electricity production, at biomethane-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+82,"electricity production, at co-firing wood and coal power plant, 50-50","electricity, high voltage",kilowatt hour
+83,"electricity production, at co-firing wood and coal power plant, 80-20","electricity, high voltage",kilowatt hour
+84,"electricity production, at co-generation hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+85,"electricity production, at co-generation natural gas-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+86,"electricity production, at co-generation oil-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+87,"electricity production, at co-generation wood-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+88,"electricity production, at hard coal-fired IGCC power plant","electricity, high voltage",kilowatt hour
+89,"electricity production, at hard coal-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+90,"electricity production, at hard coal-fired power plant, oxy, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+91,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+92,"electricity production, at hard coal-fired power plant, ultra-super critical, oxy, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+93,"electricity production, at hydrogen-fired combined cycle power plant, by auto-thermal reforming of natural gas","electricity, high voltage",kilowatt hour
+94,"electricity production, at hydrogen-fired combined cycle power plant, by auto-thermal reforming of natural gas, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+95,"electricity production, at lignite-fired IGCC power plant","electricity, high voltage",kilowatt hour
+96,"electricity production, at lignite-fired IGCC power plant, pre, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+97,"electricity production, at lignite-fired power plant, oxy, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+98,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+99,"electricity production, at lignite-fired power plant, pulverised","electricity, high voltage",kilowatt hour
+100,"electricity production, at natural gas-fired combined cycle power plant","electricity, high voltage",kilowatt hour
+101,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+102,"electricity production, at oil-fired power plant, combined cycle, oxy, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+103,"electricity production, at wood burning power plant","electricity, high voltage",kilowatt hour
+104,"electricity production, at wood burning power plant, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+105,"electricity production, coal, aluminium industry","electricity, high voltage, aluminium industry",kilowatt hour
+106,"electricity production, cobalt industry","electricity, high voltage, cobalt industry",kilowatt hour
+107,"electricity production, compressed air energy storage","electricity, high voltage",kilowatt hour
+108,"electricity production, compressed air energy storage, adiabatic","electricity, high voltage",kilowatt hour
+109,"electricity production, deep geothermal","electricity, high voltage",kilowatt hour
+110,"electricity production, from combined cycle plant, synthetic natural gas","electricity, high voltage",kilowatt hour
+111,"electricity production, from combined cycle plant, synthetic natural gas, post, pipeline 200km, storage 1000m","electricity, high voltage",kilowatt hour
+113,"electricity production, hard coal","electricity, high voltage",kilowatt hour
+114,"electricity production, hard coal, at coal mine power plant","electricity, high voltage, for internal use in coal mining",kilowatt hour
+115,"electricity production, hard coal, conventional","electricity, high voltage",kilowatt hour
+116,"electricity production, hard coal, subcritical","electricity, high voltage",kilowatt hour
+117,"electricity production, hard coal, supercritical","electricity, high voltage",kilowatt hour
+118,"electricity production, hard coal, ultra-supercritical","electricity, high voltage",kilowatt hour
+119,"electricity production, high voltage, for Swiss Federal Railways","electricity, high voltage, for Swiss Federal Railways",kilowatt hour
+120,"electricity production, hydro, aluminium industry","electricity, high voltage, aluminium industry",kilowatt hour
+121,"electricity production, hydro, pumped storage","electricity, high voltage",kilowatt hour
+122,"electricity production, hydro, reservoir, alpine region","electricity, high voltage",kilowatt hour
+123,"electricity production, hydro, reservoir, alpine region, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour
+124,"electricity production, hydro, reservoir, non-alpine region","electricity, high voltage",kilowatt hour
+125,"electricity production, hydro, reservoir, tropical region","electricity, high voltage",kilowatt hour
+126,"electricity production, hydro, run-of-river","electricity, high voltage",kilowatt hour
+127,"electricity production, hydro, run-of-river, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour
+128,"electricity production, lignite","electricity, high voltage",kilowatt hour
+129,"electricity production, medium voltage, petroleum refinery operation","electricity, medium voltage",kilowatt hour
+130,"electricity production, natural gas, 10MW","electricity, high voltage",kilowatt hour
+131,"electricity production, natural gas, aluminium industry","electricity, high voltage, aluminium industry",kilowatt hour
+132,"electricity production, natural gas, combined cycle power plant","electricity, high voltage",kilowatt hour
+133,"electricity production, natural gas, conventional power plant","electricity, high voltage",kilowatt hour
+134,"electricity production, natural gas, gas turbine, conventional power plant","electricity, high voltage",kilowatt hour
+135,"electricity production, natural gas, subcritical, steam cycle","electricity, high voltage",kilowatt hour
+136,"electricity production, nuclear, aluminium industry","electricity, high voltage, aluminium industry",kilowatt hour
+137,"electricity production, nuclear, boiling water reactor","electricity, high voltage",kilowatt hour
+138,"electricity production, nuclear, pressure water reactor","electricity, high voltage",kilowatt hour
+139,"electricity production, nuclear, pressure water reactor, heavy water moderated","electricity, high voltage",kilowatt hour
+140,"electricity production, oil","electricity, high voltage",kilowatt hour
+141,"electricity production, oil, aluminium industry","electricity, high voltage, aluminium industry",kilowatt hour
+142,"electricity production, peat","electricity, high voltage",kilowatt hour
+143,"electricity production, photovoltaic","electricity, low voltage",kilowatt hour
+144,"electricity production, photovoltaic, 0.28kWp, GaAs","electricity production, photovoltaic, 0.28kWp, GaAs",kilowatt hour
+145,"electricity production, photovoltaic, 0.5kWp, perovskite-on-silicon tandem","electricity production, photovoltaic, 0.5kWp, perovskite-on-silicon tandem",kilowatt hour
+146,"electricity production, photovoltaic, 3kWp facade installation, multi-Si, laminated, integrated","electricity, low voltage",kilowatt hour
+147,"electricity production, photovoltaic, 3kWp facade installation, multi-Si, panel, mounted","electricity, low voltage",kilowatt hour
+148,"electricity production, photovoltaic, 3kWp facade installation, single-Si, laminated, integrated","electricity, low voltage",kilowatt hour
+149,"electricity production, photovoltaic, 3kWp facade installation, single-Si, panel, mounted","electricity, low voltage",kilowatt hour
+150,"electricity production, photovoltaic, 3kWp flat-roof installation, multi-Si","electricity, low voltage",kilowatt hour
+151,"electricity production, photovoltaic, 3kWp flat-roof installation, single-Si","electricity, low voltage",kilowatt hour
+152,"electricity production, photovoltaic, 3kWp slanted-roof installation, CIS, panel, mounted","electricity, low voltage",kilowatt hour
+153,"electricity production, photovoltaic, 3kWp slanted-roof installation, CdTe, laminated, integrated","electricity, low voltage",kilowatt hour
+154,"electricity production, photovoltaic, 3kWp slanted-roof installation, a-Si, laminated, integrated","electricity, low voltage",kilowatt hour
+155,"electricity production, photovoltaic, 3kWp slanted-roof installation, a-Si, panel, mounted","electricity, low voltage",kilowatt hour
+156,"electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, laminated, integrated","electricity, low voltage",kilowatt hour
+157,"electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, panel, mounted","electricity, low voltage",kilowatt hour
+158,"electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, panel, mounted, renewable energy product","electricity, low voltage, renewable energy products",kilowatt hour
+159,"electricity production, photovoltaic, 3kWp slanted-roof installation, ribbon-Si, laminated, integrated","electricity, low voltage",kilowatt hour
+160,"electricity production, photovoltaic, 3kWp slanted-roof installation, ribbon-Si, panel, mounted","electricity, low voltage",kilowatt hour
+161,"electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, laminated, integrated","electricity, low voltage",kilowatt hour
+162,"electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, panel, mounted","electricity, low voltage",kilowatt hour
+163,"electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, panel, mounted, renewable energy produc","electricity, low voltage, renewable energy products",kilowatt hour
+164,"electricity production, photovoltaic, 570kWp open ground installation, multi-Si","electricity, low voltage",kilowatt hour
+165,"electricity production, photovoltaic, at 1.3 MWp slanted-roof, multi-Si, panel, mounted","electricity production, photovoltaic, at 1.3 MWp slanted-roof, multi-Si, panel, mounted",kilowatt hour
+166,"electricity production, photovoltaic, at 156 kWp flat-roof, multi-Si","electricity production, photovoltaic, at 156 kWp flat-roof, multi-Si",kilowatt hour
+167,"electricity production, photovoltaic, at 156 kWp flat-roof, single-Si","electricity production, photovoltaic, at 156 kWp flat-roof, single-Si",kilowatt hour
+168,"electricity production, photovoltaic, at 280 kWp flat-roof, multi-Si","electricity production, photovoltaic, at 280 kWp flat-roof, multi-Si",kilowatt hour
+169,"electricity production, photovoltaic, at 280 kWp flat-roof, single-Si","electricity production, photovoltaic, at 280 kWp flat-roof, single-Si",kilowatt hour
+170,"electricity production, photovoltaic, at 324 kWp flat-roof, multi-Si","electricity production, photovoltaic, at 324 kWp flat-roof, multi-Si",kilowatt hour
+171,"electricity production, photovoltaic, at 3kWp slanted-roof, CIS, laminated, integrated","electricity production, photovoltaic, at 3kWp slanted-roof, CIS, laminated, integrated",kilowatt hour
+172,"electricity production, photovoltaic, at 3kWp slanted-roof, CdTe, panel, mounted","electricity production, photovoltaic, at 3kWp slanted-roof, CdTe, panel, mounted",kilowatt hour
+173,"electricity production, photovoltaic, at 450 kWp flat-roof, single-Si","electricity production, photovoltaic, at 450 kWp flat-roof, single-Si",kilowatt hour
+174,"electricity production, photovoltaic, at 560 kWp open ground, single-Si","electricity production, photovoltaic, at 560 kWp open ground, single-Si",kilowatt hour
+175,"electricity production, photovoltaic, at 569 kWp open ground, multi-Si","electricity production, photovoltaic, at 569 kWp open ground, multi-Si",kilowatt hour
+176,"electricity production, photovoltaic, at 570 kWp open ground, multi-Si","electricity production, photovoltaic, at 570 kWp open ground, multi-Si",kilowatt hour
+177,"electricity production, photovoltaic, at 93 kWp slanted-roof, multi-Si, laminated, integrated","electricity production, photovoltaic, at 93 kWp slanted-roof, multi-Si, laminated, integrated",kilowatt hour
+178,"electricity production, photovoltaic, at 93 kWp slanted-roof, multi-Si, panel, mounted","electricity production, photovoltaic, at 93 kWp slanted-roof, multi-Si, panel, mounted",kilowatt hour
+179,"electricity production, photovoltaic, at 93 kWp slanted-roof, single-Si, laminated, integrated","electricity production, photovoltaic, at 93 kWp slanted-roof, single-Si, laminated, integrated",kilowatt hour
+180,"electricity production, photovoltaic, at 93 kWp slanted-roof, single-Si, panel, mounted","electricity production, photovoltaic, at 93 kWp slanted-roof, single-Si, panel, mounted",kilowatt hour
+181,"electricity production, photovoltaic, commercial","electricity, low voltage",kilowatt hour
+182,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, CIS, panel, mounted","electricity, low voltage",kilowatt hour
+183,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, CdTe, laminated, integrated","electricity, low voltage",kilowatt hour
+184,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, multi-Si, laminated, integrated","electricity, low voltage",kilowatt hour
+185,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, multi-Si, panel, mounted","electricity, low voltage",kilowatt hour
+186,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, single-Si, laminated, integrated","electricity, low voltage",kilowatt hour
+187,"electricity production, photovoltaic, photovoltaic slanted-roof installation, 3 kWp, single-Si, panel, mounted","electricity, low voltage",kilowatt hour
+188,"electricity production, photovoltaic, residential","electricity, low voltage",kilowatt hour
+189,"electricity production, solar thermal parabolic trough, 50 MW","electricity, high voltage",kilowatt hour
+190,"electricity production, solar tower power plant, 20 MW","electricity, high voltage",kilowatt hour
+191,"electricity production, wave energy converter","electricity, high voltage",kilowatt hour
+192,"electricity production, wind, 1-3MW turbine, offshore","electricity, high voltage",kilowatt hour
+193,"electricity production, wind, 1-3MW turbine, offshore, direct drive","electricity, high voltage",kilowatt hour
+194,"electricity production, wind, 1-3MW turbine, onshore","electricity, high voltage",kilowatt hour
+195,"electricity production, wind, 1-3MW turbine, onshore, direct drive","electricity, high voltage",kilowatt hour
+196,"electricity production, wind, 1-3MW turbine, onshore, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour
+197,"electricity production, wind, 1-3MW turbine, onshore, renewable energy products, direct drive","electricity, high voltage, renewable energy products",kilowatt hour
+198,"electricity production, wind, 2.3MW turbine, precast concrete tower, onshore","electricity, high voltage",kilowatt hour
+199,"electricity production, wind, 6kW small-scale turbine, onshore","electricity, low voltage",kilowatt hour
+200,"electricity production, wind, <1MW turbine, onshore","electricity, high voltage",kilowatt hour
+201,"electricity production, wind, <1MW turbine, onshore, direct drive","electricity, high voltage",kilowatt hour
+202,"electricity production, wind, <1MW turbine, onshore, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour
+203,"electricity production, wind, <1MW turbine, onshore, renewable energy products, direct drive","electricity, high voltage, renewable energy products",kilowatt hour
+204,"electricity production, wind, >3MW turbine, onshore","electricity, high voltage",kilowatt hour
+205,"electricity production, wind, >3MW turbine, onshore, direct drive","electricity, high voltage",kilowatt hour
+206,"electricity production, wind, >3MW turbine, onshore, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour
+207,"electricity production, wind, >3MW turbine, onshore, renewable energy products, direct drive","electricity, high voltage, renewable energy products",kilowatt hour
+208,"electricity production, wood, future","electricity, high voltage",kilowatt hour
+209,ethanol production from grass,"ethanol, without water, in 95% solution state, from fermentation",kilogram
+210,ethanol production from grass,grass fibre,kilogram
+211,ethanol production from grass,"protein feed, 100% crude",kilogram
+212,ethanol production from maize,Distiller's Dried Grains with Solubles,kilogram
+213,ethanol production from maize,"ethanol, without water, in 95% solution state, from fermentation",kilogram
+214,ethanol production from potatoes,Distiller's Dried Grains with Solubles,kilogram
+215,ethanol production from potatoes,"ethanol, without water, in 95% solution state, from fermentation",kilogram
+216,ethanol production from rye,Distiller's Dried Grains with Solubles,kilogram
+217,ethanol production from rye,"ethanol, without water, in 95% solution state, from fermentation",kilogram
+218,ethanol production from sugar beet,"ethanol, without water, in 95% solution state, from fermentation",kilogram
+219,ethanol production from sugar beet,sugar beet pulp,kilogram
+220,ethanol production from sugar beet molasses,"ethanol, without water, in 95% solution state, from fermentation",kilogram
+221,ethanol production from sweet sorghum,"bagasse, from sweet sorghum",kilogram
+222,ethanol production from sweet sorghum,"electricity, high voltage",kilowatt hour
+223,ethanol production from sweet sorghum,"ethanol, without water, in 95% solution state, from fermentation",kilogram
+224,ethanol production from whey,"ethanol, without water, in 95% solution state, from fermentation",kilogram
+225,ethanol production from whey,fodder yeast,kilogram
+226,ethanol production from whey,"protein feed, 100% crude",kilogram
+227,ethanol production from wood,"electricity, high voltage",kilowatt hour
+228,ethanol production from wood,"ethanol, without water, in 95% solution state, from fermentation",kilogram
+229,"ethanol production, ethylene hydration","diethyl ether, without water, in 99.95% solution state",kilogram
+230,"ethanol production, ethylene hydration","ethanol, without water, in 99.7% solution state, from ethylene",kilogram
+231,"ethanol production, via fermentation, from corn starch, energy allocation","ethanol, from corn starch",kilogram
+232,"ethanol production, via fermentation, from corn stover, economic allocation","ethanol, from corn stover",kilogram
+233,"ethanol production, via fermentation, from corn stover, energy allocation","ethanol, from corn stover",kilogram
+234,"ethanol production, via fermentation, from corn stover, system expansion","ethanol, from corn stover",kilogram
+235,"ethanol production, via fermentation, from corn, economic allocation","ethanol, from corn",kilogram
+236,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram
+237,"ethanol production, via fermentation, from corn, system expansion","ethanol, from corn",kilogram
+238,"ethanol production, via fermentation, from corn, with carbon capture and reuse, economic allocation","ethanol, from corn",kilogram
+239,"ethanol production, via fermentation, from corn, with carbon capture and reuse, energy allocation","ethanol, from corn",kilogram
+240,"ethanol production, via fermentation, from corn, with carbon capture and reuse, system expansion","ethanol, from corn",kilogram
+241,"ethanol production, via fermentation, from corn, with carbon capture and storage, economic allocation","ethanol, from corn",kilogram
+242,"ethanol production, via fermentation, from corn, with carbon capture and storage, energy allocation","ethanol, from corn",kilogram
+243,"ethanol production, via fermentation, from corn, with carbon capture and storage, system expansion","ethanol, from corn",kilogram
+244,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram
+245,"ethanol production, via fermentation, from eucalyptus, with carbon capture and storage","ethanol, from eucalyptus",kilogram
+246,"ethanol production, via fermentation, from forage sorghum, economic allocation","ethanol, from forage sorghum",kilogram
+247,"ethanol production, via fermentation, from forage sorghum, energy allocation","ethanol, from forage sorghum",kilogram
+248,"ethanol production, via fermentation, from forage sorghum, system expansion","ethanol, from forage sorghum",kilogram
+249,"ethanol production, via fermentation, from forest product (non-residual), energy allocation","ethanol, from forest residues",kilogram
+250,"ethanol production, via fermentation, from forest residue, economic allocation","ethanol, from forest residue",kilogram
+251,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram
+252,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residues",kilogram
+253,"ethanol production, via fermentation, from forest residue, system expansion","ethanol, from forest residue",kilogram
+254,"ethanol production, via fermentation, from forest residue, with carbon capture and storage, energy allocation","ethanol, from forest residue",kilogram
+255,"ethanol production, via fermentation, from forest residues, energy allocation","ethanol, from forest residues",kilogram
+256,"ethanol production, via fermentation, from grain sorghum, economic allocation","ethanol, from grain sorghum",kilogram
+257,"ethanol production, via fermentation, from grain sorghum, energy allocation","ethanol, from grain sorghum",kilogram
+258,"ethanol production, via fermentation, from grain sorghum, system expansion","ethanol, from grain sorghum",kilogram
+259,"ethanol production, via fermentation, from miscanthus, economic allocation","ethanol, from miscanthus",kilogram
+260,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram
+261,"ethanol production, via fermentation, from miscanthus, system expansion","ethanol, from miscanthus",kilogram
+262,"ethanol production, via fermentation, from miscanthus, with carbon capture and storage, economic allocation","ethanol, from miscanthus",kilogram
+263,"ethanol production, via fermentation, from miscanthus, with carbon capture and storage, energy allocation","ethanol, from miscanthus",kilogram
+264,"ethanol production, via fermentation, from miscanthus, with carbon capture and storage, system expansion","ethanol, from miscanthus",kilogram
+265,"ethanol production, via fermentation, from poplar, economic allocation","ethanol, from poplar",kilogram
+266,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram
+267,"ethanol production, via fermentation, from poplar, system expansion","ethanol, from poplar",kilogram
+268,"ethanol production, via fermentation, from poplar, with carbon capture and storage, energy allocation","ethanol, from poplar",kilogram
+269,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram
+270,"ethanol production, via fermentation, from sugarbeet, with carbon capture and storage, energy allocation","ethanol, from sugarbeet",kilogram
+271,"ethanol production, via fermentation, from sugarcane straw, economic allocation","ethanol, from sugarcane straw",kilogram
+272,"ethanol production, via fermentation, from sugarcane straw, energy allocation","ethanol, from sugarcane straw",kilogram
+273,"ethanol production, via fermentation, from sugarcane straw, system expansion","ethanol, from sugarcane straw",kilogram
+274,"ethanol production, via fermentation, from sugarcane, economic allocation","ethanol, from sugarcane",kilogram
+275,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram
+276,"ethanol production, via fermentation, from sugarcane, system expansion","ethanol, from sugarcane",kilogram
+277,"ethanol production, via fermentation, from sugarcane, with carbon capture and storage, economic allocation","ethanol, from sugarcane",kilogram
+278,"ethanol production, via fermentation, from sugarcane, with carbon capture and storage, energy allocation","ethanol, from sugarcane",kilogram
+279,"ethanol production, via fermentation, from sugarcane, with carbon capture and storage, system expansion","ethanol, from sugarcane",kilogram
+280,"ethanol production, via fermentation, from sweet sorghum, economic allocation","ethanol, from sweet sorghum",kilogram
+281,"ethanol production, via fermentation, from sweet sorghum, energy allocation","ethanol, from sweet sorghum",kilogram
+282,"ethanol production, via fermentation, from sweet sorghum, system expansion","ethanol, from sweet sorghum",kilogram
+283,"ethanol production, via fermentation, from switchgrass, economic allocation","ethanol, from switchgrass",kilogram
+284,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram
+285,"ethanol production, via fermentation, from switchgrass, system expansion","ethanol, from switchgrass",kilogram
+286,"ethanol production, via fermentation, from switchgrass, with carbon capture and storage, economic allocation","ethanol, from switchgrass",kilogram
+287,"ethanol production, via fermentation, from switchgrass, with carbon capture and storage, energy allocation","ethanol, from switchgrass",kilogram
+288,"ethanol production, via fermentation, from switchgrass, with carbon capture and storage, system expansion","ethanol, from switchgrass",kilogram
+289,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram
+290,"ethanol production, via fermentation, from wheat straw, energy allocation","ethanol, from wheat straw pellets",kilogram
+291,"ethanol production, via fermentation, from willow, economic allocation","ethanol, from willow",kilogram
+292,"ethanol production, via fermentation, from willow, energy allocation","ethanol, from willow",kilogram
+293,"ethanol production, via fermentation, from willow, system expansion","ethanol, from willow",kilogram
+294,hard coal briquettes production,hard coal briquettes,megajoule
+295,"heat and power co-generation, biogas, gas engine","electricity, high voltage",kilowatt hour
+296,"heat and power co-generation, biogas, gas engine","heat, central or small-scale, other than natural gas",megajoule
+297,"heat and power co-generation, biogas, gas engine, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour
+298,"heat and power co-generation, biogas, gas engine, renewable energy products","heat, central or small-scale, other than natural gas",megajoule
+299,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","electricity, high voltage",kilowatt hour
+300,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction","heat, district or industrial, other than natural gas",megajoule
+301,"heat and power co-generation, existing, wood chips","electricity, high voltage",kilowatt hour
+302,"heat and power co-generation, hard coal","electricity, high voltage",kilowatt hour
+303,"heat and power co-generation, hard coal","heat, district or industrial, other than natural gas",megajoule
+304,"heat and power co-generation, lignite","electricity, high voltage",kilowatt hour
+305,"heat and power co-generation, lignite","heat, district or industrial, other than natural gas",megajoule
+306,"heat and power co-generation, natural gas, 160kW electrical, Jakobsberg","electricity, low voltage",kilowatt hour
+307,"heat and power co-generation, natural gas, 160kW electrical, Jakobsberg","heat, central or small-scale, natural gas, Jakobsberg",megajoule
+308,"heat and power co-generation, natural gas, 160kW electrical, lambda=1","electricity, low voltage",kilowatt hour
+309,"heat and power co-generation, natural gas, 160kW electrical, lambda=1","heat, central or small-scale, natural gas",megajoule
+310,"heat and power co-generation, natural gas, 1MW electrical, lean burn","electricity, high voltage",kilowatt hour
+311,"heat and power co-generation, natural gas, 1MW electrical, lean burn","heat, district or industrial, natural gas",megajoule
+312,"heat and power co-generation, natural gas, 200kW electrical, lean burn","electricity, high voltage",kilowatt hour
+313,"heat and power co-generation, natural gas, 200kW electrical, lean burn","heat, district or industrial, natural gas",megajoule
+314,"heat and power co-generation, natural gas, 500kW electrical, lean burn","electricity, high voltage",kilowatt hour
+315,"heat and power co-generation, natural gas, 500kW electrical, lean burn","heat, district or industrial, natural gas",megajoule
+316,"heat and power co-generation, natural gas, 50kW electrical, lean burn","electricity, low voltage",kilowatt hour
+317,"heat and power co-generation, natural gas, 50kW electrical, lean burn","heat, central or small-scale, natural gas",megajoule
+318,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","electricity, high voltage",kilowatt hour
+319,"heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical","heat, district or industrial, natural gas",megajoule
+320,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","electricity, high voltage",kilowatt hour
+321,"heat and power co-generation, natural gas, conventional power plant, 100MW electrical","heat, district or industrial, natural gas",megajoule
+322,"heat and power co-generation, natural gas, mini-plant 2KW electrical","electricity, low voltage",kilowatt hour
+323,"heat and power co-generation, natural gas, mini-plant 2KW electrical","heat, central or small-scale, natural gas",megajoule
+324,"heat and power co-generation, oil","electricity, high voltage",kilowatt hour
+325,"heat and power co-generation, oil","heat, district or industrial, other than natural gas",megajoule
+326,"heat and power co-generation, wood chips, 2000 kW","electricity, high voltage",kilowatt hour
+327,"heat and power co-generation, wood chips, 2000 kW","heat, district or industrial, other than natural gas",megajoule
+328,"heat and power co-generation, wood chips, 2000 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour
+329,"heat and power co-generation, wood chips, 2000 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+330,"heat and power co-generation, wood chips, 6667 kW","electricity, high voltage",kilowatt hour
+331,"heat and power co-generation, wood chips, 6667 kW","heat, district or industrial, other than natural gas",megajoule
+332,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","electricity, high voltage",kilowatt hour
+333,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+334,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014, renewable energy products","electricity, high voltage, renewable energy products",kilowatt hour
+335,"heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014, renewable energy products","heat, district or industrial, other than natural gas",megajoule
+336,"heat production, air-water heat pump 10kW","heat, air-water heat pump 10kW",megajoule
+337,"heat production, anthracite, at stove 5-15kW","heat, central or small-scale, other than natural gas",megajoule
+338,"heat production, at 110 MW concentrating solar power plant, with thermal energy storage",heat,megajoule
+339,"heat production, at co-generation hard coal-fired power plant, post, pipeline 200km, storage 1000m","heat, district or industrial, other than natural gas",megajoule
+340,"heat production, at co-generation natural gas-fired power plant, post, pipeline 200km, storage 1000m","heat, district or industrial, natural gas",megajoule
+341,"heat production, at co-generation oil-fired power plant, post, pipeline 200km, storage 1000m","heat, district or industrial, other than natural gas",megajoule
+342,"heat production, at co-generation wood-fired power plant, post, pipeline 200km, storage 1000m","heat, district or industrial, other than natural gas",megajoule
+343,"heat production, at coal coke industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule
+344,"heat production, at hard coal industrial furnace 1-10MW","heat, district or industrial, other than natural gas",megajoule
+345,"heat production, at heat pump 30kW, allocation exergy","heat, central or small-scale, other than natural gas",megajoule
+346,"heat production, at hot water tank, solar+electric, flat plate, multiple dwelling","heat, solar+electric, multiple-dwelling, for hot water",megajoule
+347,"heat production, at hot water tank, solar+gas, flat plate, multiple dwelling","heat, solar+gas, multiple-dwelling, for hot water",megajoule
+348,"heat production, at hot water tank, solar+gas, flat plate, one-family house","heat, solar+gas, one-family house, for hot water",megajoule
+349,"heat production, at solar+gas heating, flat plate, one-family house, combined system","heat, solar+gas, one-family house, for combined system",megajoule
+350,"heat production, at solar+gas heating, tube collector, one-family house, combined system","heat, solar+gas, one-family house, for combined system",megajoule
+351,"heat production, at solar+wood heating, flat plate, one-family house, combined system","heat, solar+wood, one-family house, for combined system",megajoule
+352,"heat production, biomethane, at boiler condensing modulating <100kW","heat, central or small-scale, biomethane",megajoule
+353,"heat production, biomethane, low pressure, at diffusion absorption heat pump 4kW, future","heat, diffusion absorption heat pump",megajoule
+354,"heat production, borehole heat exchanger, brine-water heat pump 10kW","heat, brine-water heat pump 10kW",megajoule
+355,"heat production, coal tar, at industrial furnace 1MW","heat, district or industrial, other than natural gas",megajoule
+356,"heat production, deep geothermal","heat, deep geothermal",megajoule
+357,"heat production, from hydrogen-fired one gigawatt gas turbine",heat,megajoule
+358,"heat production, from hydrogen-fired one gigawatt gas turbine, for grid balancing",heat,megajoule
+359,"heat production, hard coal briquette, stove 5-15kW","heat, central or small-scale, other than natural gas",megajoule
+360,"heat production, hard coal coke, stove 5-15kW","heat, central or small-scale, other than natural gas",megajoule
+361,"heat production, hardwood chips from forest, at furnace 1000kW","heat, district or industrial, other than natural gas",megajoule
+362,"heat production, hardwood chips from forest, at furnace 1000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+363,"heat production, hardwood chips from forest, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule
+364,"heat production, hardwood chips from forest, at furnace 300kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+365,"heat production, hardwood chips from forest, at furnace 5000kW","heat, district or industrial, other than natural gas",megajoule
+366,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+367,"heat production, hardwood chips from forest, at furnace 50kW","heat, central or small-scale, other than natural gas",megajoule
+368,"heat production, hardwood chips from forest, at furnace 50kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule
+369,"heat production, heavy fuel oil, at industrial furnace 1MW","heat, district or industrial, other than natural gas",megajoule
+370,"heat production, light fuel oil, at boiler 100kW condensing, non-modulating","heat, central or small-scale, other than natural gas",megajoule
+371,"heat production, light fuel oil, at boiler 100kW, non-modulating","heat, central or small-scale, other than natural gas",megajoule
+372,"heat production, light fuel oil, at boiler 10kW condensing, non-modulating","heat, central or small-scale, other than natural gas",megajoule
+373,"heat production, light fuel oil, at boiler 10kW, non-modulating","heat, central or small-scale, other than natural gas",megajoule
+374,"heat production, light fuel oil, at industrial furnace 1MW","heat, district or industrial, other than natural gas",megajoule
+375,"heat production, lignite briquette, at stove 5-15kW","heat, central or small-scale, other than natural gas",megajoule
+376,"heat production, mixed logs, at furnace 100kW","heat, central or small-scale, other than natural gas",megajoule
+377,"heat production, mixed logs, at furnace 100kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule
+378,"heat production, mixed logs, at furnace 30kW","heat, central or small-scale, other than natural gas",megajoule
+379,"heat production, mixed logs, at furnace 30kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule
+380,"heat production, mixed logs, at wood heater 6kW","heat, central or small-scale, other than natural gas",megajoule
+381,"heat production, mixed logs, at wood heater 6kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule
+382,"heat production, natural gas, at boiler atm. low-NOx condensing non-modulating <100kW","heat, central or small-scale, natural gas",megajoule
+383,"heat production, natural gas, at boiler atmospheric low-NOx non-modulating <100kW","heat, central or small-scale, natural gas",megajoule
+384,"heat production, natural gas, at boiler atmospheric non-modulating <100kW","heat, central or small-scale, natural gas",megajoule
+385,"heat production, natural gas, at boiler condensing modulating <100kW","heat, central or small-scale, natural gas",megajoule
+386,"heat production, natural gas, at boiler condensing modulating >100kW","heat, district or industrial, natural gas",megajoule
+387,"heat production, natural gas, at boiler fan burner low-NOx non-modulating <100kW","heat, central or small-scale, natural gas",megajoule
+388,"heat production, natural gas, at boiler fan burner non-modulating <100kW","heat, central or small-scale, natural gas",megajoule
+389,"heat production, natural gas, at boiler modulating <100kW","heat, central or small-scale, natural gas",megajoule
+390,"heat production, natural gas, at boiler modulating >100kW","heat, district or industrial, natural gas",megajoule
+391,"heat production, natural gas, at diffusion absorption heat pump 4kW, future","heat, future",megajoule
+392,"heat production, natural gas, at industrial furnace >100kW","heat, district or industrial, natural gas",megajoule
+393,"heat production, natural gas, at industrial furnace low-NOx >100kW","heat, district or industrial, natural gas",megajoule
+394,"heat production, propane, at industrial furnace >100kW","heat, district or industrial, other than natural gas",megajoule
+395,"heat production, softwood chips from forest, at furnace 1000kW","heat, district or industrial, other than natural gas",megajoule
+396,"heat production, softwood chips from forest, at furnace 1000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+397,"heat production, softwood chips from forest, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule
+398,"heat production, softwood chips from forest, at furnace 300kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+399,"heat production, softwood chips from forest, at furnace 5000kW","heat, district or industrial, other than natural gas",megajoule
+400,"heat production, softwood chips from forest, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+401,"heat production, softwood chips from forest, at furnace 50kW","heat, central or small-scale, other than natural gas",megajoule
+402,"heat production, softwood chips from forest, at furnace 50kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule
+403,"heat production, straw, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule
+404,"heat production, straw, organic, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule
+405,"heat production, untreated waste wood, at furnace 1000-5000 kW","heat, district or industrial, other than natural gas",megajoule
+406,"heat production, untreated waste wood, at furnace 1000-5000 kW","waste wood, untreated",kilogram
+407,"heat production, untreated waste wood, at furnace 1000-5000 kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+408,"heat production, untreated waste wood, at furnace 1000-5000 kW, state-of-the-art 2014","waste wood, untreated",kilogram
+409,"heat production, water-water heat pump, industrial, 100kW","heat, water-water heat pump, industrial, 100kW",megajoule
+410,"heat production, wood chips from industry, at furnace 1000kW","heat, district or industrial, other than natural gas",megajoule
+411,"heat production, wood chips from industry, at furnace 1000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+412,"heat production, wood chips from industry, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule
+413,"heat production, wood chips from industry, at furnace 300kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+414,"heat production, wood chips from industry, at furnace 5000kW","heat, district or industrial, other than natural gas",megajoule
+415,"heat production, wood chips from industry, at furnace 5000kW, state-of-the-art 2014","heat, district or industrial, other than natural gas",megajoule
+416,"heat production, wood chips from industry, at furnace 50kW","heat, central or small-scale, other than natural gas",megajoule
+417,"heat production, wood chips from industry, at furnace 50kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule
+418,"heat production, wood chips from post-consumer wood, at furnace 300kW","heat, district or industrial, other than natural gas",megajoule
+419,"heat production, wood pellet, at furnace 25kW","heat, central or small-scale, other than natural gas",megajoule
+420,"heat production, wood pellet, at furnace 25kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule
+421,"heat production, wood pellet, at furnace 300kW","heat, central or small-scale, other than natural gas",megajoule
+422,"heat production, wood pellet, at furnace 300kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule
+423,"heat production, wood pellet, at furnace 9kW","heat, central or small-scale, other than natural gas",megajoule
+424,"heat production, wood pellet, at furnace 9kW, state-of-the-art 2014","heat, central or small-scale, other than natural gas",megajoule
+425,"hydrogen production, coal gasification","hydrogen, gaseous, low pressure",kilogram
+426,"hydrogen production, coal gasification, with CCS","hydrogen, gaseous, low pressure",kilogram
+429,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant","hydrogen, gaseous, 25 bar",kilogram
+430,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant","hydrogen, gaseous, 25 bar",kilogram
+432,"hydrogen production, steam methane reforming","hydrogen, gaseous, low pressure",kilogram
+433,"hydrogen production, steam methane reforming, with CCS","hydrogen, gaseous, low pressure",kilogram
+434,"kerosene production, from methanol, from wood, with CCS, economic allocation","kerosene, synthetic",kilogram
+435,"kerosene production, from methanol, from wood, with CCS, energy allocation","kerosene, synthetic",kilogram
+436,"kerosene production, from methanol, hydrogen from coal gasification, economic allocation","kerosene, synthetic",kilogram
+437,"kerosene production, from methanol, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram
+438,"kerosene production, from methanol, hydrogen from coal gasification, with CCS, economic allocation","kerosene, synthetic",kilogram
+439,"kerosene production, from methanol, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram
+440,"kerosene production, from methanol, hydrogen from electrolysis, CO2 from DAC, economic allocation","kerosene, synthetic",kilogram
+441,"kerosene production, from methanol, hydrogen from electrolysis, CO2 from DAC, energy allocation","kerosene, synthetic",kilogram
+442,"kerosene production, from methanol, hydrogen from electrolysis, CO2 from cement plant, economic allocation","kerosene, synthetic",kilogram
+443,"kerosene production, from methanol, hydrogen from electrolysis, CO2 from cement plant, energy allocation","kerosene, synthetic",kilogram
+444,"kerosene production, petroleum refinery operation",kerosene,kilogram
+445,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation","kerosene, synthetic",kilogram
+446,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage","kerosene, synthetic",kilogram
+447,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, economic allocation","kerosene, synthetic",kilogram
+448,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation","kerosene, synthetic",kilogram
+449,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, economic allocation","kerosene, synthetic",kilogram
+450,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation","kerosene, synthetic",kilogram
+451,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, economic allocation","kerosene, synthetic",kilogram
+453,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, economic allocation","kerosene, synthetic",kilogram
+454,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation","kerosene, synthetic",kilogram
+455,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, economic allocation","kerosene, synthetic",kilogram
+456,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation","kerosene, synthetic",kilogram
+457,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, economic allocation, at fuelling station","kerosene, synthetic",kilogram
+458,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, energy allocation, at fuelling station","kerosene, synthetic",kilogram
+459,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, with CCS, economic allocation, at fuelling station","kerosene, synthetic",kilogram
+460,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation, at fuelling station","kerosene, synthetic",kilogram
+461,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from electrolysis, economic allocation, at fuelling station","kerosene, synthetic",kilogram
+462,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from electrolysis, energy allocation, at fuelling station","kerosene, synthetic",kilogram
+463,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, economic allocation, at fuelling station","kerosene, synthetic",kilogram
+464,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, energy allocation, at fuelling station","kerosene, synthetic",kilogram
+465,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, with CCS, economic allocation, at fuelling station","kerosene, synthetic",kilogram
+466,"kerosene production, synthetic, from Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation, at fuelling station","kerosene, synthetic",kilogram
+467,"kerosene production, synthetic, from methanol, from wood, with CCS, economic allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram
+468,"kerosene production, synthetic, from methanol, from wood, with CCS, energy allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram
+469,"kerosene production, synthetic, from methanol, hydrogen from coal gasification, economic allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram
+470,"kerosene production, synthetic, from methanol, hydrogen from coal gasification, energy allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram
+471,"kerosene production, synthetic, from methanol, hydrogen from coal gasification, with CCS, economic allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram
+472,"kerosene production, synthetic, from methanol, hydrogen from coal gasification, with CCS, energy allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram
+473,"kerosene production, synthetic, from methanol, hydrogen from electrolysis, CO2 from DAC, economic allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram
+474,"kerosene production, synthetic, from methanol, hydrogen from electrolysis, CO2 from DAC, energy allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram
+475,"kerosene production, synthetic, from methanol, hydrogen from electrolysis, CO2 from cement plant, economic allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram
+476,"kerosene production, synthetic, from methanol, hydrogen from electrolysis, CO2 from cement plant, energy allocation, at fuelling station","kerosene, synthetic, vehicle grade",kilogram
+477,"kerosene production, via Fischer-Tropsch, from forest product (non-residual), energy allocation","kerosene, from forest residues",kilogram
+478,"kerosene production, via Fischer-Tropsch, from forest product (non-residual), with carbon capture and storage, energy allocation","kerosene, from forest residues",kilogram
+479,"kerosene production, via Fischer-Tropsch, from forest residues, energy allocation","kerosene, from forest residues",kilogram
+480,lignite briquettes production,lignite briquettes,megajoule
+483,"methanol production, biomass gasification","methanol, from biomass",kilogram
+484,"methanol production, coal gasification",methanol,kilogram
+485,"methanol production, natural gas reforming",methanol,kilogram
+486,"mixed natural gas and biomethane production, high pressure","mixed natural gas and biomethane, high pressure",cubic meter
+487,needle coke production,needle coke,kilogram
+488,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system","heat, central or small-scale, other than natural gas",megajoule
+489,"petrol production, 15% ETBE additive by volume, with ethanol from biomass","petrol, 15% ETBE additive by volume, with ethanol from biomass",kilogram
+490,"petrol production, 4% ETBE additive by volume, with ethanol from biomass","petrol, 4% ETBE additive by volume, with ethanol from biomass",kilogram
+491,"petrol production, 5% ethanol by volume from biomass","petrol, 5% ethanol by volume from biomass",kilogram
+492,"petrol production, 85% ethanol by volume from biomass","petrol, 85% ethanol by volume from biomass",kilogram
+493,"petrol production, low-sulfur","petrol, low-sulfur",kilogram
+494,"petrol production, unleaded, petroleum refinery operation","petrol, unleaded",kilogram
+495,"petroleum and gas production, offshore","natural gas, high pressure",cubic meter
+496,"petroleum and gas production, offshore",petroleum,kilogram
+497,"petroleum and gas production, onshore","natural gas, high pressure",cubic meter
+498,"petroleum and gas production, onshore",petroleum,kilogram
+499,"petroleum coke production, petroleum refinery operation",petroleum coke,kilogram
+500,"steam heat production, water-water heat pump, industrial, 100kW","steam heat, water-water heat pump, industrial, 100kW",megajoule
+501,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification","syngas, RWGS, Production",kilogram
+502,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification, with CCS","syngas, RWGS, Production",kilogram
+503,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from electrolysis","syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from electrolysis",kilogram
+504,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from wood gasification","syngas, RWGS, Production",kilogram
+505,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from wood gasification, with CCS","syngas, RWGS, Production",kilogram
+506,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram
+507,"wood chips production, softwood, at sawmill","wood chips, wet, measured as dry mass",kilogram
+508,wood pellet production,"wood pellet, measured as dry mass",kilogram
+509,"wood pellets, burned in stirling heat and power co-generation unit, 3kW electrical, future","electricity, low voltage",kilowatt hour
+510,"wood pellets, burned in stirling heat and power co-generation unit, 3kW electrical, future","heat, future",megajoule
