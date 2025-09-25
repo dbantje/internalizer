@@ -17,8 +17,6 @@ from .utils import (
     split_remind_index,
 )
 from .calculation_setup import (
-    prepare_setup,
-    default_setup, 
     CalculationSetup,
     RemindInternalizationSetup,
     EI_INDEX
@@ -256,34 +254,35 @@ class Internalizer:
                    "and `Internalizer.calculate_costs(...)`` first. Exiting.")
         
         dflist = []
-        for lvl in self.cs.levels:
-            results = {}
-            for year in self.years:
-                # recalculate mapping
-                mapping = self.cs.data[lvl].get(
-                    "regionalized mapping", self.cs.regionalize_dynamic_mapping(lvl, year)
-                )
-                fp = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/regionalized_impacts_{lvl}.csv"
-                regionalized_impacts = pd.read_csv(fp)
+        for agg_lvl, lvllist in self.cs.aggregate_levels.items():
+            for lvl in lvllist:
+                results = {}
+                for year in self.years:
+                    # recalculate mapping
+                    mapping = self.cs.data[lvl].get(
+                        "regionalized mapping", self.cs.regionalize_dynamic_mapping(lvl, year)
+                    )
+                    fp = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/regionalized_impacts_{lvl}.csv"
+                    regionalized_impacts = pd.read_csv(fp)
 
-                impacts_agg = aggregate_with_mapping(
-                    mapping, regionalized_impacts,
-                    var_col="LCIA method",
-                    value_col="impact"
-                )
+                    impacts_agg = aggregate_with_mapping(
+                        mapping, regionalized_impacts,
+                        var_col="LCIA method",
+                        value_col="impact"
+                    )
 
-                results[year] = impacts_agg.set_index(
-                    ["REMIND index", "region", "LCIA method"]
-                )["impact"].to_xarray()
+                    results[year] = impacts_agg.set_index(
+                        ["REMIND index", "region", "LCIA method"]
+                    )["impact"].to_xarray()
 
-            # interpolate
-            x = interpolate_and_weight_xr(results, MODEL_YEARS[self.model], 1.0)
+                # interpolate
+                x = interpolate_and_weight_xr(results, MODEL_YEARS[self.model], 1.0)
 
-            # multiply with production volumes
-            prodVol = self.cs.get_production_volumes(lvl, MODEL_YEARS[self.model])
-            df = (prodVol * x).to_dataframe(name="impact").reset_index()
-            df["level"] = lvl
-            dflist.append(df)
+                # multiply with production volumes
+                prodVol = self.cs.get_production_volumes(lvl, MODEL_YEARS[self.model])
+                df = (prodVol * x).to_dataframe(name="impact").reset_index()
+                df["level"] = agg_lvl
+                dflist.append(df)
 
         pd.concat(dflist, ignore_index=True)[
             ["level", "REMIND index", "region", "year", "LCIA method", "impact"]].to_csv(
@@ -302,22 +301,26 @@ class Internalizer:
         
         ramp_up = get_linear_ramp_up(MODEL_YEARS[self.model], ramp_up_startyear, ramp_up_endyear)
 
-        for lvl in self.cs.levels:
-            domains = self.cs.data[lvl]["domains"]
-            x = interpolate_and_weight_xr(
-                    self.cost_results[lvl],
-                    MODEL_YEARS[self.model],
-                    ramp_up
-                )
-            
-            # convert to USD / GJ
-            x =  x * convert_euros_to_dollar(EURO_REF_YEAR, REMIND_USD_REF_YEAR) * 1000
+        for agg_lvl, lvllist in self.cs.aggregate_levels.items():
+            dflist = []
+            for lvl in lvllist:
+                domains = self.cs.data[lvl]["domains"]
+                x = interpolate_and_weight_xr(
+                        self.cost_results[lvl],
+                        MODEL_YEARS[self.model],
+                        ramp_up
+                    )
                 
-            total = x.sel({"impact category": impact_categories}).sum(dim="impact category")
-            df = total.to_dataframe(name="cost").reset_index()
-            df = split_remind_index(df, domains).rename(columns={"year": "ttot", "region": "all_regi"})
-            df[["ttot", "all_regi"] + domains + ["cost"]].to_csv(
-                self.outdir + f"/lca_costs_{lvl}.csv", index=False, header=True)
+                # convert to USD / GJ
+                x =  x * convert_euros_to_dollar(EURO_REF_YEAR, REMIND_USD_REF_YEAR) * 1000
+                    
+                total = x.sel({"impact category": impact_categories}).sum(dim="impact category")
+                df = total.to_dataframe(name="cost").reset_index()
+                df = split_remind_index(df, domains).rename(columns={"year": "ttot", "region": "all_regi"})
+                dflist.append(df[["ttot", "all_regi"] + domains + ["cost"]])
+            pd.concat(dflist).to_csv(
+                self.outdir + f"/lca_costs_{agg_lvl}.csv", index=False, header=True
+            )
             
 
 
