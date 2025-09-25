@@ -66,7 +66,7 @@ def get_demFE(gdxpath: str, years: List[int]) -> xr.DataArray:
     os.remove(csvname)
 
     df["emi_sectors"] = df["emi_sectors"].str.lower()
-    df["REMIND index"] = [" - ".join([sec, fuel]) for fuel, sec in zip(df["emi_sectors"], df["all_enty.1"])]
+    df["REMIND index"] = [" - ".join([sec, fuel]) for sec, fuel in zip(df["emi_sectors"], df["all_enty.1"])]
     mapper = {"Val": "demFE", "ttot": "year", "all_regi": "region"}
     df = df.rename(columns=mapper)
     df = df.loc[df["year"].isin(years)]
