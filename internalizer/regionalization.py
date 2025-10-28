@@ -194,11 +194,20 @@ def fill_mapping_from_mif(
     combined_idx = regionalized_mapping.index.intersection(mifdata.index)
     sel = regionalized_mapping.loc[combined_idx]
 
-    # calculate shares
+    # calculate totals
     sel["weight"] = mifdata.loc[combined_idx]
     sel = sel.reset_index()
     sel["total"] = sel.reset_index().groupby(["REMIND index", "region"])["weight"].transform("sum")
-    sel["share"] = sel["weight"] / sel["total"]
+
+    # where total is zero, set weights to one and recalculate total
+    def robust_weights(row):
+        if row["total"] == 0:
+            return 1
+        else:
+            return row["weight"]
+    sel["weight new"] = sel.apply(robust_weights, axis=1)
+    sel["total new"] = sel.groupby(["REMIND index", "region"])["weight new"].transform("sum")
+    sel["share"] = sel["weight new"] / sel["total new"]
 
     return sel[["REMIND index", "dataset name", 
                 "dataset reference product", "dataset unit", "share", "region"]]
