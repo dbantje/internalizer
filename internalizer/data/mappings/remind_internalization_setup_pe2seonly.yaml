@@ -1,0 +1,14 @@
+name: pe2seonly
+levels:
+  - pe2se
+aggregate_levels:
+  SE:
+    - pe2se
+mappings:
+  pe2se:
+    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/pe2se.csv
+    depends_on_year: False
+removal_lists: {}
+domains:
+  pe2se:
+    - all_te

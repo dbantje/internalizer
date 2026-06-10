@@ -35,6 +35,7 @@ COST_PERSPECTIVES = [
 
 DEFAULT_CONFIG = DATA_DIR / "mappings" / "remind_internalization_setup_v2.yaml"
 CONFIG_NO_REMOVAL = DATA_DIR / "mappings" / "remind_internalization_setup_noRemoval.yaml"
+CONFIG_PE2SE_ONLY = DATA_DIR / "mappings" / "remind_internalization_setup_pe2seonly.yaml"
 
 MODEL_YEARS = {
     "remind": [2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045,
@@ -156,9 +157,12 @@ class Internalizer:
         self,
         setup: str = "default",
         yaml_file: Path | str = DEFAULT_CONFIG,
+        levels = "SE,FE",
     ) -> None:
         if setup == "default":
-            self.cs = RemindInternalizationSetup(yaml_file, self.mifpath, self.gdxpath, self.get_technosphere_df())
+            self.cs = RemindInternalizationSetup(yaml_file, levels, self.mifpath, self.gdxpath, self.get_technosphere_df())
+        elif setup == "pe2se":
+            self.cs = RemindInternalizationSetup(CONFIG_PE2SE_ONLY, levels, self.mifpath, self.gdxpath, self.get_technosphere_df())
         else:
             cs = CalculationSetup(yaml_file)
             cs.build_removal_lists(self.get_technosphere_df())
