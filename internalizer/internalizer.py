@@ -290,7 +290,7 @@ class Internalizer:
 
         pd.concat(dflist, ignore_index=True)[
             ["level", "REMIND index", "region", "year", "LCIA method", "impact"]].to_csv(
-                self.outdir + f"/aggregated_impacts.csv", index=False
+                os.path.join(self.outdir, self.model, self.scenario, "aggregated_impacts.csv"), index=False
             )
     
     def write_remind_input_files(
@@ -323,7 +323,7 @@ class Internalizer:
                 df = split_remind_index(df, domains).rename(columns={"year": "ttot", "region": "all_regi"})
                 dflist.append(df[["ttot", "all_regi"] + domains + ["cost"]])
             pd.concat(dflist).to_csv(
-                self.outdir + f"/lca_costs_{agg_lvl}.csv", index=False, header=True
+                os.path.join(self.outdir, self.model, self.scenario, f"lca_costs_{agg_lvl}.csv"), index=False, header=True
             )
             
 
