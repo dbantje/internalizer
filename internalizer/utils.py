@@ -36,6 +36,10 @@ def convert_euros_to_dollar(year, target_year):
     return (HICP[target_year] / HICP[year]) / PPP[target_year]
 
 
+def convert_dollars_to_euro(year, target_year):
+    return (CPI[target_year] / CPI[year]) * PPP[target_year]
+
+
 def format_lcia_method_exchanges(method):
     """
         Format LCIA method data to fit such structure:
