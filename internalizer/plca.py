@@ -19,14 +19,14 @@ from .utils import (
 )
 from .filesystem_constants import DATA_DIR
 
-FILEPATH_MONETIZATION_FACTORS = DATA_DIR / "mfs_monte_carlo_sample_euro2022.nc"
-FILEPATH_MONETIZATION_FACTORS_PERSPECTIVES = DATA_DIR / "mfs_perspectives_euro2022.nc"
+FILEPATH_MONETIZATION_FACTORS = DATA_DIR / "mfs_MCsample_EUR2022.nc"
+FILEPATH_MONETIZATION_FACTORS_PERSPECTIVES = DATA_DIR / "mfs_perspectives_EUR2022.nc"
 NCV_DICT = get_ncv_dict()
 
 def get_cfs_and_mfs(
-        monetization: float | str | dict,
-        lca: MultiLCA,
-        biosphere_inds: dict
+    monetization: float | str | dict,
+    lca: MultiLCA,
+    biosphere_inds: dict
 ) -> Tuple[csr_matrix, xr.DataArray, list]:
     methods = get_lcia_method_names()
     if isinstance(monetization, float):
@@ -57,7 +57,7 @@ def get_cfs_and_mfs(
         mfs = xr.DataArray(
             np.diag(list(monetization.values())),
             {
-                "LCIA method": [m.replace(" - ", ", ") for m in methods],
+                "LCIA method": methods,
                 "impact category": methods
             }
         )
@@ -84,14 +84,14 @@ def get_monetized_results(
             impacts = xr.DataArray(
                 [data],
                 {
-                    "LCIA method": [m.replace(" - ", ", ") for m in methods]
+                    "LCIA method": methods
                 }
             )
         else:
             impacts = xr.DataArray(
                 data,
                 {
-                    "LCIA method": [m.replace(" - ", ", ") for m in methods]
+                    "LCIA method": methods
                 }
             )
         
