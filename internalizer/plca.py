@@ -30,21 +30,23 @@ def get_cfs_and_mfs(
 ) -> Tuple[csr_matrix, xr.DataArray, list]:
     methods = get_lcia_method_names()
     if isinstance(monetization, float):
+        mfs = xr.load_dataarray(FILEPATH_MONETIZATION_FACTORS)
+        methods = list(mfs.coords["LCIA method"].values)
         cfs = fill_characterization_factors_matrices(
             methods=methods,
             biosphere_matrix_dict=lca.dicts.biosphere,
             biosphere_dict=biosphere_inds
         )
-        mfs = xr.load_dataarray(FILEPATH_MONETIZATION_FACTORS)
         return cfs, mfs, methods 
     elif isinstance(monetization, str):
+        mfs = xr.load_dataarray(FILEPATH_MONETIZATION_FACTORS_PERSPECTIVES).sel(
+            {"perspective": monetization}
+        )
+        methods = list(mfs.coords["LCIA method"].values)
         cfs = fill_characterization_factors_matrices(
             methods=methods,
             biosphere_matrix_dict=lca.dicts.biosphere,
             biosphere_dict=biosphere_inds
-        )
-        mfs = xr.load_dataarray(FILEPATH_MONETIZATION_FACTORS_PERSPECTIVES).sel(
-            {"perspective": monetization}
         )
         return cfs, mfs, methods
     else:
