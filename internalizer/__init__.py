@@ -1,4 +1,4 @@
-__version__ = (0, 8, 0)
+__version__ = (0, 8, 1)
 __all__ = ["convert_euros_to_dollar", "Internalizer"]
 
 from .utils import convert_euros_to_dollar
