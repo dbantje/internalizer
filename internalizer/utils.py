@@ -9,7 +9,7 @@ from typing import List
 
 from .filesystem_constants import DATA_DIR
 
-LCIA_METHODS =  DATA_DIR / "lcia_for-monetization_ei310.json"
+LCIA_METHODS =  DATA_DIR / "lcia_ei310.json"
 FILEPATH_NCVS = DATA_DIR / "NCVs.csv"
 FILEPATH_CPI = DATA_DIR / "CPI_US.csv"
 FILEPATH_PPP = DATA_DIR / "PPPdata.csv"
