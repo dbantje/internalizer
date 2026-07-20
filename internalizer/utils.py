@@ -20,6 +20,8 @@ HICP = HICP["average HICP"]
 PPP = pd.read_csv(FILEPATH_PPP).set_index("year")["PPP"]
 CPI = pd.read_csv(FILEPATH_CPI).set_index("year")["CPI"]
 
+METHOD2IC_MAPPING = DATA_DIR / "method2ic_mapping.csv"
+
 def get_lcia_method_names():
     """Get a list of available LCIA methods."""
     with open(LCIA_METHODS, "r") as f:
@@ -224,4 +226,30 @@ def correct_coke_production_flows(matrixfolder: Path | str):
 def get_dict_mapping_from_df(df, col1, col2):
     temp = df[[col1, col2]].copy().drop_duplicates()
     return dict(zip(temp[col1], temp[col2]))
+
+
+def map_lcia_methods_to_impact_categories(
+    df: pd.DataFrame,
+    value_col: str = "cost"
+) -> pd.DataFrame:
+    """
+    Map LCIA methods to impact categories based on keywords.
+    :param df: DataFrame to be mapped
+    """
+    mapping = pd.read_csv(METHOD2IC_MAPPING).set_index("LCIA method")["impact_category"].to_dict()
+    df["impact_category"] = df["impact_category"].map(lambda x: mapping.get(x, x))
+    df = df.groupby([col for col in df.columns if col != value_col], as_index=False)[value_col].sum()
+
+
+def get_automatic_exclude_list(
+    methods: list,
+    ics_exclude = ["climate change", "fossil resources"],
+) -> list:
+    """
+    Get a list of impact categories to automatically exclude based on the LCIA methods used.
+    :param methods: List of LCIA methods
+    :return: List of impact categories to exclude
+    """
+    mapping = pd.read_csv(METHOD2IC_MAPPING).set_index("LCIA method")["impact_category"].to_dict()
+    return [m for m in methods if mapping.get(m, m).lower() in ics_exclude]
 
