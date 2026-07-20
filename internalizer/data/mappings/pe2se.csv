@@ -78,3 +78,7 @@ csp;electricity production, solar thermal parabolic trough, 50 MW;electricity, h
 solhe;operation, solar collector system, Cu flat plate collector, one-family house, for combined system;heat, central or small-scale, other than natural gas;megajoule;1.0
 tnrs;electricity production, nuclear, pressure water reactor;electricity, high voltage;kilowatt hour;1.0
 fnrs;electricity production, nuclear, pressure water reactor;electricity, high voltage;kilowatt hour;1.0
+biopyronly;biochar, from spruce wood pyrolysis;biochar;kilogram;1.0
+biopyrhe;biochar, from spruce wood pyrolysis;biochar;kilogram;1.0
+biopyrchp;biochar, from spruce wood pyrolysis;biochar;kilogram;1.0
+biopyrliq;biochar, from spruce wood pyrolysis;biochar;kilogram;1.0
