@@ -1,7 +1,8 @@
 from premise import NewDatabase
 import bw2data as bd
+import bw_processing as bwp
+from bw_processing import Datapackage
 from bw2calc import MultiLCA
-from pathways.lca import get_lca_matrices
 import xarray as xr
 import pandas as pd
 import numpy as np
@@ -15,13 +16,158 @@ from .utils import (
     get_ncv_dict,
     get_lcia_method_names,
     csr_matrix,
-    correct_coke_production_flows
+    correct_coke_production_flows,
+    change_compartments_PM,
+    read_indices_csv,
 )
 from .filesystem_constants import DATA_DIR
 
 FILEPATH_MONETIZATION_FACTORS = DATA_DIR / "mfs_MCsample_EUR2022.nc"
 FILEPATH_MONETIZATION_FACTORS_PERSPECTIVES = DATA_DIR / "mfs_perspectives_EUR2022.nc"
 NCV_DICT = get_ncv_dict()
+
+
+def load_matrix_and_index(
+    file_path: Path,
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    """Load a sparse matrix representation and uncertainties from a CSV export.
+
+    :param file_path: CSV file containing row, column, value, and distribution columns.
+    :type file_path: pathlib.Path
+    :returns: Tuple of data values, index pairs, sign flags, and distribution metadata.
+    :rtype: tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray, numpy.ndarray]
+    """
+    # Load the data from the CSV file
+    array = np.genfromtxt(file_path, delimiter=";", skip_header=1)
+
+    # give `indices_array` a list of tuples of indices
+    indices_array = np.array(
+        list(zip(array[:, 1].astype(int), array[:, 0].astype(int))),
+        dtype=bwp.INDICES_DTYPE,
+    )
+
+    data_array = array[:, 2]
+
+    # make a boolean scalar array to store the sign of the data
+    flip_array = array[:, -1].astype(bool)
+
+    distributions_array = np.array(
+        list(
+            zip(
+                array[:, 3].astype(int),  # uncertainty type
+                array[:, 4].astype(float),  # loc
+                array[:, 5].astype(float),  # scale
+                array[:, 6].astype(float),  # shape
+                array[:, 7].astype(float),  # minimum
+                array[:, 8].astype(float),  # maximum
+                array[:, 9].astype(bool),  # negative
+            )
+        ),
+        dtype=bwp.UNCERTAINTY_DTYPE,
+    )
+
+    return data_array, indices_array, flip_array, distributions_array
+
+
+def get_lca_matrices(
+    filepaths: list,
+    model: str,
+    scenario: str,
+    year: int,
+    remove_uncertainty: bool = True,
+    change_pm_compartments: bool = False,
+) -> tuple[
+    Datapackage,
+    dict[tuple[str, str, str, str], int],
+    dict[tuple, int],
+    list[tuple] | None,
+    dict | None,
+]:
+    """Retrieve the technosphere and biosphere matrices plus indices for a scenario.
+
+    :param filepaths: Candidate CSV file paths bundled in the datapackage.
+    :type filepaths: list[str]
+    :param model: Name of the IAM model to filter for.
+    :type model: str
+    :param scenario: Pathway identifier to match in filenames.
+    :type scenario: str
+    :param remove_uncertainty: When ``True``, zero out distribution parameters.
+    :type remove_uncertainty: bool
+    :param change_pm_compartments: When ``True``, adjust PM compartments in the matrices.
+    :type change_pm_compartments: bool
+    :returns: Datapackage with LCI matrices, technosphere/biosphere indices
+    :rtype: tuple[bw_processing.Datapackage, dict, dict]
+    :raises FileNotFoundError: If expected matrix files cannot be located.
+    :raises ValueError: When the set of candidate files does not match expectations.
+    """
+
+    # find the correct filepaths in filepaths
+    # the correct filepath are the strings that contains
+    # the model, scenario and year
+    def filter_filepaths(suffix: str, contains: List[str]):
+        return [
+            Path(fp)
+            for fp in filepaths
+            if all(kw in fp.replace(" ", "") for kw in contains)
+            and Path(fp).suffix == suffix
+            and Path(fp).exists()
+        ]
+
+    def select_filepath(keyword: str, fps):
+        matches = [fp for fp in fps if keyword in fp.name]
+        if not matches:
+            raise FileNotFoundError(f"Expected file containing '{keyword}' not found.")
+        return matches[0]
+
+    fps = filter_filepaths(
+        suffix=".csv",
+        contains=[model, f"/{str(year)}/"] + scenario.replace(" ", "").split("-"),
+    )
+    if len(fps) != 4:
+        raise ValueError(
+            f"Expected 4 filepaths, got {len(fps)} when looking at {filepaths} for terms: {model}, {scenario}, {year}"
+        )
+
+    if change_pm_compartments:
+        change_compartments_PM(fps)
+
+    fp_technosphere_inds = select_filepath("A_matrix_index", fps)
+    fp_biosphere_inds = select_filepath("B_matrix_index", fps)
+    technosphere_inds = read_indices_csv(fp_technosphere_inds)
+    biosphere_inds = read_indices_csv(fp_biosphere_inds)
+    # remove the last element of the tuple, which is the index
+    biosphere_inds = {k[:-1]: v for k, v in biosphere_inds.items()}
+
+    dp = bwp.create_datapackage()
+
+    fp_A = select_filepath("A_matrix", [fp for fp in fps if "index" not in fp.name])
+    fp_B = select_filepath("B_matrix", [fp for fp in fps if "index" not in fp.name])
+
+    # Load matrices and add them to the datapackage
+    uncertain_parameters = None
+    for matrix_name, fp in [("technosphere_matrix", fp_A), ("biosphere_matrix", fp_B)]:
+        data, indices, sign, distributions = load_matrix_and_index(fp)
+
+        # remove uncertainty data
+        if remove_uncertainty is True:
+            distributions = np.array(
+                [
+                    (0, None, None, None, None, None, False)
+                    for _ in range(len(distributions))
+                ],
+                dtype=bwp.UNCERTAINTY_DTYPE,
+            )
+
+        dp.add_persistent_vector(
+            matrix=matrix_name,
+            indices_array=indices,
+            data_array=data,
+            flip_array=sign if matrix_name == "technosphere_matrix" else None,
+            distributions_array=distributions,
+        )
+
+    return dp, technosphere_inds, biosphere_inds
+
 
 def get_cfs_and_mfs(
     monetization: float | str | dict,
@@ -173,16 +319,18 @@ def _calculate_costs_year(
     level: str,
     outdir: str,
     model: str,
-    save_intermediate_results: bool
+    save_intermediate_results: bool,
+    change_pm_compartments: bool = False,
 ) -> xr.DataArray:
 
     # load matrices
     matrix_folder = outdir + f"/{model}/{scenario}/{str(year)}/"
-    dp, technosphere_inds, biosphere_inds, _, _ = get_lca_matrices(
+    dp, technosphere_inds, biosphere_inds = get_lca_matrices(
         [matrix_folder + fn for fn in os.listdir(matrix_folder) if "matrix" in fn],
         model,
         scenario,
-        year
+        year,
+        change_pm_compartments=change_pm_compartments,
     )
     print(f"{level}, {year}: Matrices loaded")
 

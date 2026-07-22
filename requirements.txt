@@ -5,5 +5,4 @@ bw2calc>=2.0.1
 bw2data>=4.3
 bw2io>=0.9.4
 premise
-pathways
 scipy

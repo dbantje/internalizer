@@ -6,6 +6,7 @@ import pandas as pd
 import xarray as xr
 from pathlib import Path
 from typing import List
+import csv
 
 from .filesystem_constants import DATA_DIR
 
@@ -21,6 +22,7 @@ PPP = pd.read_csv(FILEPATH_PPP).set_index("year")["PPP"]
 CPI = pd.read_csv(FILEPATH_CPI).set_index("year")["CPI"]
 
 METHOD2IC_MAPPING = DATA_DIR / "method2ic_mapping.csv"
+COMPARTMENTS_CHANGE = DATA_DIR / "PM_compartments_change.csv"
 
 def get_lcia_method_names():
     """Get a list of available LCIA methods."""
@@ -29,10 +31,12 @@ def get_lcia_method_names():
 
     return [" - ".join(x["name"]) for x in data]
 
+
 def get_ncv_dict():
     ncvs = pd.read_csv(FILEPATH_NCVS)
 
     return ncvs.set_index(["dataset reference product", "dataset unit"])["NCV in MJ/product"].to_dict()
+
 
 def convert_euros_to_dollar(year, target_year):
     return (HICP[target_year] / HICP[year]) / PPP[target_year]
@@ -70,6 +74,7 @@ def get_lcia_methods(methods: list = None):
         data = [x for x in data if " - ".join(x["name"]) in methods]
 
     return {" - ".join(x["name"]): format_lcia_method_exchanges(x) for x in data}
+
 
 def fill_characterization_factors_matrices(
     methods: list, biosphere_matrix_dict: dict, biosphere_dict: dict
@@ -112,6 +117,7 @@ def fill_characterization_factors_matrices(
 
     return matrix
 
+
 def check_monetization_factors(
         monetization: dict
 ) -> None:
@@ -119,7 +125,34 @@ def check_monetization_factors(
     for k in monetization.keys():
         if k not in available_methods:
             raise ValueError(f"Method {k} not available!")
-        
+
+
+def read_indices_csv(file_path: Path) -> dict[tuple[str, str, str, str], int]:
+    """Parse a semicolon-separated index CSV into a lookup dictionary.
+
+    :param file_path: Path to the CSV file containing activity metadata.
+    :type file_path: pathlib.Path
+    :returns: Mapping from ``(name, product, location, unit)`` tuples to indices.
+    :rtype: dict[tuple[str, str, str, str], int]
+    """
+    indices = dict()
+    with open(file_path, encoding="utf-8") as read_obj:
+        csv_reader = csv.reader(read_obj, delimiter=";")
+        for row in csv_reader:
+            if row[4] == "index":
+                continue
+            try:
+                indices[(row[0], row[1], row[2], row[3])] = int(row[4])
+            except IndexError as err:
+                print(
+                    f"Error reading row {row} from {file_path}: {err}. "
+                    f"Could it be that the file uses commas instead of semicolons?"
+                )
+    # remove any unicode characters
+    indices = {tuple([str(x) for x in k]): v for k, v in indices.items()}
+    return indices
+
+
 def interpolate_and_weight_xr(
     data: dict,
     interpolation_years: list,
@@ -143,6 +176,7 @@ def interpolate_and_weight_xr(
     # weight
     return x * weighting_factors
 
+
 def ramp(
     x: list | np.ndarray,
     a: float,
@@ -152,6 +186,7 @@ def ramp(
         x = np.array(x)
 
     return np.where(x <  a, 0, np.where(x > b, 1, (x-a)/(b-a)))
+
 
 def get_linear_ramp_up(
     interpolation_years: list,
@@ -166,6 +201,7 @@ def get_linear_ramp_up(
         }
     )
 
+
 def split_remind_index(
     df: pd.DataFrame,
     domains: List[str]
@@ -175,6 +211,7 @@ def split_remind_index(
         df[domain] = df["REMIND index"].apply(lambda x: x.split(" - ")[i])
 
     return df
+
 
 def apply_filter_to_dataframe(
     df: pd.DataFrame,
@@ -195,6 +232,7 @@ def apply_filter_to_dataframe(
             mask2 = mask2 & ~df[col].str.contains(s) 
 
     return df[mask1 & mask2]
+
 
 def correct_coke_production_flows(matrixfolder: Path | str):
     # load data
@@ -222,6 +260,76 @@ def correct_coke_production_flows(matrixfolder: Path | str):
     
     Bmatrix.loc[idx, "value"] = data["exchange amount - 3.10.1"].values
     Bmatrix.reset_index().to_csv(matrixfolder + "/B_matrix.csv", sep=";", index=False)
+
+
+def change_compartments_PM(filepaths) -> None:
+    """Change compartments in biosphere matrices specified by COMPARTMENTS_CHANGE.
+
+    :returns: ``None``
+    :rtype: None
+    """
+    changes = pd.read_csv(COMPARTMENTS_CHANGE).dropna(subset="new compartment")
+
+    # select filepaths
+    def select_filepath(keyword: str, fps):
+        matches = [fp for fp in fps if keyword in fp.name]
+        if not matches:
+            raise FileNotFoundError(f"Expected file containing '{keyword}' not found.")
+        return matches[0]
+
+    # load indices and biosphere matrix
+    Aidx = pd.read_csv(select_filepath(("A_matrix_index"), filepaths), sep=";")
+    Bidx = pd.read_csv(
+        select_filepath(("B_matrix_index"), filepaths), sep=";"
+    ).set_index(["name", "compartment", "subcompartment"])["index"]
+    fp_biosphere = select_filepath(
+        "B_matrix", [fp for fp in filepaths if "index" not in fp.name]
+    )
+    Bdata = pd.read_csv(fp_biosphere, sep=";")
+
+    # get needed biosphere indices
+    pm_pollutants = [
+        "Ammonia",
+        "Nitrogen oxides",
+        "Particulate Matter, > 2.5 um and < 10um",
+        "Particulate Matter, < 2.5 um",
+        "Sulfur dioxide",
+        "Nitrate",
+    ]
+
+    # change compartments
+    # one pollutant and dataset name at a time
+    for pollutant in pm_pollutants:
+        Bidx_all = Bidx.loc[pollutant, "air", :]
+        for idx, row in changes.iterrows():
+            act_idx = Aidx[Aidx["name"] == row["dataset name"]]["index"]
+            b_idx_new = Bidx.loc[pollutant, "air", row["new compartment"]]
+            Amask = Bdata["index of activity"].isin(act_idx)
+            Bmask = Bdata["index of biosphere flow"].isin(Bidx_all)
+            mask = Amask & Bmask
+            Bdata.loc[mask, "index of biosphere flow"] = b_idx_new
+
+    # remove redundancy in matrix
+    aggfuncs = {
+        "value": "sum",
+        "uncertainty type": "first",
+        "loc": "sum",
+        "scale": "first",
+        "shape": "first",
+        "minimum": "first",
+        "maximum": "first",
+        "negative": "first",
+        "flip": "first",
+    }
+    Bdata_new = (
+        Bdata.groupby(["index of activity", "index of biosphere flow"])
+        .agg(aggfuncs)
+        .reset_index()
+    )
+
+    # save new matrix
+    Bdata_new.to_csv(fp_biosphere, sep=";", index=False)
+
 
 def get_dict_mapping_from_df(df, col1, col2):
     temp = df[[col1, col2]].copy().drop_duplicates()

@@ -173,7 +173,8 @@ class Internalizer:
         self,
         monetization: float | str | dict,
         multiprocessing: bool = True,
-        save_intermediate_results: bool = False
+        save_intermediate_results: bool = False,
+        change_pm_compartments: bool = False,
     ) -> None:
         """
         Calculate all costs.
@@ -213,7 +214,8 @@ class Internalizer:
                         lvl,
                         self.outdir,
                         self.model,
-                        save_intermediate_results
+                        save_intermediate_results,
+                        change_pm_compartments,
                     )   
                 )
 
