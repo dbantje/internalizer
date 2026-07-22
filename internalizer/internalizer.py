@@ -1,17 +1,28 @@
-from typing import List, Optional, Tuple
+from typing import List, Optional
 from pathlib import Path
 import os
 
 from multiprocessing import Pool, cpu_count
-import bw2data as bd
-import pandas as pd
-import numpy as np
-import xarray as xr
 import shutil
+import pandas as pd
+import bw2data as bd
 
-from .plca import _run_premise_year, _calculate_costs_year, _calculate_costs_year_new
-from .regionalization import get_regionalized_mapping
-from .utils import convert_euros_to_dollar
+from premise import NewDatabase, clear_cache
+from .plca import _run_premise_year, _calculate_costs_year
+from .utils import (
+    convert_euros_to_dollar,
+    check_monetization_factors,
+    get_linear_ramp_up,
+    interpolate_and_weight_xr,
+    split_remind_index,
+)
+from .calculation_setup import (
+    CalculationSetup,
+    RemindInternalizationSetup,
+    EI_INDEX
+)
+from .regionalization import aggregate_with_mapping, regionalize_impacts
+from .filesystem_constants import DATA_DIR
 
 EURO_REF_YEAR = 2022
 REMIND_USD_REF_YEAR = 2017
@@ -21,6 +32,10 @@ COST_PERSPECTIVES = [
     "budget constraint",
     "taxation costs"
 ]
+
+DEFAULT_CONFIG = DATA_DIR / "mappings" / "remind_internalization_setup_v2.yaml"
+CONFIG_NO_REMOVAL = DATA_DIR / "mappings" / "remind_internalization_setup_noRemoval.yaml"
+CONFIG_PE2SE_ONLY = DATA_DIR / "mappings" / "remind_internalization_setup_pe2seonly.yaml"
 
 MODEL_YEARS = {
     "remind": [2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045,
@@ -44,20 +59,27 @@ class Internalizer:
 
     def __init__(
         self,
-        filepath: str,
+        mifpath: str,
         model: str,
         pathway: str,
         ei_version: str,
-        bw_project: str
+        bw_project: str,
+        gdxpath: str,
+        outputfolder: str = "output",
+        single_run: bool = True,
+        max_mp_tasks: int | None = 4
     ):
         # get directory of data file and scenario name
         self.model = model
-        rundir, filename = extract_folder_and_filename(filepath)
+        rundir, filename = extract_folder_and_filename(mifpath)
         self.rundir = rundir
-        self.outdir = "./output/" + extract_output_folder(filepath)
+        outputdir = f"./{outputfolder}"
+        if not single_run:
+            outputdir += "/" + extract_output_folder(mifpath)
+        self.outdir = outputdir
         namecheck = "_".join((model.lower(), pathway))
         if filename != namecheck:
-            shutil.copy(filepath, rundir+f"/{namecheck}.mif")
+            shutil.copy(mifpath, rundir+f"/{namecheck}.mif")
         self.scenario = pathway
 
         if not os.path.exists(self.outdir):
@@ -65,11 +87,37 @@ class Internalizer:
 
         self.ei_version = ei_version 
         self.bw_project = bw_project
+        self.gdxpath = gdxpath
+        self.mifpath = mifpath
+        if max_mp_tasks is not None:
+            self.max_mp_tasks = max_mp_tasks
+        else:
+            self.max_mp_tasks = cpu_count()
+
+    def recreate_premise_cache(
+        self,
+    ) -> None:
+        # set brightway project
+        bd.projects.set_current(self.bw_project)
+        
+        # clear premise cache
+        clear_cache()
+
+        # newdatabase initialization creates cache
+        ei_label = "ecoinvent-{}-cutoff".format(self.ei_version)
+        scen = {"model": self.model, "pathway": self.scenario, "year": 2020, "filepath": self.rundir}
+        ndb = NewDatabase(
+            scenarios=[scen],
+            source_db=ei_label,
+            source_version=self.ei_version,
+            biosphere_name="ecoinvent-{}-biosphere".format(self.ei_version),
+        )
 
     def run_premise(
         self,
         years: List[int],
-        multiprocessing: bool = True
+        multiprocessing: bool = True,
+        quiet: bool = True
     ) -> None:
         self.years = years
         
@@ -78,146 +126,208 @@ class Internalizer:
                 self.bw_project,
                 {"model": self.model, "pathway": self.scenario, "year": year, "filepath": self.rundir},
                 self.ei_version,
-                self.outdir
+                self.outdir,
+                quiet
             )
             for year in self.years
         ]
 
         if multiprocessing:
-            with Pool(cpu_count(), maxtasksperchild=1000) as p:
+            with Pool(self.max_mp_tasks) as p:
+            #with Pool(cpu_count(), maxtasksperchild=1000) as p:
                 p.starmap(_run_premise_year, args)
         else:
             for arg in args:
                 _run_premise_year(*arg)
 
-    def calculate_costs_new(
-            self,
-            regionalized_mapping: pd.DataFrame,
-            cost_perspective: str | float,
-            remove_double_counting: bool,
-            extra_activities: List[Tuple] = [],
-            multiprocessing: bool = True
-    ) -> None:
-        # check cost perspectives
-        if isinstance(cost_perspective, float):
-            if cost_perspective >= 1 or cost_perspective <= 0:
-                raise ValueError("Given number for cost perspective is not a "
-                "valid quantile (not between 0 and 1)!")
-        else:
-            if cost_perspective not in COST_PERSPECTIVES:
-                raise ValueError(f"Cost perspective must be one of {COST_PERSPECTIVES}.")
-            
-        args = [
-            (
-                regionalized_mapping,
-                cost_perspective,
-                remove_double_counting,
-                extra_activities,
-                self.scenario,
-                year,
-                self.outdir,
-                self.model,
+    def get_technosphere_df(self):
+        dflist = []
+        for year in self.years:
+            matrix_folder = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/"
+            df = pd.read_csv(
+                matrix_folder + "/A_matrix_index.csv", sep=";",
+                usecols=[0, 1, 2],
+                names=EI_INDEX
             )
-            for year in self.years
-        ]
+            dflist.append(df)
+        
+        return pd.concat(dflist, ignore_index=True).drop_duplicates()
 
-        self.cost_results = {}
-        if multiprocessing:
-            with Pool(cpu_count(), maxtasksperchild=1000) as p:
-                results = p.starmap(_calculate_costs_year_new, args)
-
-                for y, r in zip(self.years, results):
-                    self.cost_results[y] = r
+    def set_calculation_setup(
+        self,
+        setup: str = "default",
+        yaml_file: Path | str = DEFAULT_CONFIG,
+        levels = "SE,FE",
+    ) -> None:
+        if setup == "default":
+            self.cs = RemindInternalizationSetup(yaml_file, levels, self.mifpath, self.gdxpath, self.get_technosphere_df())
+        elif setup == "pe2se":
+            self.cs = RemindInternalizationSetup(CONFIG_PE2SE_ONLY, levels, self.mifpath, self.gdxpath, self.get_technosphere_df())
         else:
-            for year, arg in zip(self.years, args):
-                self.cost_results[year] = _calculate_costs_year_new(*arg)
+            cs = CalculationSetup(yaml_file)
+            cs.build_removal_lists(self.get_technosphere_df())
+            cs.regionalize_constant_mappings()
+            self.cs = cs   
 
     def calculate_costs(
         self,
-        mapping: pd.DataFrame,
-        quantiles: np.ndarray,
-        multiprocessing: bool = True
+        monetization: float | str | dict,
+        multiprocessing: bool = True,
+        save_intermediate_results: bool = False
     ) -> None:
-        # regionalize mapping
-        all_shares = get_regionalized_mapping(mapping, self.rundir)
-
-        args = [
-            (
-                all_shares,
-                self.scenario,
-                year,
-                self.outdir,
-                self.model,
-                quantiles
-            )
-            for year in self.years
-        ]
-
-        self.cost_results = {}
-        if multiprocessing:
-            with Pool(cpu_count(), maxtasksperchild=1000) as p:
-                results = p.starmap(_calculate_costs_year, args)
-
-                for y, r in zip(self.years, results):
-                    self.cost_results[y] = r
+        """
+        Calculate all costs.
+        """           
+        # check monetization
+        if isinstance(monetization, float):
+            if monetization >= 1 or monetization <= 0:
+                raise ValueError("Given number for cost perspective is not a "
+                "valid quantile (not between 0 and 1)!")
+        elif isinstance(monetization, str):
+            if monetization not in COST_PERSPECTIVES:
+                raise ValueError(f"Cost perspective must be one of {COST_PERSPECTIVES}.")
+        elif isinstance(monetization, dict):
+            check_monetization_factors(monetization)
         else:
-            for year, arg in zip(self.years, args):
-                self.cost_results[year] = _calculate_costs_year(*arg)
-
-    def export_costs(
-            self,
-            ramp_up_startyear: Optional[int] = None,
-    ) -> xr.DataArray:
-        years_extended = MODEL_YEARS[self.model]
-
-        data = self.cost_results.copy()
-
-        years_in_data = np.array(list(data.keys()))
-        first_year = years_extended[0]
-        years_before = [y for y in years_extended if y < years_in_data[0]]
-        years_after = [y for y in years_extended if y > years_in_data[-1]]
-        last_year = years_extended[-1]
-
-        last_array = data[max(years_in_data)]
-        zero_array = xr.zeros_like(last_array)
+            raise ValueError(f"Argument 'monetization' must be a float, string, or dictionary!")
         
-        if len(years_before) > 0:
-            # add some years before
-            data[first_year] = zero_array
-            closest_year_before = max(years_before)
-            if ramp_up_startyear is None:
-                if first_year < closest_year_before:
-                    data[closest_year_before] = zero_array
-            else:
-                ramp_start = min(closest_year_before, ramp_up_startyear)
-                if first_year < ramp_start: 
-                    data[ramp_start] = zero_array
+        if not hasattr(self, "cs"):
+            raise AttributeError("No calculation setup is set. " \
+            "Run 'Internalizer.set_calculation_setup(...)` first. Exiting.")
 
-        if len(years_after) > 0:
-            # add last year
-            data[last_year] = last_array
+        args = []
+        for lvl in self.cs.levels:
+            rlist = self.cs.data[lvl]["removal list"]
+            for year in self.years:
+                mapping = self.cs.data[lvl].get(
+                    "regionalized mapping", self.cs.regionalize_dynamic_mapping(lvl, year)
+                )
+                    
+                args.append(
+                    (
+                        mapping,
+                        monetization,
+                        rlist,
+                        self.scenario,
+                        year,
+                        lvl,
+                        self.outdir,
+                        self.model,
+                        save_intermediate_results
+                    )   
+                )
 
-        data = dict(sorted(data.items()))
+        if multiprocessing:
+            with Pool(self.max_mp_tasks) as p:
+            # with Pool(cpu_count(), maxtasksperchild=1000) as p:
+                p.starmap(_calculate_costs_year, args)
 
-        return xr.concat(
-            list(data.values()),
-            pd.Index(list(data.keys()), name="year")
-        ).interp(year=years_extended)
-    
-    def write_remind_input_file(
-            self,
-            ramp_up_startyear,
-            excluded_impacts: List[str] = ["fossil resources", "climate change"],
-            q: float | List[float] = 0.5,
+                # for lvl, y, r in zip(lvllist, yearlist, results):
+                #     self.cost_results[lvl][y] = r
+        else:
+            for arg in args:
+                _calculate_costs_year(*arg)
+
+    def load_costs(
+        self
     ) -> None:
-        x = self.export_costs(ramp_up_startyear=ramp_up_startyear)
-        x = x.sel({"quantile": q})
+        
+        if not hasattr(self, "cs"):
+            raise AttributeError("No calculation setup is set. Run 'Internalizer.set_calculation_setup(...)`\n",
+                   "and `Internalizer.calculate_costs(...)`` first. Exiting.")
+        
+        # load raw costs and aggregate with mappings
+        self.cost_results = {}
+        for lvl in self.cs.levels:
+            self.cost_results[lvl] = {}
+            for year in self.years:
+                # recalculate mapping
+                mapping = self.cs.data[lvl].get(
+                    "regionalized mapping", self.cs.regionalize_dynamic_mapping(lvl, year)
+                )
+                fp = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/regionalized_costs_{lvl}.csv"
+                regionalized_costs = pd.read_csv(fp)
+                costs_agg = aggregate_with_mapping(mapping, regionalized_costs)
+                self.cost_results[lvl][year] = costs_agg.set_index(
+                    ["REMIND index", "region", "impact category"]
+                )["cost"].to_xarray()
+        
+    def calculate_aggregated_impacts(self) -> None:
+        if not hasattr(self, "cs"):
+            raise AttributeError("No calculation setup is set. Run 'Internalizer.set_calculation_setup(...)`\n",
+                   "and `Internalizer.calculate_costs(...)`` first. Exiting.")
+        
+        dflist = []
+        for agg_lvl, lvllist in self.cs.aggregate_levels.items():
+            for lvl in lvllist:
+                results = {}
+                for year in self.years:
+                    # recalculate mapping
+                    mapping = self.cs.data[lvl].get(
+                        "regionalized mapping", self.cs.regionalize_dynamic_mapping(lvl, year)
+                    )
+                    fp = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/regionalized_impacts_{lvl}.csv"
+                    regionalized_impacts = pd.read_csv(fp)
 
-        # convert to USD / GJ
-        x =  x * convert_euros_to_dollar(EURO_REF_YEAR, REMIND_USD_REF_YEAR) * 1000
+                    impacts_agg = aggregate_with_mapping(
+                        mapping, regionalized_impacts,
+                        var_col="LCIA method",
+                        value_col="impact"
+                    )
 
-        total = x.drop_sel({"impact category": excluded_impacts}).sum(dim="impact category")
-        df = total.to_dataframe().reset_index()
-        df["all_te"] = df["REMIND tech"].apply(lambda x: x.split(".")[-1])
-        df["quantile"] = df["quantile"].apply(lambda x: str(int(100 * x)))
-        df[["year", "region", "all_te", "quantile", "cost"]].to_csv(self.outdir + "/inputfile.cs4r", index=False, header=False)
+                    results[year] = impacts_agg.set_index(
+                        ["REMIND index", "region", "LCIA method"]
+                    )["impact"].to_xarray()
+
+                # interpolate
+                x = interpolate_and_weight_xr(results, MODEL_YEARS[self.model], 1.0)
+
+                # multiply with production volumes
+                prodVol = self.cs.get_production_volumes(lvl, MODEL_YEARS[self.model])
+                df = (prodVol * x).to_dataframe(name="impact").reset_index()
+                df["level"] = agg_lvl
+                dflist.append(df)
+
+        pd.concat(dflist, ignore_index=True)[
+            ["level", "REMIND index", "region", "year", "LCIA method", "impact"]].to_csv(
+                os.path.join(self.outdir, "aggregated_impacts.csv"), index=False
+            )
+    
+    def write_remind_input_files(
+        self,
+        ramp_up_startyear: int,
+        ramp_up_endyear: int,
+        impact_categories: List[str]
+    ) -> None:
+        if not hasattr(self, "cost_results"):
+            raise AttributeError("No cost results available. " \
+            "Run `.calculate_costs()` and `.load_costs()` first. Exiting.")
+        
+        ramp_up = get_linear_ramp_up(MODEL_YEARS[self.model], ramp_up_startyear, ramp_up_endyear)
+
+        for agg_lvl, lvllist in self.cs.aggregate_levels.items():
+            dflist = []
+            for lvl in lvllist:
+                domains = self.cs.data[lvl]["domains"]
+                x = interpolate_and_weight_xr(
+                        self.cost_results[lvl],
+                        MODEL_YEARS[self.model],
+                        ramp_up
+                    )
+                
+                # convert to USD / GJ
+                x =  x * convert_euros_to_dollar(EURO_REF_YEAR, REMIND_USD_REF_YEAR) * 1000
+                    
+                total = x.sel({"impact category": impact_categories}).sum(dim="impact category")
+                df = total.to_dataframe(name="cost").reset_index()
+                df = split_remind_index(df, domains).rename(columns={"year": "ttot", "region": "all_regi"})
+                dflist.append(df[["ttot", "all_regi"] + domains + ["cost"]])
+            pd.concat(dflist).to_csv(
+                os.path.join(self.outdir, f"lca_costs_{agg_lvl}.csv"), index=False, header=True
+            )
+            
+
+
+        
+
+        

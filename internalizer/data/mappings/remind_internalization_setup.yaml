@@ -1,0 +1,50 @@
+name: default
+levels:
+  - SE
+  - FE
+mappings:
+  SE:
+    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/prodSE.csv
+    depends_on_year: False
+  FE:
+    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/demFE.csv
+    depends_on_year: True
+removal_lists:
+  FE:
+    remove_layers:
+      - SE
+    fltr:
+      dataset name:
+        - electricity production
+        - heat production
+        - heat and power co-generation
+        - hydrogen production
+        - kerosene production
+        - ethanol production
+        - biodiesel production
+        - biomethane production
+        - petroleum and gas production
+        - diesel production
+        - briquettes production
+        - coke production
+        - petrol production
+        - syngas, RWGS, Production
+        - wood chips production
+    mask:
+      dataset name:
+        - unit construction
+        - treatment of
+        - carbon dioxide storage at hydrogen production plant
+        - carbon dioxide, captured at hydrogen production plant
+        - carbon dioxide, captured and stored
+      dataset unit:
+        - unit
+domains:
+  SE:
+    - all_te
+  FE:
+    - emi_sectors
+    - all_enty
+      
+        
+

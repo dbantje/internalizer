@@ -1,0 +1,2315 @@
+Biomass CHP:
+  dataset:
+  - name: heat and power co-generation, wood chips, 2000 kW
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: heat and power co-generation, wood chips, 2000 kW, state-of-the-art 2014
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: heat and power co-generation, wood chips, 6667 kW
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Biomass|++|Combined Heat and Power w/o CC
+Biomass IGCC:
+  dataset:
+  - name: electricity production, at biomass-fired IGCC power plant
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Biomass|++|Gasification Combined Cycle w/o CC
+Biomass IGCC CCS:
+  dataset:
+  - name: electricity production, at biomass-fired IGCC power plant, pre, pipeline
+      200km, storage 1000m
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Biomass|++|Gasification Combined Cycle w/ CC
+Buildings - Heating - Syn Fuel:
+  dataset:
+  - name: methanol, synthetic, burned in residential boiler
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Buildings|Liquids|+|Hydrogen
+Buildings - Other - Elec:
+  dataset:
+  - name: market group for electricity, low voltage
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: FE|Buildings|non-Heating|Electricity|Conventional
+CDR - OAE, electric calciner - Diesel:
+  dataset:
+  - name: diesel, burned in diesel-electric generating set, 10MW
+    reference product: diesel, burned in diesel-electric generating set, 10MW
+    unit: megajoule
+  scenario variable: FE|CDR|OAE, electric calciner|+|Diesel
+CDR - OAE, electric calciner - Elec:
+  dataset:
+  - name: market group for electricity, low voltage
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: FE|CDR|OAE, electric calciner|+|Electricity
+CDR - OAE, electric calciner - H2:
+  dataset:
+  - name: hydrogen, burned in gas turbine 1GW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|CDR|OAE, electric calciner|+|Hydrogen
+CDR - OAE, traditional calciner - Diesel:
+  dataset:
+  - name: diesel, burned in diesel-electric generating set, 10MW
+    reference product: diesel, burned in diesel-electric generating set, 10MW
+    unit: megajoule
+  scenario variable: FE|CDR|OAE, traditional calciner|+|Diesel
+CDR - OAE, traditional calciner - Elec:
+  dataset:
+  - name: market group for electricity, low voltage
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: FE|CDR|OAE, traditional calciner|+|Electricity
+CDR - OAE, traditional calciner - Gases:
+  dataset:
+  - name: natural gas, burned in gas turbine
+    reference product: natural gas, burned in gas turbine
+    unit: megajoule
+  scenario variable: FE|CDR|OAE, traditional calciner|+|Gases
+CDR - OAE, traditional calciner - Hydrogen:
+  dataset:
+  - name: hydrogen, burned in gas turbine 1GW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|CDR|OAE, traditional calciner|+|Hydrogen
+Coal CHP:
+  dataset:
+  - name: heat and power co-generation, hard coal
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: heat and power co-generation, lignite
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Coal|++|Combined Heat and Power w/o CC
+Coal IGCC:
+  dataset:
+  - name: electricity production, at hard coal-fired IGCC power plant
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, at lignite-fired IGCC power plant
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Coal|++|Gasification Combined Cycle w/o CC
+Coal IGCC CCS:
+  dataset:
+  - name: electricity production, at lignite-fired IGCC power plant, pre, pipeline
+      200km, storage 1000m
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, at hard coal-fired IGCC power plant, pre, pipeline
+      200km, storage 1000m
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Coal|++|Gasification Combined Cycle w/ CC
+Coal PC:
+  dataset:
+  - name: electricity production, hard coal
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, hard coal, conventional
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, lignite
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Coal|++|Pulverised Coal w/o CC
+Gas CC:
+  dataset:
+  - name: electricity production, natural gas, combined cycle power plant
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Gas|++|Combined Cycle w/o CC
+Gas CC CCS:
+  dataset:
+  - name: electricity production, at natural gas-fired combined cycle power plant,
+      post, pipeline 200km, storage 1000m
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Gas|++|Combined Cycle w/ CC
+Gas CHP:
+  dataset:
+  - name: heat and power co-generation, natural gas, combined cycle power plant, 400MW
+      electrical
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: heat and power co-generation, natural gas, conventional power plant, 100MW
+      electrical
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Gas|++|Combined Heat and Power w/o CC
+Gas OC:
+  dataset:
+  - name: electricity production, natural gas, conventional power plant
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Gas|++|Gas Turbine
+Geothermal:
+  dataset:
+  - name: electricity production, deep geothermal
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|+|Geothermal
+Hydro:
+  dataset:
+  - name: electricity production, hydro, reservoir, alpine region
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, hydro, run-of-river
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, hydro, reservoir, tropical region
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, hydro, reservoir, non-alpine region
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|+|Hydro
+Industry - Cement - Bio CH4:
+  dataset:
+  - name: biomethane, burned in residential natural gas boiler <100kW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Cement|Gases|+|Biomass
+Industry - Cement - Biofuel:
+  dataset:
+  - name: methanol from biomass, burned in residential boiler
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Cement|Liquids|+|Biomass
+Industry - Cement - Elec:
+  dataset:
+  - name: market group for electricity, low voltage
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: FE|Industry|Cement|+|Electricity
+Industry - Cement - H2:
+  dataset:
+  - name: hydrogen, burned in gas turbine 1GW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Cement|+|Hydrogen
+Industry - Cement - Nat Gas:
+  dataset:
+  - name: natural gas, burned in gas turbine
+    reference product: natural gas, burned in gas turbine
+    unit: megajoule
+  scenario variable: FE|Industry|Cement|Gases|+|Fossil
+Industry - Cement - Oil:
+  dataset:
+  - name: light fuel oil, burned in industrial furnace 1MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Cement|Liquids|+|Fossil
+Industry - Cement - SNG:
+  dataset:
+  - name: natural gas, synthetic, burned in gas turbine
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Cement|Gases|+|Hydrogen
+Industry - Cement - Solid biomass:
+  dataset:
+  - name: soft wood chips from forest, burned in furnace 1000kW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Cement|Solids|+|Biomass
+Industry - Cement - Solid coal:
+  dataset:
+  - name: hard coal, burned in hard coal industrial furnace 1-10MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Cement|Solids|+|Fossil
+Industry - Cement - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in diesel-electric generating set, 10MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Cement|Liquids|+|Hydrogen
+Industry - Chemicals - Chemicals - Bio CH4:
+  dataset:
+  - name: biomethane, burned in residential natural gas boiler <100kW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Chemicals|Gases|+|Biomass
+Industry - Chemicals - Chemicals - Biofuel:
+  dataset:
+  - name: methanol from biomass, burned in residential boiler
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Chemicals|Liquids|+|Biomass
+Industry - Chemicals - Chemicals - Elec, high temp:
+  dataset:
+  - name: market group for electricity, low voltage
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: FE|Industry|Chemicals|Electricity|+|High-temperature heat
+Industry - Chemicals - Chemicals - Elec, low temp:
+  dataset:
+  - name: market group for electricity, low voltage
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: FE|Industry|Chemicals|Electricity|+|Mechanical work and low-temperature
+    heat
+Industry - Chemicals - Chemicals - H2:
+  dataset:
+  - name: hydrogen, burned in gas turbine 1GW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Chemicals|+|Hydrogen
+Industry - Chemicals - Chemicals - Liquid fossil:
+  dataset:
+  - name: light fuel oil, burned in industrial furnace 1MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Chemicals|Liquids|+|Fossil
+Industry - Chemicals - Chemicals - Nat Gas:
+  dataset:
+  - name: natural gas, burned in gas turbine
+    reference product: natural gas, burned in gas turbine
+    unit: megajoule
+  scenario variable: FE|Industry|Chemicals|Gases|+|Fossil
+Industry - Chemicals - Chemicals - SNG:
+  dataset:
+  - name: natural gas, synthetic, burned in gas turbine
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Chemicals|Gases|+|Hydrogen
+Industry - Chemicals - Chemicals - Solid Biomass:
+  dataset:
+  - name: soft wood chips from forest, burned in furnace 1000kW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Chemicals|Solids|+|Biomass
+Industry - Chemicals - Chemicals - Solid coal:
+  dataset:
+  - name: hard coal, burned in hard coal industrial furnace 1-10MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Chemicals|Solids|+|Fossil
+Industry - Chemicals - Chemicals - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in diesel-electric generating set, 10MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Chemicals|Liquids|+|Hydrogen
+Industry - Chemicals - Elec:
+  dataset:
+  - name: market group for electricity, low voltage
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: FE|Industry|Chemicals|+|Electricity
+Industry - Non-energy use - Bio CH4:
+  dataset:
+  - name: biomethane production, from biogas upgrading, using amine scrubbing
+    reference product: biomethane, from biogas upgrading, using amine scrubbing
+    unit: kilogram
+  scenario variable: FE|Non-energy Use|Industry|Gases|+|Biomass
+Industry - Non-energy use - Biofuel:
+  dataset:
+  - name: methanol production, biomass gasification
+    reference product: methanol, from biomass
+    unit: kilogram
+  scenario variable: FE|Non-energy Use|Industry|Liquids|+|Biomass
+Industry - Non-energy use - Biomass:
+  dataset:
+  - name: market for plywood
+    reference product: plywood
+    unit: cubic meter
+  scenario variable: FE|Non-energy Use|Industry|Solids|+|Biomass
+Industry - Non-energy use - Hydrogen:
+  dataset:
+  - name: market for hydrogen, gaseous, low pressure, 60-year period
+    reference product: hydrogen, gaseous, low pressure
+    unit: kilogram
+  - name: market for hydrogen, gaseous, low pressure, 40-year period
+    reference product: hydrogen, gaseous, low pressure
+    unit: kilogram
+  - name: market for hydrogen, gaseous, low pressure
+    reference product: hydrogen, gaseous, low pressure
+    unit: kilogram
+  - name: market for hydrogen, gaseous, low pressure, 20-year period
+    reference product: hydrogen, gaseous, low pressure
+    unit: kilogram
+  scenario variable: FE|Non-energy Use|Industry|Gases|+|Hydrogen
+Industry - Non-energy use - Liquid fossil:
+  dataset:
+  - name: market for light fuel oil
+    reference product: light fuel oil
+    unit: kilogram
+  scenario variable: FE|Non-energy Use|Industry|Liquids|+|Fossil
+Industry - Non-energy use - Nat Gas:
+  dataset:
+  - name: market for natural gas, high pressure
+    reference product: natural gas, high pressure
+    unit: cubic meter
+  scenario variable: FE|Non-energy Use|Industry|Gases|+|Fossil
+Industry - Non-energy use - Solid coal:
+  dataset:
+  - name: market for hard coal
+    reference product: hard coal
+    unit: kilogram
+  scenario variable: FE|Non-energy Use|Industry|Solids|+|Fossil
+Industry - Non-energy use - Syn Fuel:
+  dataset:
+  - name: diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis,
+      energy allocation
+    reference product: diesel, synthetic
+    unit: kilogram
+  scenario variable: FE|Non-energy Use|Industry|Liquids|+|Hydrogen
+Industry - Other - Bio CH4:
+  dataset:
+  - name: heat production, biomethane, at boiler condensing modulating <100kW
+    reference product: heat, central or small-scale, biomethane
+    unit: megajoule
+  scenario variable: FE|Industry|Other Industry|Gases|+|Biomass
+Industry - Other - Biofuel:
+  dataset:
+  - name: methanol from biomass, burned in residential boiler
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Other Industry|Liquids|+|Biomass
+Industry - Other - Elec:
+  dataset:
+  - name: market group for electricity, low voltage
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: FE|Industry|Other Industry|+|Electricity
+Industry - Other - Elec, high temp:
+  dataset:
+  - name: market group for electricity, low voltage
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: FE|Industry|Other Industry|Electricity|+|High-temperature heat
+Industry - Other - Elec, low temp:
+  dataset:
+  - name: market group for electricity, low voltage
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: FE|Industry|Other Industry|Electricity|+|Mechanical work and
+    low-temperature heat
+Industry - Other - H2:
+  dataset:
+  - name: hydrogen, burned in gas turbine 1GW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Other Industry|+|Hydrogen
+Industry - Other - Heat:
+  dataset:
+  - name: market for heat, district or industrial, natural gas
+    reference product: heat, district or industrial, natural gas
+    unit: megajoule
+  scenario variable: FE|Industry|Other Industry|+|Heat
+Industry - Other - Liquid fossil:
+  dataset:
+  - name: light fuel oil, burned in industrial furnace 1MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Other Industry|Liquids|+|Fossil
+Industry - Other - Nat Gas:
+  dataset:
+  - name: natural gas, burned in gas turbine
+    reference product: natural gas, burned in gas turbine
+    unit: megajoule
+  scenario variable: FE|Industry|Other Industry|Gases|+|Fossil
+Industry - Other - SNG:
+  dataset:
+  - name: natural gas, synthetic, burned in gas turbine
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Other Industry|Gases|+|Hydrogen
+Industry - Other - Solid Biomass:
+  dataset:
+  - name: soft wood chips from forest, burned in furnace 1000kW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Other Industry|Solids|+|Biomass
+Industry - Other - Solid coal:
+  dataset:
+  - name: hard coal, burned in hard coal industrial furnace 1-10MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Other Industry|Solids|+|Fossil
+Industry - Other - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in diesel-electric generating set, 10MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Other Industry|Liquids|+|Hydrogen
+Industry - Steel - All steel - Bio CH4:
+  dataset:
+  - name: heat production, biomethane, at boiler condensing modulating <100kW
+    reference product: heat, central or small-scale, biomethane
+    unit: megajoule
+  scenario variable: FE|Industry|Steel|Gases|+|Biomass
+Industry - Steel - All steel - Biofuel:
+  dataset:
+  - name: methanol from biomass, burned in residential boiler
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Steel|Liquids|+|Biomass
+Industry - Steel - All steel - Elec:
+  dataset:
+  - name: market group for electricity, low voltage
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: FE|Industry|Steel|+|Electricity
+Industry - Steel - All steel - H2:
+  dataset:
+  - name: hydrogen, burned in gas turbine 1GW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Steel|+|Hydrogen
+Industry - Steel - All steel - Liquid fossil:
+  dataset:
+  - name: light fuel oil, burned in industrial furnace 1MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Steel|Liquids|+|Fossil
+Industry - Steel - All steel - Nat Gas:
+  dataset:
+  - name: natural gas, burned in gas turbine
+    reference product: natural gas, burned in gas turbine
+    unit: megajoule
+  scenario variable: FE|Industry|Steel|Gases|+|Fossil
+Industry - Steel - All steel - SNG:
+  dataset:
+  - name: natural gas, synthetic, burned in gas turbine
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Steel|Gases|+|Hydrogen
+Industry - Steel - All steel - Solid Biomass:
+  dataset:
+  - name: soft wood chips from forest, burned in furnace 1000kW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Steel|Solids|+|Biomass
+Industry - Steel - All steel - Solid coal:
+  dataset:
+  - name: hard coal, burned in hard coal industrial furnace 1-10MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Steel|Solids|+|Fossil
+Industry - Steel - All steel - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in diesel-electric generating set, 10MW
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Industry|Steel|Liquids|+|Hydrogen
+Nuclear:
+  dataset:
+  - name: electricity production, nuclear, pressure water reactor
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, nuclear, boiling water reactor
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, nuclear, pressure water reactor, heavy water moderated
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|+|Nuclear
+Oil ST:
+  dataset:
+  - name: electricity production, oil
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Oil|w/o CC
+Solar CSP:
+  dataset:
+  - name: electricity production, solar thermal parabolic trough, 50 MW
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, solar tower power plant, 20 MW
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Solar|+|CSP
+Solar PV Centralized:
+  dataset:
+  - name: electricity production, photovoltaic, commercial
+    reference product: electricity, low voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Solar|+|PV
+Storage, Hydrogen:
+  dataset:
+  - name: electricity production, from hydrogen-fired one gigawatt gas turbine, for
+      grid balancing
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|+|Hydrogen
+Transport - Freight - Domestic Shipping - Biofuel:
+  dataset:
+  - name: methanol from biomass, burned in container ship
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Domestic Shipping|Liquids|Biomass
+Transport - Freight - Domestic Shipping - Liquid fossil:
+  dataset:
+  - name: heavy fuel oil, burned in container ship
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Domestic Shipping|Liquids|Fossil
+Transport - Freight - Domestic Shipping - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in container ship
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Domestic Shipping|Liquids|Hydrogen
+Transport - Freight - Int. Shipping - Biofuel:
+  dataset:
+  - name: methanol from biomass, burned in container ship
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass
+Transport - Freight - Int. Shipping - Liquid fossil:
+  dataset:
+  - name: heavy fuel oil, burned in container ship
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Bunkers|Freight|International Shipping|Liquids|Fossil
+Transport - Freight - Rail - Biofuel:
+  dataset:
+  - name: biodiesel, burned in passenger train
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Rail|Liquids|Biomass
+Transport - Freight - Rail - Elec:
+  dataset:
+  - name: electricity, used in passenger train
+    reference product: electricity, high voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Rail|Electricity
+Transport - Freight - Rail - Liquid fossil:
+  dataset:
+  - name: diesel, burned in passenger train
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Rail|Liquids|Fossil
+Transport - Freight - Rail - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in passenger train
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Rail|Liquids|Hydrogen
+Transport - Freight - Truck(0-3_5t) - Bio CH4:
+  dataset:
+  - name: biomethane, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Gases|Biomass
+Transport - Freight - Truck(0-3_5t) - Biofuel:
+  dataset:
+  - name: biodiesel, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Liquids|Biomass
+Transport - Freight - Truck(0-3_5t) - Elec:
+  dataset:
+  - name: electricity, used in passenger car
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Electricity
+Transport - Freight - Truck(0-3_5t) - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Hydrogen
+Transport - Freight - Truck(0-3_5t) - Liquid fossil:
+  dataset:
+  - name: petrol, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Liquids|Fossil
+Transport - Freight - Truck(0-3_5t) - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Gases|Fossil
+Transport - Freight - Truck(0-3_5t) - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Gases|Hydrogen
+Transport - Freight - Truck(0-3_5t) - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Liquids|Hydrogen
+Transport - Freight - Truck(18t) - Bio CH4:
+  dataset:
+  - name: biomethane, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(18t)|Gases|Biomass
+Transport - Freight - Truck(18t) - Biofuel:
+  dataset:
+  - name: biodiesel, burned in heavy-duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(18t)|Liquids|Biomass
+Transport - Freight - Truck(18t) - Elec:
+  dataset:
+  - name: electricity, used in heavy-duty vehicle
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(18t)|Electricity
+Transport - Freight - Truck(18t) - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(18t)|Hydrogen
+Transport - Freight - Truck(18t) - Liquid fossil:
+  dataset:
+  - name: diesel, burned in heavy-duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(18t)|Liquids|Fossil
+Transport - Freight - Truck(18t) - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(18t)|Gases|Fossil
+Transport - Freight - Truck(18t) - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(18t)|Gases|Hydrogen
+Transport - Freight - Truck(18t) - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(18t)|Liquids|Hydrogen
+Transport - Freight - Truck(26t) - Bio CH4:
+  dataset:
+  - name: biomethane, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(26t)|Gases|Biomass
+Transport - Freight - Truck(26t) - Biofuel:
+  dataset:
+  - name: biodiesel, burned in heavy-duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(26t)|Liquids|Biomass
+Transport - Freight - Truck(26t) - Elec:
+  dataset:
+  - name: electricity, used in heavy-duty vehicle
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(26t)|Electricity
+Transport - Freight - Truck(26t) - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(26t)|Hydrogen
+Transport - Freight - Truck(26t) - Liquid fossil:
+  dataset:
+  - name: diesel, burned in heavy-duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(26t)|Liquids|Fossil
+Transport - Freight - Truck(26t) - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(26t)|Gases|Fossil
+Transport - Freight - Truck(26t) - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(26t)|Gases|Hydrogen
+Transport - Freight - Truck(26t) - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(26t)|Liquids|Hydrogen
+Transport - Freight - Truck(40t) - Bio CH4:
+  dataset:
+  - name: biomethane, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(40t)|Gases|Biomass
+Transport - Freight - Truck(40t) - Biofuel:
+  dataset:
+  - name: biodiesel, burned in heavy-duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(40t)|Liquids|Biomass
+Transport - Freight - Truck(40t) - Elec:
+  dataset:
+  - name: electricity, used in heavy-duty vehicle
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(40t)|Electricity
+Transport - Freight - Truck(40t) - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(40t)|Hydrogen
+Transport - Freight - Truck(40t) - Liquid fossil:
+  dataset:
+  - name: diesel, burned in heavy-duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(40t)|Liquids|Fossil
+Transport - Freight - Truck(40t) - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(40t)|Gases|Fossil
+Transport - Freight - Truck(40t) - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(40t)|Gases|Hydrogen
+Transport - Freight - Truck(40t) - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Heavy|Truck(40t)|Liquids|Hydrogen
+Transport - Freight - Truck(7_5t) - Bio CH4:
+  dataset:
+  - name: biomethane, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(7_5t)|Gases|Biomass
+Transport - Freight - Truck(7_5t) - Biofuel:
+  dataset:
+  - name: biodiesel, burned in heavy-duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(7_5t)|Liquids|Biomass
+Transport - Freight - Truck(7_5t) - Elec:
+  dataset:
+  - name: electricity, used in heavy-duty vehicle
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(7_5t)|Electricity
+Transport - Freight - Truck(7_5t) - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(7_5t)|Hydrogen
+Transport - Freight - Truck(7_5t) - Liquid fossil:
+  dataset:
+  - name: diesel, burned in heavy-duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(7_5t)|Liquids|Fossil
+Transport - Freight - Truck(7_5t) - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(7_5t)|Gases|Fossil
+Transport - Freight - Truck(7_5t) - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(7_5t)|Gases|Hydrogen
+Transport - Freight - Truck(7_5t) - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in heavy duty vehicle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Freight|Road|Light|Truck(7_5t)|Liquids|Hydrogen
+Transport - Pass - Bus - Bio CH4:
+  dataset:
+  - name: biomethane, burned in single deck coach or urban bus
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|Bus|Gases|Biomass
+Transport - Pass - Bus - Biofuel:
+  dataset:
+  - name: biodiesel, burned in single deck coach or urban bus
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|Bus|Liquids|Biomass
+Transport - Pass - Bus - Elec:
+  dataset:
+  - name: electricity, used in single deck coach or urban bus
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|Bus|Electricity
+Transport - Pass - Bus - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a single deck coach or urban bus
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|Bus|Hydrogen
+Transport - Pass - Bus - Liquid fossil:
+  dataset:
+  - name: diesel, burned in single deck coach or urban bus
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|Bus|Liquids|Fossil
+Transport - Pass - Bus - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in single deck coach or urban bus
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|Bus|Gases|Fossil
+Transport - Pass - Bus - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in single deck coach or urban bus
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|Bus|Gases|Hydrogen
+Transport - Pass - Bus - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in single deck coach or urban bus
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|Bus|Liquids|Hydrogen
+Transport - Pass - Compact Car - Bio CH4:
+  dataset:
+  - name: biomethane, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Gases|Biomass
+Transport - Pass - Compact Car - Biofuel:
+  dataset:
+  - name: biodiesel, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids|Biomass
+Transport - Pass - Compact Car - Elec:
+  dataset:
+  - name: electricity, used in passenger car
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Electricity
+Transport - Pass - Compact Car - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Hydrogen
+Transport - Pass - Compact Car - Liquid fossil:
+  dataset:
+  - name: petrol, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids|Fossil
+Transport - Pass - Compact Car - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Gases|Fossil
+Transport - Pass - Compact Car - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Gases|Hydrogen
+Transport - Pass - Compact Car - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids|Hydrogen
+Transport - Pass - Domestic Aviation - Biofuel:
+  dataset:
+  - name: kerosene, from biomass, burned in aircraft
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Domestic Aviation|Liquids|Biomass
+Transport - Pass - Domestic Aviation - H2:
+  dataset:
+  - name: hydrogen, burned in aircraft
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Domestic Aviation|Hydrogen
+Transport - Pass - Domestic Aviation - Liquid fossil:
+  dataset:
+  - name: kerosene, burned in aircraft
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Domestic Aviation|Liquids|Fossil
+Transport - Pass - Domestic Aviation - Syn Fuel:
+  dataset:
+  - name: kerosene, synthetic, burned in aircraft
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Domestic Aviation|Liquids|Hydrogen
+Transport - Pass - Int Aviation - Biofuel:
+  dataset:
+  - name: kerosene, from biomass, burned in aircraft
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Bunkers|Pass|International Aviation|Liquids|Biomass
+Transport - Pass - Int Aviation - Liquid fossil:
+  dataset:
+  - name: kerosene, burned in aircraft
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Bunkers|Pass|International Aviation|Liquids|Fossil
+Transport - Pass - Int Aviation - Syn Fuel:
+  dataset:
+  - name: kerosene, synthetic, burned in aircraft
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Bunkers|Pass|International Aviation|Liquids|Hydrogen
+Transport - Pass - Large Car - Bio CH4:
+  dataset:
+  - name: biomethane, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Gases|Biomass
+Transport - Pass - Large Car - Biofuel:
+  dataset:
+  - name: biodiesel, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Liquids|Biomass
+Transport - Pass - Large Car - Elec:
+  dataset:
+  - name: electricity, used in passenger car
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Electricity
+Transport - Pass - Large Car - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Hydrogen
+Transport - Pass - Large Car - Liquid fossil:
+  dataset:
+  - name: petrol, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Liquids|Fossil
+Transport - Pass - Large Car - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Gases|Fossil
+Transport - Pass - Large Car - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Gases|Hydrogen
+Transport - Pass - Large Car - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Liquids|Hydrogen
+Transport - Pass - Large Car and SUV - Bio CH4:
+  dataset:
+  - name: biomethane, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|Gases|Biomass
+Transport - Pass - Large Car and SUV - Biofuel:
+  dataset:
+  - name: biodiesel, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|Liquids|Biomass
+Transport - Pass - Large Car and SUV - Elec:
+  dataset:
+  - name: electricity, used in passenger car
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|Electricity
+Transport - Pass - Large Car and SUV - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|Hydrogen
+Transport - Pass - Large Car and SUV - Liquid fossil:
+  dataset:
+  - name: petrol, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|Liquids|Fossil
+Transport - Pass - Large Car and SUV - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|Gases|Fossil
+Transport - Pass - Large Car and SUV - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|Gases|Hydrogen
+Transport - Pass - Large Car and SUV - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|Liquids|Hydrogen
+Transport - Pass - Midsize Car - Bio CH4:
+  dataset:
+  - name: biomethane, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Gases|Biomass
+Transport - Pass - Midsize Car - Biofuel:
+  dataset:
+  - name: biodiesel, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids|Biomass
+Transport - Pass - Midsize Car - Elec:
+  dataset:
+  - name: electricity, used in passenger car
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Electricity
+Transport - Pass - Midsize Car - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Hydrogen
+Transport - Pass - Midsize Car - Liquid fossil:
+  dataset:
+  - name: petrol, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids|Fossil
+Transport - Pass - Midsize Car - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Gases|Fossil
+Transport - Pass - Midsize Car - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Gases|Hydrogen
+Transport - Pass - Midsize Car - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids|Hydrogen
+Transport - Pass - Mini Car - Bio CH4:
+  dataset:
+  - name: biomethane, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Gases|Biomass
+Transport - Pass - Mini Car - Biofuel:
+  dataset:
+  - name: biodiesel, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Liquids|Biomass
+Transport - Pass - Mini Car - Elec:
+  dataset:
+  - name: electricity, used in passenger car
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Electricity
+Transport - Pass - Mini Car - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Hydrogen
+Transport - Pass - Mini Car - Liquid fossil:
+  dataset:
+  - name: petrol, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Liquids|Fossil
+Transport - Pass - Mini Car - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Gases|Fossil
+Transport - Pass - Mini Car - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Gases|Hydrogen
+Transport - Pass - Mini Car - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Liquids|Hydrogen
+Transport - Pass - Moped - Biofuel:
+  dataset:
+  - name: bioethanol, burned in motorcycle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Moped|Liquids|Biomass
+Transport - Pass - Moped - Elec:
+  dataset:
+  - name: electricity, used in battery electric motorcycle
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Moped|Electricity
+Transport - Pass - Moped - Liquid fossil:
+  dataset:
+  - name: petrol, burned in motorcycle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Moped|Liquids|Fossil
+Transport - Pass - Moped - Syn Fuel:
+  dataset:
+  - name: petrol, synthetic, burned in motorcycle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Moped|Liquids|Hydrogen
+Transport - Pass - Motorcycle(50-250cc) - Biofuel:
+  dataset:
+  - name: bioethanol, burned in motorcycle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|Liquids|Biomass
+Transport - Pass - Motorcycle(50-250cc) - Elec:
+  dataset:
+  - name: electricity, used in battery electric motorcycle
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|Electricity
+Transport - Pass - Motorcycle(50-250cc) - Liquid fossil:
+  dataset:
+  - name: petrol, burned in motorcycle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|Liquids|Fossil
+Transport - Pass - Motorcycle(50-250cc) - Syn Fuel:
+  dataset:
+  - name: petrol, synthetic, burned in motorcycle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|Liquids|Hydrogen
+Transport - Pass - Motorcycle(>250cc) - Biofuel:
+  dataset:
+  - name: bioethanol, burned in motorcycle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|Liquids|Biomass
+Transport - Pass - Motorcycle(>250cc) - Elec:
+  dataset:
+  - name: electricity, used in battery electric motorcycle
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|Electricity
+Transport - Pass - Motorcycle(>250cc) - Liquid fossil:
+  dataset:
+  - name: petrol, burned in motorcycle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|Liquids|Fossil
+Transport - Pass - Motorcycle(>250cc) - Syn Fuel:
+  dataset:
+  - name: petrol, synthetic, burned in motorcycle
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|Liquids|Hydrogen
+Transport - Pass - Rail - Biofuel:
+  dataset:
+  - name: biodiesel, burned in passenger train
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Rail|Liquids|Biomass
+Transport - Pass - Rail - Elec:
+  dataset:
+  - name: electricity, used in passenger train
+    reference product: electricity, high voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Rail|Electricity
+Transport - Pass - Rail - Liquid fossil:
+  dataset:
+  - name: diesel, burned in passenger train
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Rail|Liquids|Fossil
+Transport - Pass - Rail - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in passenger train
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Rail|Liquids|Hydrogen
+Transport - Pass - Subcompact Car - Bio CH4:
+  dataset:
+  - name: biomethane, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Gases|Biomass
+Transport - Pass - Subcompact Car - Biofuel:
+  dataset:
+  - name: biodiesel, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids|Biomass
+Transport - Pass - Subcompact Car - Elec:
+  dataset:
+  - name: electricity, used in passenger car
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Electricity
+Transport - Pass - Subcompact Car - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hydrogen
+Transport - Pass - Subcompact Car - Liquid fossil:
+  dataset:
+  - name: petrol, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids|Fossil
+Transport - Pass - Subcompact Car - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Gases|Fossil
+Transport - Pass - Subcompact Car - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Gases|Hydrogen
+Transport - Pass - Subcompact Car - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids|Hydrogen
+Transport - Pass - Van - Bio CH4:
+  dataset:
+  - name: biomethane, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Gases|Biomass
+Transport - Pass - Van - Biofuel:
+  dataset:
+  - name: biodiesel, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Liquids|Biomass
+Transport - Pass - Van - Elec:
+  dataset:
+  - name: electricity, used in passenger car
+    reference product: electricity, low voltage
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Electricity
+Transport - Pass - Van - H2:
+  dataset:
+  - name: hydrogen, used in a fuel cell in a passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Hydrogen
+Transport - Pass - Van - Liquid fossil:
+  dataset:
+  - name: petrol, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Liquids|Fossil
+Transport - Pass - Van - Nat Gas:
+  dataset:
+  - name: compressed gas, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Gases|Fossil
+Transport - Pass - Van - SNG:
+  dataset:
+  - name: compressed gas, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Gases|Hydrogen
+Transport - Pass - Van - Syn Fuel:
+  dataset:
+  - name: diesel, synthetic, burned in passenger car
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Liquids|Hydrogen
+Wind Offshore:
+  dataset:
+  - name: electricity production, wind, 1-3MW turbine, offshore, direct drive
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, wind, 1-3MW turbine, offshore
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Wind|+|Offshore
+Wind Onshore:
+  dataset:
+  - name: electricity production, wind, 1-3MW turbine, onshore
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, wind, >3MW turbine, onshore
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, wind, 1-3MW turbine, onshore, direct drive
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, wind, <1MW turbine, onshore
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, wind, <1MW turbine, onshore, direct drive
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  - name: electricity production, wind, >3MW turbine, onshore, direct drive
+    reference product: electricity, high voltage
+    unit: kilowatt hour
+  scenario variable: SE|Electricity|Wind|+|Onshore
+biodiesel, from used cooking oil:
+  dataset:
+  - name: biodiesel production, via transesterification, from used cooking oil, energy
+      allocation
+    reference product: biodiesel, from cooking oil
+    unit: kilogram
+  scenario variable: SE|Liquids|Biomass|Biodiesel
+bioenergy, with CCS:
+  dataset:
+  - name: carbon dioxide, captured and stored, at wood burning power plant, pipeline
+      200km, storage 1000m
+    reference product: carbon dioxide, captured
+    unit: kilogram
+  scenario variable: Emi|CO2|CDR|+|BECCS
+bioethanol, from grass:
+  dataset:
+  - name: ethanol production, via fermentation, from switchgrass, energy allocation
+    reference product: ethanol, from switchgrass
+    unit: kilogram
+  - name: ethanol production from sweet sorghum
+    reference product: ethanol, without water, in 95% solution state, from fermentation
+    unit: kilogram
+  - name: ethanol production, via fermentation, from miscanthus, energy allocation
+    reference product: ethanol, from miscanthus
+    unit: kilogram
+  - name: ethanol production from grass
+    reference product: ethanol, without water, in 95% solution state, from fermentation
+    unit: kilogram
+  scenario variable: SE|Liquids|Biomass|++|Non-Cellulosic
+bioethanol, from sugar:
+  dataset:
+  - name: ethanol production from sugar beet molasses
+    reference product: ethanol, without water, in 95% solution state, from fermentation
+    unit: kilogram
+  - name: ethanol production, via fermentation, from sugarcane, energy allocation
+    reference product: ethanol, from sugarcane
+    unit: kilogram
+  - name: ethanol production from sugar beet
+    reference product: ethanol, without water, in 95% solution state, from fermentation
+    unit: kilogram
+  - name: ethanol production, via fermentation, from sugarbeet, energy allocation
+    reference product: ethanol, from sugarbeet
+    unit: kilogram
+  scenario variable: SE|Liquids|Biomass|Conventional Ethanol
+bioethanol, from wood:
+  dataset:
+  - name: ethanol production, via fermentation, from poplar, energy allocation
+    reference product: ethanol, from poplar
+    unit: kilogram
+  - name: ethanol production, via fermentation, from forest product (non-residual),
+      energy allocation
+    reference product: ethanol, from forest residues
+    unit: kilogram
+  - name: ethanol production, via fermentation, from eucalyptus
+    reference product: ethanol, from eucalyptus
+    unit: kilogram
+  - name: ethanol production, via fermentation, from forest residue, energy allocation
+    reference product: ethanol, from forest residue
+    unit: kilogram
+  - name: ethanol production, via fermentation, from willow, energy allocation
+    reference product: ethanol, from willow
+    unit: kilogram
+  - name: ethanol production, via fermentation, from forest residue, energy allocation
+    reference product: ethanol, from forest residues
+    unit: kilogram
+  - name: ethanol production from wood
+    reference product: ethanol, without water, in 95% solution state, from fermentation
+    unit: kilogram
+  - name: ethanol production, via fermentation, from forest residues, energy allocation
+    reference product: ethanol, from forest residues
+    unit: kilogram
+  scenario variable: SE|Liquids|Biomass|Cellulosic|+|w/o CC
+bioethanol, from wood, with CCS:
+  dataset:
+  - name: ethanol production, via fermentation, from poplar, with carbon capture and
+      storage, energy allocation
+    reference product: ethanol, from poplar
+    unit: kilogram
+  - name: ethanol production, via fermentation, from eucalyptus, with carbon capture
+      and storage
+    reference product: ethanol, from eucalyptus
+    unit: kilogram
+  scenario variable: SE|Liquids|Biomass|Cellulosic|+|w/ CC
+biomass - residual:
+  dataset:
+  - name: supply of forest residue
+    reference product: forest residue
+    unit: kilogram
+  scenario variable: SE|Electricity|Biomass|Residues
+biomass crops - purpose grown:
+  dataset:
+  - name: market for wood chips and particles, willow
+    reference product: wood chips and particles, willow
+    unit: kilogram
+  scenario variable: SE|Electricity|Biomass|Energy Crops
+biomass industrial emissions with CCS:
+  dataset:
+  - name: carbon dioxide, captured and stored, from a hydrogen production plant using
+      steam methane reforming of biomethane
+    reference product: carbon dioxide, captured
+    unit: kilogram
+  scenario variable: Emi|CO2|CDR|+|Synthetic Fuels CCS
+biomethane:
+  dataset:
+  - name: biomethane production, medium pressure, vehicle grade
+    reference product: biomethane, medium pressure, vehicle grade
+    unit: kilogram
+  - name: biomethane production, high pressure from synthetic gas, wood, fixed bed
+      technology
+    reference product: biomethane, high pressure
+    unit: cubic meter
+  - name: biomethane production, high pressure from synthetic gas, wood, fluidised
+      technology
+    reference product: biomethane, high pressure
+    unit: cubic meter
+  - name: biomethane production, from biogas upgrading, using amine scrubbing
+    reference product: biomethane, from biogas upgrading, using amine scrubbing
+    unit: kilogram
+  - name: biomethane production, high pressure, vehicle grade
+    reference product: biomethane, high pressure, vehicle grade
+    unit: kilogram
+  - name: biomethane production, low pressure, vehicle grade
+    reference product: biomethane, low pressure, vehicle grade
+    unit: kilogram
+  - name: mixed natural gas and biomethane production, high pressure
+    reference product: mixed natural gas and biomethane, high pressure
+    unit: cubic meter
+  scenario variable: SE|Gases|+|Biomass
+bus, battery electric:
+  dataset:
+  - name: transport, passenger bus, battery electric - overnight charging, 13m single
+      deck urban bus
+    reference product: transport, passenger bus
+    unit: person kilometer
+  scenario variable: ES|Transport|Pass|Road|Bus|BEV
+bus, compressed gas:
+  dataset:
+  - name: transport, passenger bus, compressed gas, 13m single deck urban bus, EURO-VI
+    reference product: transport, passenger bus, EURO-VI
+    unit: person kilometer
+  scenario variable: ES|Transport|Pass|Road|Bus|Gases
+bus, diesel:
+  dataset:
+  - name: transport, passenger bus, diesel, 13m single deck urban bus, EURO-VI
+    reference product: transport, passenger bus, EURO-VI
+    unit: person kilometer
+  scenario variable: ES|Transport|Pass|Road|Bus|Liquids
+bus, fuel cell:
+  dataset:
+  - name: transport, passenger bus, fuel cell electric, 13m single deck urban bus
+    reference product: transport, passenger bus
+    unit: person kilometer
+  scenario variable: ES|Transport|Pass|Road|Bus|FCEV
+diesel:
+  dataset:
+  - name: diesel production, low-sulfur
+    reference product: diesel, low-sulfur
+    unit: kilogram
+  - name: diesel production, petroleum refinery operation
+    reference product: diesel
+    unit: kilogram
+  - name: petroleum refinery operation
+    reference product: diesel
+    unit: kilogram
+  - name: market for diesel, low-sulfur
+    reference product: diesel, low-sulfur
+    unit: kilogram
+  - name: diesel production, low-sulfur, petroleum refinery operation
+    reference product: diesel, low-sulfur
+    unit: kilogram
+  - name: market for diesel
+    reference product: diesel
+    unit: kilogram
+  scenario variable: SE|Liquids|Fossil|+|Oil|Diesel
+diesel, synthetic, from wood:
+  dataset:
+  - name: diesel production, synthetic, Fischer Tropsch process, hydrogen from wood
+      gasification, energy allocation
+    reference product: diesel, synthetic
+    unit: kilogram
+  scenario variable: SE|Liquids|Biomass|BioFTR|w/o CC
+diesel, synthetic, from wood, with CCS:
+  dataset:
+  - name: diesel production, synthetic, Fischer Tropsch process, hydrogen from wood
+      gasification, with CCS, energy allocation
+    reference product: diesel, synthetic
+    unit: kilogram
+  scenario variable: SE|Liquids|Biomass|BioFTR|w/ CC
+direct air capture (solvent) with storage:
+  dataset:
+  - name: carbon dioxide, captured and stored, with a solvent-based direct air capture
+      system, 1MtCO2
+    reference product: carbon dioxide, captured
+    unit: kilogram
+  scenario variable: Emi|CO2|CDR|+|DACCS
+energy, for DACCS, from electricity:
+  dataset:
+  - name: electricity, medium-voltage, used as final energy
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|CDR|DAC|+|Electricity
+energy, for DACCS, from gas boiler:
+  dataset:
+  - name: heat production, natural gas, at boiler condensing modulating >100kW
+    reference product: heat, district or industrial, natural gas
+    unit: megajoule
+  scenario variable: FE|CDR|DAC|+|Gases
+energy, for DACCS, from hydrogen turbine:
+  dataset:
+  - name: heat production, from hydrogen-fired one gigawatt gas turbine
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|CDR|DAC|+|Hydrogen
+energy, for DACCS, from other:
+  dataset:
+  - name: heat production, natural gas, at boiler condensing modulating >100kW
+    reference product: heat, district or industrial, natural gas
+    unit: megajoule
+  scenario variable: FE|CDR|DAC|+|Heat
+energy, for EWR, from electricity:
+  dataset:
+  - name: electricity, medium-voltage, used as final energy
+    reference product: heat
+    unit: megajoule
+  scenario variable: FE|CDR|EW|+|Electricity
+energy, from EWR, from diesel:
+  dataset:
+  - name: diesel, burned in diesel-electric generating set, 10MW
+    reference product: diesel, burned in diesel-electric generating set, 10MW
+    unit: megajoule
+  scenario variable: FE|CDR|EW|+|Diesel
+enhanced rock weathering:
+  dataset:
+  - name: carbon dioxide, captured and stored, by olivine spreading on coastline
+    reference product: carbon dioxide, captured
+    unit: kilogram
+  scenario variable: Emi|CO2|CDR|+|EW
+gasoline:
+  dataset:
+  - name: petrol production, unleaded, petroleum refinery operation
+    reference product: petrol, unleaded
+    unit: kilogram
+  - name: petroleum refinery operation
+    reference product: petrol, unleaded
+    unit: kilogram
+  - name: petrol production, low-sulfur
+    reference product: petrol, low-sulfur
+    unit: kilogram
+  - name: market for petrol, low-sulfur
+    reference product: petrol, low-sulfur
+    unit: kilogram
+  - name: market for petrol, unleaded
+    reference product: petrol, unleaded
+    unit: kilogram
+  scenario variable: SE|Liquids|Fossil|+|Oil|Gasoline
+heat, buildings, from LPG boiler:
+  dataset:
+  - name: heat, residential, by combustion of liquefied petroleum gas using boiler,
+      distributed by pipeline
+    reference product: heat, from residential heating system
+    unit: megajoule
+  scenario variable: FE|Buildings|Liquids|Fossil|+|Gas
+heat, buildings, from biomass-based methanol boiler:
+  dataset:
+  - name: heat, residential, by combustion of methanol using boiler, distributed by
+      truck, produced with biomass
+    reference product: heat, from residential heating system
+    unit: megajoule
+  scenario variable: FE|Buildings|Liquids|+|Biomass
+heat, buildings, from coal stove:
+  dataset:
+  - name: heat production, hard coal briquette, stove 5-15kW
+    reference product: heat, central or small-scale, other than natural gas
+    unit: megajoule
+  scenario variable: FE|Buildings|Solids|Coal
+heat, buildings, from coal-based methanol boiler:
+  dataset:
+  - name: heat, residential, by combustion of methanol using boiler, distributed by
+      truck, produced with coal
+    reference product: heat, from residential heating system
+    unit: megajoule
+  scenario variable: FE|Buildings|Liquids|Fossil|+|Coal
+heat, buildings, from district heating:
+  dataset:
+  - name: market for heat, district or industrial, natural gas
+    reference product: heat, district or industrial, natural gas
+    unit: megajoule
+  scenario variable: FE|Buildings|Heating|District Heating
+heat, buildings, from electric heater:
+  dataset:
+  - name: heat, residential, electric storage heater, using electricity from grid
+    reference product: heat, from residential heating system
+    unit: megajoule
+  scenario variable: FE|Buildings|Heating|Electricity|Resistance
+heat, buildings, from heat pump:
+  dataset:
+  - name: heat production, air-water heat pump 10kW
+    reference product: heat, air-water heat pump 10kW
+    unit: megajoule
+  scenario variable: FE|Buildings|Heating|Electricity|Heat pump
+heat, buildings, from hydrogen boiler:
+  dataset:
+  - name: heat, residential, by combustion of hydrogen using boiler, distributed by
+      pipeline, produced by Electrolysis, PEM using electricity from grid
+    reference product: heat, from residential heating system
+    unit: megajoule
+  scenario variable: FE|Buildings|Heating|Hydrogen
+heat, buildings, from light fuel oil boiler:
+  dataset:
+  - name: heat production, light fuel oil, at boiler 100kW condensing, non-modulating
+    reference product: heat, central or small-scale, other than natural gas
+    unit: megajoule
+  scenario variable: FE|Buildings|Liquids|Fossil|+|Oil
+heat, buildings, from natural gas:
+  dataset:
+  - name: heat production, natural gas, at boiler condensing modulating <100kW
+    reference product: heat, central or small-scale, natural gas
+    unit: megajoule
+  scenario variable: FE|Buildings|Heating|Gases
+heat, buildings, from wood logs heater:
+  dataset:
+  - name: heat production, mixed logs, at wood heater 6kW
+    reference product: heat, central or small-scale, other than natural gas
+    unit: megajoule
+  scenario variable: FE|Buildings|Solids|Biomass|+|Traditional
+heat, buildings, from wood pellets heater:
+  dataset:
+  - name: heat production, wood pellet, at furnace 9kW
+    reference product: heat, central or small-scale, other than natural gas
+    unit: megajoule
+  scenario variable: FE|Buildings|Solids|Biomass|+|Modern
+heat, industrial, from biomass CHP:
+  dataset:
+  - name: heat and power co-generation, wood chips, 6667 kW
+    reference product: heat, district or industrial, other than natural gas
+    unit: megajoule
+  scenario variable: SE|Heat|Biomass|Combined Heat and Power
+heat, industrial, from coal CHP:
+  dataset:
+  - name: heat and power co-generation, hard coal
+    reference product: heat, district or industrial, other than natural gas
+    unit: megajoule
+  scenario variable: SE|Heat|Coal|Combined Heat and Power
+heat, industrial, from geothermal:
+  dataset:
+  - name: heat production, deep geothermal
+    reference product: heat, deep geothermal
+    unit: megajoule
+  scenario variable: SE|Heat|+|Geothermal
+heat, industrial, from heat pump:
+  dataset:
+  - name: heat production, air-water heat pump 10kW
+    reference product: heat, air-water heat pump 10kW
+    unit: megajoule
+  scenario variable: SE|Heat|Electricity|Heat Pump
+heat, industrial, from natural gas CHP:
+  dataset:
+  - name: heat and power co-generation, natural gas, conventional power plant, 100MW
+      electrical
+    reference product: heat, district or industrial, natural gas
+    unit: megajoule
+  scenario variable: SE|Heat|Gas|Combined Heat and Power
+heat, industrial, from solar thermal:
+  dataset:
+  - name: heat production, at 110 MW concentrating solar power plant, with thermal
+      energy storage
+    reference product: heat
+    unit: megajoule
+  scenario variable: SE|Heat|+|Solar
+hydrogen, from biomass:
+  dataset:
+  - name: hydrogen production, gaseous, 25 bar, from gasification of woody biomass
+      in entrained flow gasifier, at gasification plant
+    reference product: hydrogen, gaseous, 25 bar
+    unit: kilogram
+  scenario variable: SE|Hydrogen|Biomass|+|w/o CC
+hydrogen, from biomass, with CCS:
+  dataset:
+  - name: hydrogen production, gaseous, 25 bar, from gasification of woody biomass
+      in entrained flow gasifier, with CCS, at gasification plant
+    reference product: hydrogen, gaseous, 25 bar
+    unit: kilogram
+  scenario variable: SE|Hydrogen|Biomass|+|w/ CC
+hydrogen, from coal:
+  dataset:
+  - name: hydrogen production, coal gasification
+    reference product: heat, from steam, in chemical industry
+    unit: megajoule
+  - name: hydrogen production, coal gasification
+    reference product: hydrogen, gaseous, low pressure
+    unit: kilogram
+  - name: hydrogen production, coal gasification
+    reference product: sulfur
+    unit: kilogram
+  scenario variable: SE|Hydrogen|Coal|+|w/o CC
+hydrogen, from coal, with CCS:
+  dataset:
+  - name: hydrogen production, coal gasification, with CCS
+    reference product: hydrogen, gaseous, low pressure
+    unit: kilogram
+  scenario variable: SE|Hydrogen|Coal|+|w/ CC
+hydrogen, from electrolysis, PEM:
+  dataset:
+  - name: hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity
+    reference product: hydrogen, gaseous, 30 bar
+    unit: kilogram
+  scenario variable: SE|Hydrogen|+|Electricity
+hydrogen, from natural gas:
+  dataset:
+  - name: hydrogen production, steam methane reforming
+    reference product: electricity, medium voltage
+    unit: kilowatt hour
+  - name: hydrogen production, steam methane reforming
+    reference product: hydrogen, gaseous, low pressure
+    unit: kilogram
+  scenario variable: SE|Hydrogen|Gas|+|w/o CC
+hydrogen, from natural gas, with CCS:
+  dataset:
+  - name: hydrogen production, steam methane reforming, with CCS
+    reference product: hydrogen, gaseous, low pressure
+    unit: kilogram
+  scenario variable: SE|Hydrogen|Gas|+|w/ CC
+land-use change:
+  dataset:
+  - name: carbon dioxide, captured and stored, by land-use change
+    reference product: carbon dioxide, captured
+    unit: kilogram
+  scenario variable: Emi|CO2|CDR|+|Land-Use Change
+moped, battery electric:
+  dataset:
+  - name: transport, Scooter, battery electric, 4-11kW
+    reference product: transport, Scooter, battery electric, 4-11kW
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Two Wheelers|Moped|BEV
+moped, gasoline:
+  dataset:
+  - name: transport, Scooter, gasoline, 4-11kW, EURO-5
+    reference product: transport, Scooter, gasoline, 4-11kW, EURO-5
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Two Wheelers|Moped|Liquids
+motorcycle, 50-250cc, battery electric:
+  dataset:
+  - name: transport, Motorbike, battery electric, 11-35kW
+    reference product: transport, Motorbike, battery electric, 11-35kW
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|BEV
+motorcycle, 50-250cc, gasoline:
+  dataset:
+  - name: transport, Motorbike, gasoline, 11-35kW, EURO-5
+    reference product: transport, Motorbike, gasoline, 11-35kW, EURO-5
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|Liquids
+motorcycle, >250cc, battery electric:
+  dataset:
+  - name: transport, Motorbike, battery electric, >35kW
+    reference product: transport, Motorbike, battery electric, >35kW
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|BEV
+motorcycle, >250cc, gasoline:
+  dataset:
+  - name: transport, Motorbike, gasoline, >35kW, EURO-5
+    reference product: transport, Motorbike, gasoline, >35kW, EURO-5
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|Liquids
+natural gas:
+  dataset:
+  - name: petroleum and gas production, onshore
+    reference product: natural gas, high pressure
+    unit: cubic meter
+  - name: natural gas production, liquefied
+    reference product: natural gas, liquefied
+    unit: cubic meter
+  - name: market for natural gas, high pressure, 40-year period
+    reference product: natural gas, high pressure
+    unit: cubic meter
+  - name: market for natural gas, high pressure, 20-year period
+    reference product: natural gas, high pressure
+    unit: cubic meter
+  - name: natural gas, high pressure, domestic supply with seasonal storage
+    reference product: natural gas, high pressure
+    unit: cubic meter
+  - name: petroleum and gas production, onshore
+    reference product: petroleum
+    unit: kilogram
+  - name: market group for natural gas, high pressure
+    reference product: natural gas, high pressure
+    unit: cubic meter
+  - name: market for natural gas, liquefied
+    reference product: natural gas, liquefied
+    unit: cubic meter
+  - name: market for natural gas, low pressure
+    reference product: natural gas, low pressure
+    unit: cubic meter
+  - name: petroleum and gas production, offshore
+    reference product: natural gas, high pressure
+    unit: cubic meter
+  - name: market for natural gas, high pressure, 60-year period
+    reference product: natural gas, high pressure
+    unit: cubic meter
+  - name: market for natural gas, high pressure
+    reference product: natural gas, high pressure
+    unit: cubic meter
+  - name: petroleum and gas production, offshore
+    reference product: petroleum
+    unit: kilogram
+  scenario variable: SE|Gases|Fossil|+|Natural Gas
+ocean liming:
+  dataset:
+  - name: carbon dioxide, captured and stored, by ocean liming
+    reference product: carbon dioxide, captured
+    unit: kilogram
+  scenario variable: Emi|CO2|CDR|+|OAE
+passenger car, battery electric, large:
+  dataset:
+  - name: transport, passenger car, battery electric, Large
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|BEV
+passenger car, battery electric, medium:
+  dataset:
+  - name: transport, passenger car, battery electric, Medium
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|BEV
+passenger car, battery electric, medium SUV:
+  dataset:
+  - name: transport, passenger car, battery electric, Medium SUV
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|BEV
+passenger car, battery electric, mini:
+  dataset:
+  - name: transport, passenger car, battery electric, Mini
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|BEV
+passenger car, battery electric, small:
+  dataset:
+  - name: transport, passenger car, battery electric, Small
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|BEV
+passenger car, battery electric, van:
+  dataset:
+  - name: transport, passenger car, battery electric, Van
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|BEV
+passenger car, compressed gas, large:
+  dataset:
+  - name: transport, passenger car, compressed gas, Large, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Gases
+passenger car, compressed gas, medium:
+  dataset:
+  - name: transport, passenger car, compressed gas, Medium, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Gases
+passenger car, compressed gas, medium SUV:
+  dataset:
+  - name: transport, passenger car, compressed gas, Medium SUV, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|Gases
+passenger car, compressed gas, mini:
+  dataset:
+  - name: transport, passenger car, compressed gas, Mini, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Gases
+passenger car, compressed gas, small:
+  dataset:
+  - name: transport, passenger car, compressed gas, Small, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Gases
+passenger car, compressed gas, van:
+  dataset:
+  - name: transport, passenger car, compressed gas, Van, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Gases
+passenger car, fuel cell electric, large:
+  dataset:
+  - name: transport, passenger car, fuel cell electric, Large
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|FCEV
+passenger car, fuel cell electric, medium:
+  dataset:
+  - name: transport, passenger car, fuel cell electric, Medium
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|FCEV
+passenger car, fuel cell electric, medium SUV:
+  dataset:
+  - name: transport, passenger car, fuel cell electric, Medium SUV
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|FCEV
+passenger car, fuel cell electric, mini:
+  dataset:
+  - name: transport, passenger car, fuel cell electric, Mini
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|FCEV
+passenger car, fuel cell electric, small:
+  dataset:
+  - name: transport, passenger car, fuel cell electric, Small
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|FCEV
+passenger car, fuel cell electric, van:
+  dataset:
+  - name: transport, passenger car, fuel cell electric, Van
+    reference product: transport, passenger car
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|FCEV
+passenger car, gasoline, large:
+  dataset:
+  - name: transport, passenger car, gasoline, Large, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Liquids
+passenger car, gasoline, medium:
+  dataset:
+  - name: transport, passenger car, gasoline, Medium, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids
+passenger car, gasoline, medium SUV:
+  dataset:
+  - name: transport, passenger car, gasoline, Medium SUV, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|Liquids
+passenger car, gasoline, mini:
+  dataset:
+  - name: transport, passenger car, gasoline, Mini, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Liquids
+passenger car, gasoline, small:
+  dataset:
+  - name: transport, passenger car, gasoline, Small, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids
+passenger car, gasoline, van:
+  dataset:
+  - name: transport, passenger car, gasoline, Van, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Liquids
+passenger car, plugin gasoline hybrid, large:
+  dataset:
+  - name: transport, passenger car, plugin gasoline hybrid, Large, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Hybrid
+    electric
+passenger car, plugin gasoline hybrid, medium:
+  dataset:
+  - name: transport, passenger car, plugin gasoline hybrid, Medium, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Hybrid
+    electric
+passenger car, plugin gasoline hybrid, medium SUV:
+  dataset:
+  - name: transport, passenger car, plugin gasoline hybrid, Medium SUV, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and
+    SUV|Hybrid electric
+passenger car, plugin gasoline hybrid, mini:
+  dataset:
+  - name: transport, passenger car, plugin gasoline hybrid, Mini, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Hybrid
+    electric
+passenger car, plugin gasoline hybrid, small:
+  dataset:
+  - name: transport, passenger car, plugin gasoline hybrid, Small, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hybrid
+    electric
+passenger car, plugin gasoline hybrid, van:
+  dataset:
+  - name: transport, passenger car, plugin gasoline hybrid, Van, EURO-6
+    reference product: transport, passenger car, EURO-6
+    unit: kilometer
+  scenario variable: ES|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Hybrid electric
+petrol, synthetic, from coal:
+  dataset:
+  - name: gasoline production, from methanol, hydrogen from coal gasification, energy
+      allocation
+    reference product: gasoline, synthetic
+    unit: kilogram
+  scenario variable: SE|Liquids|Fossil|Coal|+|w/o CC
+petrol, synthetic, from coal, with CCS:
+  dataset:
+  - name: gasoline production, from methanol, hydrogen from coal gasification, with
+      CCS, energy allocation
+    reference product: gasoline, synthetic
+    unit: kilogram
+  scenario variable: SE|Liquids|Fossil|Coal|+|w/ CC
+petrol, synthetic, from electrolysis:
+  dataset:
+  - name: gasoline production, from methanol, hydrogen from electrolysis, CO2 from
+      DAC, energy allocation
+    reference product: gasoline, synthetic
+    unit: kilogram
+  scenario variable: SE|Liquids|+|Hydrogen
+ship, ammonia:
+  dataset:
+  - name: transport, freight, sea, container ship, powered with liquid ammonia
+    reference product: transport, freight, sea, container ship
+    unit: ton kilometer
+  scenario variable: FE|Transport|Bunkers|Freight|International Shipping|Liquids|Hydrogen
+ship, biodiesel:
+  dataset:
+  - name: transport, freight, sea, container ship, powered with biodiesel
+    reference product: transport, freight, sea, container ship
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Domestic Shipping|Liquids|Biomass
+ship, marine oil:
+  dataset:
+  - name: transport, freight, sea, container ship
+    reference product: transport, freight, sea, container ship
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Domestic Shipping|Liquids|Fossil
+steel - primary - BF/BOF:
+  dataset:
+  - name: steel production, converter, low-alloyed
+    reference product: steel, low-alloyed
+    unit: kilogram
+  scenario variable: Production|Industry|Steel|+|BF-BOF
+steel - primary - BF/BOF CCS:
+  dataset:
+  - name: steel production, low-alloyed, BF/BOF + CCS
+    reference product: steel, low-alloyed
+    unit: kilogram
+  scenario variable: Production|Industry|Steel|+|BF-BOF-CCS
+steel - primary - DRI:
+  dataset:
+  - name: steel production, low-alloyed, natural gas-based DRI + EAF
+    reference product: steel, low-alloyed
+    unit: kilogram
+  scenario variable: Production|Industry|Steel|+|DRI-NG-EAF
+steel - primary - DRI CCS:
+  dataset:
+  - name: steel production, low-alloyed, natural gas-based DRI + EAF + CCS
+    reference product: steel, low-alloyed
+    unit: kilogram
+  scenario variable: Production|Industry|Steel|+|DRI-NG-EAF-CCS
+steel - primary - H-DRI:
+  dataset:
+  - name: steel production, low-alloyed, hydrogen-based DRI + EAF
+    reference product: steel, low-alloyed
+    unit: kilogram
+  scenario variable: Production|Industry|Steel|+|DRI-H2-EAF
+steel - secondary:
+  dataset:
+  - name: steel production, electric, low-alloyed
+    reference product: steel, low-alloyed
+    unit: kilogram
+  scenario variable: Production|Industry|Steel|+|SCRAP-EAF
+train, diesel-electric:
+  dataset:
+  - name: transport, freight train, diesel-electric
+    reference product: transport, freight train
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Rail|Liquids
+train, electric:
+  dataset:
+  - name: transport, freight train, electric
+    reference product: transport, freight train
+    unit: ton kilometer
+  - name: transport, freight train, electricity
+    reference product: transport, freight train
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Rail|Electric
+train, fuel cell:
+  dataset:
+  - name: transport, freight train, fuel cell, hydrogen
+    reference product: transport, freight train
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Rail|Liquids|Hydrogen
+truck, battery electric, 18 metric ton:
+  dataset:
+  - name: transport, freight, lorry, battery electric, 18 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(18t)|BEV
+truck, battery electric, 26 metric ton:
+  dataset:
+  - name: transport, freight, lorry, battery electric, 26 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(26t)|BEV
+truck, battery electric, 3.5 metric ton:
+  dataset:
+  - name: transport, freight, lorry, battery electric, 3.5 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Light|Truck(0-3_5t)|BEV
+truck, battery electric, 40 metric ton:
+  dataset:
+  - name: transport, freight, lorry, battery electric, 40 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(40t)|BEV
+truck, battery electric, 7.5 metric ton:
+  dataset:
+  - name: transport, freight, lorry, battery electric, 7.5 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Light|Truck(7_5t)|BEV
+truck, compressed gas, 18 metric ton:
+  dataset:
+  - name: transport, freight, lorry, compressed gas, 18 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(18t)|Gases
+truck, compressed gas, 26 metric ton:
+  dataset:
+  - name: transport, freight, lorry, compressed gas, 26 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(26t)|Gases
+truck, compressed gas, 3.5 metric ton:
+  dataset:
+  - name: transport, freight, lorry, compressed gas, 3.5 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Light|Truck(0-3_5t)|Gases
+truck, compressed gas, 40 metric ton:
+  dataset:
+  - name: transport, freight, lorry, compressed gas, 40 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(40t)|Gases
+truck, compressed gas, 7.5 metric ton:
+  dataset:
+  - name: transport, freight, lorry, compressed gas, 7.5 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Light|Truck(7_5t)|Gases
+truck, diesel, 18 metric ton:
+  dataset:
+  - name: transport, freight, lorry, diesel, 18 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(18t)|Liquids
+truck, diesel, 26 metric ton:
+  dataset:
+  - name: transport, freight, lorry, diesel, 26 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(26t)|Liquids
+truck, diesel, 3.5 metric ton:
+  dataset:
+  - name: transport, freight, lorry, diesel, 3.5 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Light|Truck(0-3_5t)|Liquids
+truck, diesel, 40 metric ton:
+  dataset:
+  - name: transport, freight, lorry, diesel, 40 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(40t)|Liquids
+truck, diesel, 7.5 metric ton:
+  dataset:
+  - name: transport, freight, lorry, diesel, 7.5 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Light|Truck(7_5t)|Liquids
+truck, fuel cell electric, 18 metric ton:
+  dataset:
+  - name: transport, freight, lorry, fuel cell electric, 18 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(18t)|FCEV
+truck, fuel cell electric, 26 metric ton:
+  dataset:
+  - name: transport, freight, lorry, fuel cell electric, 26 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(26t)|FCEV
+truck, fuel cell electric, 3.5 metric ton:
+  dataset:
+  - name: transport, freight, lorry, fuel cell electric, 3.5 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Light|Truck(0-3_5t)|FCEV
+truck, fuel cell electric, 40 metric ton:
+  dataset:
+  - name: transport, freight, lorry, fuel cell electric, 40 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Heavy|Truck(40t)|FCEV
+truck, fuel cell electric, 7.5 metric ton:
+  dataset:
+  - name: transport, freight, lorry, fuel cell electric, 7.5 metric ton
+    reference product: transport, freight, lorry
+    unit: ton kilometer
+  scenario variable: ES|Transport|Freight|Road|Light|Truck(7_5t)|FCEV

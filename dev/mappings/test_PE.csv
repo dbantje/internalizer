@@ -1,0 +1,9 @@
+REMIND index;dataset name;dataset reference product;dataset unit;share
+pecoal;hard coal mine operation and hard coal preparation;hard coal;kilogram;0.5
+pecoal;lignite mine operation;lignite;kilogram;0.5
+pegas;petroleum and gas production, onshore;natural gas, high pressure;cubic meter;0.5
+pegas;petroleum and gas production, offshore;natural gas, high pressure;cubic meter;0.5
+peoil;petroleum and gas production, onshore;petroleum;kilogram;0.5
+peoil;petroleum and gas production, offshore;petroleum;kilogram;0.5
+peur;uranium mine operation, underground;uranium ore, as U;kilogram;0.7
+peur;uranium mine operation, open cast;uranium ore, as U;kilogram;0.3

@@ -1,0 +1,13 @@
+region,poplar,switchgrass,eucalyptus,miscanthus
+CAZ,0.5,0.5,,
+CHA,0.5,0.5,,
+EUR,0.5,0.4,0.1,
+IND,,,0.3,0.7
+JPN,0.6,0.4,,
+LAM,,,0.3,0.7
+MEA,,,0.2,0.8
+NEU,0.6,0.4,,
+OAS,,,0.2,0.8
+REF,0.8,0.2,,
+SSA,,,0.1,0.9
+USA,0.2,0.5,,0.3

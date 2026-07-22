@@ -1,0 +1,457 @@
+,dataset name,region,cost
+363,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",CAZ,-1.6904508968363856
+64,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",CAZ,-0.8606661560813096
+139,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",JPN,-0.8536065060276272
+67,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",IND,-0.8259412251886624
+73,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",REF,-0.8151311317420946
+68,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",JPN,-0.800950777968676
+65,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",CHA,-0.7880684494173562
+72,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",OAS,-0.7834400436634394
+70,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",MEA,-0.7833993764020329
+74,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",SSA,-0.7756809212691055
+75,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",USA,-0.7723750389417379
+69,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",LAM,-0.7701999051259334
+76,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",World,-0.7684805207569707
+406,"hydrogen production, steam methane reforming, with CCS",JPN,-0.7282977609414732
+54,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",IND,-0.724421887033672
+60,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",REF,-0.7022697961543843
+431,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",World,-0.6994498981031525
+55,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",JPN,-0.6002316891755727
+187,"electricity production, lignite",IND,-0.5764479928607907
+199,"electricity production, natural gas, combined cycle power plant",JPN,-0.557255201050609
+393,"hydrogen production, steam methane reforming",JPN,-0.5481880007529643
+212,"electricity production, natural gas, conventional power plant",JPN,-0.5193406929014547
+379,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",IND,-0.43935904813517457
+52,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",CHA,-0.43914857158245946
+57,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",MEA,-0.3571287455043897
+59,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",OAS,-0.3528103042172141
+71,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",NEU,-0.28064700085316374
+164,"electricity production, hard coal",IND,-0.2592933971422419
+311,"heat production, deep geothermal",IND,-0.25842257468852103
+377,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",CHA,-0.2211226642475638
+190,"electricity production, lignite",NEU,-0.20727079385898986
+47,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",REF,-0.2002251457834503
+42,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",JPN,-0.17791039555037033
+380,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",JPN,-0.1756027484263736
+41,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",IND,-0.17463635405649308
+24,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage",World,-0.17339874501714794
+423,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage",World,-0.17118398250065028
+92,"electricity production, at biomass-fired IGCC power plant",EUR,-0.16690188663307556
+336,"hydrogen production, coal gasification, with CCS",IND,-0.15800520285956707
+61,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",SSA,-0.14414299631718636
+0,"biomethane production, from biogas upgrading, using amine scrubbing",CAZ,-0.13745213225769431
+22,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation",World,-0.1201671098615505
+421,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation",World,-0.11917276810436947
+312,"heat production, deep geothermal",JPN,-0.1179055927879015
+385,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",REF,-0.10186016353400375
+34,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",REF,-0.10127922709787257
+382,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",MEA,-0.0965984301636051
+309,"heat production, deep geothermal",CHA,-0.09484863715549094
+29,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",JPN,-0.09437400143471059
+44,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",MEA,-0.08368853836433487
+373,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",SSA,-0.08249115869086565
+50,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",World,-0.08227659694594348
+387,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",USA,-0.08024384370587866
+28,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",IND,-0.07699771240494736
+39,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",CHA,-0.07097473277612183
+369,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",MEA,-0.06988700388906924
+323,"hydrogen production, coal gasification",IND,-0.06656657882184577
+314,"heat production, deep geothermal",REF,-0.06654025600900862
+337,"hydrogen production, coal gasification, with CCS",JPN,-0.06273535593545221
+371,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",OAS,-0.06194933506193822
+334,"hydrogen production, coal gasification, with CCS",CHA,-0.05955751061753898
+23,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage",EUR,-0.0580645513112432
+422,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage",EUR,-0.05724859002628101
+94,"electricity production, at biomass-fired IGCC power plant",JPN,-0.05390736430172689
+451,"wood chips production, hardwood, at sawmill",EUR,-0.047693205816987
+342,"hydrogen production, coal gasification, with CCS",REF,-0.04289243257672727
+21,"diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation",EUR,-0.03893396883895746
+420,"kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation",EUR,-0.038631375582085146
+449,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification",World,-0.03787484852044657
+37,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",World,-0.03763787177985592
+31,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",MEA,-0.03657598348621572
+316,"heat production, deep geothermal",USA,-0.03584910880087291
+345,"hydrogen production, coal gasification, with CCS",World,-0.03476798370843037
+196,"electricity production, natural gas, combined cycle power plant",CHA,-0.03294377860716048
+339,"hydrogen production, coal gasification, with CCS",MEA,-0.031244643167048475
+375,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",World,-0.027897969649960892
+225,"electricity production, nuclear, pressure water reactor",LAM,-0.02774353761853897
+299,hard coal briquettes production,World,-0.027278870767563735
+221,"electricity production, nuclear, pressure water reactor",CHA,-0.02661994175562609
+162,"electricity production, hard coal",CHA,-0.026386906969974463
+223,"electricity production, nuclear, pressure water reactor",IND,-0.02630729589780134
+12,"biomethane production, from biogas upgrading, using amine scrubbing",World,-0.026303522735638026
+2,"biomethane production, from biogas upgrading, using amine scrubbing",EUR,-0.02630211793546078
+7,"biomethane production, from biogas upgrading, using amine scrubbing",NEU,-0.025884589117310883
+304,"heat and power co-generation, natural gas, 500kW electrical, lean burn",World,-0.025729534476356748
+8,"biomethane production, from biogas upgrading, using amine scrubbing",OAS,-0.02571078961841032
+5,"biomethane production, from biogas upgrading, using amine scrubbing",LAM,-0.025367577524108707
+324,"hydrogen production, coal gasification",JPN,-0.025327915349167365
+10,"biomethane production, from biogas upgrading, using amine scrubbing",SSA,-0.02528207447245112
+344,"hydrogen production, coal gasification, with CCS",USA,-0.02520005995194545
+229,"electricity production, nuclear, pressure water reactor",REF,-0.02517300354358509
+97,"electricity production, at biomass-fired IGCC power plant",NEU,-0.025170516895743046
+224,"electricity production, nuclear, pressure water reactor",JPN,-0.024882853378002376
+228,"electricity production, nuclear, pressure water reactor",OAS,-0.024674486117715194
+321,"hydrogen production, coal gasification",CHA,-0.02464915146815787
+232,"electricity production, nuclear, pressure water reactor",World,-0.024475061619037664
+226,"electricity production, nuclear, pressure water reactor",MEA,-0.02447384537263022
+230,"electricity production, nuclear, pressure water reactor",SSA,-0.024455851937514452
+231,"electricity production, nuclear, pressure water reactor",USA,-0.024398840622042183
+32,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",NEU,-0.024371056443269513
+222,"electricity production, nuclear, pressure water reactor",EUR,-0.024330523148583152
+201,"electricity production, natural gas, combined cycle power plant",MEA,-0.023560002949045068
+227,"electricity production, nuclear, pressure water reactor",NEU,-0.02301830953608525
+101,"electricity production, at biomass-fired IGCC power plant",USA,-0.022541167678698844
+205,"electricity production, natural gas, combined cycle power plant",SSA,-0.022471720853339348
+38,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",CAZ,-0.021808594979982898
+95,"electricity production, at biomass-fired IGCC power plant",LAM,-0.021358308664254234
+198,"electricity production, natural gas, combined cycle power plant",IND,-0.02049422462676101
+435,lignite briquettes production,World,-0.020215304357569287
+303,"heat and power co-generation, natural gas, 500kW electrical, lean burn",NEU,-0.0200717111481071
+329,"hydrogen production, coal gasification",REF,-0.019167692937336254
+200,"electricity production, natural gas, combined cycle power plant",LAM,-0.019155889288755307
+45,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",NEU,-0.019041223487234714
+207,"electricity production, natural gas, combined cycle power plant",World,-0.01871314484509394
+197,"electricity production, natural gas, combined cycle power plant",EUR,-0.018393700974144424
+186,"electricity production, lignite",EUR,-0.018064279245848004
+391,"hydrogen production, steam methane reforming",EUR,-0.018022172921602055
+137,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",EUR,-0.017928419981693578
+204,"electricity production, natural gas, combined cycle power plant",REF,-0.017769047454135434
+211,"electricity production, natural gas, conventional power plant",IND,-0.01769019597985017
+11,"biomethane production, from biogas upgrading, using amine scrubbing",USA,-0.01765219892241439
+161,"electricity production, hard coal",CAZ,-0.017493146903027987
+26,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",CHA,-0.01717189821721054
+450,"wood chips production, hardwood, at sawmill",CAZ,-0.01686172168979183
+365,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",EUR,-0.01661465106957666
+210,"electricity production, natural gas, conventional power plant",EUR,-0.016571256086898883
+343,"hydrogen production, coal gasification, with CCS",SSA,-0.016520798744194657
+6,"biomethane production, from biogas upgrading, using amine scrubbing",MEA,-0.015440046106521044
+392,"hydrogen production, steam methane reforming",IND,-0.015418686388547338
+364,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",CHA,-0.015136249452944709
+354,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",JPN,-0.014772870058592014
+184,"electricity production, lignite",CAZ,-0.013911940326161994
+220,"electricity production, natural gas, conventional power plant",World,-0.013884956875308252
+401,"hydrogen production, steam methane reforming",World,-0.01304965396991653
+326,"hydrogen production, coal gasification",MEA,-0.01270986251340153
+432,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",EUR,-0.011769352479737013
+79,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",EUR,-0.010963409120161074
+370,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",NEU,-0.009880139049775936
+330,"hydrogen production, coal gasification",SSA,-0.009291172689123743
+9,"biomethane production, from biogas upgrading, using amine scrubbing",REF,-0.00927859323969528
+202,"electricity production, natural gas, combined cycle power plant",NEU,-0.009200284982295288
+171,"electricity production, hard coal",USA,-0.008875562421968276
+185,"electricity production, lignite",CHA,-0.008738704826250197
+218,"electricity production, natural gas, conventional power plant",SSA,-0.008012939847470575
+340,"hydrogen production, coal gasification, with CCS",NEU,-0.007987956610249114
+331,"hydrogen production, coal gasification",USA,-0.007788093069378592
+213,"electricity production, natural gas, conventional power plant",LAM,-0.007625867857519447
+214,"electricity production, natural gas, conventional power plant",MEA,-0.007548670356148452
+191,"electricity production, lignite",OAS,-0.007527111940587579
+318,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014",NEU,-0.007455633939143904
+203,"electricity production, natural gas, combined cycle power plant",OAS,-0.007356959777837555
+168,"electricity production, hard coal",OAS,-0.007121058668658275
+341,"hydrogen production, coal gasification, with CCS",OAS,-0.006526248231797425
+332,"hydrogen production, coal gasification",World,-0.006411670813524632
+193,"electricity production, lignite",USA,-0.006294502319015509
+215,"electricity production, natural gas, conventional power plant",NEU,-0.006153776656183426
+399,"hydrogen production, steam methane reforming",SSA,-0.006116121503643788
+394,"hydrogen production, steam methane reforming",LAM,-0.006056479556116826
+134,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m",World,-0.005955629005341309
+374,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",USA,-0.005695994656588408
+217,"electricity production, natural gas, conventional power plant",REF,-0.005626088296552226
+395,"hydrogen production, steam methane reforming",MEA,-0.005558799618248833
+359,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",REF,-0.005523850510478792
+62,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",USA,-0.00547675235000427
+216,"electricity production, natural gas, conventional power plant",OAS,-0.005454917879936698
+298,hard coal briquettes production,EUR,-0.005129757441629381
+366,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",IND,-0.004931084025512465
+398,"hydrogen production, steam methane reforming",REF,-0.004655173112414288
+15,coke production,World,-0.0044693388858225
+355,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",LAM,-0.004468444975460082
+307,"heat production, at hard coal industrial furnace 1-10MW",World,-0.00444429249738156
+1,"biomethane production, from biogas upgrading, using amine scrubbing",CHA,-0.004380577088276177
+397,"hydrogen production, steam methane reforming",OAS,-0.004282088009577886
+172,"electricity production, hard coal",World,-0.004261918281316272
+104,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m",World,-0.004178152891801486
+166,"electricity production, hard coal",LAM,-0.004019276427264893
+335,"hydrogen production, coal gasification, with CCS",EUR,-0.0037954466165637676
+209,"electricity production, natural gas, conventional power plant",CHA,-0.0037609977530712615
+188,"electricity production, lignite",LAM,-0.003642554250971532
+165,"electricity production, hard coal",JPN,-0.0034830598503075116
+327,"hydrogen production, coal gasification",NEU,-0.0034455047377286692
+427,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",World,-0.0031733145984198245
+426,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",EUR,-0.0031733145984198245
+40,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",EUR,-0.0031690204001592268
+448,"syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification",EUR,-0.002911490098025526
+396,"hydrogen production, steam methane reforming",NEU,-0.002879283273399026
+194,"electricity production, lignite",World,-0.0028179825261240394
+424,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",EUR,-0.0028159984409389413
+425,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",World,-0.0028159984409389413
+27,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",EUR,-0.0028121713225833034
+167,"electricity production, hard coal",MEA,-0.002703105027161269
+390,"hydrogen production, steam methane reforming",CHA,-0.0027019000171437015
+322,"hydrogen production, coal gasification",EUR,-0.002661446465916442
+353,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",IND,-0.0025542983218118623
+170,"electricity production, hard coal",SSA,-0.0025486912799308516
+14,coke production,USA,-0.002447860170430817
+434,lignite briquettes production,EUR,-0.002230462695809126
+328,"hydrogen production, coal gasification",OAS,-0.0019502632457239807
+452,"wood chips production, hardwood, at sawmill",NEU,-0.0010898015188589546
+192,"electricity production, lignite",REF,-0.0009748890753370523
+361,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",USA,-0.0008759056660523827
+325,"hydrogen production, coal gasification",LAM,-0.0006987562266813783
+189,"electricity production, lignite",MEA,-0.000662043288473398
+133,"electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m",EUR,-0.000657332803684891
+169,"electricity production, hard coal",REF,-0.0005780956021574969
+368,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",LAM,-0.0003914064223552768
+338,"hydrogen production, coal gasification, with CCS",LAM,1.537338525059834e-05
+19,"diesel production, petroleum refinery operation",SSA,0.0005437717732563104
+418,"kerosene production, petroleum refinery operation",SSA,0.0005438028706042088
+306,"heat production, at hard coal industrial furnace 1-10MW",EUR,0.000911275773909072
+453,"wood chips production, hardwood, at sawmill",World,0.0011168751028991556
+183,"electricity production, hydro, reservoir, non-alpine region",World,0.0015680237050589357
+177,"electricity production, hydro, reservoir, non-alpine region",MEA,0.0015680259402353744
+182,"electricity production, hydro, reservoir, non-alpine region",USA,0.0015680259402353744
+181,"electricity production, hydro, reservoir, non-alpine region",SSA,0.0015680259402353744
+179,"electricity production, hydro, reservoir, non-alpine region",OAS,0.0015680259402353744
+176,"electricity production, hydro, reservoir, non-alpine region",LAM,0.0015680259402353744
+180,"electricity production, hydro, reservoir, non-alpine region",REF,0.001588360307420234
+372,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",REF,0.001697219755293314
+416,"kerosene production, petroleum refinery operation",IND,0.0017695214285647256
+17,"diesel production, petroleum refinery operation",IND,0.0017695843485474195
+446,"petrol production, unleaded, petroleum refinery operation",SSA,0.001867885537389555
+315,"heat production, deep geothermal",SSA,0.0018939660473576273
+206,"electricity production, natural gas, combined cycle power plant",USA,0.0019347195160448981
+173,"electricity production, hydro, reservoir, non-alpine region",CAZ,0.00266750226354294
+219,"electricity production, natural gas, conventional power plant",USA,0.003631370915959909
+163,"electricity production, hard coal",EUR,0.003700787271297237
+150,"electricity production, deep geothermal",EUR,0.0037179058559698615
+157,"electricity production, deep geothermal",REF,0.003722984315120444
+152,"electricity production, deep geothermal",JPN,0.0037236666845021503
+154,"electricity production, deep geothermal",MEA,0.0037236666845021503
+149,"electricity production, deep geothermal",CHA,0.0037236666845021503
+151,"electricity production, deep geothermal",IND,0.0037236666845021503
+160,"electricity production, deep geothermal",World,0.0037236666845021503
+159,"electricity production, deep geothermal",USA,0.0037236666845021503
+444,"petrol production, unleaded, petroleum refinery operation",IND,0.004079944876450322
+351,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",CHA,0.004141269490969577
+156,"electricity production, deep geothermal",OAS,0.004596601011510568
+175,"electricity production, hydro, reservoir, non-alpine region",IND,0.004740928640393819
+178,"electricity production, hydro, reservoir, non-alpine region",NEU,0.004851632180281684
+174,"electricity production, hydro, reservoir, non-alpine region",EUR,0.004851632180281684
+4,"biomethane production, from biogas upgrading, using amine scrubbing",JPN,0.0048835946803949684
+158,"electricity production, deep geothermal",SSA,0.0054555644357102695
+400,"hydrogen production, steam methane reforming",USA,0.005580146899773267
+20,"diesel production, petroleum refinery operation",World,0.005693330242162398
+419,"kerosene production, petroleum refinery operation",World,0.005693353486617985
+18,"diesel production, petroleum refinery operation",LAM,0.006291138645398509
+417,"kerosene production, petroleum refinery operation",LAM,0.006291148941716868
+415,"kerosene production, petroleum refinery operation",EUR,0.006303694481575898
+16,"diesel production, petroleum refinery operation",EUR,0.006303744530237455
+118,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m",EUR,0.0063185363501775
+447,"petrol production, unleaded, petroleum refinery operation",World,0.006334050249174663
+25,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",CAZ,0.006993593406183795
+13,coke production,EUR,0.007047452237088263
+195,"electricity production, natural gas, combined cycle power plant",CAZ,0.007133303399685377
+313,"heat production, deep geothermal",LAM,0.007206717485078544
+443,"petrol production, unleaded, petroleum refinery operation",EUR,0.007332716967264572
+445,"petrol production, unleaded, petroleum refinery operation",LAM,0.008254963501679731
+319,"heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014",World,0.008410776734341248
+153,"electricity production, deep geothermal",LAM,0.009166915046776048
+208,"electricity production, natural gas, conventional power plant",CAZ,0.009946299205004198
+389,"hydrogen production, steam methane reforming",CAZ,0.010734563493562901
+362,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",World,0.010964923753300526
+352,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",EUR,0.014980120681232046
+305,"heat production, at hard coal industrial furnace 1-10MW",CAZ,0.015155719801898214
+119,"electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m",World,0.016220274836673397
+404,"hydrogen production, steam methane reforming, with CCS",EUR,0.017184797681462496
+405,"hydrogen production, steam methane reforming, with CCS",IND,0.01846074530206563
+310,"heat production, deep geothermal",EUR,0.019315457972800702
+414,"hydrogen production, steam methane reforming, with CCS",World,0.020719717578302255
+357,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",NEU,0.021417446871158024
+367,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant",JPN,0.021634887346401184
+455,wood pellet production,World,0.02251063041465647
+245,"electricity production, solar thermal parabolic trough, 50 MW",SSA,0.023604907111324687
+155,"electricity production, deep geothermal",NEU,0.024396913785924575
+237,"electricity production, photovoltaic, commercial",LAM,0.024942254578626477
+246,"electricity production, solar thermal parabolic trough, 50 MW",USA,0.026124813217353507
+358,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",OAS,0.03033704859248233
+407,"hydrogen production, steam methane reforming, with CCS",LAM,0.03150082345923881
+408,"hydrogen production, steam methane reforming, with CCS",MEA,0.03162277801426292
+412,"hydrogen production, steam methane reforming, with CCS",SSA,0.03236420993147372
+241,"electricity production, photovoltaic, commercial",SSA,0.03336912716320547
+409,"hydrogen production, steam methane reforming, with CCS",NEU,0.03413963781867125
+356,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",MEA,0.034265499964709505
+410,"hydrogen production, steam methane reforming, with CCS",OAS,0.03426710412625255
+244,"electricity production, solar thermal parabolic trough, 50 MW",EUR,0.035001681624548045
+247,"electricity production, solar thermal parabolic trough, 50 MW",World,0.035054908949896074
+238,"electricity production, photovoltaic, commercial",MEA,0.0351744817543503
+411,"hydrogen production, steam methane reforming, with CCS",REF,0.03585254042710486
+403,"hydrogen production, steam methane reforming, with CCS",CHA,0.036241650425632446
+3,"biomethane production, from biogas upgrading, using amine scrubbing",IND,0.038674913121827276
+384,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",OAS,0.041928871551440774
+360,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",SSA,0.04221108721066353
+240,"electricity production, photovoltaic, commercial",OAS,0.0422214293675641
+234,"electricity production, photovoltaic, commercial",CHA,0.044431305120087985
+142,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",NEU,0.04796508588751971
+413,"hydrogen production, steam methane reforming, with CCS",USA,0.04840669807364518
+84,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",NEU,0.049994480365477795
+242,"electricity production, photovoltaic, commercial",USA,0.05067886084292857
+437,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat",World,0.05251823489155366
+386,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",SSA,0.05666248822911307
+402,"hydrogen production, steam methane reforming, with CCS",CAZ,0.058532375105149435
+56,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",LAM,0.06221813602077376
+58,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",NEU,0.06383096365927611
+350,"hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant",CAZ,0.06971250362551902
+381,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",LAM,0.07033442337888335
+146,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",USA,0.07093502414944161
+301,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction",NEU,0.07165744667522668
+136,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",CHA,0.07322172444113025
+147,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",World,0.07741682658474948
+383,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",NEU,0.08180310550733887
+317,"heat production, deep geothermal",World,0.08443693889170727
+138,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",IND,0.08502307878148879
+49,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",USA,0.08521494008491015
+109,"electricity production, at hard coal-fired IGCC power plant",JPN,0.08829312187694868
+135,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",CAZ,0.08932479266402635
+250,"electricity production, solar tower power plant, 20 MW",SSA,0.08935409598523403
+430,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",EUR,0.09047216079814821
+124,"electricity production, at lignite-fired IGCC power plant",JPN,0.0917259143746991
+111,"electricity production, at hard coal-fired IGCC power plant",MEA,0.09515940631429626
+99,"electricity production, at biomass-fired IGCC power plant",REF,0.09549242489522326
+302,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction",World,0.09579441868731385
+429,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",World,0.09777218056782169
+251,"electricity production, solar tower power plant, 20 MW",USA,0.09793220641470633
+388,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",World,0.09869900466598495
+126,"electricity production, at lignite-fired IGCC power plant",MEA,0.09873206384068274
+378,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",EUR,0.09894196740506511
+63,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",World,0.1013993247425571
+36,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",USA,0.10526057202551464
+102,"electricity production, at biomass-fired IGCC power plant",World,0.10804577528465252
+252,"electricity production, solar tower power plant, 20 MW",World,0.10819276694164554
+141,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",MEA,0.1097938639814227
+439,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat",World,0.10991115057220459
+145,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",SSA,0.11060384624930233
+249,"electricity production, solar tower power plant, 20 MW",EUR,0.11106210922570715
+140,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",LAM,0.1113711161538435
+436,"methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat",EUR,0.11227101718528945
+116,"electricity production, at hard coal-fired IGCC power plant",USA,0.1125709564520567
+131,"electricity production, at lignite-fired IGCC power plant",USA,0.11259919043194583
+107,"electricity production, at hard coal-fired IGCC power plant",EUR,0.11281196885346474
+248,"electricity production, solar tower power plant, 20 MW",CAZ,0.11365065287358501
+144,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",REF,0.11408953046999114
+143,"electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m",OAS,0.11445371304031267
+320,"hydrogen production, coal gasification",CAZ,0.11694244927741829
+122,"electricity production, at lignite-fired IGCC power plant",EUR,0.11736018577295536
+115,"electricity production, at hard coal-fired IGCC power plant",SSA,0.11833109167568563
+233,"electricity production, photovoltaic, commercial",CAZ,0.12021537221672732
+243,"electricity production, photovoltaic, commercial",World,0.12046070906033812
+120,"electricity production, at lignite-fired IGCC power plant",CAZ,0.12479275741273389
+130,"electricity production, at lignite-fired IGCC power plant",SSA,0.12615521481895736
+438,"methane, from electrochemical methanation, with carbon from atmosphere, using waste heat",EUR,0.13307916937133854
+105,"electricity production, at hard coal-fired IGCC power plant",CAZ,0.1338108435563244
+125,"electricity production, at lignite-fired IGCC power plant",LAM,0.13495014179022138
+106,"electricity production, at hard coal-fired IGCC power plant",CHA,0.13657944047111462
+236,"electricity production, photovoltaic, commercial",JPN,0.13727949381671237
+110,"electricity production, at hard coal-fired IGCC power plant",LAM,0.13732406584303236
+108,"electricity production, at hard coal-fired IGCC power plant",IND,0.1386462782466226
+442,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system",World,0.13907042755471657
+114,"electricity production, at hard coal-fired IGCC power plant",REF,0.1391561789155996
+112,"electricity production, at hard coal-fired IGCC power plant",NEU,0.1409667757419837
+117,"electricity production, at hard coal-fired IGCC power plant",World,0.14278865393975496
+113,"electricity production, at hard coal-fired IGCC power plant",OAS,0.1429245561765439
+235,"electricity production, photovoltaic, commercial",EUR,0.14327750119976462
+66,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation",EUR,0.1436091849806047
+43,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",LAM,0.14747031036906746
+127,"electricity production, at lignite-fired IGCC power plant",NEU,0.14881758850324184
+270,"electricity production, wind, 1-3MW turbine, onshore",USA,0.15520517364870204
+259,"electricity production, wind, 1-3MW turbine, onshore",CAZ,0.15520518913287226
+269,"electricity production, wind, 1-3MW turbine, onshore",SSA,0.15520519405730596
+263,"electricity production, wind, 1-3MW turbine, onshore",JPN,0.1552051976364927
+264,"electricity production, wind, 1-3MW turbine, onshore",LAM,0.15520519972058736
+267,"electricity production, wind, 1-3MW turbine, onshore",OAS,0.15520520453392614
+265,"electricity production, wind, 1-3MW turbine, onshore",MEA,0.15520521036668752
+260,"electricity production, wind, 1-3MW turbine, onshore",CHA,0.15520521270347443
+262,"electricity production, wind, 1-3MW turbine, onshore",IND,0.15520521318924932
+271,"electricity production, wind, 1-3MW turbine, onshore",World,0.15520524835166405
+268,"electricity production, wind, 1-3MW turbine, onshore",REF,0.15574415623670643
+261,"electricity production, wind, 1-3MW turbine, onshore",EUR,0.15663350300600984
+266,"electricity production, wind, 1-3MW turbine, onshore",NEU,0.15671402298882536
+297,"electricity production, wind, >3MW turbine, onshore",World,0.15965093891936677
+288,"electricity production, wind, >3MW turbine, onshore",IND,0.15965093892076795
+285,"electricity production, wind, >3MW turbine, onshore",CAZ,0.15965097207564632
+290,"electricity production, wind, >3MW turbine, onshore",LAM,0.1596509768606103
+291,"electricity production, wind, >3MW turbine, onshore",MEA,0.15965098657883275
+293,"electricity production, wind, >3MW turbine, onshore",OAS,0.15965098794241223
+286,"electricity production, wind, >3MW turbine, onshore",CHA,0.1596509886284884
+289,"electricity production, wind, >3MW turbine, onshore",JPN,0.15965100207034486
+296,"electricity production, wind, >3MW turbine, onshore",USA,0.1596510226443011
+295,"electricity production, wind, >3MW turbine, onshore",SSA,0.1596510329578435
+294,"electricity production, wind, >3MW turbine, onshore",REF,0.1601444984028366
+287,"electricity production, wind, >3MW turbine, onshore",EUR,0.1603727259484263
+292,"electricity production, wind, >3MW turbine, onshore",NEU,0.16040227360204634
+128,"electricity production, at lignite-fired IGCC power plant",OAS,0.1616889990906049
+30,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",LAM,0.16286119828799928
+454,wood pellet production,EUR,0.16385017487963996
+441,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system",NEU,0.16385605893303765
+46,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",OAS,0.17273087589869549
+258,"electricity production, wind, 1-3MW turbine, offshore",World,0.17673425331282344
+255,"electricity production, wind, 1-3MW turbine, offshore",JPN,0.17673491953758097
+253,"electricity production, wind, 1-3MW turbine, offshore",CHA,0.17673491953758097
+257,"electricity production, wind, 1-3MW turbine, offshore",OAS,0.17673491953758097
+256,"electricity production, wind, 1-3MW turbine, offshore",NEU,0.17856222929249121
+254,"electricity production, wind, 1-3MW turbine, offshore",EUR,0.17856222929249121
+123,"electricity production, at lignite-fired IGCC power plant",IND,0.1819037309936539
+428,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",EUR,0.1840509208216937
+132,"electricity production, at lignite-fired IGCC power plant",World,0.18407060138567055
+300,"heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction",LAM,0.19090074739000615
+53,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",EUR,0.19140523632848153
+33,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",OAS,0.1925296490944186
+121,"electricity production, at lignite-fired IGCC power plant",CHA,0.19447601375039344
+91,"electricity production, at biomass-fired IGCC power plant",CHA,0.19841182795136705
+48,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation",SSA,0.21330153706361002
+35,"diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation",SSA,0.21657458498553436
+129,"electricity production, at lignite-fired IGCC power plant",REF,0.22094936597065834
+278,"electricity production, wind, <1MW turbine, onshore",MEA,0.2308571221338627
+284,"electricity production, wind, <1MW turbine, onshore",World,0.23085713616611198
+277,"electricity production, wind, <1MW turbine, onshore",LAM,0.2308571533028737
+275,"electricity production, wind, <1MW turbine, onshore",IND,0.23085715754926062
+273,"electricity production, wind, <1MW turbine, onshore",CHA,0.23085716242464271
+283,"electricity production, wind, <1MW turbine, onshore",USA,0.23085716367994993
+272,"electricity production, wind, <1MW turbine, onshore",CAZ,0.23085717052600732
+280,"electricity production, wind, <1MW turbine, onshore",OAS,0.2308571767143814
+282,"electricity production, wind, <1MW turbine, onshore",SSA,0.23085717962170454
+276,"electricity production, wind, <1MW turbine, onshore",JPN,0.2308571798706473
+281,"electricity production, wind, <1MW turbine, onshore",REF,0.23157799624601838
+274,"electricity production, wind, <1MW turbine, onshore",EUR,0.23276843288376117
+279,"electricity production, wind, <1MW turbine, onshore",NEU,0.23287195213699452
+98,"electricity production, at biomass-fired IGCC power plant",OAS,0.26619875151697153
+239,"electricity production, photovoltaic, commercial",NEU,0.27839310596824063
+96,"electricity production, at biomass-fired IGCC power plant",MEA,0.28904589145748166
+333,"hydrogen production, coal gasification, with CCS",CAZ,0.3003808174650897
+100,"electricity production, at biomass-fired IGCC power plant",SSA,0.30931130971744736
+347,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity",World,0.31167932787371766
+346,"hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity",NEU,0.3121046323581037
+440,"operation, solar collector system, Cu flat plate collector, one-family house, for combined system",CAZ,0.3271571615528035
+103,"electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m",EUR,0.34361178757556077
+349,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity",World,0.6001337994248643
+348,"hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity",NEU,0.6005553285915382
+93,"electricity production, at biomass-fired IGCC power plant",IND,0.68429619184687
+148,"electricity production, deep geothermal",CAZ,0.6877206761825435
+308,"heat production, deep geothermal",CAZ,0.7150316442879446
+89,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",World,1.037952983441644
+82,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",LAM,1.0619736143179503
+88,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",USA,1.081136389085129
+87,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",SSA,1.149978510657057
+433,"kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",World,1.2025124969094023
+85,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",OAS,1.257247104523984
+83,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",MEA,1.2796798479756288
+90,"electricity production, at biomass-fired IGCC power plant",CAZ,1.2820932024616203
+51,"diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation",CAZ,1.2963464889047072
+78,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",CHA,1.3408346982314603
+81,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",JPN,1.683888862781928
+86,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",REF,2.3681664669300204
+80,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",IND,2.7177988611465893
+376,"hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity",CAZ,3.6927460335628344
+77,"diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation",CAZ,195.30703449580636

@@ -1,0 +1,88 @@
+REMIND index;dataset name;dataset reference product;dataset unit;share
+ngcc;electricity production, natural gas, combined cycle power plant;electricity, high voltage;kilowatt hour;1.0
+ngccc;electricity production, at natural gas-fired combined cycle power plant, post, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;1.0
+ngt;electricity production, natural gas, conventional power plant;electricity, high voltage;kilowatt hour;1.0
+gaschp;heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical;electricity, high voltage;kilowatt hour;regional
+gaschp;heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical;heat, district or industrial, natural gas;megajoule;regional
+gaschp;heat and power co-generation, natural gas, conventional power plant, 100MW electrical;electricity, high voltage;kilowatt hour;regional
+gaschp;heat and power co-generation, natural gas, conventional power plant, 100MW electrical;heat, district or industrial, natural gas;megajoule;regional
+gastr;petroleum and gas production, onshore;natural gas, high pressure;cubic meter;0.7
+gastr;petroleum and gas production, offshore;natural gas, high pressure;cubic meter;0.3
+gash2;hydrogen production, steam methane reforming;hydrogen, gaseous, low pressure;kilogram;1.0
+gash2c;hydrogen production, steam methane reforming, with CCS;hydrogen, gaseous, low pressure;kilogram;1.0
+gashp;heat and power co-generation, natural gas, 500kW electrical, lean burn;heat, district or industrial, natural gas;megajoule;1.0
+gasftrec;diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation;diesel, synthetic;kilogram;0.6
+gasftrec;kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation;kerosene, synthetic;kilogram;0.4
+gasftcrec;diesel production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage;diesel, synthetic;kilogram;0.6
+gasftcrec;kerosene production, synthetic, Fischer Tropsch process, from natural gas, energy allocation, with carbon capture and storage;kerosene, synthetic;kilogram;0.4
+igcc;electricity production, at lignite-fired IGCC power plant;electricity, high voltage;kilowatt hour;0.5
+igcc;electricity production, at hard coal-fired IGCC power plant;electricity, high voltage;kilowatt hour;0.5
+igccc;electricity production, at lignite-fired power plant, post, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;0.5
+igccc;electricity production, at hard coal-fired power plant, post, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;0.5
+pc;electricity production, lignite;electricity, high voltage;kilowatt hour;0.5
+pc;electricity production, hard coal;electricity, high voltage;kilowatt hour;0.5
+coalchp;heat and power co-generation, lignite;electricity, high voltage;kilowatt hour;regional
+coalchp;heat and power co-generation, lignite;heat, district or industrial, other than natural gas;megajoule;regional
+coalchp;heat and power co-generation, hard coal;electricity, high voltage;kilowatt hour;regional
+coalchp;heat and power co-generation, hard coal;heat, district or industrial, other than natural gas;megajoule;regional
+coaltr;coke production;coke;megajoule;0.4
+coaltr;lignite briquettes production;lignite briquettes;megajoule;0.3
+coaltr;hard coal briquettes production;hard coal briquettes;megajoule;0.3
+coalgas;syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification;syngas, RWGS, Production;kilogram;1.0
+coalh2;hydrogen production, coal gasification;hydrogen, gaseous, low pressure;kilogram;1.0
+coalh2c;hydrogen production, coal gasification, with CCS;hydrogen, gaseous, low pressure;kilogram;1.0
+coalhp;heat production, at hard coal industrial furnace 1-10MW;heat, district or industrial, other than natural gas;megajoule;1.0
+refliq;diesel production, petroleum refinery operation;diesel;kilogram;0.34
+refliq;kerosene production, petroleum refinery operation;kerosene;kilogram;0.1
+refliq;petrol production, unleaded, petroleum refinery operation;petrol, unleaded;kilogram;0.56
+coalftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;diesel, synthetic;kilogram;0.5
+coalftrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;kerosene, synthetic;kilogram;0.5
+coalftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;diesel, synthetic;kilogram;0.5
+coalftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;0.5
+bioftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation;diesel, synthetic;kilogram;0.5
+bioftrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation;kerosene, synthetic;kilogram;0.5
+bioftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation;diesel, synthetic;kilogram;0.5
+bioftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;0.5
+biodiesel;biodiesel production, via transesterification, from palm oil, energy allocation;biodiesel, from palm oil;kilogram;regional
+biodiesel;biodiesel production, via transesterification, from rapeseed oil, energy allocation;biodiesel, from rapeseed oil;kilogram;regional
+bioeths;ethanol production, via fermentation, from corn, energy allocation;ethanol, from corn;kilogram;regional
+bioeths;ethanol production, via fermentation, from sugarbeet, energy allocation;ethanol, from sugarbeet;kilogram;regional
+bioeths;ethanol production, via fermentation, from sugarcane, energy allocation;ethanol, from sugarcane;kilogram;regional
+bioeths;ethanol production, via fermentation, from grain sorghum, energy allocation;ethanol, from grain sorghum;kilogram;regional
+bioethl;ethanol production, via fermentation, from poplar, energy allocation;ethanol, from poplar;kilogram;regional
+bioethl;ethanol production, via fermentation, from switchgrass, energy allocation;ethanol, from switchgrass;kilogram;regional
+bioethl;ethanol production, via fermentation, from eucalyptus;ethanol, from eucalyptus;kilogram;regional
+bioethl;ethanol production, via fermentation, from miscanthus, energy allocation;ethanol, from miscanthus;kilogram;regional
+dot;heat and power co-generation, diesel, 200kW electrical, SCR-NOx reduction;electricity, high voltage;kilowatt hour;1.0
+biochp;heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014;electricity, high voltage;kilowatt hour;regional
+biochp;heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014;heat, district or industrial, other than natural gas;megajoule;regional
+bioigcc;electricity production, at biomass-fired IGCC power plant;electricity, high voltage;kilowatt hour;1.0
+bioigccc;electricity production, at biomass-fired IGCC power plant, pre, pipeline 200km, storage 1000m;electricity, high voltage;kilowatt hour;1.0
+bioh2;hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant;hydrogen, gaseous, 25 bar;kilogram;1.0
+bioh2c;hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant;hydrogen, gaseous, 25 bar;kilogram;1.0
+biohp;heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014;heat, district or industrial, other than natural gas;megajoule;1.0
+biotr;wood chips production, hardwood, at sawmill;wood chips, wet, measured as dry mass;kilogram;1.0
+biotrmod;wood pellet production;wood pellet, measured as dry mass;kilogram;1.0
+biogas;biomethane production, from biogas upgrading, using amine scrubbing;biomethane, from biogas upgrading, using amine scrubbing;kilogram;1.0
+biogasc;biomethane production, from biogas upgrading, using amine scrubbing;biomethane, from biogas upgrading, using amine scrubbing;kilogram;1.0
+geohdr;electricity production, deep geothermal;electricity, high voltage;kilowatt hour;1.0
+geohe;heat production, deep geothermal;heat, deep geothermal;megajoule;1.0
+hydro;electricity production, hydro, reservoir, non-alpine region;electricity, high voltage;kilowatt hour;1.0
+wind;electricity production, wind, <1MW turbine, onshore;electricity, high voltage;kilowatt hour;0.2
+wind;electricity production, wind, 1-3MW turbine, onshore;electricity, high voltage;kilowatt hour;0.6
+wind;electricity production, wind, >3MW turbine, onshore;electricity, high voltage;kilowatt hour;0.2
+windoff;electricity production, wind, 1-3MW turbine, offshore;electricity, high voltage;kilowatt hour;1.0
+spv;electricity production, photovoltaic, commercial;electricity, low voltage;kilowatt hour;1.0
+csp;electricity production, solar tower power plant, 20 MW;electricity, high voltage;kilowatt hour;0.5
+csp;electricity production, solar thermal parabolic trough, 50 MW;electricity, high voltage;kilowatt hour;0.5
+solhe;operation, solar collector system, Cu flat plate collector, one-family house, for combined system;heat, central or small-scale, other than natural gas;megajoule;1.0
+tnrs;electricity production, nuclear, pressure water reactor;electricity, high voltage;kilowatt hour;1.0
+fnrs;electricity production, nuclear, pressure water reactor;electricity, high voltage;kilowatt hour;1.0
+elh2;hydrogen production, gaseous, 30 bar, from PEM electrolysis, from grid electricity;hydrogen, gaseous, 30 bar;kilogram;0.8
+elh2;hydrogen production, gaseous, 20 bar, from AEC electrolysis, from grid electricity;hydrogen, gaseous, 20 bar;kilogram;0.1
+elh2;hydrogen production, gaseous, 1 bar, from SOEC electrolysis, from grid electricity;hydrogen, gaseous, 1 bar;kilogram;0.1
+h2turb;electricity production, from hydrogen-fired one gigawatt gas turbine, for grid balancing;electricity, high voltage;kilowatt hour;1.0
+h22ch4;methane, from electrochemical methanation, with carbon from atmosphere, using heat pump heat;methane, from electrochemical methanation;kilogram;0.5
+h22ch4;methane, from electrochemical methanation, with carbon from atmosphere, using waste heat;methane, from electrochemical methanation;kilogram;0.5
+MeOH;diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation;diesel, synthetic;kilogram;0.5
+MeOH;kerosene production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation;kerosene, synthetic;kilogram;0.5

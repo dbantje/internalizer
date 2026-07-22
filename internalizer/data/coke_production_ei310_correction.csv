@@ -1,0 +1,62 @@
+activityName,geography,reference product,group,exchange name,compartment,subcompartment,exchange unitName,exchange amount - 3.10,exchange amount - 3.10.1
+coke production,RoW,benzene,ToEnvironment,Anthracene,air,non-urban air or from high stacks,kg,0.532238724,2.50713E-06
+coke production,RoW,benzene,ToEnvironment,Benzo(b)fluoranthene,air,non-urban air or from high stacks,kg,9.7481E-07,8.11474E-07
+coke production,RoW,benzene,ToEnvironment,Benzo(k)fluoranthene,air,non-urban air or from high stacks,kg,1.15453E-07,3.96095E-07
+coke production,RoW,benzene,ToEnvironment,Cobalt II,air,non-urban air or from high stacks,kg,0.056158019,7.34977E-08
+coke production,RoW,benzene,ToEnvironment,Phenanthrene,air,non-urban air or from high stacks,kg,8.64633E-05,1.06901E-05
+coke production,RoW,benzene,ToEnvironment,Polychlorinated biphenyls,air,non-urban air or from high stacks,kg,2.16846E-09,2.70902E-12
+coke production,RoW,coal gas,ToEnvironment,Anthracene,air,non-urban air or from high stacks,kg,0.004279963,2.01609E-08
+coke production,RoW,coal gas,ToEnvironment,Benzo(b)fluoranthene,air,non-urban air or from high stacks,kg,7.83887E-09,6.52541E-09
+coke production,RoW,coal gas,ToEnvironment,Benzo(k)fluoranthene,air,non-urban air or from high stacks,kg,9.28409E-10,3.18518E-09
+coke production,RoW,coal gas,ToEnvironment,Cobalt II,air,non-urban air or from high stacks,kg,0.000451591,5.91027E-10
+coke production,RoW,coal gas,ToEnvironment,Phenanthrene,air,non-urban air or from high stacks,kg,6.95289E-07,8.59639E-08
+coke production,RoW,coal gas,ToEnvironment,Polychlorinated biphenyls,air,non-urban air or from high stacks,kg,1.74375E-11,2.17844E-14
+coke production,RoW,coal tar,ToEnvironment,Anthracene,air,non-urban air or from high stacks,kg,0.307833352,1.45006E-06
+coke production,RoW,coal tar,ToEnvironment,Benzo(b)fluoranthene,air,non-urban air or from high stacks,kg,5.63805E-07,4.69336E-07
+coke production,RoW,coal tar,ToEnvironment,Benzo(k)fluoranthene,air,non-urban air or from high stacks,kg,6.67752E-08,2.29092E-07
+coke production,RoW,coal tar,ToEnvironment,Cobalt II,air,non-urban air or from high stacks,kg,0.032480371,4.25092E-08
+coke production,RoW,coal tar,ToEnvironment,Phenanthrene,air,non-urban air or from high stacks,kg,5.00082E-05,6.18289E-06
+coke production,RoW,coal tar,ToEnvironment,Polychlorinated biphenyls,air,non-urban air or from high stacks,kg,1.25418E-09,1.56683E-12
+coke production,RoW,coke,ToEnvironment,Anthracene,air,non-urban air or from high stacks,kg,0.007313343,3.44498E-08
+coke production,RoW,coke,ToEnvironment,Benzo(b)fluoranthene,air,non-urban air or from high stacks,kg,1.33946E-08,1.11502E-08
+coke production,RoW,coke,ToEnvironment,Benzo(k)fluoranthene,air,non-urban air or from high stacks,kg,1.58641E-09,5.44264E-09
+coke production,RoW,coke,ToEnvironment,Cobalt II,air,non-urban air or from high stacks,kg,0.000771652,1.00991E-09
+coke production,RoW,coke,ToEnvironment,Phenanthrene,air,non-urban air or from high stacks,kg,1.18807E-06,1.4689E-07
+coke production,RoW,coke,ToEnvironment,Polychlorinated biphenyls,air,non-urban air or from high stacks,kg,2.97962E-11,3.72238E-14
+coke production,RoW,"steam, in chemical industry",ToEnvironment,Anthracene,air,non-urban air or from high stacks,kg,0.013862154,6.52982E-08
+coke production,RoW,"steam, in chemical industry",ToEnvironment,Benzo(b)fluoranthene,air,non-urban air or from high stacks,kg,2.53889E-08,2.11348E-08
+coke production,RoW,"steam, in chemical industry",ToEnvironment,Benzo(k)fluoranthene,air,non-urban air or from high stacks,kg,3.00698E-09,1.03163E-08
+coke production,RoW,"steam, in chemical industry",ToEnvironment,Cobalt II,air,non-urban air or from high stacks,kg,0.001462635,1.91425E-09
+coke production,RoW,"steam, in chemical industry",ToEnvironment,Phenanthrene,air,non-urban air or from high stacks,kg,2.25194E-06,2.78424E-07
+coke production,RoW,"steam, in chemical industry",ToEnvironment,Polychlorinated biphenyls,air,non-urban air or from high stacks,kg,5.64775E-11,7.05563E-14
+coke production,RoW,sulfur,ToEnvironment,Anthracene,air,non-urban air or from high stacks,kg,0.050992169,2.402E-07
+coke production,RoW,sulfur,ToEnvironment,Benzo(b)fluoranthene,air,non-urban air or from high stacks,kg,9.33936E-08,7.77448E-08
+coke production,RoW,sulfur,ToEnvironment,Benzo(k)fluoranthene,air,non-urban air or from high stacks,kg,1.10612E-08,3.79487E-08
+coke production,RoW,sulfur,ToEnvironment,Cobalt II,air,non-urban air or from high stacks,kg,0.005380329,7.04159E-09
+coke production,RoW,sulfur,ToEnvironment,Phenanthrene,air,non-urban air or from high stacks,kg,8.28379E-06,1.02419E-06
+coke production,RoW,sulfur,ToEnvironment,Polychlorinated biphenyls,air,non-urban air or from high stacks,kg,2.07754E-10,2.59543E-13
+"coke production, wet quenching",CN,benzene,ToEnvironment,Benzo(b)fluoranthene,air,non-urban air or from high stacks,kg,1.08728E-06,8.65797E-07
+"coke production, wet quenching",CN,benzene,ToEnvironment,Benzo(k)fluoranthene,air,non-urban air or from high stacks,kg,4.22831E-08,4.22831E-07
+"coke production, wet quenching",CN,benzene,ToEnvironment,Cobalt II,air,non-urban air or from high stacks,kg,0.076149827,7.61498E-08
+"coke production, wet quenching",CN,benzene,ToEnvironment,Phenanthrene,air,non-urban air or from high stacks,kg,0.000114164,1.14164E-05
+"coke production, wet quenching",CN,benzene,ToEnvironment,Polychlorinated biphenyls,air,non-urban air or from high stacks,kg,2.93968E-09,2.93968E-12
+"coke production, wet quenching",CN,coal gas,ToEnvironment,Benzo(b)fluoranthene,air,non-urban air or from high stacks,kg,8.74329E-09,6.96225E-09
+"coke production, wet quenching",CN,coal gas,ToEnvironment,Benzo(k)fluoranthene,air,non-urban air or from high stacks,kg,3.40017E-10,3.40017E-09
+"coke production, wet quenching",CN,coal gas,ToEnvironment,Cobalt II,air,non-urban air or from high stacks,kg,0.000612354,6.12354E-10
+"coke production, wet quenching",CN,coal gas,ToEnvironment,Phenanthrene,air,non-urban air or from high stacks,kg,9.18045E-07,9.18045E-08
+"coke production, wet quenching",CN,coal gas,ToEnvironment,Polychlorinated biphenyls,air,non-urban air or from high stacks,kg,2.36393E-11,2.36393E-14
+"coke production, wet quenching",CN,coal tar,ToEnvironment,Benzo(b)fluoranthene,air,non-urban air or from high stacks,kg,6.28855E-07,5.00755E-07
+"coke production, wet quenching",CN,coal tar,ToEnvironment,Benzo(k)fluoranthene,air,non-urban air or from high stacks,kg,2.44555E-08,2.44555E-07
+"coke production, wet quenching",CN,coal tar,ToEnvironment,Cobalt II,air,non-urban air or from high stacks,kg,0.044043125,4.40431E-08
+"coke production, wet quenching",CN,coal tar,ToEnvironment,Phenanthrene,air,non-urban air or from high stacks,kg,6.60298E-05,6.60298E-06
+"coke production, wet quenching",CN,coal tar,ToEnvironment,Polychlorinated biphenyls,air,non-urban air or from high stacks,kg,1.70024E-09,1.70024E-12
+"coke production, wet quenching",CN,coke,ToEnvironment,Benzo(b)fluoranthene,air,non-urban air or from high stacks,kg,1.494E-08,1.18967E-08
+"coke production, wet quenching",CN,coke,ToEnvironment,Benzo(k)fluoranthene,air,non-urban air or from high stacks,kg,5.81E-10,5.81E-09
+"coke production, wet quenching",CN,coke,ToEnvironment,Cobalt II,air,non-urban air or from high stacks,kg,0.001046353,1.04635E-09
+"coke production, wet quenching",CN,coke,ToEnvironment,Phenanthrene,air,non-urban air or from high stacks,kg,1.5687E-06,1.5687E-07
+"coke production, wet quenching",CN,coke,ToEnvironment,Polychlorinated biphenyls,air,non-urban air or from high stacks,kg,4.03933E-11,4.03933E-14
+"coke production, wet quenching",CN,sulfur,ToEnvironment,Benzo(b)fluoranthene,air,non-urban air or from high stacks,kg,1.04169E-07,8.29493E-08
+"coke production, wet quenching",CN,sulfur,ToEnvironment,Benzo(k)fluoranthene,air,non-urban air or from high stacks,kg,4.05101E-09,4.05101E-08
+"coke production, wet quenching",CN,sulfur,ToEnvironment,Cobalt II,air,non-urban air or from high stacks,kg,0.007295683,7.29568E-09
+"coke production, wet quenching",CN,sulfur,ToEnvironment,Phenanthrene,air,non-urban air or from high stacks,kg,1.09377E-05,1.09377E-06
+"coke production, wet quenching",CN,sulfur,ToEnvironment,Polychlorinated biphenyls,air,non-urban air or from high stacks,kg,2.81642E-10,2.81642E-13
