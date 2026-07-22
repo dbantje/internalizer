@@ -68,9 +68,7 @@ biogasc;biomethane production, from biogas upgrading, using amine scrubbing;biom
 geohdr;electricity production, deep geothermal;electricity, high voltage;kilowatt hour;1.0
 geohe;heat production, deep geothermal;heat, deep geothermal;megajoule;1.0
 hydro;electricity production, hydro, reservoir, non-alpine region;electricity, high voltage;kilowatt hour;1.0
-windon;electricity production, wind, <1MW turbine, onshore;electricity, high voltage;kilowatt hour;0.2
-windon;electricity production, wind, 1-3MW turbine, onshore;electricity, high voltage;kilowatt hour;0.6
-windon;electricity production, wind, >3MW turbine, onshore;electricity, high voltage;kilowatt hour;0.2
+windon;electricity production, wind, 1-3MW turbine, onshore;electricity, high voltage;kilowatt hour;1.0
 windoff;electricity production, wind, 1-3MW turbine, offshore;electricity, high voltage;kilowatt hour;1.0
 spv;electricity production, photovoltaic, commercial;electricity, low voltage;kilowatt hour;1.0
 csp;electricity production, solar tower power plant, 20 MW;electricity, high voltage;kilowatt hour;0.5
