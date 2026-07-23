@@ -24,6 +24,34 @@ CPI = pd.read_csv(FILEPATH_CPI).set_index("year")["CPI"]
 METHOD2IC_MAPPING = DATA_DIR / "method2ic_mapping.csv"
 COMPARTMENTS_CHANGE = DATA_DIR / "PM_compartments_change.csv"
 
+BMATRIX_DTYPES = {
+    "index of activity": np.int32,
+    "index of biosphere flow": np.int32,
+    "value": np.float64,
+    "uncertainty type": np.int8,
+    "loc": np.float64,
+    "scale": np.float64,
+    "shape": np.float64,
+    "minimum": np.float64,
+    "maximum": np.float64,
+    "negative": np.int8,
+    "flip": np.int8
+}
+
+AMATRIX_DTYPES = {
+    "index of activity": np.int32,
+    "index of product": np.int32,
+    "value": np.float64,
+    "uncertainty type": np.int8,
+    "loc": np.float64,
+    "scale": np.float64,
+    "shape": np.float64,
+    "minimum": np.float64,
+    "maximum": np.float64,
+    "negative": np.int8,
+    "flip": np.int8
+}
+
 def get_lcia_method_names():
     """Get a list of available LCIA methods."""
     with open(LCIA_METHODS, "r") as f:
@@ -239,7 +267,11 @@ def correct_coke_production_flows(matrixfolder: Path | str):
     data = pd.read_csv(FILEPATH_COKEPROD_CORRECTION)
 
     # load matrix data
-    Bmatrix = pd.read_csv(matrixfolder + "/B_matrix.csv", sep=";")
+    Bmatrix = pd.read_csv(
+        matrixfolder + "/B_matrix.csv",
+        sep=";",
+        dtype=BMATRIX_DTYPES
+    )
     Bidx = pd.read_csv(matrixfolder + "/B_matrix_index.csv", sep=";", header=None,
                     names=["exchange name", "compartment", "subcompartment", "exchange unitName", "index of biosphere flow"])
     Aidx = pd.read_csv(matrixfolder + "/A_matrix_index.csv", sep=";", header=None,
@@ -293,7 +325,7 @@ def change_compartments_PM(filepaths) -> None:
     fp_biosphere = select_filepath(
         "B_matrix", [fp for fp in filepaths if "index" not in fp.name]
     )
-    Bdata = pd.read_csv(fp_biosphere, sep=";")
+    Bdata = pd.read_csv(fp_biosphere, sep=";", dtype=BMATRIX_DTYPES)
 
     # get needed biosphere indices
     pm_pollutants = [
