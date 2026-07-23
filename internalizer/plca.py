@@ -333,6 +333,7 @@ def _run_premise_year(
     project: str,
     scen: dict,
     ei_version: str,
+    source_version: str,
     outdir: str,
     quiet: bool,
     include_interventions: bool,
@@ -344,7 +345,7 @@ def _run_premise_year(
     kwargs = {
         "scenarios": [scen],
         "source_db": ei_label,
-        "source_version": ei_version,
+        "source_version": source_version,
         "biosphere_name": "ecoinvent-{}-biosphere".format(ei_version),
         "quiet": quiet
     }

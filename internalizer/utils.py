@@ -453,3 +453,19 @@ def get_shares_adjustments(s):
     
     return shares_adjustments
 
+
+def get_source_version(ei_version: str) -> str:
+    """
+    Get the source version of the ecoinvent database based on the provided version string.
+    :param ei_version: Ecoinvent version string (e.g., "3.10.1")
+    :return: Source version string (e.g., "3.10")
+    """
+    parts = ei_version.split(".")
+    if len(parts) < 2:
+        raise ValueError(f"Invalid ecoinvent version format: {ei_version}. Expected format 'X.Y.Z' or 'X.Y'.")
+    if len(parts) == 2 or ei_version in ["3.7.1", "3.9.1"]:
+        return ei_version
+    else:
+        source_version = ".".join(parts[:2])
+        return source_version
+

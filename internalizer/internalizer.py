@@ -15,6 +15,7 @@ from .utils import (
     get_linear_ramp_up,
     interpolate_and_weight_xr,
     split_remind_index,
+    get_source_version,
 )
 from .calculation_setup import (
     CalculationSetup,
@@ -85,7 +86,8 @@ class Internalizer:
         if not os.path.exists(self.outdir):
             os.mkdir(self.outdir)
 
-        self.ei_version = ei_version 
+        self.ei_version = ei_version
+        self.source_version = get_source_version(ei_version) 
         self.bw_project = bw_project
         self.gdxpath = gdxpath
         self.mifpath = mifpath
@@ -109,7 +111,7 @@ class Internalizer:
         kwargs = {
             "scenarios": [scen],
             "source_db": ei_label,
-            "source_version": self.ei_version,
+            "source_version": self.source_version,
             "biosphere_name": "ecoinvent-{}-biosphere".format(self.ei_version),
         }
         kwargs.update(DEFAULT_PREMISE_KWARGS)
@@ -129,6 +131,7 @@ class Internalizer:
                 self.bw_project,
                 {"model": self.model, "pathway": self.scenario, "year": year, "filepath": self.rundir},
                 self.ei_version,
+                self.self.source_version,
                 self.outdir,
                 quiet,
                 include_interventions
