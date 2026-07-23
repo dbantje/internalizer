@@ -278,9 +278,17 @@ def change_compartments_PM(filepaths) -> None:
         return matches[0]
 
     # load indices and biosphere matrix
-    Aidx = pd.read_csv(select_filepath(("A_matrix_index"), filepaths), sep=";")
+    Aidx = pd.read_csv(
+        select_filepath(("A_matrix_index"), filepaths),
+        sep=";",
+        header=None,
+        names=["name", "reference product", "unit", "location", "index"]
+    )
     Bidx = pd.read_csv(
-        select_filepath(("B_matrix_index"), filepaths), sep=";"
+        select_filepath(("B_matrix_index"), filepaths),
+        sep=";",
+        header=None,
+        names=["name", "compartment", "subcompartment", "unit", "index"]
     ).set_index(["name", "compartment", "subcompartment"])["index"]
     fp_biosphere = select_filepath(
         "B_matrix", [fp for fp in filepaths if "index" not in fp.name]
