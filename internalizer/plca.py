@@ -45,7 +45,7 @@ ALL_INTERVENTIONS = [
 ]
 
 DEFAULT_PREMISE_KWARGS = {
-    "keep_imports_uncertainty": False,
+    "keep_imports_uncertainty": True,
     "fleet_regionalization": "global"
 }
 
