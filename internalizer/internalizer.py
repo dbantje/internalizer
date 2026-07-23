@@ -131,7 +131,7 @@ class Internalizer:
                 self.bw_project,
                 {"model": self.model, "pathway": self.scenario, "year": year, "filepath": self.rundir},
                 self.ei_version,
-                self.self.source_version,
+                self.source_version,
                 self.outdir,
                 quiet,
                 include_interventions
