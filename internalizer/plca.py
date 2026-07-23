@@ -352,9 +352,9 @@ def _run_premise_year(
     kwargs.update(DEFAULT_PREMISE_KWARGS)
     if include_interventions:
         kwargs["metals_scenario"] = "intervention"
-        kwargs["interventions_scenario"] = {iv: "intervention" for iv in ALL_INTERVENTIONS}
+        kwargs["intervention_scenarios"] = {iv: "intervention" for iv in ALL_INTERVENTIONS}
         kwargs["gains_masks"] = GAINS_MASKS
-        kwargs["shares_adjustment"] = get_shares_adjustments("all:intervention")
+        kwargs["shares_adjustments"] = get_shares_adjustments("all:intervention")
     ndb = NewDatabase(**kwargs)
 
     ndb.update(sectors=SECTOR_UPDATES)
