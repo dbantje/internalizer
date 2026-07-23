@@ -8,7 +8,7 @@ import pandas as pd
 import bw2data as bd
 
 from premise import NewDatabase, clear_cache
-from .plca import _run_premise_year, _calculate_costs_year
+from .plca import _run_premise_year, _calculate_costs_year, DEFAULT_PREMISE_KWARGS
 from .utils import (
     convert_euros_to_dollar,
     check_monetization_factors,
@@ -106,18 +106,21 @@ class Internalizer:
         # newdatabase initialization creates cache
         ei_label = "ecoinvent-{}-cutoff".format(self.ei_version)
         scen = {"model": self.model, "pathway": self.scenario, "year": 2020, "filepath": self.rundir}
-        ndb = NewDatabase(
-            scenarios=[scen],
-            source_db=ei_label,
-            source_version=self.ei_version,
-            biosphere_name="ecoinvent-{}-biosphere".format(self.ei_version),
-        )
+        kwargs = {
+            "scenarios": [scen],
+            "source_db": ei_label,
+            "source_version": self.ei_version,
+            "biosphere_name": "ecoinvent-{}-biosphere".format(self.ei_version),
+        }
+        kwargs.update(DEFAULT_PREMISE_KWARGS)
+        ndb = NewDatabase(**kwargs)
 
     def run_premise(
         self,
         years: List[int],
         multiprocessing: bool = True,
-        quiet: bool = True
+        quiet: bool = True,
+        include_interventions: bool = True,
     ) -> None:
         self.years = years
         
@@ -127,7 +130,8 @@ class Internalizer:
                 {"model": self.model, "pathway": self.scenario, "year": year, "filepath": self.rundir},
                 self.ei_version,
                 self.outdir,
-                quiet
+                quiet,
+                include_interventions
             )
             for year in self.years
         ]

@@ -19,12 +19,60 @@ from .utils import (
     correct_coke_production_flows,
     change_compartments_PM,
     read_indices_csv,
+    get_shares_adjustments,
 )
 from .filesystem_constants import DATA_DIR
 
 FILEPATH_MONETIZATION_FACTORS = DATA_DIR / "mfs_MCsample_EUR2022.nc"
 FILEPATH_MONETIZATION_FACTORS_PERSPECTIVES = DATA_DIR / "mfs_perspectives_EUR2022.nc"
 NCV_DICT = get_ncv_dict()
+
+GAINS_MASKS = [
+    "burned in container ship",
+    "smelting of copper concentrate, sulfide ore",
+    "heat production, hardwood chips from forest, at furnace 50kW",
+    "heat production, mixed logs, at wood heater"
+]
+
+ALL_INTERVENTIONS = [
+    "tailings",
+    "slags",
+    "copper",
+    # "brake_wear",
+    "smelting",
+    "woodstoves",
+    "shipping",
+]
+
+DEFAULT_PREMISE_KWARGS = {
+    "keep_imports_uncertainty": False,
+    "fleet_regionalization": "global"
+}
+
+SECTOR_UPDATES = [
+    "biomass",
+    "electricity",
+    "cement",
+    "steel" ,
+    "fuels",
+    "renewable",
+    "metals",
+    # "mining",
+    "interventions",
+    "heat",
+    "cdr",
+    "battery",
+    "emissions",
+    "cars",
+    "two_wheelers",
+    "trucks",
+    "ships",
+    "buses",
+    "trains",
+    "final energy",
+    # "capacity",
+#    "external",
+]
 
 
 def load_matrix_and_index(
@@ -286,20 +334,29 @@ def _run_premise_year(
     scen: dict,
     ei_version: str,
     outdir: str,
-    quiet: bool
+    quiet: bool,
+    include_interventions: bool,
 ) -> None:
     bd.projects.set_current(project)
 
     ei_label = "ecoinvent-{}-cutoff".format(ei_version)
-    ndb = NewDatabase(
-        scenarios=[scen],
-        source_db=ei_label,
-        source_version=ei_version,
-        biosphere_name="ecoinvent-{}-biosphere".format(ei_version),
-        quiet=quiet
-    )
 
-    ndb.update()
+    kwargs = {
+        "scenarios": [scen],
+        "source_db": ei_label,
+        "source_version": ei_version,
+        "biosphere_name": "ecoinvent-{}-biosphere".format(ei_version),
+        "quiet": quiet
+    }
+    kwargs.update(DEFAULT_PREMISE_KWARGS)
+    if include_interventions:
+        kwargs["metals_scenario"] = "intervention"
+        kwargs["interventions_scenario"] = {iv: "intervention" for iv in ALL_INTERVENTIONS}
+        kwargs["gains_masks"] = GAINS_MASKS
+        kwargs["shares_adjustment"] = get_shares_adjustments("all:intervention")
+    ndb = NewDatabase(**kwargs)
+
+    ndb.update(sectors=SECTOR_UPDATES)
 
     ndb.write_db_to_matrices(outdir)
 

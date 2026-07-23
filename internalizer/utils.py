@@ -23,6 +23,7 @@ CPI = pd.read_csv(FILEPATH_CPI).set_index("year")["CPI"]
 
 METHOD2IC_MAPPING = DATA_DIR / "method2ic_mapping.csv"
 COMPARTMENTS_CHANGE = DATA_DIR / "PM_compartments_change.csv"
+FILEPATH_ADJUSTED_SECONDARY_SHARES = DATA_DIR / "adjusted_secondary_shares.csv"
 
 BMATRIX_DTYPES = {
     "index of activity": np.int32,
@@ -400,4 +401,55 @@ def get_automatic_exclude_list(
     """
     mapping = pd.read_csv(METHOD2IC_MAPPING).set_index("LCIA method")["impact_category"].to_dict()
     return [m for m in methods if mapping.get(m, m).lower() in ics_exclude]
+
+
+def get_group_shares(df, group, scen):
+    if group == "all":
+        sel = df
+    else:
+        if group not in df["group"].unique():
+            raise ValueError(f"Group {group} not found in {FILEPATH_ADJUSTED_SECONDARY_SHARES}."
+                            + "Please check the group names in the file and the config.")
+        sel = df[df["group"] == group]
+
+    shares = {}
+    baseline = sel.set_index("metal")["frozen"].to_dict()
+    if scen in sel.columns:
+        s = sel.set_index("metal")[scen].to_dict()
+        for metal, s in s.items():
+            bl = baseline[metal]
+            shares[metal] = {
+                "secondary": {2020: bl, 2050: s},
+                "primary": {2020: 1 - bl, 2050: 1 - s}
+            }
+    elif scen == "intervention":
+        metals = sel["metal"]
+        means = sel["central"]
+        minima = sel["low"]
+        maxima = sel["high"]
+        for metal, mean, min_, max_ in zip(metals, means, minima, maxima):
+            shares[metal] = {
+                "secondary": {
+                    2020: {"mean": baseline[metal], "min": baseline[metal], "max": baseline[metal]},
+                    2050: {"mean": mean, "min": min_, "max": max_}
+                },
+                "primary": {
+                    2020: {"mean": 1 - baseline[metal], "min": 1 - baseline[metal], "max": 1 - baseline[metal]},
+                    2050: {"mean": 1 - mean, "min": 1 - max_, "max": 1 - min_}
+                }
+            }
+
+    return shares
+
+
+def get_shares_adjustments(s):
+    adjustments = pd.read_csv(FILEPATH_ADJUSTED_SECONDARY_SHARES, delimiter=";")
+    shares_adjustments = get_group_shares(adjustments, "all", "frozen")
+    if s != "":
+        for x in s.split(","):
+            group, scen = x.split(":")
+            new_shares = get_group_shares(adjustments, group, scen) # check if groups and scenarios are valid
+            shares_adjustments.update(new_shares)
+    
+    return shares_adjustments
 
