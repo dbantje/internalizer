@@ -1,0 +1,272 @@
+REMIND index;scenario variable;dataset name;dataset reference product;dataset unit;share
+build - fehes;FE|Buildings|Heating|District Heating;market for heat, district or industrial, natural gas;heat, district or industrial, natural gas;megajoule;regional
+build - feels;FE|Buildings|Heating|Electricity|Heat pump;heat production, air-water heat pump 10kW;heat, air-water heat pump 10kW;megajoule;regional
+build - feels;FE|Buildings|Heating|Electricity|Resistance;heat, residential, electric storage heater, using electricity from grid;heat, from residential heating system;megajoule;regional
+build - fegas;FE|Buildings|Heating|Gases;heat production, natural gas, at boiler condensing modulating <100kW;heat, central or small-scale, natural gas;megajoule;regional
+build - feh2s;FE|Buildings|Heating|Hydrogen;heat, residential, by combustion of hydrogen using boiler, distributed by pipeline, produced by Electrolysis, PEM using electricity from grid;heat, from residential heating system;megajoule;regional
+build - fehos;FE|Buildings|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;light fuel oil, from non-residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+build - fehos;FE|Buildings|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Residues;light fuel oil, from residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+build - fehos;FE|Buildings|Liquids|+|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;light fuel oil, from oily biomass, burned in residential boiler;heat;megajoule;regional
+build - fehos;FE|Buildings|Liquids|+|Hydrogen;methanol, synthetic, burned in residential boiler;heat;megajoule;regional
+build - fehos;FE|Buildings|Liquids|Fossil|+|Coal;heat, residential, by combustion of methanol using boiler, distributed by truck, produced with coal;heat, from residential heating system;megajoule;regional
+build - fehos;FE|Buildings|Liquids|Fossil|+|Gas;heat, residential, by combustion of liquefied petroleum gas using boiler, distributed by pipeline;heat, from residential heating system;megajoule;regional
+build - fehos;FE|Buildings|Liquids|Fossil|+|Oil;heat production, light fuel oil, at boiler 100kW condensing, non-modulating;heat, central or small-scale, other than natural gas;megajoule;regional
+build - fesos;FE|Buildings|Solids|Biomass|+|Modern;heat production, wood pellet, at furnace 9kW;heat, central or small-scale, other than natural gas;megajoule;regional
+build - fesos;FE|Buildings|Solids|Biomass|+|Traditional;heat production, mixed logs, at wood heater 6kW;heat, central or small-scale, other than natural gas;megajoule;regional
+build - fesos;FE|Buildings|Solids|Coal;heat production, hard coal briquette, stove 5-15kW;heat, central or small-scale, other than natural gas;megajoule;regional
+build - feels;FE|Buildings|non-Heating|Electricity|Conventional;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
+cdr - feels;FE|CDR|DAC|+|Electricity;electricity, medium-voltage, used as final energy;heat;megajoule;regional
+cdr - fegas;FE|CDR|DAC|+|Gases;heat production, natural gas, at boiler condensing modulating >100kW;heat, district or industrial, natural gas;megajoule;regional
+cdr - fehes;FE|CDR|DAC|+|Heat;market for heat, district or industrial, natural gas;heat, district or industrial, natural gas;megajoule;regional
+cdr - feh2s;FE|CDR|DAC|+|Hydrogen;heat production, from hydrogen-fired one gigawatt gas turbine;heat;megajoule;regional
+cdr - fedie;FE|CDR|EW|+|Diesel;diesel, burned in diesel-electric generating set, 10MW;diesel, burned in diesel-electric generating set, 10MW;megajoule;regional
+cdr - feels;FE|CDR|EW|+|Electricity;electricity, medium-voltage, used as final energy;heat;megajoule;regional
+cdr - fedie;FE|CDR|OAE, electric calciner|+|Diesel;diesel, burned in diesel-electric generating set, 10MW;diesel, burned in diesel-electric generating set, 10MW;megajoule;regional
+cdr - feels;FE|CDR|OAE, electric calciner|+|Electricity;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
+cdr - feh2s;FE|CDR|OAE, electric calciner|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+cdr - fedie;FE|CDR|OAE, traditional calciner|+|Diesel;diesel, burned in diesel-electric generating set, 10MW;diesel, burned in diesel-electric generating set, 10MW;megajoule;regional
+cdr - feels;FE|CDR|OAE, traditional calciner|+|Electricity;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
+cdr - fegas;FE|CDR|OAE, traditional calciner|+|Gases;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
+cdr - feh2s;FE|CDR|OAE, traditional calciner|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+indst - feels;FE|Industry|Cement|+|Electricity;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - feh2s;FE|Industry|Cement|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+indst - fegas;FE|Industry|Cement|Gases|+|Biomass;biomethane, burned in residential natural gas boiler <100kW;heat;megajoule;regional
+indst - fegas;FE|Industry|Cement|Gases|+|Fossil;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
+indst - fegas;FE|Industry|Cement|Gases|+|Hydrogen;natural gas, synthetic, burned in gas turbine;heat;megajoule;regional
+indst - fehos;FE|Industry|Cement|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;light fuel oil, from non-residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Cement|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Residues;light fuel oil, from residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Cement|Liquids|+|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;light fuel oil, from oily biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Cement|Liquids|+|Fossil;light fuel oil, burned in industrial furnace 1MW;heat;megajoule;regional
+indst - fehos;FE|Industry|Cement|Liquids|+|Hydrogen;diesel, synthetic, burned in diesel-electric generating set, 10MW;heat;megajoule;regional
+indst - fesos;FE|Industry|Cement|Solids|+|Biomass;soft wood chips from forest, burned in furnace 1000kW;heat;megajoule;regional
+indst - fesos;FE|Industry|Cement|Solids|+|Fossil;hard coal, burned in hard coal industrial furnace 1-10MW;heat;megajoule;regional
+indst - feh2s;FE|Industry|Chemicals|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+indst - feels;FE|Industry|Chemicals|Electricity|+|High-temperature heat;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - feels;FE|Industry|Chemicals|Electricity|+|Mechanical work and low-temperature heat;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - fehes;FE|Industry|Other Industry|+|Heat;market for heat, district or industrial, natural gas;heat, district or industrial, natural gas;megajoule;regional
+indst - feh2s;FE|Industry|Other Industry|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+indst - feels;FE|Industry|Other Industry|Electricity|+|High-temperature heat;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - feels;FE|Industry|Other Industry|Electricity|+|Mechanical work and low-temperature heat;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - fegas;FE|Industry|Other Industry|Gases|+|Biomass;heat production, biomethane, at boiler condensing modulating <100kW;heat, central or small-scale, biomethane;megajoule;regional
+indst - fegas;FE|Industry|Other Industry|Gases|+|Fossil;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
+indst - fegas;FE|Industry|Other Industry|Gases|+|Hydrogen;natural gas, synthetic, burned in gas turbine;heat;megajoule;regional
+indst - fehos;FE|Industry|Other Industry|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;light fuel oil, from non-residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Other Industry|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Residues;light fuel oil, from residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Other Industry|Liquids|+|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;light fuel oil, from oily biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Other Industry|Liquids|+|Fossil;light fuel oil, burned in industrial furnace 1MW;heat;megajoule;regional
+indst - fehos;FE|Industry|Other Industry|Liquids|+|Hydrogen;diesel, synthetic, burned in diesel-electric generating set, 10MW;heat;megajoule;regional
+indst - fesos;FE|Industry|Other Industry|Solids|+|Biomass;soft wood chips from forest, burned in furnace 1000kW;heat;megajoule;regional
+indst - fesos;FE|Industry|Other Industry|Solids|+|Fossil;hard coal, burned in hard coal industrial furnace 1-10MW;heat;megajoule;regional
+indst - feels;FE|Industry|Steel|+|Electricity;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - feh2s;FE|Industry|Steel|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+indst - fegas;FE|Industry|Steel|Gases|+|Biomass;heat production, biomethane, at boiler condensing modulating <100kW;heat, central or small-scale, biomethane;megajoule;regional
+indst - fegas;FE|Industry|Steel|Gases|+|Fossil;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
+indst - fegas;FE|Industry|Steel|Gases|+|Hydrogen;natural gas, synthetic, burned in gas turbine;heat;megajoule;regional
+indst - fehos;FE|Industry|Steel|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;light fuel oil, from non-residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Steel|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Residues;light fuel oil, from residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Steel|Liquids|+|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;light fuel oil, from oily biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Steel|Liquids|+|Fossil;light fuel oil, burned in industrial furnace 1MW;heat;megajoule;regional
+indst - fehos;FE|Industry|Steel|Liquids|+|Hydrogen;diesel, synthetic, burned in diesel-electric generating set, 10MW;heat;megajoule;regional
+indst - fesos;FE|Industry|Steel|Solids|+|Biomass;soft wood chips from forest, burned in furnace 1000kW;heat;megajoule;regional
+indst - fesos;FE|Industry|Steel|Solids|+|Fossil;hard coal, burned in hard coal industrial furnace 1-10MW;heat;megajoule;regional
+indst - fegas;FE|Non-energy Use|Industry|Gases|+|Biomass;biomethane production, from biogas upgrading, using amine scrubbing;biomethane, from biogas upgrading, using amine scrubbing;kilogram;regional
+indst - fegas;FE|Non-energy Use|Industry|Gases|+|Fossil;market for natural gas, high pressure;natural gas, high pressure;cubic meter;regional
+indst - feh2s;FE|Non-energy Use|Industry|Gases|+|Hydrogen;market for hydrogen, gaseous, low pressure;hydrogen, gaseous, low pressure;kilogram;regional
+indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;light fuel oil, from non-residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Residues;light fuel oil, from residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;light fuel oil, from oily biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Fossil;market for light fuel oil;light fuel oil;kilogram;regional
+indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Hydrogen;diesel production, synthetic, Fischer Tropsch process, hydrogen from electrolysis, energy allocation;diesel, synthetic;kilogram;regional
+indst - fesos;FE|Non-energy Use|Industry|Solids|+|Biomass;market for plywood;plywood;cubic meter;regional
+indst - fesos;FE|Non-energy Use|Industry|Solids|+|Fossil;market for hard coal;hard coal;kilogram;regional
+trans - fedie;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;biodiesel, from non-residual cellulosic biomass, burned in container ship;heat;megajoule;regional
+trans - fedie;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;biodiesel, from non-residual cellulosic biomass, burned in container ship;heat;megajoule;regional
+trans - fedie;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;biodiesel, from non-residual oily biomass, burned in container ship;heat;megajoule;regional
+trans - fedie;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Fossil;heavy fuel oil, burned in container ship;heat;megajoule;regional
+trans - fedie;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Hydrogen;diesel, synthetic, burned in container ship;heat;megajoule;regional
+trans - fepet;FE|Transport|Bunkers|Pass|International Aviation|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;kerosene, from cellulosic non-residual biomass, burned in aircraft;heat;megajoule;regional
+trans - fepet;FE|Transport|Bunkers|Pass|International Aviation|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;kerosene, from cellulosic residual biomass, burned in aircraft;heat;megajoule;regional
+trans - fepet;FE|Transport|Bunkers|Pass|International Aviation|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;kerosene, from non-residual oily biomass, burned in aircraft;heat;megajoule;regional
+trans - fepet;FE|Transport|Bunkers|Pass|International Aviation|Liquids|Fossil;kerosene, burned in aircraft;heat;megajoule;regional
+trans - fepet;FE|Transport|Bunkers|Pass|International Aviation|Liquids|Hydrogen;kerosene, synthetic, burned in aircraft;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Domestic Shipping|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;biodiesel, from non-residual cellulosic biomass, burned in container ship;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Domestic Shipping|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;biodiesel, from residual cellulosic biomass, burned in container ship;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Domestic Shipping|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;biodiesel, from non-residual oily biomass, burned in container ship;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Domestic Shipping|Liquids|Fossil;heavy fuel oil, burned in container ship;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Domestic Shipping|Liquids|Hydrogen;diesel, synthetic, burned in container ship;heat;megajoule;regional
+trans - feelt;FE|Transport|Freight|Rail|Electricity;electricity, used in passenger train;electricity, high voltage;megajoule;regional
+trans - fedie;FE|Transport|Freight|Rail|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;biodiesel, from non-residual cellulosic biomass, burned in passenger train;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Rail|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;biodiesel, from residual cellulosic biomass, burned in passenger train;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Rail|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;biodiesel, from non-residual oily biomass, burned in passenger train;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Rail|Liquids|Fossil;diesel, burned in passenger train;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Rail|Liquids|Hydrogen;diesel, synthetic, burned in passenger train;heat;megajoule;regional
+trans - feelt;FE|Transport|Freight|Road|Heavy|Truck(18t)|Electricity;electricity, used in heavy-duty vehicle;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Heavy|Truck(18t)|Gases|Biomass;biomethane, burned in heavy duty vehicle;heat;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Heavy|Truck(18t)|Gases|Fossil;compressed gas, burned in heavy duty vehicle;heat;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Heavy|Truck(18t)|Gases|Hydrogen;compressed gas, synthetic, burned in heavy duty vehicle;heat;megajoule;regional
+trans - feh2t;FE|Transport|Freight|Road|Heavy|Truck(18t)|Hydrogen;hydrogen, used in a fuel cell in a heavy duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(18t)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;biodiesel, from non-residual cellulosic biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(18t)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;biodiesel, from residual cellulosic biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(18t)|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;biodiesel, from non-residual oily biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(18t)|Liquids|Fossil;diesel, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(18t)|Liquids|Hydrogen;diesel, synthetic, burned in heavy duty vehicle;heat;megajoule;regional
+trans - feelt;FE|Transport|Freight|Road|Heavy|Truck(26t)|Electricity;electricity, used in heavy-duty vehicle;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Heavy|Truck(26t)|Gases|Biomass;biomethane, burned in heavy duty vehicle;heat;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Heavy|Truck(26t)|Gases|Fossil;compressed gas, burned in heavy duty vehicle;heat;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Heavy|Truck(26t)|Gases|Hydrogen;compressed gas, synthetic, burned in heavy duty vehicle;heat;megajoule;regional
+trans - feh2t;FE|Transport|Freight|Road|Heavy|Truck(26t)|Hydrogen;hydrogen, used in a fuel cell in a heavy duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(26t)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;biodiesel, from non-residual cellulosic biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(26t)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;biodiesel, from residual cellulosic biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(26t)|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;biodiesel, from non-residual oily biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(26t)|Liquids|Fossil;diesel, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(26t)|Liquids|Hydrogen;diesel, synthetic, burned in heavy duty vehicle;heat;megajoule;regional
+trans - feelt;FE|Transport|Freight|Road|Heavy|Truck(40t)|Electricity;electricity, used in heavy-duty vehicle;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Heavy|Truck(40t)|Gases|Biomass;biomethane, burned in heavy duty vehicle;heat;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Heavy|Truck(40t)|Gases|Fossil;compressed gas, burned in heavy duty vehicle;heat;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Heavy|Truck(40t)|Gases|Hydrogen;compressed gas, synthetic, burned in heavy duty vehicle;heat;megajoule;regional
+trans - feh2t;FE|Transport|Freight|Road|Heavy|Truck(40t)|Hydrogen;hydrogen, used in a fuel cell in a heavy duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(40t)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;biodiesel, from non-residual cellulosic biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(40t)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;biodiesel, from residual cellulosic biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(40t)|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;biodiesel, from non-residual oily biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(40t)|Liquids|Fossil;diesel, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Heavy|Truck(40t)|Liquids|Hydrogen;diesel, synthetic, burned in heavy duty vehicle;heat;megajoule;regional
+trans - feelt;FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Electricity;electricity, used in passenger car;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Gases|Biomass;biomethane, burned in heavy duty vehicle;heat;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Gases|Fossil;compressed gas, burned in heavy duty vehicle;heat;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Gases|Hydrogen;compressed gas, synthetic, burned in heavy duty vehicle;heat;megajoule;regional
+trans - feh2t;FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Hydrogen;hydrogen, used in a fuel cell in a heavy duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;biodiesel, from non-residual cellulosic biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;biodiesel, from residual cellulosic biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;biodiesel, from non-residual oily biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fepet;FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Liquids|Fossil;petrol, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Light|Truck(0-3_5t)|Liquids|Hydrogen;diesel, synthetic, burned in heavy duty vehicle;heat;megajoule;regional
+trans - feelt;FE|Transport|Freight|Road|Light|Truck(7_5t)|Electricity;electricity, used in heavy-duty vehicle;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Light|Truck(7_5t)|Gases|Biomass;biomethane, burned in heavy duty vehicle;heat;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Light|Truck(7_5t)|Gases|Fossil;compressed gas, burned in heavy duty vehicle;heat;megajoule;regional
+trans - fegat;FE|Transport|Freight|Road|Light|Truck(7_5t)|Gases|Hydrogen;compressed gas, synthetic, burned in heavy duty vehicle;heat;megajoule;regional
+trans - feh2t;FE|Transport|Freight|Road|Light|Truck(7_5t)|Hydrogen;hydrogen, used in a fuel cell in a heavy duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Light|Truck(7_5t)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;biodiesel, from non-residual cellulosic biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Light|Truck(7_5t)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;biodiesel, from residual oily biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Light|Truck(7_5t)|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;biodiesel, from non-residual oily biomass, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Light|Truck(7_5t)|Liquids|Fossil;diesel, burned in heavy-duty vehicle;heat;megajoule;regional
+trans - fedie;FE|Transport|Freight|Road|Light|Truck(7_5t)|Liquids|Hydrogen;diesel, synthetic, burned in heavy duty vehicle;heat;megajoule;regional
+trans - feh2t;FE|Transport|Pass|Domestic Aviation|Hydrogen;hydrogen, burned in aircraft;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Domestic Aviation|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;kerosene, from cellulosic non-residual biomass, burned in aircraft;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Domestic Aviation|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;kerosene, from cellulosic residual biomass, burned in aircraft;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Domestic Aviation|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;kerosene, from non-residual oily biomass, burned in aircraft;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Domestic Aviation|Liquids|Fossil;kerosene, burned in aircraft;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Domestic Aviation|Liquids|Hydrogen;kerosene, synthetic, burned in aircraft;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Rail|Electricity;electricity, used in passenger train;electricity, high voltage;megajoule;regional
+trans - fedie;FE|Transport|Pass|Rail|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;biodiesel, from non-residual cellulosic biomass, burned in passenger train;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Rail|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;biodiesel, from residual oily biomass, burned in passenger train;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Rail|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;biodiesel, from non-residual oily biomass, burned in passenger train;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Rail|Liquids|Fossil;diesel, burned in passenger train;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Rail|Liquids|Hydrogen;diesel, synthetic, burned in passenger train;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Road|Bus|Electricity;electricity, used in single deck coach or urban bus;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|Bus|Gases|Biomass;biomethane, burned in single deck coach or urban bus;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|Bus|Gases|Fossil;compressed gas, burned in single deck coach or urban bus;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|Bus|Gases|Hydrogen;compressed gas, synthetic, burned in single deck coach or urban bus;heat;megajoule;regional
+trans - feh2t;FE|Transport|Pass|Road|Bus|Hydrogen;hydrogen, used in a fuel cell in a single deck coach or urban bus;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|Bus|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;biodiesel, from non-residual cellulosic biomass, burned in single deck coach or urban bus;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|Bus|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;biodiesel, from residual oily biomass, burned in single deck coach or urban bus;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|Bus|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;biodiesel, from non-residual oily biomass, burned in single deck coach or urban bus;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|Bus|Liquids|Fossil;diesel, burned in single deck coach or urban bus;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|Bus|Liquids|Hydrogen;diesel, synthetic, burned in single deck coach or urban bus;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Electricity;electricity, used in passenger car;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Gases|Biomass;biomethane, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Gases|Fossil;compressed gas, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Gases|Hydrogen;compressed gas, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feh2t;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Hydrogen;hydrogen, used in a fuel cell in a passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;bioethanol, from non-residual cellulosic biomass, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;bioethanol, from forest residues, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Sugar and Starch;bioethanol, from sugar crops, burned in passenger car;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids|Fossil;petrol, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car and SUV|Liquids|Hydrogen;diesel, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Electricity;electricity, used in passenger car;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Gases|Biomass;biomethane, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Gases|Fossil;compressed gas, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Gases|Hydrogen;compressed gas, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feh2t;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Hydrogen;hydrogen, used in a fuel cell in a passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;bioethanol, from non-residual cellulosic biomass, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;bioethanol, from forest residues, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Sugar and Starch;bioethanol, from sugar crops, burned in passenger car;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Liquids|Fossil;petrol, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Large Car|Liquids|Hydrogen;diesel, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Electricity;electricity, used in passenger car;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Gases|Biomass;biomethane, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Gases|Fossil;compressed gas, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Gases|Hydrogen;compressed gas, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feh2t;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Hydrogen;hydrogen, used in a fuel cell in a passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;bioethanol, from non-residual cellulosic biomass, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;bioethanol, from forest residues, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Sugar and Starch;bioethanol, from sugar crops, burned in passenger car;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Liquids|Fossil;petrol, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Large|Van|Liquids|Hydrogen;diesel, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Electricity;electricity, used in passenger car;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Gases|Biomass;biomethane, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Gases|Fossil;compressed gas, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Gases|Hydrogen;compressed gas, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feh2t;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Hydrogen;hydrogen, used in a fuel cell in a passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;bioethanol, from non-residual cellulosic biomass, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;bioethanol, from forest residues, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Sugar and Starch;bioethanol, from sugar crops, burned in passenger car;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids|Fossil;petrol, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Compact Car|Liquids|Hydrogen;diesel, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Electricity;electricity, used in passenger car;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Gases|Biomass;biomethane, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Gases|Fossil;compressed gas, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Gases|Hydrogen;compressed gas, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feh2t;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Hydrogen;hydrogen, used in a fuel cell in a passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;bioethanol, from non-residual cellulosic biomass, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;bioethanol, from forest residues, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Sugar and Starch;bioethanol, from sugar crops, burned in passenger car;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids|Fossil;petrol, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Medium|Midsize Car|Liquids|Hydrogen;diesel, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Electricity;electricity, used in passenger car;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Gases|Biomass;biomethane, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Gases|Fossil;compressed gas, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Gases|Hydrogen;compressed gas, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feh2t;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Hydrogen;hydrogen, used in a fuel cell in a passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;bioethanol, from non-residual cellulosic biomass, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;bioethanol, from forest residues, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Sugar and Starch;bioethanol, from sugar crops, burned in passenger car;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Liquids|Fossil;petrol, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Mini Car|Liquids|Hydrogen;diesel, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Electricity;electricity, used in passenger car;electricity, low voltage;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Gases|Biomass;biomethane, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Gases|Fossil;compressed gas, burned in passenger car;heat;megajoule;regional
+trans - fegat;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Gases|Hydrogen;compressed gas, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feh2t;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Hydrogen;hydrogen, used in a fuel cell in a passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;bioethanol, from non-residual cellulosic biomass, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;bioethanol, from forest residues, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Sugar and Starch;bioethanol, from sugar crops, burned in passenger car;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids|Fossil;petrol, burned in passenger car;heat;megajoule;regional
+trans - fedie;FE|Transport|Pass|Road|LDV|Four Wheelers|Small|Subcompact Car|Liquids|Hydrogen;diesel, synthetic, burned in passenger car;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Road|LDV|Two Wheelers|Moped|Electricity;electricity, used in battery electric motorcycle;electricity, low voltage;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Moped|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;bioethanol, from eucalyptus, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Moped|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;bioethanol, from residues, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Moped|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Sugar and Starch;bioethanol, from sugar crops, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Moped|Liquids|Fossil;petrol, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Moped|Liquids|Hydrogen;petrol, synthetic, burned in motorcycle;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|Electricity;electricity, used in battery electric motorcycle;electricity, low voltage;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;bioethanol, from eucalyptus, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;bioethanol, from residues, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Sugar and Starch;bioethanol, from sugar crops, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|Liquids|Fossil;petrol, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(50-250cc)|Liquids|Hydrogen;petrol, synthetic, burned in motorcycle;heat;megajoule;regional
+trans - feelt;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|Electricity;electricity, used in battery electric motorcycle;electricity, low voltage;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;bioethanol, from eucalyptus, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;bioethanol, from residues, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Sugar and Starch;bioethanol, from sugar crops, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|Liquids|Fossil;petrol, burned in motorcycle;heat;megajoule;regional
+trans - fepet;FE|Transport|Pass|Road|LDV|Two Wheelers|Motorcycle(>250cc)|Liquids|Hydrogen;petrol, synthetic, burned in motorcycle;heat;megajoule;regional
+indst - fegas;FE|w/o Non-energy Use|Industry|Chemicals|Gases|+|Biomass;biomethane, burned in residential natural gas boiler <100kW;heat;megajoule;regional
+indst - fegas;FE|w/o Non-energy Use|Industry|Chemicals|Gases|+|Fossil;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
+indst - fegas;FE|w/o Non-energy Use|Industry|Chemicals|Gases|+|Hydrogen;natural gas, synthetic, burned in gas turbine;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;light fuel oil, from non-residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Residues;light fuel oil, from residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;light fuel oil, from oily biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Fossil;light fuel oil, burned in industrial furnace 1MW;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Hydrogen;diesel, synthetic, burned in diesel-electric generating set, 10MW;heat;megajoule;regional
+indst - fesos;FE|w/o Non-energy Use|Industry|Chemicals|Solids|+|Biomass;soft wood chips from forest, burned in furnace 1000kW;heat;megajoule;regional
+indst - fesos;FE|w/o Non-energy Use|Industry|Chemicals|Solids|+|Fossil;hard coal, burned in hard coal industrial furnace 1-10MW;heat;megajoule;regional
