@@ -22,7 +22,7 @@ mappings:
     path: /p/tmp/davidba/internalizer/internalizer/data/mappings/h22se.csv
     depends_on_year: False
   fe:
-    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/demFE.csv
+    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/demFE_bioallocation.csv
     depends_on_year: True
 removal_lists:
   fe:
