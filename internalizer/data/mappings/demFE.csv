@@ -39,14 +39,14 @@ indst - fesos;FE|Industry|Cement|Solids|+|Fossil;hard coal, burned in hard coal 
 indst - feh2s;FE|Industry|Chemicals|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 indst - feels;FE|Industry|Chemicals|Electricity|+|High-temperature heat;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
 indst - feels;FE|Industry|Chemicals|Electricity|+|Mechanical work and low-temperature heat;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
-indst - fegas;FE|Industry|Chemicals|Gases|+|Biomass;biomethane, burned in residential natural gas boiler <100kW;heat;megajoule;regional
-indst - fegas;FE|Industry|Chemicals|Gases|+|Fossil;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
-indst - fegas;FE|Industry|Chemicals|Gases|+|Hydrogen;natural gas, synthetic, burned in gas turbine;heat;megajoule;regional
-indst - fehos;FE|Industry|Chemicals|Liquids|+|Biomass;methanol from biomass, burned in residential boiler;heat;megajoule;regional
-indst - fehos;FE|Industry|Chemicals|Liquids|+|Fossil;light fuel oil, burned in industrial furnace 1MW;heat;megajoule;regional
-indst - fehos;FE|Industry|Chemicals|Liquids|+|Hydrogen;diesel, synthetic, burned in diesel-electric generating set, 10MW;heat;megajoule;regional
-indst - fesos;FE|Industry|Chemicals|Solids|+|Biomass;soft wood chips from forest, burned in furnace 1000kW;heat;megajoule;regional
-indst - fesos;FE|Industry|Chemicals|Solids|+|Fossil;hard coal, burned in hard coal industrial furnace 1-10MW;heat;megajoule;regional
+indst - fegas;FE|w/o Non-energy Use|Industry|Chemicals|Gases|+|Biomass;biomethane, burned in residential natural gas boiler <100kW;heat;megajoule;regional
+indst - fegas;FE|w/o Non-energy Use|Industry|Chemicals|Gases|+|Fossil;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
+indst - fegas;FE|w/o Non-energy Use|Industry|Chemicals|Gases|+|Hydrogen;natural gas, synthetic, burned in gas turbine;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Biomass;methanol from biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Fossil;light fuel oil, burned in industrial furnace 1MW;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Hydrogen;diesel, synthetic, burned in diesel-electric generating set, 10MW;heat;megajoule;regional
+indst - fesos;FE|w/o Non-energy Use|Industry|Chemicals|Solids|+|Biomass;soft wood chips from forest, burned in furnace 1000kW;heat;megajoule;regional
+indst - fesos;FE|w/o Non-energy Use|Industry|Chemicals|Solids|+|Fossil;hard coal, burned in hard coal industrial furnace 1-10MW;heat;megajoule;regional
 indst - fehes;FE|Industry|Other Industry|+|Heat;market for heat, district or industrial, natural gas;heat, district or industrial, natural gas;megajoule;regional
 indst - feh2s;FE|Industry|Other Industry|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 indst - feels;FE|Industry|Other Industry|Electricity|+|High-temperature heat;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
