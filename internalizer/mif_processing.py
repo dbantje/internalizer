@@ -6,7 +6,11 @@ def add_ES_subcategories(mifpath, newpath):
     """
     Add subcategories for ES transport variables that are needed for premise.
     """
-    df = pd.read_csv(mifpath, sep=";").iloc[:, :-1]
+    df = pd.read_csv(mifpath, sep=";")
+    if len(df.columns) == 25:
+        df = df.iloc[:, :-1]
+    if len(df.columns) != 24:
+        raise ValueError("Unexpected number of columns in the MIF file.")
 
     all_variables = list(df["Variable"].unique())
     ES_variables = [v for v in all_variables if v.startswith("ES|Transport")]
