@@ -370,6 +370,9 @@ def _run_premise_year(
         correct_coke_production_flows(mfolder)
 
     if change_pm_compartments:
+        model = scen["model"]
+        scenario = scen["pathway"]
+        year = scen["year"]
         matrix_folder = outdir + f"/{model}/{scenario}/{str(year)}/"
         fps = [matrix_folder + fn for fn in os.listdir(matrix_folder) if "matrix" in fn]
         if len(fps) != 4:
