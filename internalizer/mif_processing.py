@@ -1,5 +1,5 @@
 import pandas as pd
-from allocate_bio_liquids import process_mif_file
+from .allocate_bio_liquids import process_mif_file
 import xarray as xr
 
 def add_ES_subcategories(mifpath, newpath):
