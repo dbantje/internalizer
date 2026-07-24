@@ -123,6 +123,7 @@ class Internalizer:
         multiprocessing: bool = True,
         quiet: bool = True,
         include_interventions: bool = True,
+        change_pm_compartments: bool = False,
     ) -> None:
         self.years = years
         
@@ -134,7 +135,8 @@ class Internalizer:
                 self.source_version,
                 self.outdir,
                 quiet,
-                include_interventions
+                include_interventions,
+                change_pm_compartments,
             )
             for year in self.years
         ]
@@ -181,7 +183,6 @@ class Internalizer:
         monetization: float | str | dict,
         multiprocessing: bool = True,
         save_intermediate_results: bool = False,
-        change_pm_compartments: bool = False,
     ) -> None:
         """
         Calculate all costs.
@@ -222,7 +223,6 @@ class Internalizer:
                         self.outdir,
                         self.model,
                         save_intermediate_results,
-                        change_pm_compartments,
                     )   
                 )
 

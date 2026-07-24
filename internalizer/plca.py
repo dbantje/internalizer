@@ -176,8 +176,8 @@ def get_lca_matrices(
             f"Expected 4 filepaths, got {len(fps)} when looking at {filepaths} for terms: {model}, {scenario}, {year}"
         )
 
-    if change_pm_compartments:
-        change_compartments_PM(fps)
+    # if change_pm_compartments:
+    #     change_compartments_PM(fps)
 
     fp_technosphere_inds = select_filepath("A_matrix_index", fps)
     fp_biosphere_inds = select_filepath("B_matrix_index", fps)
@@ -337,6 +337,7 @@ def _run_premise_year(
     outdir: str,
     quiet: bool,
     include_interventions: bool,
+    change_pm_compartments: bool,
 ) -> None:
     bd.projects.set_current(project)
 
@@ -368,6 +369,16 @@ def _run_premise_year(
         mfolder = outdir + f"/{model}/{scenario}/{str(year)}/"
         correct_coke_production_flows(mfolder)
 
+    if change_pm_compartments:
+        matrix_folder = outdir + f"/{model}/{scenario}/{str(year)}/"
+        fps = [matrix_folder + fn for fn in os.listdir(matrix_folder) if "matrix" in fn]
+        if len(fps) != 4:
+            raise ValueError(
+                f"Expected 4 filepaths, got {len(fps)} when looking at filepaths for terms: {model}, {scenario}, {year}"
+            )
+    
+        change_compartments_PM(fps)
+
 def _calculate_costs_year(
     mapping: pd.DataFrame,
     monetization: float | str | dict,
@@ -378,7 +389,6 @@ def _calculate_costs_year(
     outdir: str,
     model: str,
     save_intermediate_results: bool,
-    change_pm_compartments: bool = False,
 ) -> xr.DataArray:
 
     # load matrices
@@ -388,7 +398,6 @@ def _calculate_costs_year(
         model,
         scenario,
         year,
-        change_pm_compartments=change_pm_compartments,
     )
     print(f"{level}, {year}: Matrices loaded")
 
