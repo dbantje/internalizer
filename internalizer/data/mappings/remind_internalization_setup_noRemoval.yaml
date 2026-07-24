@@ -4,10 +4,10 @@ levels:
   - FE
 mappings:
   SE:
-    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/prodSE.csv
+    file: prodSE.csv
     depends_on_year: False
   FE:
-    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/demFE.csv
+    file: demFE.csv
     depends_on_year: True
 removal_lists: {}
 domains:

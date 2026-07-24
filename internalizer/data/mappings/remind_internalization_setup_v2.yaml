@@ -13,16 +13,16 @@ aggregate_levels:
     - h22se
 mappings:
   pe2se:
-    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/pe2se.csv
+    file: pe2se.csv
     depends_on_year: False
   se2h2:
-    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/se2h2.csv
+    file: se2h2.csv
     depends_on_year: False
   h22se:
-    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/h22se.csv
+    file: h22se.csv
     depends_on_year: False
   fe:
-    path: /p/tmp/davidba/internalizer/internalizer/data/mappings/demFE_bioallocation.csv
+    file: demFE_bioallocation.csv
     depends_on_year: True
 removal_lists:
   fe:

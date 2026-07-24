@@ -55,7 +55,8 @@ class CalculationSetup:
         # read in mapping files
         for lvl, ddict in setup["mappings"].items():
             data[lvl] = {}
-            mapping = pd.read_csv(ddict["path"], sep=";")
+            fp = DATA_DIR / "mappings" / ddict["file"]
+            mapping = pd.read_csv(fp, sep=";")
             data[lvl]["base mapping"] = mapping
 
             if "domains" in setup.keys():
