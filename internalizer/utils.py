@@ -317,12 +317,15 @@ def change_compartments_PM(filepaths) -> None:
         header=None,
         names=["name", "reference product", "unit", "location", "index"]
     )
+    Aidx["index"] = Aidx["index"].astype(int)
     Bidx = pd.read_csv(
         select_filepath(("B_matrix_index"), filepaths),
         sep=";",
         header=None,
         names=["name", "compartment", "subcompartment", "unit", "index"]
-    ).set_index(["name", "compartment", "subcompartment"])["index"]
+    )
+    Bidx["index"] = Bidx["index"].astype(int)
+    Bidx = Bidx.set_index(["name", "compartment", "subcompartment"])["index"]
     fp_biosphere = select_filepath(
         "B_matrix", [fp for fp in filepaths if "index" not in fp.name]
     )
