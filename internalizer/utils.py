@@ -25,6 +25,22 @@ METHOD2IC_MAPPING = DATA_DIR / "method2ic_mapping.csv"
 COMPARTMENTS_CHANGE = DATA_DIR / "PM_compartments_change.csv"
 FILEPATH_ADJUSTED_SECONDARY_SHARES = DATA_DIR / "adjusted_secondary_shares.csv"
 
+AIDX_DTYPES = {
+    "name": str,
+    "reference product": str,
+    "unit": str,
+    "location": str,
+    "index": np.int32
+}
+
+BIDX_DTYPES = {
+    "name": str,
+    "compartment": str,
+    "subcompartment": str,
+    "unit": str,
+    "index": np.int32
+}
+
 BMATRIX_DTYPES = {
     "index of activity": np.int32,
     "index of biosphere flow": np.int32,
@@ -314,17 +330,13 @@ def change_compartments_PM(filepaths) -> None:
     Aidx = pd.read_csv(
         select_filepath(("A_matrix_index"), filepaths),
         sep=";",
-        header=None,
-        names=["name", "reference product", "unit", "location", "index"]
+        dtype=AIDX_DTYPES,
     )
-    Aidx["index"] = Aidx["index"].astype(int)
     Bidx = pd.read_csv(
         select_filepath(("B_matrix_index"), filepaths),
         sep=";",
-        header=None,
-        names=["name", "compartment", "subcompartment", "unit", "index"]
+        dtype=BIDX_DTYPES
     )
-    Bidx["index"] = Bidx["index"].astype(int)
     Bidx = Bidx.set_index(["name", "compartment", "subcompartment"])["index"]
     fp_biosphere = select_filepath(
         "B_matrix", [fp for fp in filepaths if "index" not in fp.name]
