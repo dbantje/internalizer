@@ -356,10 +356,9 @@ def _run_premise_year(
         kwargs["intervention_scenarios"] = {iv: "intervention" for iv in ALL_INTERVENTIONS}
         kwargs["gains_masks"] = GAINS_MASKS
         kwargs["shares_adjustments"] = get_shares_adjustments("all:intervention")
+    
     ndb = NewDatabase(**kwargs)
-
     ndb.update(sectors=SECTOR_UPDATES)
-
     ndb.write_db_to_matrices(outdir)
 
     if ei_version == "3.10":
@@ -374,7 +373,7 @@ def _run_premise_year(
         scenario = scen["pathway"]
         year = scen["year"]
         matrix_folder = outdir + f"/{model}/{scenario}/{str(year)}/"
-        fps = [matrix_folder + fn for fn in os.listdir(matrix_folder) if "matrix" in fn]
+        fps = [Path(matrix_folder + fn) for fn in os.listdir(matrix_folder) if "matrix" in fn]
         if len(fps) != 4:
             raise ValueError(
                 f"Expected 4 filepaths, got {len(fps)} when looking at filepaths for terms: {model}, {scenario}, {year}"
