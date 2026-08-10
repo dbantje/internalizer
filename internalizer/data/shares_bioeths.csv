@@ -1,13 +1,13 @@
-region,corn,sugarbeet,sugarcane,grain sorghum
+region,corn,sugarbeet,sugarcane,wheat grains
 CAZ,0.4,0.3,,0.3
 CHA,0.4,0.4,,0.2
-EUR,0.3,0.7,,
-IND,,,0.5,0.5
+EUR,0.3,0.3,,0.4
+IND,,,0.8,0.2
 JPN,0.5,0.3,,0.2
-LAM,0.5,,0.5,
+LAM,0.1,,0.8,0.1
 MEA,,,0.5,0.5
-NEU,0.3,0.7,,
-OAS,0.3,,0.7,
-REF,,1.0,,
+NEU,0.3,0.3,,0.4
+OAS,,,0.7,0.3
+REF,,0.4,,0.6
 SSA,,,0.3,0.7
 USA,0.9,0.1,,
