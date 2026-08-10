@@ -47,6 +47,7 @@ removal_lists:
         - petrol production
         - syngas, RWGS, Production
         - wood chips production
+        - esterification of soybean oil
     mask:
       dataset name:
         - unit construction

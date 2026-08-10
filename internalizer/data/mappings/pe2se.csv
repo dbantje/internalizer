@@ -45,6 +45,7 @@ bioftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from w
 bioftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;0.5
 biodiesel;biodiesel production, via transesterification, from palm oil, energy allocation;biodiesel, from palm oil;kilogram;regional
 biodiesel;biodiesel production, via transesterification, from rapeseed oil, energy allocation;biodiesel, from rapeseed oil;kilogram;regional
+biodiesel;esterification of soybean oil;fatty acid methyl ester;kilogram;regional
 bioeths;ethanol production, via fermentation, from corn, energy allocation;ethanol, from corn;kilogram;regional
 bioeths;ethanol production, via fermentation, from sugarbeet, energy allocation;ethanol, from sugarbeet;kilogram;regional
 bioeths;ethanol production, via fermentation, from sugarcane, energy allocation;ethanol, from sugarcane;kilogram;regional
