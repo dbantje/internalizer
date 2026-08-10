@@ -48,7 +48,8 @@ biodiesel;biodiesel production, via transesterification, from rapeseed oil, ener
 bioeths;ethanol production, via fermentation, from corn, energy allocation;ethanol, from corn;kilogram;regional
 bioeths;ethanol production, via fermentation, from sugarbeet, energy allocation;ethanol, from sugarbeet;kilogram;regional
 bioeths;ethanol production, via fermentation, from sugarcane, energy allocation;ethanol, from sugarcane;kilogram;regional
-bioeths;ethanol production, via fermentation, from grain sorghum, energy allocation;ethanol, from grain sorghum;kilogram;regional
+bioeths;ethanol production, via fermentation, from wheat grains, energy allocation;ethanol, from wheat grains;kilogram;regional
+bioethl;ethanol production, via fermentation, from forest residue, energy allocation;ethanol, from forest residue;kilogram;regional
 bioethl;ethanol production, via fermentation, from poplar, energy allocation;ethanol, from poplar;kilogram;regional
 bioethl;ethanol production, via fermentation, from switchgrass, energy allocation;ethanol, from switchgrass;kilogram;regional
 bioethl;ethanol production, via fermentation, from eucalyptus;ethanol, from eucalyptus;kilogram;regional
