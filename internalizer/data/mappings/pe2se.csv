@@ -61,8 +61,10 @@ bioigccc;electricity production, at biomass-fired IGCC power plant, pre, pipelin
 bioh2;hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, at gasification plant;hydrogen, gaseous, 25 bar;kilogram;1.0
 bioh2c;hydrogen production, gaseous, 25 bar, from gasification of woody biomass in entrained flow gasifier, with CCS, at gasification plant;hydrogen, gaseous, 25 bar;kilogram;1.0
 biohp;heat production, hardwood chips from forest, at furnace 5000kW, state-of-the-art 2014;heat, district or industrial, other than natural gas;megajoule;1.0
-biotr;wood chips production, hardwood, at sawmill;wood chips, wet, measured as dry mass;kilogram;1.0
-biotrmod;wood pellet production;wood pellet, measured as dry mass;kilogram;1.0
+biotr;wood chips production, hardwood, at sawmill;wood chips, wet, measured as dry mass;kilogram;regional
+biotr;supply of forest residue;forest residue;kilogram;regional
+biotrmod;wood pellet production;wood pellet, measured as dry mass;kilogram;regional
+biotrmod;supply of forest residue;forest residue;kilogram;regional
 biogas;biomethane production, high pressure from synthetic gas, wood, fixed bed technology;biomethane, high pressure;cubic meter;1.0
 biogasc;biomethane production, high pressure from synthetic gas, wood, fixed bed technology;biomethane, high pressure;cubic meter;1.0
 geohdr;electricity production, deep geothermal;electricity, high voltage;kilowatt hour;1.0
