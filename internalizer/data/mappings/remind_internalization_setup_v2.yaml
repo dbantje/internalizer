@@ -14,7 +14,7 @@ aggregate_levels:
 mappings:
   pe2se:
     file: pe2se.csv
-    depends_on_year: False
+    depends_on_year: True
   se2h2:
     file: se2h2.csv
     depends_on_year: False

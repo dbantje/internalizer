@@ -2,8 +2,8 @@ import pandas as pd
 from typing import List, Optional
 from pathlib import Path
 from .regionalization import (
-    get_regionalized_mapping,
-    regionalize_SE_mapping,
+    regionalize_pe2se_mapping,
+    fill_regions_mapping,
     fill_mapping_from_mif,
     get_prodSE,
     get_demFE
@@ -99,7 +99,7 @@ class CalculationSetup:
     ) -> None:
         for lvl in self.levels:
             if not self.setup["mappings"][lvl]["depends_on_year"]:
-                self.data[lvl]["regionalized mapping"] = get_regionalized_mapping(self.data[lvl]["base mapping"], None)
+                self.data[lvl]["regionalized mapping"] = fill_regions_mapping(self.data[lvl]["base mapping"])
 
     def get_production_volume(
         self,
@@ -127,9 +127,9 @@ class RemindInternalizationSetup(CalculationSetup):
 
     def regionalize_constant_mappings(self) -> None:
         for lvl in self.levels:
-            if lvl in ["pe2se", "seh2", "h22se"]:
-                self.data[lvl]["regionalized mapping"] = regionalize_SE_mapping(
-                    self.data[lvl]["base mapping"], self.gdxpath)
+            if lvl in ["seh2", "h22se"]:
+                self.data[lvl]["regionalized mapping"] = fill_regions_mapping(
+                    self.data[lvl]["base mapping"])
 
     def regionalize_dynamic_mapping(
         self,
@@ -138,8 +138,12 @@ class RemindInternalizationSetup(CalculationSetup):
     ) -> pd.DataFrame:
         if lvl == "fe":
             return fill_mapping_from_mif(self.data[lvl]["base mapping"], self.mifpath, year)
+        elif lvl == "pe2se":
+            return regionalize_pe2se_mapping(self.data[lvl]["base mapping"], self.gdxpath, self.mifpath, year)
         else:
-            return get_regionalized_mapping(self.data[lvl]["base mapping"], None)
+            if self.setup["mappings"][lvl]["depends_on_year"]:
+                raise ValueError(f"Mapping for level {lvl} is not implemented yet.")
+            return fill_regions_mapping(self.data[lvl]["base mapping"])
         
     def get_production_volumes(
         self,
