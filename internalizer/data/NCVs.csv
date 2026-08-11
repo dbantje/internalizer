@@ -51,6 +51,6 @@ plywood,cubic meter,10800
 "electricity, high voltage",megajoule,1.0
 "electricity, low voltage",megajoule,1.0
 biochar,kilogram,28.7
-biomethane, high pressure,cubic meter,36
+"biomethane, high pressure",cubic meter,36
 forest residue,kilogram,15.4
 fatty acid methyl ester,kilogram,37.8
