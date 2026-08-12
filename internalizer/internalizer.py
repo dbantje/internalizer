@@ -183,6 +183,7 @@ class Internalizer:
         monetization: float | str | dict,
         multiprocessing: bool = True,
         save_intermediate_results: bool = False,
+        use_removal_lists: bool = True,
     ) -> None:
         """
         Calculate all costs.
@@ -206,7 +207,7 @@ class Internalizer:
 
         args = []
         for lvl in self.cs.levels:
-            rlist = self.cs.data[lvl]["removal list"]
+            rlist = self.cs.data[lvl]["removal list"] if use_removal_lists else None
             for year in self.years:
                 mapping = self.cs.data[lvl].get(
                     "regionalized mapping", self.cs.regionalize_dynamic_mapping(lvl, year)
