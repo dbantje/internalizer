@@ -1,81 +1,129 @@
-,region,REMIND index,dataset name,dataset reference product,dataset unit,share
-0,CAZ,bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.4
-1,CHA,bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.4
-2,EUR,bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.3
-4,JPN,bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.5
-5,LAM,bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.1
-7,NEU,bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.3
-11,USA,bioeths,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.9
-12,CAZ,bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.3
-13,CHA,bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.4
-14,EUR,bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.3
-16,JPN,bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.3
-19,NEU,bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.3
-21,REF,bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.4
-23,USA,bioeths,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.1
-27,IND,bioeths,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.8
-29,LAM,bioeths,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.8
-30,MEA,bioeths,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.5
-32,OAS,bioeths,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.7
-34,SSA,bioeths,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.3
-36,CAZ,bioeths,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.3
-37,CHA,bioeths,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.2
-38,EUR,bioeths,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.4
-39,IND,bioeths,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.2
-40,JPN,bioeths,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.2
-41,LAM,bioeths,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.1
-42,MEA,bioeths,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.5
-43,NEU,bioeths,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.4
-44,OAS,bioeths,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.3
-45,REF,bioeths,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.6
-46,SSA,bioeths,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.7
-51,IND,biodiesel,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0
-54,MEA,biodiesel,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0
-56,OAS,biodiesel,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0
-58,SSA,biodiesel,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0
-62,EUR,biodiesel,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0
-64,JPN,biodiesel,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0
-67,NEU,biodiesel,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0
-69,REF,biodiesel,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0
-72,CAZ,biodiesel,esterification of soybean oil,fatty acid methyl ester,kilogram,1.0
-73,CHA,biodiesel,esterification of soybean oil,fatty acid methyl ester,kilogram,1.0
-77,LAM,biodiesel,esterification of soybean oil,fatty acid methyl ester,kilogram,1.0
-83,USA,biodiesel,esterification of soybean oil,fatty acid methyl ester,kilogram,1.0
-84,CAZ,bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
-85,CHA,bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
-86,EUR,bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.11462873308084537
-88,JPN,bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
-91,NEU,bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
-93,REF,bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
-95,USA,bioethl,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
-96,CAZ,bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
-97,CHA,bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
-98,EUR,bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0917029864646763
-100,JPN,bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
-103,NEU,bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
-105,REF,bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
-107,USA,bioethl,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
-110,EUR,bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.022925746616169074
-111,IND,bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.1167396058931137
-113,LAM,bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.0
-114,MEA,bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.0
-116,OAS,bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.04637225549764175
-118,SSA,bioethl,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.0
-123,IND,bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.27239241375059864
-125,LAM,bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.0
-126,MEA,bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.0
-128,OAS,bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.185489021990567
-130,SSA,bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.0
-131,USA,bioethl,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.0
-132,CAZ,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
-133,CHA,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
-134,EUR,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,0.7707425338383093
-135,IND,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,0.6108679803562876
-136,JPN,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
-137,LAM,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
-138,MEA,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
-139,NEU,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
-140,OAS,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,0.7681387225117913
-141,REF,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
-142,SSA,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
-143,USA,bioethl,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
+REMIND index,region,dataset name,dataset reference product,dataset unit,share
+biodiesel,CAZ,esterification of soybean oil,fatty acid methyl ester,kilogram,1.0
+biodiesel,CHA,esterification of soybean oil,fatty acid methyl ester,kilogram,1.0
+biodiesel,EUR,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0
+biodiesel,IND,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0
+biodiesel,JPN,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0
+biodiesel,LAM,esterification of soybean oil,fatty acid methyl ester,kilogram,1.0
+biodiesel,MEA,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0
+biodiesel,NEU,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0
+biodiesel,OAS,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0
+biodiesel,REF,"biodiesel production, via transesterification, from rapeseed oil, energy allocation","biodiesel, from rapeseed oil",kilogram,1.0
+biodiesel,SSA,"biodiesel production, via transesterification, from palm oil, energy allocation","biodiesel, from palm oil",kilogram,1.0
+biodiesel,USA,esterification of soybean oil,fatty acid methyl ester,kilogram,1.0
+bioethl,CAZ,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
+bioethl,CAZ,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
+bioethl,CAZ,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
+bioethl,CHA,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
+bioethl,CHA,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
+bioethl,CHA,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
+bioethl,EUR,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.11462873308084537
+bioethl,EUR,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0917029864646763
+bioethl,EUR,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.022925746616169074
+bioethl,EUR,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,0.7707425338383093
+bioethl,IND,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.1167396058931137
+bioethl,IND,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.27239241375059864
+bioethl,IND,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,0.6108679803562876
+bioethl,JPN,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
+bioethl,JPN,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
+bioethl,JPN,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
+bioethl,LAM,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.0
+bioethl,LAM,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.0
+bioethl,LAM,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
+bioethl,MEA,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.0
+bioethl,MEA,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.0
+bioethl,MEA,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
+bioethl,NEU,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
+bioethl,NEU,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
+bioethl,NEU,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
+bioethl,OAS,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.04637225549764175
+bioethl,OAS,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.185489021990567
+bioethl,OAS,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,0.7681387225117913
+bioethl,REF,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
+bioethl,REF,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
+bioethl,REF,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
+bioethl,SSA,"ethanol production, via fermentation, from eucalyptus","ethanol, from eucalyptus",kilogram,0.0
+bioethl,SSA,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.0
+bioethl,SSA,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
+bioethl,USA,"ethanol production, via fermentation, from poplar, energy allocation","ethanol, from poplar",kilogram,0.0
+bioethl,USA,"ethanol production, via fermentation, from switchgrass, energy allocation","ethanol, from switchgrass",kilogram,0.0
+bioethl,USA,"ethanol production, via fermentation, from miscanthus, energy allocation","ethanol, from miscanthus",kilogram,0.0
+bioethl,USA,"ethanol production, via fermentation, from forest residue, energy allocation","ethanol, from forest residue",kilogram,1.0
+bioeths,CAZ,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.4
+bioeths,CAZ,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.3
+bioeths,CAZ,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.3
+bioeths,CHA,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.4
+bioeths,CHA,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.4
+bioeths,CHA,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.2
+bioeths,EUR,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.3
+bioeths,EUR,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.3
+bioeths,EUR,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.4
+bioeths,IND,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.8
+bioeths,IND,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.2
+bioeths,JPN,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.5
+bioeths,JPN,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.3
+bioeths,JPN,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.2
+bioeths,LAM,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.1
+bioeths,LAM,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.8
+bioeths,LAM,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.1
+bioeths,MEA,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.5
+bioeths,MEA,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.5
+bioeths,NEU,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.3
+bioeths,NEU,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.3
+bioeths,NEU,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.4
+bioeths,OAS,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.7
+bioeths,OAS,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.3
+bioeths,REF,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.4
+bioeths,REF,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.6
+bioeths,SSA,"ethanol production, via fermentation, from sugarcane, energy allocation","ethanol, from sugarcane",kilogram,0.3
+bioeths,SSA,"ethanol production, via fermentation, from wheat grains, energy allocation","ethanol, from wheat grains",kilogram,0.7
+bioeths,USA,"ethanol production, via fermentation, from corn, energy allocation","ethanol, from corn",kilogram,0.9
+bioeths,USA,"ethanol production, via fermentation, from sugarbeet, energy allocation","ethanol, from sugarbeet",kilogram,0.1
+biotr,CAZ,supply of forest residue,forest residue,kilogram,1.0
+biotr,CAZ,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.0
+biotr,CHA,supply of forest residue,forest residue,kilogram,1.0
+biotr,CHA,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.0
+biotr,EUR,supply of forest residue,forest residue,kilogram,0.7707425338383093
+biotr,EUR,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.22925746616169074
+biotr,IND,supply of forest residue,forest residue,kilogram,0.6108679803562876
+biotr,IND,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.38913201964371236
+biotr,JPN,supply of forest residue,forest residue,kilogram,1.0
+biotr,JPN,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.0
+biotr,LAM,supply of forest residue,forest residue,kilogram,1.0
+biotr,LAM,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.0
+biotr,MEA,supply of forest residue,forest residue,kilogram,1.0
+biotr,MEA,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.0
+biotr,NEU,supply of forest residue,forest residue,kilogram,1.0
+biotr,NEU,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.0
+biotr,OAS,supply of forest residue,forest residue,kilogram,0.7681387225117913
+biotr,OAS,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.23186127748820873
+biotr,REF,supply of forest residue,forest residue,kilogram,1.0
+biotr,REF,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.0
+biotr,SSA,supply of forest residue,forest residue,kilogram,1.0
+biotr,SSA,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.0
+biotr,USA,supply of forest residue,forest residue,kilogram,1.0
+biotr,USA,"wood chips production, hardwood, at sawmill","wood chips, wet, measured as dry mass",kilogram,0.0
+biotrmod,CAZ,supply of forest residue,forest residue,kilogram,1.0
+biotrmod,CAZ,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.0
+biotrmod,CHA,supply of forest residue,forest residue,kilogram,1.0
+biotrmod,CHA,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.0
+biotrmod,EUR,supply of forest residue,forest residue,kilogram,0.7707425338383093
+biotrmod,EUR,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.22925746616169074
+biotrmod,IND,supply of forest residue,forest residue,kilogram,0.6108679803562876
+biotrmod,IND,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.38913201964371236
+biotrmod,JPN,supply of forest residue,forest residue,kilogram,1.0
+biotrmod,JPN,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.0
+biotrmod,LAM,supply of forest residue,forest residue,kilogram,1.0
+biotrmod,LAM,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.0
+biotrmod,MEA,supply of forest residue,forest residue,kilogram,1.0
+biotrmod,MEA,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.0
+biotrmod,NEU,supply of forest residue,forest residue,kilogram,1.0
+biotrmod,NEU,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.0
+biotrmod,OAS,supply of forest residue,forest residue,kilogram,0.7681387225117913
+biotrmod,OAS,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.23186127748820873
+biotrmod,REF,supply of forest residue,forest residue,kilogram,1.0
+biotrmod,REF,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.0
+biotrmod,SSA,supply of forest residue,forest residue,kilogram,1.0
+biotrmod,SSA,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.0
+biotrmod,USA,supply of forest residue,forest residue,kilogram,1.0
+biotrmod,USA,wood pellet production,"wood pellet, measured as dry mass",kilogram,0.0

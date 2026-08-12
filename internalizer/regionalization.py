@@ -207,6 +207,18 @@ def get_biofuels_regional_shares(
                 sel2, residue_ratios
             ))
 
+    for tech in ["biotr", "biotrmod"]:
+        sel = mapping[mapping["REMIND index"].str.endswith(tech)]
+        residue_mask = sel["dataset name"].str.contains("residue")
+        sel2 = sel[residue_mask]
+        dflist.append(apply_regional_shares_to_dataframe(
+            sel2, residue_ratios
+        ))
+        sel2 = sel[~residue_mask]
+        dflist.append(apply_regional_shares_to_dataframe(
+            sel2, crops_ratios
+        ))
+
     return pd.concat(dflist, axis=0, ignore_index=True).dropna(subset="share")
 
 def fill_mapping_from_mif(
