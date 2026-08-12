@@ -20,10 +20,12 @@ kerosene,kilogram,43
 "ethanol, from sugarbeet",kilogram,26.7
 "ethanol, from sugarcane",kilogram,26.7
 "ethanol, from grain sorghum",kilogram,26.7
+"ethanol, from wheat grains",kilogram,26.7
 "ethanol, from poplar",kilogram,26.7
 "ethanol, from switchgrass",kilogram,26.7
 "ethanol, from eucalyptus",kilogram,26.7
 "ethanol, from miscanthus",kilogram,26.7
+"ethanol, from forest residue",kilogram,26.7
 "hydrogen, gaseous, 25 bar",kilogram,120
 "wood chips, wet, measured as dry mass",kilogram,15.4
 "wood pellet, measured as dry mass",kilogram,17.6
