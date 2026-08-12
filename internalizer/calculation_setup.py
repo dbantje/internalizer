@@ -56,7 +56,7 @@ class CalculationSetup:
         for lvl, ddict in setup["mappings"].items():
             data[lvl] = {}
             fp = DATA_DIR / "mappings" / ddict["file"]
-            mapping = pd.read_csv(fp, sep=";")
+            mapping = pd.read_csv(fp, sep=";", comment="#")
             data[lvl]["base mapping"] = mapping
 
             if "domains" in setup.keys():
@@ -92,6 +92,11 @@ class CalculationSetup:
 
                 # remove activities that are in this level's mapping
                 merged = df.merge(mapping, how="outer", indicator=True)
+                both = merged[merged['_merge'] == 'both']
+                if len(both) > 0:
+                    print(f"Warning: {both.shape[0]} activities in both mapping and removal list for level {lvl}.")
+                    for idx, row in both.iterrows():
+                        print(f"\tActivity in both: {row[EI_INDEX]}")
                 self.data[lvl]["removal list"] = merged[merged['_merge'] == 'left_only'][EI_INDEX]
 
     def regionalize_constant_mappings(
