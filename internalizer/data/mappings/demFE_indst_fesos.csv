@@ -1,0 +1,11 @@
+REMIND index;scenario variable;dataset name;dataset reference product;dataset unit;share
+indst - fesos;FE|Industry|Cement|Solids|+|Biomass;soft wood chips from forest, burned in furnace 1000kW;heat;megajoule;regional
+indst - fesos;FE|Industry|Cement|Solids|+|Fossil;hard coal, burned in hard coal industrial furnace 1-10MW;heat;megajoule;regional
+indst - fesos;FE|Industry|Other Industry|Solids|+|Biomass;soft wood chips from forest, burned in furnace 1000kW;heat;megajoule;regional
+indst - fesos;FE|Industry|Other Industry|Solids|+|Fossil;hard coal, burned in hard coal industrial furnace 1-10MW;heat;megajoule;regional
+indst - fesos;FE|Industry|Steel|Solids|+|Biomass;soft wood chips from forest, burned in furnace 1000kW;heat;megajoule;regional
+indst - fesos;FE|Industry|Steel|Solids|+|Fossil;hard coal, burned in hard coal industrial furnace 1-10MW;heat;megajoule;regional
+indst - fesos;FE|Non-energy Use|Industry|Solids|+|Biomass;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - fesos;FE|Non-energy Use|Industry|Solids|+|Fossil;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - fesos;FE|w/o Non-energy Use|Industry|Chemicals|Solids|+|Biomass;soft wood chips from forest, burned in furnace 1000kW;heat;megajoule;regional
+indst - fesos;FE|w/o Non-energy Use|Industry|Chemicals|Solids|+|Fossil;hard coal, burned in hard coal industrial furnace 1-10MW;heat;megajoule;regional

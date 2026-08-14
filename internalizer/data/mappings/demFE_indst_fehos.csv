@@ -1,0 +1,26 @@
+REMIND index;scenario variable;dataset name;dataset reference product;dataset unit;share
+indst - fehos;FE|Industry|Cement|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;light fuel oil, from non-residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Cement|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Residues;light fuel oil, from residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Cement|Liquids|+|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;light fuel oil, from oily biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Cement|Liquids|+|Fossil;light fuel oil, burned in industrial furnace 1MW;heat;megajoule;regional
+indst - fehos;FE|Industry|Cement|Liquids|+|Hydrogen;diesel, synthetic, burned in diesel-electric generating set, 10MW;heat;megajoule;regional
+indst - fehos;FE|Industry|Other Industry|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;light fuel oil, from non-residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Other Industry|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Residues;light fuel oil, from residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Other Industry|Liquids|+|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;light fuel oil, from oily biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Other Industry|Liquids|+|Fossil;light fuel oil, burned in industrial furnace 1MW;heat;megajoule;regional
+indst - fehos;FE|Industry|Other Industry|Liquids|+|Hydrogen;diesel, synthetic, burned in diesel-electric generating set, 10MW;heat;megajoule;regional
+indst - fehos;FE|Industry|Steel|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;light fuel oil, from non-residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Steel|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Residues;light fuel oil, from residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Steel|Liquids|+|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;light fuel oil, from oily biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|Industry|Steel|Liquids|+|Fossil;light fuel oil, burned in industrial furnace 1MW;heat;megajoule;regional
+indst - fehos;FE|Industry|Steel|Liquids|+|Hydrogen;diesel, synthetic, burned in diesel-electric generating set, 10MW;heat;megajoule;regional
+indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Residues;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Fossil;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - fehos;FE|Non-energy Use|Industry|Liquids|+|Hydrogen;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;light fuel oil, from non-residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Biomass|Allocated Feedstock|Cellulosic|Residues;light fuel oil, from residual cellulosic biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;light fuel oil, from oily biomass, burned in residential boiler;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Fossil;light fuel oil, burned in industrial furnace 1MW;heat;megajoule;regional
+indst - fehos;FE|w/o Non-energy Use|Industry|Chemicals|Liquids|+|Hydrogen;diesel, synthetic, burned in diesel-electric generating set, 10MW;heat;megajoule;regional

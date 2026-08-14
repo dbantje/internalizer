@@ -9,7 +9,7 @@ from .regionalization import (
     get_demFE
 )
 from .filesystem_constants import DATA_DIR
-from .utils import apply_filter_to_dataframe, get_dict_mapping_from_df
+from .utils import apply_filter_to_dataframe, apply_mask_to_dataframe, get_dict_mapping_from_df
 import yaml
 import xarray as xr
 
@@ -79,24 +79,32 @@ class CalculationSetup:
                 self.data[lvl]["removal list"] = None
             else:
                 ddict = self.setup["removal_lists"][lvl]
+
+                # candidate activities: other specified levels and activities that match the filter
                 dflist = []
                 # exclude activities from specified other levels
                 for other_lvl in ddict["remove_layers"]:
                     other_mapping = self.data[other_lvl]["base mapping"]
                     dflist.append(other_mapping[EI_INDEX])
+                dflist.append(apply_filter_to_dataframe(all_activities, ddict["fltr"]))
+                candidates = pd.concat(dflist).drop_duplicates()
 
-                # get extra activities to remove
-                dflist.append(apply_filter_to_dataframe(all_activities, ddict["fltr"], ddict["mask"]))
-
-                df = pd.concat(dflist).drop_duplicates()
+                # remove activities that match the mask
+                df = apply_mask_to_dataframe(candidates, ddict["mask"])
+                n_removed = len(candidates) - len(df)
+                print(f"Level {lvl}: {n_removed} activities removed from removal list.")
+                names_removed = set(candidates[EI_INDEX[0]].unique()) - set(df[EI_INDEX[0]].unique())
+                for name in names_removed:
+                    print(f"\tActivity removed from removal list: {name}")
 
                 # remove activities that are in this level's mapping
                 merged = df.merge(mapping, how="outer", indicator=True)
                 both = merged[merged['_merge'] == 'both']
                 if len(both) > 0:
-                    print(f"Warning: {both.shape[0]} activities in both mapping and removal list for level {lvl}.")
-                    for idx, row in both.iterrows():
-                        print(f"\tActivity in both: {row[EI_INDEX]}")
+                    print(f"Warning: {both.shape[0]} activities in both mapping and removal list for level {lvl}." \
+                          "These will not be removed from the mapping. Please check whether this is intended.")
+                    for name in both[EI_INDEX[0]].unique():
+                        print(f"\tActivity in both: {name}")
                 self.data[lvl]["removal list"] = merged[merged['_merge'] == 'left_only'][EI_INDEX]
 
     def regionalize_constant_mappings(

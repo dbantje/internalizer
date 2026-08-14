@@ -4,9 +4,13 @@ levels:
   - se2h2
   - h22se
   - fe
+  - fe_indst_fehos
+  - fe_indst_fesos
 aggregate_levels:
   FE:
     - fe
+    - fe_indst_fehos
+    - fe_indst_fesos
   SE:
     - pe2se
     - se2h2
@@ -22,7 +26,13 @@ mappings:
     file: h22se.csv
     depends_on_year: False
   fe:
-    file: demFE_bioallocation.csv
+    file: demFE_rest.csv
+    depends_on_year: True
+  fe_indst_fehos:
+    file: demFE_indst_fehos.csv
+    depends_on_year: True
+  fe_indst_fesos:
+    file: demFE_indst_fesos.csv
     depends_on_year: True
 removal_lists:
   fe:
@@ -50,8 +60,82 @@ removal_lists:
         - syngas, RWGS, Production
         - wood chips production
         - esterification of soybean oil
+        - market for cleft timber
     mask:
       dataset name:
+        - unit construction
+        - treatment of
+        - carbon dioxide storage at hydrogen production plant
+        - carbon dioxide, captured at hydrogen production plant
+        - carbon dioxide, captured and stored
+      dataset unit:
+        - unit
+  fe_indst_fehos:
+    remove_layers:
+      - pe2se
+      - se2h2
+      - h22se
+    fltr:
+      dataset name:
+        - electricity production
+        - heat production
+        - heat and power co-generation
+        - hydrogen production
+        - kerosene production
+        - ethanol production
+        - biodiesel production
+        - biomethane production
+        - petroleum and gas production
+        - hard coal mine operation
+        - lignite mine operation
+        - diesel production
+        - briquettes production
+        - coke production
+        - petrol production
+        - syngas, RWGS, Production
+        - wood chips production
+        - esterification of soybean oil
+        - market for cleft timber
+    mask:
+      dataset name:
+        - heat production, light fuel oil, at industrial furnace 1MW
+        - unit construction
+        - treatment of
+        - carbon dioxide storage at hydrogen production plant
+        - carbon dioxide, captured at hydrogen production plant
+        - carbon dioxide, captured and stored
+      dataset unit:
+        - unit
+  fe_indst_fesos:
+    remove_layers:
+      - pe2se
+      - se2h2
+      - h22se
+    fltr:
+      dataset name:
+        - electricity production
+        - heat production
+        - heat and power co-generation
+        - hydrogen production
+        - kerosene production
+        - ethanol production
+        - biodiesel production
+        - biomethane production
+        - petroleum and gas production
+        - hard coal mine operation
+        - lignite mine operation
+        - diesel production
+        - briquettes production
+        - coke production
+        - petrol production
+        - syngas, RWGS, Production
+        - wood chips production
+        - esterification of soybean oil
+        - market for cleft timber
+    mask:
+      dataset name:
+        - heat production, at hard coal industrial furnace 1-10MW
+        - heat production, softwood chips from forest, at furnace 1000kW
         - unit construction
         - treatment of
         - carbon dioxide storage at hydrogen production plant

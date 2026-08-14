@@ -327,7 +327,7 @@ def get_monetized_results(
     ]
 
     return all_costs, all_impacts
-   
+
 
 def _run_premise_year(
     project: str,

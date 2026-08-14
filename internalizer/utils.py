@@ -261,22 +261,31 @@ def split_remind_index(
 def apply_filter_to_dataframe(
     df: pd.DataFrame,
     fltr: dict,
-    msk: dict
 ) -> pd.DataFrame:
-    if len(fltr) == 0 and len(msk) == 0:
+    if len(fltr) == 0:
         return None
     
-    mask1 = False
+    mask = False
     for col, slist in fltr.items():
         for s in slist:
-            mask1 = mask1 | df[col].str.contains(s)
+            mask = mask | df[col].str.contains(s)
 
-    mask2 = True
+    return df[mask]
+
+
+def apply_mask_to_dataframe(
+    df: pd.DataFrame,
+    msk: dict
+) -> pd.DataFrame:
+    if len(msk) == 0:
+        return None
+    
+    mask = True
     for col, slist in msk.items():
         for s in slist:
-            mask2 = mask2 & ~df[col].str.contains(s) 
+            mask = mask & ~df[col].str.contains(s) 
 
-    return df[mask1 & mask2]
+    return df[mask]
 
 
 def correct_coke_production_flows(matrixfolder: Path | str):
