@@ -26,8 +26,7 @@ coalchp;heat and power co-generation, lignite;heat, district or industrial, othe
 coalchp;heat and power co-generation, hard coal;electricity, high voltage;kilowatt hour;regional
 coalchp;heat and power co-generation, hard coal;heat, district or industrial, other than natural gas;megajoule;regional
 coaltr;coke production;coke;megajoule;0.4
-coaltr;lignite briquettes production;lignite briquettes;megajoule;0.3
-coaltr;hard coal briquettes production;hard coal briquettes;megajoule;0.3
+coaltr;hard coal mine operation and hard coal preparation;hard coal;kilogram;0.6
 coalgas;syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coal gasification;syngas, RWGS, Production;kilogram;1.0
 coalh2;hydrogen production, coal gasification;hydrogen, gaseous, low pressure;kilogram;1.0
 coalh2c;hydrogen production, coal gasification, with CCS;hydrogen, gaseous, low pressure;kilogram;1.0

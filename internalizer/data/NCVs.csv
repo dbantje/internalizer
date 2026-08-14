@@ -10,6 +10,7 @@ dataset reference product,dataset unit,NCV in MJ/product
 coke,megajoule,1
 lignite briquettes,megajoule,1
 hard coal briquettes,megajoule,1
+hard coal,kilogram,25.5
 "syngas, RWGS, Production",kilogram,23.9
 diesel,kilogram,42.78
 kerosene,kilogram,43
