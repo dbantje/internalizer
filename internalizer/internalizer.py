@@ -154,7 +154,7 @@ class Internalizer:
         for year in self.years:
             matrix_folder = self.outdir + f"/{self.model}/{self.scenario}/{str(year)}/"
             df = pd.read_csv(
-                matrix_folder + "/A_matrix_index.csv", sep=";",
+                matrix_folder + "A_matrix_index.csv", sep=";",
                 usecols=[0, 1, 2],
                 names=EI_INDEX
             )
