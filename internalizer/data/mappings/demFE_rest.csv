@@ -14,7 +14,9 @@ build - fehos;FE|Buildings|Liquids|Fossil|+|Oil;heat production, light fuel oil,
 build - fesos;FE|Buildings|Solids|Biomass|+|Modern;heat production, wood pellet, at furnace 9kW;heat, central or small-scale, other than natural gas;megajoule;regional
 build - fesos;FE|Buildings|Solids|Biomass|+|Traditional;heat production, mixed logs, at wood heater 6kW;heat, central or small-scale, other than natural gas;megajoule;regional
 build - fesos;FE|Buildings|Solids|Coal;heat production, hard coal briquette, stove 5-15kW;heat, central or small-scale, other than natural gas;megajoule;regional
-build - feels;FE|Buildings|non-Heating|Electricity|Conventional;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
+build - feels;FE|Buildings|non-Heating|Electricity|Appliances and Lighting;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
+build - feels;FE|Buildings|non-Heating|Electricity|ICT;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
+build - feels;FE|Buildings|non-Heating|Electricity|Space Cooling;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
 cdr - feels;FE|CDR|DAC|+|Electricity;electricity, medium-voltage, used as final energy;heat;megajoule;regional
 cdr - fegas;FE|CDR|DAC|+|Gases;heat production, natural gas, at boiler condensing modulating >100kW;heat, district or industrial, natural gas;megajoule;regional
 cdr - fehes;FE|CDR|DAC|+|Heat;market for heat, district or industrial, natural gas;heat, district or industrial, natural gas;megajoule;regional
