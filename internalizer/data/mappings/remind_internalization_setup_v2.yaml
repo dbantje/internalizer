@@ -211,3 +211,9 @@ domains:
   fe:
     - emi_sectors
     - all_enty
+  fe_indst_fehos:
+    - emi_sectors
+    - all_enty
+  fe_indst_fesos:
+    - emi_sectors
+    - all_enty
