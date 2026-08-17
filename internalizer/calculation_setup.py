@@ -149,7 +149,7 @@ class RemindInternalizationSetup(CalculationSetup):
         lvl: str,
         year: int,
     ) -> pd.DataFrame:
-        if lvl == "fe":
+        if lvl in ["fe", "fe_indst_fehos", "fe_indst_fesos"]:
             return fill_mapping_from_mif(self.data[lvl]["base mapping"], self.mifpath, year)
         elif lvl == "pe2se":
             return regionalize_pe2se_mapping(self.data[lvl]["base mapping"], self.gdxpath, self.mifpath, year)
@@ -163,7 +163,7 @@ class RemindInternalizationSetup(CalculationSetup):
         lvl: str,
         years: List[int]
     ) -> xr.DataArray | float:
-        if lvl == "fe":
+        if lvl in ["fe", "fe_indst_fehos", "fe_indst_fesos"]:
             return get_demFE(self.gdxpath, years) * TWa2EJ * 1e12
         elif lvl in ["pe2se", "se2h2", "h22se"]: # xarray automatically uses smallest index
             return get_prodSE(self.gdxpath, years) * TWa2EJ * 1e12
