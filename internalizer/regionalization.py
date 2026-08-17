@@ -241,6 +241,11 @@ def fill_mapping_from_mif(
 
     # select shared index (some regions don't have certain FE variables)
     combined_idx = regionalized_mapping.index.intersection(mifdata.index)
+    missing_idx = regionalized_mapping.index.difference(mifdata.index)
+    if len(missing_idx) > 0:
+        print(f"Warning: {len(missing_idx)} scenario variable-region combinations are missing in the .mif file for year {year}.")
+        for idx in missing_idx:
+            print(f"\tMissing combination: {idx[0]} - {idx[1]}")
     sel = regionalized_mapping.loc[combined_idx]
 
     # calculate totals
