@@ -61,6 +61,7 @@ removal_lists:
         - wood chips production
         - esterification of soybean oil
         - market for cleft timber
+        - farming and supply
     mask:
       dataset name:
         - unit construction
