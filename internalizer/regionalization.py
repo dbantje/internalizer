@@ -162,16 +162,17 @@ def get_coal_power_regional_shares(mapping: pd.DataFrame) -> pd.DataFrame:
     """
     dflist = []
 
-    sel = mapping[mapping["REMIND index"].isin(["igcc", "igccc", "pc"])]
-    coal_type_shares = pd.read_csv(FILEPATH_COALTYPE_SHARES).set_index("region")
-    sel2 = sel[sel["dataset name"].str.contains("lignite")]
-    dflist.append(apply_regional_shares_to_dataframe(
-        sel2, 1.0, factors=coal_type_shares["lignite"]
-    ))
-    sel2 = sel[sel["dataset name"].str.contains("hard coal")]
-    dflist.append(apply_regional_shares_to_dataframe(
-        sel2, 1.0, factors=coal_type_shares["hard coal"]
-    ))
+    for tech in ["igcc", "igccc", "pc"]:
+        sel = mapping[mapping["REMIND index"].str.endswith(tech)]
+        coal_type_shares = pd.read_csv(FILEPATH_COALTYPE_SHARES).set_index("region")
+        sel2 = sel[sel["dataset name"].str.contains("lignite")]
+        dflist.append(apply_regional_shares_to_dataframe(
+            sel2, 1.0, factors=coal_type_shares["lignite"]
+        ))
+        sel2 = sel[sel["dataset name"].str.contains("hard coal")]
+        dflist.append(apply_regional_shares_to_dataframe(
+            sel2, 1.0, factors=coal_type_shares["hard coal"]
+        ))
 
     return pd.concat(dflist, axis=0, ignore_index=True)
 
