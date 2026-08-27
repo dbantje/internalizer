@@ -154,6 +154,28 @@ def get_chp_regional_shares(mapping: pd.DataFrame, gdxpath: str | Path) -> pd.Da
     return pd.concat(dflist, axis=0, ignore_index=True)
 
 
+def get_coal_power_regional_shares(mapping: pd.DataFrame) -> pd.DataFrame:
+    """
+    Get regional shares for coal power technologies.
+    :param mapping: dataframe containing the mapping from REMIND to LCA datasets
+    :return: dataframe with regional shares applied
+    """
+    dflist = []
+
+    sel = mapping[mapping["REMIND index"].isin(["igcc", "igccc", "pc"])]
+    coal_type_shares = pd.read_csv(FILEPATH_COALTYPE_SHARES).set_index("region")
+    sel2 = sel[sel["dataset name"].str.contains("lignite")]
+    dflist.append(apply_regional_shares_to_dataframe(
+        sel2, 1.0, factors=coal_type_shares["lignite"]
+    ))
+    sel2 = sel[sel["dataset name"].str.contains("hard coal")]
+    dflist.append(apply_regional_shares_to_dataframe(
+        sel2, 1.0, factors=coal_type_shares["hard coal"]
+    ))
+
+    return pd.concat(dflist, axis=0, ignore_index=True)
+
+
 def get_residual_biomass_ratios(mifpath, year) -> pd.DataFrame:
     """
     Get the residual biomass ratios from a REMIND `.mif` file.
@@ -316,6 +338,7 @@ def regionalize_pe2se_mapping(
     all_regional_shares = pd.concat(
         [
             get_chp_regional_shares(mapping, gdxpath),
+            get_coal_power_regional_shares(mapping),
             get_biofuels_regional_shares(mapping, mifpath, year)
         ],
         axis=0,
@@ -325,6 +348,11 @@ def regionalize_pe2se_mapping(
     # select only those that are in the mapping
     needed_techs = list(mapping[mapping["share"] == "regional"]["REMIND index"].unique())
     needed_regional_shares = all_regional_shares[all_regional_shares["REMIND index"].isin(needed_techs)]
+
+    # throw error if some needed shares are missing
+    missing_techs = set(needed_techs) - set(all_regional_shares["REMIND index"].unique())
+    if len(missing_techs) > 0:
+        raise ValueError(f"Some needed regional shares are missing: {missing_techs}")
 
     all_shares = pd.concat(
         [
