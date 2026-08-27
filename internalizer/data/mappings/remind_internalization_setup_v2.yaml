@@ -63,6 +63,10 @@ removal_lists:
         - esterification of soybean oil
         - market for cleft timber
         - farming and supply
+        - transport, freight, lorry
+        - transport, freight, sea
+        - transport, freight, train
+        - transport, freight, aircraft
     mask:
       dataset name:
         - unit construction
@@ -88,6 +92,7 @@ removal_lists:
         - biodiesel production
         - biomethane production
         - petroleum and gas production
+        - natural gas production, liquefied
         - hard coal mine operation
         - lignite mine operation
         - diesel production
@@ -98,6 +103,10 @@ removal_lists:
         - wood chips production
         - esterification of soybean oil
         - market for cleft timber
+        - transport, freight, lorry
+        - transport, freight, sea
+        - transport, freight, train
+        - transport, freight, aircraft
     mask:
       dataset name:
         - heat production, light fuel oil, at industrial furnace 1MW
@@ -124,6 +133,7 @@ removal_lists:
         - biodiesel production
         - biomethane production
         - petroleum and gas production
+        - natural gas production, liquefied
         - hard coal mine operation
         - lignite mine operation
         - diesel production
@@ -134,6 +144,10 @@ removal_lists:
         - wood chips production
         - esterification of soybean oil
         - market for cleft timber
+        - transport, freight, lorry
+        - transport, freight, sea
+        - transport, freight, train
+        - transport, freight, aircraft
     mask:
       dataset name:
         - heat production, at hard coal industrial furnace 1-10MW
@@ -165,6 +179,10 @@ removal_lists:
         - petrol production
         - syngas, RWGS, Production
         - wood chips production
+        - transport, freight, lorry
+        - transport, freight, sea
+        - transport, freight, train
+        - transport, freight, aircraft
     mask:
       dataset name:
         - unit construction
@@ -194,6 +212,10 @@ removal_lists:
         - petrol production
         - syngas, RWGS, Production
         - wood chips production
+        - transport, freight, lorry
+        - transport, freight, sea
+        - transport, freight, train
+        - transport, freight, aircraft
     mask:
       dataset name:
         - unit construction
@@ -203,6 +225,17 @@ removal_lists:
         - carbon dioxide, captured and stored
       dataset unit:
         - unit
+  pe2se:
+    remove_layers: {}
+    fltr:
+      dataset name:
+        - transport, freight, lorry
+        - transport, freight, sea
+        - transport, freight, train
+        - transport, freight, aircraft
+    mask:
+      dataset name:
+        - unit construction
 domains:
   pe2se:
     - all_te
