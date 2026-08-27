@@ -408,6 +408,16 @@ def _calculate_costs_year(
         ["dataset name", "dataset reference product", "dataset unit"]
     ).index.unique())
     selected_inds = {k: v for k, v in technosphere_inds.items() if (k[0], k[1], k[2]) in idx_list}
+
+    # check whether all datasets in mapping were found in the technosphere indices
+    found_idx_list = set((k[0], k[1], k[2]) for k in selected_inds.keys())
+    missing_idx_list = set(idx_list) - found_idx_list
+    if len(missing_idx_list) > 0:
+        raise ValueError(
+            f"Some datasets in the mapping were not found in the technosphere indices: {missing_idx_list}"
+        )
+    
+    # apply net calorific value to define functional units
     fus = {str(i): {selected_inds[k]: 1/NCV_DICT[(k[1], k[2])]} for i, k in enumerate(selected_inds.keys())}
     print(f"{level}, {year}: Functional units selected")
 
