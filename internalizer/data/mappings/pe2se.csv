@@ -30,7 +30,7 @@ coalgas;syngas, RWGS, Production, for Fischer Tropsch process, hydrogen from coa
 coalh2;hydrogen production, coal gasification;hydrogen, gaseous, low pressure;kilogram;1.0
 coalh2c;hydrogen production, coal gasification, with CCS;hydrogen, gaseous, low pressure;kilogram;1.0
 coalhp;heat production, at hard coal industrial furnace 1-10MW;heat, district or industrial, other than natural gas;megajoule;1.0
-refliq;diesel production, low-sulfur petroleum refinery operation;diesel, low-sulfur;kilogram;0.34
+refliq;diesel production, low-sulfur, petroleum refinery operation;diesel, low-sulfur;kilogram;0.34
 refliq;kerosene production, petroleum refinery operation;kerosene;kilogram;0.1
 refliq;petrol production, low-sulfur;petrol, low-sulfur;kilogram;0.56
 coalftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;diesel, synthetic;kilogram;0.6
