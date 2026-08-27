@@ -33,14 +33,14 @@ coalhp;heat production, at hard coal industrial furnace 1-10MW;heat, district or
 refliq;diesel production, low-sulfur petroleum refinery operation;diesel, low-sulfur;kilogram;0.34
 refliq;kerosene production, petroleum refinery operation;kerosene;kilogram;0.1
 refliq;petrol production, low-sulfur;petrol, low-sulfur;kilogram;0.56
-coalftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;diesel, synthetic;kilogram;regional
-coalftrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;kerosene, synthetic;kilogram;regional
-coalftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;diesel, synthetic;kilogram;regional
-coalftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;regional
-bioftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation;diesel, synthetic;kilogram;regional
-bioftrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation;kerosene, synthetic;kilogram;regional
-bioftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation;diesel, synthetic;kilogram;regional
-bioftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;regional
+coalftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;diesel, synthetic;kilogram;0.6
+coalftrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, energy allocation;kerosene, synthetic;kilogram;0.4
+coalftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;diesel, synthetic;kilogram;0.6
+coalftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from coal gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;0.4
+bioftrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation;diesel, synthetic;kilogram;0.6
+bioftrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, energy allocation;kerosene, synthetic;kilogram;0.4
+bioftcrec;diesel production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation;diesel, synthetic;kilogram;0.6
+bioftcrec;kerosene production, synthetic, Fischer Tropsch process, hydrogen from wood gasification, with CCS, energy allocation;kerosene, synthetic;kilogram;0.4
 biodiesel;biodiesel production, via transesterification, from palm oil, energy allocation;biodiesel, from palm oil;kilogram;regional
 biodiesel;biodiesel production, via transesterification, from rapeseed oil, energy allocation;biodiesel, from rapeseed oil;kilogram;regional
 biodiesel;esterification of soybean oil;fatty acid methyl ester;kilogram;regional
