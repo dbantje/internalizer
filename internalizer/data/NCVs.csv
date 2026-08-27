@@ -13,8 +13,10 @@ hard coal briquettes,megajoule,1
 hard coal,kilogram,25.5
 "syngas, RWGS, Production",kilogram,23.9
 diesel,kilogram,42.78
+"diesel, low-sulfur",kilogram,42.78
 kerosene,kilogram,43
 "petrol, unleaded",kilogram,43.44
+"petrol, low-sulfur",kilogram,43.44
 "biodiesel, from palm oil",kilogram,37.8
 "biodiesel, from rapeseed oil",kilogram,37.8
 "ethanol, from corn",kilogram,26.7
