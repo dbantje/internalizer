@@ -87,6 +87,14 @@ def convert_euros_to_dollar(year, target_year):
     return (HICP[target_year] / HICP[year]) / PPP[target_year]
 
 
+def inflate_euros(year, target_year):
+    return HICP[target_year] / HICP[year]
+
+
+def inflate_dollars(year, target_year):
+    return (CPI[target_year] / CPI[year])
+
+
 def convert_dollars_to_euro(year, target_year):
     return (CPI[target_year] / CPI[year]) * PPP[target_year]
 
