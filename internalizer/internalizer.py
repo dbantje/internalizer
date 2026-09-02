@@ -68,13 +68,17 @@ class Internalizer:
         gdxpath: str,
         outputfolder: str = "output",
         single_run: bool = True,
-        max_mp_tasks: int | None = 4
+        max_mp_tasks: int | None = 4,
+        relative_path: bool = True,
     ):
         # get directory of data file and scenario name
         self.model = model
         rundir, filename = extract_folder_and_filename(mifpath)
         self.rundir = rundir
-        outputdir = f"./{outputfolder}"
+        if relative_path:
+            outputdir = f"./{outputfolder}"
+        else:
+            outputdir = os.path.join(rundir, outputfolder)
         if not single_run:
             outputdir += "/" + extract_output_folder(mifpath)
         self.outdir = outputdir
