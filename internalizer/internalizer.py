@@ -123,7 +123,7 @@ class Internalizer:
         multiprocessing: bool = True,
         quiet: bool = True,
         include_interventions: bool = True,
-        change_pm_compartments: bool = False,
+        change_pm_compartments: bool = True,
     ) -> None:
         self.years = years
         
