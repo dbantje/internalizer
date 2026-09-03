@@ -422,6 +422,20 @@ def map_lcia_methods_to_impact_categories(
     df = df.groupby([col for col in df.columns if col != value_col], as_index=False)[value_col].sum()
 
 
+def get_methods_single_impact_category(
+    methods: list,
+    impact_category: str,
+) -> list:
+    """
+    Get a list of LCIA methods that belong to a single impact category.
+    :param methods: List of LCIA methods
+    :param impact_category: Impact category to filter by
+    :return: List of LCIA methods that belong to the specified impact category
+    """
+    mapping = pd.read_csv(METHOD2IC_MAPPING).set_index("LCIA method")["impact_category"].to_dict()
+    return [m for m in methods if mapping.get(m, m).lower() == impact_category.lower()]
+
+
 def get_automatic_exclude_list(
     methods: list,
     ics_exclude = ["climate change", "fossil resources"],
