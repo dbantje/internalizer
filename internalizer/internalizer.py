@@ -78,7 +78,7 @@ class Internalizer:
         if relative_path:
             outputdir = f"./{outputfolder}"
         else:
-            outputdir = outputdir
+            outputdir = outputfolder
         if not single_run:
             outputdir += "/" + extract_output_folder(mifpath)
         self.outdir = outputdir
