@@ -348,14 +348,18 @@ def _run_premise_year(
         "source_db": ei_label,
         "source_version": source_version,
         "biosphere_name": "ecoinvent-{}-biosphere".format(ei_version),
-        "quiet": quiet
+        "quiet": quiet,
+        "gains_masks": GAINS_MASKS
     }
     kwargs.update(DEFAULT_PREMISE_KWARGS)
     if include_interventions:
         kwargs["metals_scenario"] = "intervention"
         kwargs["intervention_scenarios"] = {iv: "intervention" for iv in ALL_INTERVENTIONS}
-        kwargs["gains_masks"] = GAINS_MASKS
         kwargs["shares_adjustments"] = get_shares_adjustments("all:intervention")
+    else:
+        kwargs["metals_scenario"] = "default"
+        kwargs["intervention_scenarios"] = {iv: "frozen" for iv in ALL_INTERVENTIONS}
+        kwargs["shares_adjustments"] = get_shares_adjustments("all:frozen")
     
     ndb = NewDatabase(**kwargs)
     ndb.update(sectors=SECTOR_UPDATES)
