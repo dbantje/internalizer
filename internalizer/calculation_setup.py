@@ -102,7 +102,7 @@ class CalculationSetup:
                 both = merged[merged['_merge'] == 'both']
                 if len(both) > 0:
                     print(f"Warning: {both.shape[0]} activities in both mapping and removal list for level {lvl}." \
-                          "These will not be removed from the mapping. Please check whether this is intended.")
+                          "These will not be removed. Please check whether this is intended.")
                     for name in both[EI_INDEX[0]].unique():
                         print(f"\tActivity in both: {name}")
                 self.data[lvl]["removal list"] = merged[merged['_merge'] == 'left_only'][EI_INDEX]
