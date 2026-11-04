@@ -6,11 +6,13 @@ levels:
   - fe
   - fe_indst_fehos
   - fe_indst_fesos
+  - fe_feh2sturbines
 aggregate_levels:
   FE:
     - fe
     - fe_indst_fehos
     - fe_indst_fesos
+    - fe_feh2sturbines
   SE:
     - pe2se
     - se2h2
@@ -33,6 +35,9 @@ mappings:
     depends_on_year: True
   fe_indst_fesos:
     file: demFE_indst_fesos.csv
+    depends_on_year: True
+  fe_feh2sturbines:
+    file: demFE_feh2sturbines.csv
     depends_on_year: True
 removal_lists:
   fe:
@@ -159,6 +164,47 @@ removal_lists:
         - carbon dioxide, captured and stored
       dataset unit:
         - unit
+  fe_feh2sturbines:
+    remove_layers:
+      - pe2se
+      - se2h2
+      - h22se
+    fltr:
+      dataset name:
+        - electricity production
+        - heat production
+        - heat and power co-generation
+        - hydrogen production
+        - kerosene production
+        - ethanol production
+        - biodiesel production
+        - biomethane production
+        - petroleum and gas production
+        - natural gas production, liquefied
+        - hard coal mine operation
+        - lignite mine operation
+        - diesel production
+        - briquettes production
+        - coke production
+        - petrol production
+        - syngas, RWGS, Production
+        - wood chips production
+        - esterification of soybean oil
+        - market for cleft timber
+        - transport, freight, lorry
+        - transport, freight, sea
+        - transport, freight, train
+        - transport, freight, aircraft
+    mask:
+      dataset name:
+        - heat production, from hydrogen-fired one gigawatt gas turbine
+        - unit construction
+        - treatment of
+        - carbon dioxide storage at hydrogen production plant
+        - carbon dioxide, captured at hydrogen production plant
+        - carbon dioxide, captured and stored
+      dataset unit:
+        - unit
   se2h2:
     remove_layers:
       - pe2se
@@ -250,5 +296,8 @@ domains:
     - emi_sectors
     - all_enty
   fe_indst_fesos:
+    - emi_sectors
+    - all_enty
+  fe_feh2sturbines:
     - emi_sectors
     - all_enty

@@ -20,39 +20,31 @@ build - feels;FE|Buildings|non-Heating|Electricity|Space Cooling;market group fo
 cdr - feels;FE|CDR|DAC|+|Electricity;electricity, medium-voltage, used as final energy;heat;megajoule;regional
 cdr - fegas;FE|CDR|DAC|+|Gases;heat production, natural gas, at boiler condensing modulating >100kW;heat, district or industrial, natural gas;megajoule;regional
 cdr - fehes;FE|CDR|DAC|+|Heat;market for heat, district or industrial, natural gas;heat, district or industrial, natural gas;megajoule;regional
-cdr - feh2s;FE|CDR|DAC|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 cdr - fedie;FE|CDR|EW|+|Diesel;diesel, burned in diesel-electric generating set, 10MW;diesel, burned in diesel-electric generating set, 10MW;megajoule;regional
 cdr - feels;FE|CDR|EW|+|Electricity;electricity, medium-voltage, used as final energy;heat;megajoule;regional
 cdr - fedie;FE|CDR|OAE, electric calciner|+|Diesel;diesel, burned in diesel-electric generating set, 10MW;diesel, burned in diesel-electric generating set, 10MW;megajoule;regional
 cdr - feels;FE|CDR|OAE, electric calciner|+|Electricity;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
-cdr - feh2s;FE|CDR|OAE, electric calciner|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 cdr - fedie;FE|CDR|OAE, traditional calciner|+|Diesel;diesel, burned in diesel-electric generating set, 10MW;diesel, burned in diesel-electric generating set, 10MW;megajoule;regional
 cdr - feels;FE|CDR|OAE, traditional calciner|+|Electricity;market group for electricity, low voltage;electricity, low voltage;kilowatt hour;regional
 cdr - fegas;FE|CDR|OAE, traditional calciner|+|Gases;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
-cdr - feh2s;FE|CDR|OAE, traditional calciner|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 indst - feels;FE|Industry|Cement|+|Electricity;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
-indst - feh2s;FE|Industry|Cement|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 indst - fegas;FE|Industry|Cement|Gases|+|Biomass;biomethane, burned in residential natural gas boiler <100kW;heat;megajoule;regional
 indst - fegas;FE|Industry|Cement|Gases|+|Fossil;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
 indst - fegas;FE|Industry|Cement|Gases|+|Hydrogen;natural gas, synthetic, burned in gas turbine;heat;megajoule;regional
-indst - feh2s;FE|Industry|Chemicals|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 indst - feels;FE|Industry|Chemicals|Electricity|+|High-temperature heat;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
 indst - feels;FE|Industry|Chemicals|Electricity|+|Mechanical work and low-temperature heat;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
 indst - fehes;FE|Industry|Other Industry|+|Heat;market for heat, district or industrial, natural gas;heat, district or industrial, natural gas;megajoule;regional
-indst - feh2s;FE|Industry|Other Industry|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 indst - feels;FE|Industry|Other Industry|Electricity|+|High-temperature heat;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
 indst - feels;FE|Industry|Other Industry|Electricity|+|Mechanical work and low-temperature heat;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
 indst - fegas;FE|Industry|Other Industry|Gases|+|Biomass;heat production, biomethane, at boiler condensing modulating <100kW;heat, central or small-scale, biomethane;megajoule;regional
 indst - fegas;FE|Industry|Other Industry|Gases|+|Fossil;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
 indst - fegas;FE|Industry|Other Industry|Gases|+|Hydrogen;natural gas, synthetic, burned in gas turbine;heat;megajoule;regional
 indst - feels;FE|Industry|Steel|+|Electricity;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
-indst - feh2s;FE|Industry|Steel|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 indst - fegas;FE|Industry|Steel|Gases|+|Biomass;heat production, biomethane, at boiler condensing modulating <100kW;heat, central or small-scale, biomethane;megajoule;regional
 indst - fegas;FE|Industry|Steel|Gases|+|Fossil;natural gas, burned in gas turbine;natural gas, burned in gas turbine;megajoule;regional
 indst - fegas;FE|Industry|Steel|Gases|+|Hydrogen;natural gas, synthetic, burned in gas turbine;heat;megajoule;regional
 indst - fegas;FE|Non-energy Use|Industry|Gases|+|Biomass;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
 indst - fegas;FE|Non-energy Use|Industry|Gases|+|Fossil;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
-indst - feh2s;FE|Non-energy Use|Industry|Gases|+|Hydrogen;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
 trans - fedie;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass|Allocated Feedstock|Cellulosic|Energy Crops;biodiesel, from non-residual cellulosic biomass, burned in container ship;heat;megajoule;regional
 trans - fedie;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass|Allocated Feedstock|Cellulosic|Residues;biodiesel, from non-residual cellulosic biomass, burned in container ship;heat;megajoule;regional
 trans - fedie;FE|Transport|Bunkers|Freight|International Shipping|Liquids|Biomass|Allocated Feedstock|Non-Cellulosic|Oil-based;biodiesel, from non-residual oily biomass, burned in container ship;heat;megajoule;regional

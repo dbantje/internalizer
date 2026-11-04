@@ -1,0 +1,8 @@
+cdr - feh2s;FE|CDR|DAC|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+cdr - feh2s;FE|CDR|OAE, electric calciner|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+cdr - feh2s;FE|CDR|OAE, traditional calciner|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+indst - feh2s;FE|Industry|Cement|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+indst - feh2s;FE|Industry|Chemicals|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+indst - feh2s;FE|Industry|Other Industry|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
+indst - feh2s;FE|Industry|Steel|+|Hydrogen;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
+indst - feh2s;FE|Non-energy Use|Industry|Gases|+|Hydrogen;market group for electricity, high voltage;electricity, high voltage;kilowatt hour;regional
