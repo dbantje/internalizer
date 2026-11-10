@@ -75,6 +75,7 @@ class CalculationSetup:
     ) -> None:
         for lvl in self.levels:
             mapping = self.data[lvl]["base mapping"]
+            print(f"Building removal list for level {lvl}...")
             if lvl not in self.setup["removal_lists"].keys():
                 self.data[lvl]["removal list"] = None
             else:
@@ -92,7 +93,7 @@ class CalculationSetup:
                 # remove activities that match the mask
                 df = apply_mask_to_dataframe(candidates, ddict["mask"])
                 n_removed = len(candidates) - len(df)
-                print(f"Level {lvl}: {n_removed} activities removed from removal list.")
+                print(f"Level {lvl}: {n_removed} activities removed from removal list. {len(df)} remaining.")
                 names_removed = set(candidates[EI_INDEX[0]].unique()) - set(df[EI_INDEX[0]].unique())
                 for name in names_removed:
                     print(f"\tActivity removed from removal list: {name}")
@@ -149,7 +150,7 @@ class RemindInternalizationSetup(CalculationSetup):
         lvl: str,
         year: int,
     ) -> pd.DataFrame:
-        if lvl in ["fe", "fe_indst_fehos", "fe_indst_fesos"]:
+        if lvl in ["fe", "fe_indst_fehos", "fe_indst_fesos", "fe_feh2turbines"]:
             return fill_mapping_from_mif(self.data[lvl]["base mapping"], self.mifpath, year)
         elif lvl == "pe2se":
             return regionalize_pe2se_mapping(self.data[lvl]["base mapping"], self.gdxpath, self.mifpath, year)
@@ -163,7 +164,7 @@ class RemindInternalizationSetup(CalculationSetup):
         lvl: str,
         years: List[int]
     ) -> xr.DataArray | float:
-        if lvl in ["fe", "fe_indst_fehos", "fe_indst_fesos"]:
+        if lvl in ["fe", "fe_indst_fehos", "fe_indst_fesos", "fe_feh2turbines"]:
             return get_demFE(self.gdxpath, years) * TWa2EJ * 1e12
         elif lvl in ["pe2se", "se2h2", "h22se"]: # xarray automatically uses smallest index
             return get_prodSE(self.gdxpath, years) * TWa2EJ * 1e12

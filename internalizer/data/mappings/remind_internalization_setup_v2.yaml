@@ -6,13 +6,13 @@ levels:
   - fe
   - fe_indst_fehos
   - fe_indst_fesos
-  - fe_feh2sturbines
+  - fe_feh2turbines
 aggregate_levels:
   FE:
     - fe
     - fe_indst_fehos
     - fe_indst_fesos
-    - fe_feh2sturbines
+    - fe_feh2turbines
   SE:
     - pe2se
     - se2h2
@@ -36,8 +36,8 @@ mappings:
   fe_indst_fesos:
     file: demFE_indst_fesos.csv
     depends_on_year: True
-  fe_feh2sturbines:
-    file: demFE_feh2sturbines.csv
+  fe_feh2turbines:
+    file: demFE_feh2turbines.csv
     depends_on_year: True
 removal_lists:
   fe:
@@ -164,7 +164,7 @@ removal_lists:
         - carbon dioxide, captured and stored
       dataset unit:
         - unit
-  fe_feh2sturbines:
+  fe_feh2turbines:
     remove_layers:
       - pe2se
       - se2h2
@@ -298,6 +298,6 @@ domains:
   fe_indst_fesos:
     - emi_sectors
     - all_enty
-  fe_feh2sturbines:
+  fe_feh2turbines:
     - emi_sectors
     - all_enty

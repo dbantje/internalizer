@@ -1,3 +1,4 @@
+REMIND index;scenario variable;dataset name;dataset reference product;dataset unit;share
 cdr - feh2s;FE|CDR|DAC|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 cdr - feh2s;FE|CDR|OAE, electric calciner|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
 cdr - feh2s;FE|CDR|OAE, traditional calciner|+|Hydrogen;hydrogen, burned in gas turbine 1GW;heat;megajoule;regional
